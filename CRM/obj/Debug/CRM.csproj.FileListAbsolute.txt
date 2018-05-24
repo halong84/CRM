@@ -143,4 +143,3 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\C
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.pdb
-C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
