@@ -145,7 +145,6 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\C
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\bin\Debug\CRM.exe.config
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\obj\Debug\CRM.pdb
@@ -306,6 +305,4 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\C
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmThanhLapToVanChuyen.resources
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmThongTinThe.resources
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmTiepQuy.resources
-=======
-C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
 >>>>>>> parent of 1d3fa0c... Long 24/05/2018 3:36
