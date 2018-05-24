@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CRM">
+</Property><Property Name="Solution File" Value="G:\CRM\CRM\CRM.sln">
+</Property><Property Name="Date" Value="Wednesday, June 13, 2012">
+</Property><Property Name="Time" Value="10:53 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CRM.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CRM.sln" Description="Converted">
+</Event></UpgradeLog>
