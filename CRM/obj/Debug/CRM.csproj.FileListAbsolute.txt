@@ -13,6 +13,7 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\M
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\ExcelDataReader.xml
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.Chinhsach.resources
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.frmAD_Huypheduyet.resources
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.frmBHHDBH.resources
@@ -144,7 +145,6 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\C
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.pdb
 <<<<<<< HEAD
-C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\bin\Debug\CRM.exe.config
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\obj\Debug\CRM.pdb
