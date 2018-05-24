@@ -13,6 +13,7 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\M
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\ExcelDataReader.xml
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.Chinhsach.resources
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.frmAD_Huypheduyet.resources
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.frmBHHDBH.resources
