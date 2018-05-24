@@ -268,6 +268,7 @@ namespace CRM.Utilities
                                 {
                                     table1.Rows[row].Cells[cell].Paragraphs.First().Append(data.Rows[row - 1][cell].ToString()).Font(new FontFamily(font_family)).FontSize(font_size).Alignment = Alignment.center;
                                     table1.Rows[row].Cells[cell].VerticalAlignment = VerticalAlignment.Center;
+                                    
                                     table1.Rows[row].Height = 30;
 
                                 }
@@ -294,7 +295,7 @@ namespace CRM.Utilities
                         table1.Rows[merge_row_index].Cells[start_index].VerticalAlignment = VerticalAlignment.Center;
                     }
                     
-                    //table1.AutoFit = AutoFit.Contents;
+                    table1.AutoFit = AutoFit.Contents;
 
                     // Center the Table
                     table1.Alignment = Alignment.center;
