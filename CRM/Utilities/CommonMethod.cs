@@ -748,5 +748,10 @@ namespace CRM.Utilities
             }
         } 
         #endregion
+
+        public static string GetServerAdd()
+        {
+            return server_add;
+        }
     }
 }
