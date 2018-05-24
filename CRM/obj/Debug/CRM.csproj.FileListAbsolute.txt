@@ -298,3 +298,10 @@ C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\obj\Debug\CRM.GUI_DV.frmTiepQuy.res
 C:\Users\Quang Tung\Documents\GitHub\CRM\CRM\obj\Debug\CRM.GUI_DV.frmQLKiemTiepQuy.resources
 =======
 >>>>>>> 1d3fa0c17a570d3462ea230448d70924da390c62
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmKiemQuy.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmPhatHanhTheGhiNo.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmQLKiemTiepQuy.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmQuanLyThe.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmThanhLapToVanChuyen.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmThongTinThe.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM\obj\Debug\CRM.GUI_DV.frmTiepQuy.resources
