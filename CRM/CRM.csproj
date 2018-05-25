@@ -114,6 +114,9 @@
     <Compile Include="BUS\DIEMKHBUS.cs" />
     <Compile Include="BUS\DIEM_CNBUS.cs" />
     <Compile Include="BUS\DIENBUS.cs" />
+    <Compile Include="BUS\DV1\ChinhanhBUS.cs" />
+    <Compile Include="BUS\DV1\PhongbanBUS.cs" />
+    <Compile Include="BUS\DV1\UserBUS.cs" />
     <Compile Include="BUS\HethongBUS.cs" />
     <Compile Include="BUS\HuyenBUS.cs" />
     <Compile Include="BUS\INOUTLOGBUS.cs" />
@@ -160,6 +163,17 @@
     <Compile Include="DAL\DIEMKHDAL.cs" />
     <Compile Include="DAL\DIEM_CNDAL.cs" />
     <Compile Include="DAL\DIENDAL.cs" />
+    <Compile Include="DAL\DV\chinhanhDAL.cs" />
+    <Compile Include="DAL\DV\ErrorMessageDAL.cs" />
+    <Compile Include="DAL\DV\KiemQuyDAL.cs" />
+    <Compile Include="DAL\DV\NhanVienDAL.cs" />
+    <Compile Include="DAL\DV\PhatHanhTheGhiNoDAL.cs" />
+    <Compile Include="DAL\DV\phongbanDAL.cs" />
+    <Compile Include="DAL\DV\TheDAL.cs" />
+    <Compile Include="DAL\DV\ThongTinTheDAL.cs" />
+    <Compile Include="DAL\DV\TiepQuyDAL.cs" />
+    <Compile Include="DAL\DV\ToVanChuyenDAL.cs" />
+    <Compile Include="DAL\DV\UserDAL.cs" />
     <Compile Include="DAL\HethongDAL.cs" />
     <Compile Include="DAL\HuyenDAL.cs" />
     <Compile Include="DAL\INOUTLOGDAL.cs" />
@@ -203,6 +217,12 @@
     <Compile Include="DataTable.cs" />
     <Compile Include="dsKHWU.Designer.cs" />
     <Compile Include="Entities\Chinhanh.cs" />
+    <Compile Include="Entities\DV\Chinhanh.cs" />
+    <Compile Include="Entities\DV\KhachHangDV.cs" />
+    <Compile Include="Entities\DV\NguoiDaiDien.cs" />
+    <Compile Include="Entities\DV\Phongban.cs" />
+    <Compile Include="Entities\DV\The.cs" />
+    <Compile Include="Entities\DV\User.cs" />
     <Compile Include="Entities\Hethong.cs" />
     <Compile Include="Entities\Huyen.cs" />
     <Compile Include="Entities\Menu.cs" />
@@ -954,6 +974,48 @@
     <Compile Include="frmXacnhan.Designer.cs">
       <DependentUpon>frmXacnhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_DV\frmKiemQuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmKiemQuy.Designer.cs">
+      <DependentUpon>frmKiemQuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DV\frmPhatHanhTheGhiNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmPhatHanhTheGhiNo.Designer.cs">
+      <DependentUpon>frmPhatHanhTheGhiNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DV\frmQLKiemTiepQuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmQLKiemTiepQuy.Designer.cs">
+      <DependentUpon>frmQLKiemTiepQuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DV\frmQuanLyThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmQuanLyThe.Designer.cs">
+      <DependentUpon>frmQuanLyThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DV\frmThanhLapToVanChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmThanhLapToVanChuyen.Designer.cs">
+      <DependentUpon>frmThanhLapToVanChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DV\frmThongTinThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmThongTinThe.Designer.cs">
+      <DependentUpon>frmThongTinThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DV\frmTiepQuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmTiepQuy.Designer.cs">
+      <DependentUpon>frmTiepQuy.cs</DependentUpon>
+    </Compile>
     <Compile Include="In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -972,6 +1034,9 @@
     </Compile>
     <Compile Include="Utilities\CommonMethod.cs" />
     <Compile Include="Utilities\ControlFormat.cs" />
+    <Compile Include="Utilities\DV\CommonMethods.cs" />
+    <Compile Include="Utilities\DV\ControlFormat.cs" />
+    <Compile Include="Utilities\DV\Thong_tin_dang_nhap.cs" />
     <Compile Include="Utilities\Thongtindangnhap.cs" />
     <EmbeddedResource Include="Chinhsach.resx">
       <DependentUpon>Chinhsach.cs</DependentUpon>
@@ -1466,6 +1531,27 @@
     <EmbeddedResource Include="frmXacnhan.resx">
       <DependentUpon>frmXacnhan.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmKiemQuy.resx">
+      <DependentUpon>frmKiemQuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmPhatHanhTheGhiNo.resx">
+      <DependentUpon>frmPhatHanhTheGhiNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmQLKiemTiepQuy.resx">
+      <DependentUpon>frmQLKiemTiepQuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmQuanLyThe.resx">
+      <DependentUpon>frmQuanLyThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmThanhLapToVanChuyen.resx">
+      <DependentUpon>frmThanhLapToVanChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmThongTinThe.resx">
+      <DependentUpon>frmThongTinThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmTiepQuy.resx">
+      <DependentUpon>frmTiepQuy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="In.resx">
       <DependentUpon>In.cs</DependentUpon>
