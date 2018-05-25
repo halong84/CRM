@@ -148,3 +148,4 @@ C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\bin\Debug\ExcelDataReader.xml
 C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\bin\Debug\ExcelDataReader.DataSet.xml
 C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.exe
 C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.pdb
+C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache

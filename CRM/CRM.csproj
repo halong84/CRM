@@ -114,9 +114,9 @@
     <Compile Include="BUS\DIEMKHBUS.cs" />
     <Compile Include="BUS\DIEM_CNBUS.cs" />
     <Compile Include="BUS\DIENBUS.cs" />
-    <Compile Include="BUS\DV1\ChinhanhBUS.cs" />
-    <Compile Include="BUS\DV1\PhongbanBUS.cs" />
-    <Compile Include="BUS\DV1\UserBUS.cs" />
+    <Compile Include="BUS\DV\ChinhanhBUS.cs" />
+    <Compile Include="BUS\DV\PhongbanBUS.cs" />
+    <Compile Include="BUS\DV\UserBUS.cs" />
     <Compile Include="BUS\HethongBUS.cs" />
     <Compile Include="BUS\HuyenBUS.cs" />
     <Compile Include="BUS\INOUTLOGBUS.cs" />
