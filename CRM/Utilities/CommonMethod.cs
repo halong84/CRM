@@ -29,8 +29,8 @@ namespace CRM.Utilities
     class CommonMethod
     {
         //Khai báo địa chỉ máy chủ chứa file template
-        //private static string server_add = "127.0.0.1";
-        private static string server_add = "10.14.0.12";
+        private static string server_add = "127.0.0.1";
+        //private static string server_add = "10.14.0.12";
 
         //Chữ in hoa ký tự đầu tiên của chuỗi
         public static string FirstCharToUpper(string input)
