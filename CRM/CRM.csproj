@@ -220,6 +220,7 @@
     <Compile Include="Entities\DV\Chinhanh.cs" />
     <Compile Include="Entities\DV\KhachHangDV.cs" />
     <Compile Include="Entities\DV\NguoiDaiDien.cs" />
+    <Compile Include="Entities\DV\NhanVien.cs" />
     <Compile Include="Entities\DV\Phongban.cs" />
     <Compile Include="Entities\DV\The.cs" />
     <Compile Include="Entities\DV\User.cs" />

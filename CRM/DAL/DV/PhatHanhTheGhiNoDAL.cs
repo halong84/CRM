@@ -128,7 +128,7 @@ namespace CRM.DAL.DV
 
         }
 
-        public static void DangKyThe(string soTK, string loaiThe, string hangThe, string hinhThucPhatHanh, string hinhThucNhanThe, string dtdd, int hmgd, int baoHiem, string user, string mapb)
+        public static void DangKyThe(string soTK, string loaiThe, string hangThe, string hinhThucPhatHanh, string hinhThucNhanThe, string dtdd, int hmgd, int baoHiem, string user, string mapb, bool phatHanhMoi)
         {
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[]{
@@ -141,7 +141,8 @@ namespace CRM.DAL.DV
                     new SqlParameter("@hmgd", hmgd),
                     new SqlParameter("@baohiem", baoHiem),
                     new SqlParameter("@userid", user),
-                    new SqlParameter("@mapb", mapb)
+                    new SqlParameter("@mapb", mapb),
+                    new SqlParameter("@phathanhmoi", phatHanhMoi)
                 };
             db.dt("DV_INSERT_THEODOITHE", Params);
         }

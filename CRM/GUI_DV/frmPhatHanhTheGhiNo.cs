@@ -535,113 +535,86 @@ namespace CRM.GUI_DV
                 case 0: //Phat hanh moi 
                     if (CheckNullPhatHanhMoi()) return;
 
-                    //Phat hanh the noi dia
-                    if (clbND_Moi.CheckedItems.Count > 0 && clbQT_Moi.CheckedItems.Count == 0) //The noi dia
+                    //Phat hanh moi the noi dia
+                    if (clbND_Moi.CheckedItems.Count > 0)
                     {
                         if (!LuuPhatHanhMoiTheNoiDia()) return;
                     }
-                    //Phat hanh the quoc te
-                    if (clbQT_Moi.CheckedItems.Count > 0 && clbND_Moi.CheckedItems.Count == 0)
+                    //Phat hanh moi the quoc te
+                    if (clbQT_Moi.CheckedItems.Count > 0)
                     {
                         if (!LuuPhatHanhMoiTheQuocTe()) return;
                     }
 
+                    
+
                     //Phat hanh the noi dia + quoc te
-                    if (clbQT_Moi.CheckedItems.Count > 0 && clbND_Moi.CheckedItems.Count > 0)
-                    {
-                        string soTK = cbSoTK.SelectedItem.ToString();
-                        string loaiTheND = StringConverter(clbND_Moi.CheckedItems[0].ToString());
-                        string loaiTheQT = StringConverter(clbQT_Moi.CheckedItems[0].ToString());
+                    //if (clbQT_Moi.CheckedItems.Count > 0 && clbND_Moi.CheckedItems.Count > 0)
+                    //{
+                    //    string soTK = cbSoTK.SelectedItem.ToString();
+                    //    string loaiTheND = StringConverter(clbND_Moi.CheckedItems[0].ToString());
+                    //    string loaiTheQT = StringConverter(clbQT_Moi.CheckedItems[0].ToString());
 
-                        if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
-                            PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count == 0)
-                        {
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
-                            return;
-                        }
+                    //    if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
+                    //        PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count == 0)
+                    //    {
+                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
+                    //        return;
+                    //    }
 
-                        else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count == 0 &&
-                                 PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
-                        {
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
-                            return;
-                        }
-                        else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
-                                 PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
-                        {
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
-                            return;
-                        }
-                        else
-                        {
-                            LuuPhatHanhMoiTheNoiDia();
-                            LuuPhatHanhMoiTheQuocTe();
-                        }
-                    }
+                    //    else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count == 0 &&
+                    //             PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
+                    //    {
+                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
+                    //        return;
+                    //    }
+                    //    else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
+                    //             PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
+                    //    {
+                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
+                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
+                    //        return;
+                    //    }
+                    //    else
+                    //    {
+                    //        LuuPhatHanhMoiTheNoiDia();
+                    //        LuuPhatHanhMoiTheQuocTe();
+                    //    }
+                    //}
 
                     //Tao file word
                     KhoiTaoPhatHanhMoi();
-                    Thread tMoi = new Thread(PhatHanhMoi);
-                    tMoi.Start();
+                    PhatHanhMoi();
+                    //Thread tMoi = new Thread(PhatHanhMoi);
+                    //tMoi.Start();
                     break;
                 case 1: //Phat hanh lai
+
                     if (CheckNullPhatHanhLai()) return;
 
-                    //Phat hanh the noi dia
-                    if (clbND_Lai.CheckedItems.Count > 0 && clbQT_Lai.CheckedItems.Count == 0) //The noi dia
+                    //Phat hanh lai the noi dia
+                    if (clbND_Lai.CheckedItems.Count > 0)
                     {
                         if (!LuuPhatHanhLaiTheNoiDia()) return;
                     }
-                    //Phat hanh the quoc te
-                    if (clbQT_Lai.CheckedItems.Count > 0 && clbND_Lai.CheckedItems.Count == 0)
+                    //Phat hanh lai the quoc te
+                    if (clbQT_Lai.CheckedItems.Count > 0)
                     {
                         if (!LuuPhatHanhLaiTheQuocTe()) return;
                     }
 
-                    //Phat hanh the noi dia + quoc te
-                    if (clbQT_Lai.CheckedItems.Count > 0 && clbND_Lai.CheckedItems.Count > 0)
-                    {
-                        string soTK = cbSoTK.SelectedItem.ToString();
-                        string loaiTheND = StringConverter(clbND_Lai.CheckedItems[0].ToString());
-                        string loaiTheQT = StringConverter(clbQT_Lai.CheckedItems[0].ToString());
-
-                        if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
-                            PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count == 0)
-                        {
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
-                            return;
-                        }
-
-                        else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count == 0 &&
-                                 PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
-                        {
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
-                            return;
-                        }
-                        else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
-                                 PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
-                        {
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
-                            MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
-                            return;
-                        }
-                        else
-                        {
-                            LuuPhatHanhLaiTheNoiDia();
-                            LuuPhatHanhLaiTheQuocTe();
-                        }
-                    }
 
                     KhoiTaoPhatHanhLai();
-                    Thread tLai = new Thread(PhatHanhLai);
-                    tLai.Start();
+                    PhatHanhLai();
+                    //Thread tLai = new Thread(PhatHanhLai);
+                    //tLai.Start();
                     break;
                 case 2: //Hop dong
                     if (CheckNullHopDong()) return;
                     KhoiTaoHopDong();
-                    Thread tHD = new Thread(HopDong);
-                    tHD.Start();
+                    HopDong();
+                    //Thread tHD = new Thread(HopDong);
+                    //tHD.Start();
                     break;
                 case 3: //Giay hen
                     break;
@@ -951,7 +924,7 @@ namespace CRM.GUI_DV
 
             if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
             {
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 MessageBox.Show("File đã được tạo tại đường dẫn: " + saveFileLocation, "Tạo file thành công");
                 OpenFileWord(saveFileLocation);
             }
@@ -978,7 +951,7 @@ namespace CRM.GUI_DV
 
             if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
             {
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 MessageBox.Show("File đã được tạo tại đường dẫn: " + saveFileLocation, "Tạo file thành công");
                 OpenFileWord(saveFileLocation);
             }
@@ -1004,7 +977,7 @@ namespace CRM.GUI_DV
             if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
             {
                 MessageBox.Show("File đã được tạo tại đường dẫn: " + saveFileLocation, "Tạo file thành công");
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 OpenFileWord(saveFileLocation);
 
             }
@@ -1014,17 +987,6 @@ namespace CRM.GUI_DV
         {
             Microsoft.Office.Interop.Word.Application ap = new Microsoft.Office.Interop.Word.Application();
             Microsoft.Office.Interop.Word.Document document = ap.Documents.Open(fileLocation);
-            //ap.Visible = false;
-            //try
-            //{
-            //    document.PrintOut();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Vui lòng kiểm tra máy in!", "Thông báo", MessageBoxButtons.OK);
-            //}
-            //document.Close();
-            //ap.Quit();
             ap.Visible = true;
         }
 
@@ -1139,15 +1101,17 @@ namespace CRM.GUI_DV
             int baoHiem = 0;
             if (!string.IsNullOrEmpty(txtHMGD_Moi.Text)) hmgd = int.Parse(txtHMGD_Moi.Text.Replace(",",""));
             if (ckbBaoHiem_Moi.Checked) baoHiem = 1;
+            bool phatHanhMoi = true;
 
             try //Luu thong tin the noi dia
             {
-                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem,Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb);
+                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem,Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
             catch
             {
-                MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
+                //MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
+                ErrorMessageDAL.DataAccessError();
                 return false;
             }
 
@@ -1165,14 +1129,16 @@ namespace CRM.GUI_DV
             int baoHiem = 0;
             if (!string.IsNullOrEmpty(txtHMGD_Moi.Text)) hmgd = int.Parse(txtHMGD_Moi.Text.Replace(",",""));
             if (ckbBaoHiem_Moi.Checked) baoHiem = 1;
+            bool phatHanhMoi = true;
             try //Luu thong tin the quoc te
             {
-                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem,Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb);
+                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem,Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
             catch
             {
-                MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
+                //MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
+                ErrorMessageDAL.DataAccessError();
                 return false;
             }
 
@@ -1190,10 +1156,11 @@ namespace CRM.GUI_DV
             int baoHiem = 0;
             if (!string.IsNullOrEmpty(txtHMGD_Lai.Text)) hmgd = int.Parse(txtHMGD_Lai.Text);
             if (ckbBaoHiem_Lai.Checked) baoHiem = 1;
+            bool phatHanhMoi = false;
 
             try //Luu thong tin the noi dia
             {
-                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem, Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb);
+                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem, Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
             catch
@@ -1216,9 +1183,10 @@ namespace CRM.GUI_DV
             int baoHiem = 0;
             if (!string.IsNullOrEmpty(txtHMGD_Lai.Text)) hmgd = int.Parse(txtHMGD_Lai.Text);
             if (ckbBaoHiem_Lai.Checked) baoHiem = 1;
+            bool phatHanhMoi = false;
             try //Luu thong tin the quoc te
             {
-                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem, Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb);
+                PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem, Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
             catch
