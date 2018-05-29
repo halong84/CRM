@@ -112,14 +112,13 @@ namespace CRM.DAL.DV
             db.dt("DV_XOATHE_THEOSOTHE", Params);
         }
 
-        public static void XoaThe_TheoSoTK_LoaiThe(string soTK, string loaiThe)
+        public static void XoaThe_TheoID(int ID)
         {
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[] { 
-            new SqlParameter("@sotk", soTK),
-            new SqlParameter("@loaithe", loaiThe)
+            new SqlParameter("@ID", ID),
             };
-            db.dt("DV_XOATHE_THEOSOTK_LOAITHE", Params);
+            db.dt("DV_XOATHE_THEOID", Params);
         }
     }
 }

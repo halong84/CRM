@@ -16,12 +16,12 @@ namespace CRM.GUI_DV
     public partial class frmThongTinThe : Form
     {
         private The the;
-        public frmThongTinThe(string soTK, string loaiThe)
+        public frmThongTinThe(int ID)
         {
             InitializeComponent();
             try
             {
-                DataRow row = ThongTinTheDAL.LayThongTinThe(soTK, loaiThe);
+                DataRow row = ThongTinTheDAL.LayThongTinThe(ID);
                 if (row != null) the = new The(row);
                 txtHoTen.Text = the.hoTen;
                 txtSoTK.Text = the.soTK;
@@ -82,6 +82,9 @@ namespace CRM.GUI_DV
                         c.Enabled = false;
                     }
                 }
+
+                if (the.isPhatHanhMoi) cbPhatHanhMoi.Checked = true;
+                else cbPhatHanhLai.Checked = true;
             }
             catch
             {

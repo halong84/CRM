@@ -58,6 +58,9 @@
             this.tHEODOITHEBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.tHEODOITHEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gbDichVu = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.ckbBaoHiem = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtHMGD = new System.Windows.Forms.TextBox();
@@ -66,13 +69,14 @@
             this.txtDTDD = new System.Windows.Forms.TextBox();
             this.ckbSMS = new System.Windows.Forms.CheckBox();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbPhatHanhMoi = new System.Windows.Forms.CheckBox();
+            this.cbPhatHanhLai = new System.Windows.Forms.CheckBox();
             this.gbThongTinThe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tHEODOITHEBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEODOITHEBindingSource1)).BeginInit();
             this.gbDichVu.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbThongTinThe
@@ -336,6 +340,33 @@
             this.gbDichVu.Text = "Dịch vụ";
             this.gbDichVu.Enter += new System.EventHandler(this.gbDichVu_Enter);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 67);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(54, 13);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "Bảo hiểm:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 13);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "Internet Banking:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 13);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "SMS Banking:";
+            // 
             // ckbBaoHiem
             // 
             this.ckbBaoHiem.AutoSize = true;
@@ -406,7 +437,7 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(119, 484);
+            this.btnLuu.Location = new System.Drawing.Point(128, 527);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(88, 28);
             this.btnLuu.TabIndex = 20;
@@ -414,44 +445,51 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // label15
+            // groupBox1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(9, 21);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 13);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "SMS Banking:";
+            this.groupBox1.Controls.Add(this.cbPhatHanhLai);
+            this.groupBox1.Controls.Add(this.cbPhatHanhMoi);
+            this.groupBox1.Location = new System.Drawing.Point(12, 484);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(322, 37);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
             // 
-            // label16
+            // cbPhatHanhMoi
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 43);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 13);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "Internet Banking:";
+            this.cbPhatHanhMoi.AutoSize = true;
+            this.cbPhatHanhMoi.Enabled = false;
+            this.cbPhatHanhMoi.Location = new System.Drawing.Point(24, 14);
+            this.cbPhatHanhMoi.Name = "cbPhatHanhMoi";
+            this.cbPhatHanhMoi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbPhatHanhMoi.Size = new System.Drawing.Size(94, 17);
+            this.cbPhatHanhMoi.TabIndex = 43;
+            this.cbPhatHanhMoi.Text = "Phát hành mới";
+            this.cbPhatHanhMoi.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // cbPhatHanhLai
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(9, 67);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 13);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "Bảo hiểm:";
+            this.cbPhatHanhLai.AutoSize = true;
+            this.cbPhatHanhLai.Enabled = false;
+            this.cbPhatHanhLai.Location = new System.Drawing.Point(183, 14);
+            this.cbPhatHanhLai.Name = "cbPhatHanhLai";
+            this.cbPhatHanhLai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbPhatHanhLai.Size = new System.Drawing.Size(88, 17);
+            this.cbPhatHanhLai.TabIndex = 44;
+            this.cbPhatHanhLai.Text = "Phát hành lại";
+            this.cbPhatHanhLai.UseVisualStyleBackColor = true;
             // 
             // frmThongTinThe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 521);
+            this.ClientSize = new System.Drawing.Size(346, 561);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.gbDichVu);
             this.Controls.Add(this.gbThongTinThe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.Name = "frmThongTinThe";
             this.Text = "Thông tin thẻ";
@@ -462,6 +500,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tHEODOITHEBindingSource1)).EndInit();
             this.gbDichVu.ResumeLayout(false);
             this.gbDichVu.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -507,6 +547,9 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox cbPhatHanhLai;
+        private System.Windows.Forms.CheckBox cbPhatHanhMoi;
 
     }
 }

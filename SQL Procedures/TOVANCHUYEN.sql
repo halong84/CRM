@@ -1,25 +1,35 @@
 USE [CRM]
 GO
 
-/****** Object:  Table [dbo].[TOVANCHUYEN]    Script Date: 05/28/2018 17:56:23 ******/
+/****** Object:  Table [dbo].[THEODOITHE]    Script Date: 05/29/2018 15:52:36 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[TOVANCHUYEN](
-	[MAPB] [nvarchar](10) NULL,
-	[MATOTRUONG] [nvarchar](20) NULL,
-	[MAGIAMSAT1] [nvarchar](20) NULL,
-	[MAGIAMSAT2] [nvarchar](20) NULL,
-	[MABAOVE] [nvarchar](20) NULL,
-	[MALAIXE] [nvarchar](20) NULL,
-	[LOAIHANG] [nvarchar](max) NULL,
-	[BANGSO] [nvarchar](20) NULL,
-	[NOIDEN] [nvarchar](max) NULL,
-	[PHUONGTIEN] [nvarchar](200) NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+CREATE TABLE [dbo].[THEODOITHE](
+	[ID] [int] NOT NULL identity(1,1),
+	[SOTK] [nvarchar](20) NULL,
+	[LOAITHE] [nvarchar](10) NULL,
+	[SOTHE] [nvarchar](20) NULL,
+	[HANGTHE] [nvarchar](10) NULL,
+	[HINHTHUCPHATHANH] [nvarchar](10) NULL,
+	[HINHTHUCNHANTHE] [nvarchar](50) NULL,
+	[DTDDSMS] [nvarchar](20) NULL,
+	[HMGD] [int] NULL,
+	[NGAYDANGKY] [datetime] NULL,
+	[NGAYNHANTHE] [datetime] NULL,
+	[NGAYGIAOTHE] [datetime] NULL,
+	[BAOHIEM] [bit] NULL,
+	[MAPB] [nvarchar](50) NULL,
+	[USERID] [nvarchar](20) NULL,
+	[PHATHANHMOI] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
 
 GO
 

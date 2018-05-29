@@ -19,9 +19,7 @@ namespace CRM.GUI_DV
         static string fileNameTLTVC = "QD_THANH_LAP_TO_VAN_CHUYEN_DAC_BIET";
         List<String> listDich, listNguon;
 
-        NhanVien nvTT, nvGS1, nvGS2, nvBV, nvLX;
         string maToTruong, maGiamSat1, maGiamSat2, maBaoVe, maLaixe;
-        bool isExist = false; //Da ton tai thong tin tren CSDL hay chua
 
         public frmThanhLapToVanChuyen()
         {
@@ -29,64 +27,59 @@ namespace CRM.GUI_DV
             listDich = new List<string>();
             listNguon = new List<string>();
 
+            cbGtTT.SelectedIndex = 0;
+            cbGtGs1.SelectedIndex = 0;
+            cbGtGs2.SelectedIndex = 0;
+            cbGtBv.SelectedIndex = 0;
+            cbGtLx.SelectedIndex = 0;
+
+
             DataTable dt = null;
             try
             {
                 dt = ToVanChuyenDAL.DV_TOVANCHUYEN_MAPB(Thong_tin_dang_nhap.ma_pb);
                 if (dt.Rows.Count > 0)
                 {
-                    isExist = true;
                     DataRow r = dt.Rows[0];
-                    //To truong
-                    maToTruong = r["MATOTRUONG"].ToString();
-                    DataRow toTruong = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_MANV(maToTruong).Rows[0];
-                    nvTT = new NhanVien(toTruong);
-                    txtTenToTruong.Text = toTruong["HOTEN"].ToString();
-                    txtChucVuToTruong.Text = toTruong["CHUCVU"].ToString();
-                    txtCMNDToTruong.Text = toTruong["CMND"].ToString();
-                    txtNgayCapToTruong.Text = toTruong["NGAYCAP"].ToString();
-                    txtNoiCapToTruong.Text = toTruong["NOICAP"].ToString();
-                    //Giam sat 1
-                    maGiamSat1 = r["MAGIAMSAT1"].ToString();
-                    DataRow gs1 = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_MANV(maGiamSat1).Rows[0];
-                    nvGS1 = new NhanVien(gs1);
-                    txtTenGiamSat1.Text = gs1["HOTEN"].ToString();
-                    txtChucVuGiamSat1.Text = gs1["CHUCVU"].ToString();
-                    txtCMNDGiamSat1.Text = gs1["CMND"].ToString();
-                    txtNgayCapGiamSat1.Text = gs1["NGAYCAP"].ToString();
-                    txtNoiCapGiamSat1.Text = gs1["NOICAP"].ToString();
-                    //Giam sat 2
-                    maGiamSat2 = r["MAGIAMSAT2"].ToString();
-                    DataRow gs2 = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_MANV(maGiamSat2).Rows[0];
-                    nvGS2 = new NhanVien(gs2);
-                    txtTenGiamSat2.Text = gs2["HOTEN"].ToString();
-                    txtChucVuGiamSat2.Text = gs2["CHUCVU"].ToString();
-                    txtCMNDGiamSat2.Text = gs2["CMND"].ToString();
-                    txtNgayCapGiamSat2.Text = gs2["NGAYCAP"].ToString();
-                    txtNoiCapGiamSat2.Text = gs2["NOICAP"].ToString();
-                    //Bao ve
-                    maBaoVe = r["MABAOVE"].ToString();
-                    DataRow bv = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_MANV(maBaoVe).Rows[0];
-                    nvBV = new NhanVien(bv);
-                    txtTenBaoVe.Text = bv["HOTEN"].ToString();
-                    txtChucVuBaoVe.Text = bv["CHUCVU"].ToString();
-                    txtCMNDBaoVe.Text = bv["CMND"].ToString();
-                    txtNgayCapBaoVe.Text = bv["NGAYCAP"].ToString();
-                    txtNoiCapBaoVe.Text = bv["NOICAP"].ToString();
-                    //Lai xe
-                    maLaixe = r["MALAIXE"].ToString();
-                    DataRow lx = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_MANV(maLaixe).Rows[0];
-                    nvLX = new NhanVien(lx);
-                    txtTenLaiXe.Text = lx["HOTEN"].ToString();
-                    txtChucVuLaiXe.Text = lx["CHUCVU"].ToString();
-                    txtCMNDLaiXe.Text = lx["CMND"].ToString();
-                    txtNgayCapLaiXe.Text = lx["NGAYCAP"].ToString();
-                    txtNoiCapLaiXe.Text = lx["NOICAP"].ToString();
-                    //Loai hang
+                    if(!Convert.ToBoolean(r["GTTT"])) cbGtTT.SelectedIndex = 1;
+                    if(!Convert.ToBoolean(r["GTGS1"])) cbGtGs1.SelectedIndex = 1;
+                    if(!Convert.ToBoolean(r["GTGS2"])) cbGtGs2.SelectedIndex = 1;
+                    if(!Convert.ToBoolean(r["GTBV"])) cbGtBv.SelectedIndex = 1;
+                    if(!Convert.ToBoolean(r["GTLX"])) cbGtLx.SelectedIndex = 1;
+
+                    txtTenToTruong.Text = r["TENTT"].ToString();
+                    txtTenGiamSat1.Text = r["TENGS1"].ToString();
+                    txtTenGiamSat2.Text = r["TENGS2"].ToString();
+                    txtTenBaoVe.Text = r["TENBV"].ToString();
+                    txtTenLaiXe.Text = r["TENLX"].ToString();
+
+                    txtChucVuToTruong.Text = r["CHUCVUTT"].ToString();
+                    txtChucVuGiamSat1.Text = r["CHUCVUGS1"].ToString();
+                    txtChucVuGiamSat2.Text = r["CHUCVUGS2"].ToString();
+                    txtChucVuBaoVe.Text = r["CHUCVUBV"].ToString();
+                    txtChucVuLaiXe.Text = r["CHUCVULX"].ToString();
+
+                    txtCMNDToTruong.Text = r["CMNDTT"].ToString();
+                    txtCMNDGiamSat1.Text = r["CMNDGS1"].ToString();
+                    txtCMNDGiamSat2.Text = r["CMNDGS2"].ToString();
+                    txtCMNDBaoVe.Text = r["CMNDBV"].ToString();
+                    txtCMNDLaiXe.Text = r["CMNDLX"].ToString();
+
+                    txtNgayCapToTruong.Text = r["NGAYCAPTT"].ToString();
+                    txtNgayCapGiamSat1.Text = r["NGAYCAPGS1"].ToString();
+                    txtNgayCapGiamSat2.Text = r["NGAYCAPGS2"].ToString();
+                    txtNgayCapBaoVe.Text = r["NGAYCAPBV"].ToString();
+                    txtNgayCapLaiXe.Text = r["NGAYCAPLX"].ToString();
+
+                    txtNoiCapToTruong.Text = r["NOICAPTT"].ToString();
+                    txtNoiCapGiamSat1.Text = r["NOICAPGS1"].ToString();
+                    txtNoiCapGiamSat2.Text = r["NOICAPGS2"].ToString();
+                    txtNoiCapBaoVe.Text = r["NOICAPBV"].ToString();
+                    txtNoiCapLaiXe.Text = r["NOICAPLX"].ToString();
+
                     txtLoaiHang.Text = r["LOAIHANG"].ToString();
-                    //Bang so
                     txtBangSo.Text = r["BANGSO"].ToString();
-                    //Phuong tien
+                    txtNoiDen.Text = r["NOIDEN"].ToString();
                     txtPhuongTien.Text = r["PHUONGTIEN"].ToString();
                 }
             }
@@ -95,7 +88,6 @@ namespace CRM.GUI_DV
                 ErrorMessageDAL.DataAccessError();
             }
 
-            
         }
 
         void KhoiTaoTLTVC()
@@ -176,117 +168,113 @@ namespace CRM.GUI_DV
             if (!string.IsNullOrEmpty(txtTenToTruong.Text))
             {
                 index++;
-                string gt = "Ông";
-                string pb = Thong_tin_dang_nhap.ten_cn;
-                if (nvTT != null)
-                {
-                    if (!nvTT.gioiTinh) gt = "Bà";
-                    if (nvTT.maPb.Split('-')[1] != "01")
-                    {
-                        pb = Thong_tin_dang_nhap.tenPb;
-                    }
-                }
-                toTruong = index + ". " + gt + ": " + txtTenToTruong.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDToTruong.Text + ", Ngày cấp: " + txtNgayCapToTruong.Text +
-                    ", Nơi cấp: " + txtNoiCapToTruong.Text + "; Chức vụ: " + txtChucVuToTruong.Text + " " + pb + "; Chức danh: Tổ trưởng;";
+                toTruong = index + ". " + cbGtTT.Text + ": " + txtTenToTruong.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDToTruong.Text + ", Ngày cấp: " + txtNgayCapToTruong.Text +
+                    ", Nơi cấp: " + txtNoiCapToTruong.Text + "; Chức vụ: " + txtChucVuToTruong.Text + "; Chức danh: Tổ trưởng;";
                 tb.Rows[index].Cells[1].Range.Text = toTruong;
+                Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
+
             }
 
-            if (string.IsNullOrEmpty(txtTenGiamSat1.Text))
+            if (!string.IsNullOrEmpty(txtTenGiamSat1.Text))
             {
                 tb.Rows.Add(oMissing);
-                tb.Rows.Add(tb.Rows[index]);
+                //tb.Rows.Add(tb.Rows[index]);
                 index++;
-                string gt = "Ông";
-                string pb = Thong_tin_dang_nhap.ten_cn;
-                if (nvGS1 != null)
-                {
-                    if (!nvGS1.gioiTinh) gt = "Bà";
-                    if (nvGS1.maPb.Split('-')[1] != "01")
-                    {
-                        pb = Thong_tin_dang_nhap.tenPb;
-                    }
-                }
-                giamSat1 = index + ". " + gt + ": " + txtTenGiamSat1.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat1.Text + " Ngày cấp: " + txtNgayCapGiamSat1.Text +
-                    " Nơi cấp: " + txtNoiCapGiamSat1.Text + "; Chức vụ: " + txtChucVuGiamSat1.Text + " " + pb + "; Chức danh: Giám sát;";
+                giamSat1 = index + ". " + cbGtBv.Text + ": " + txtTenGiamSat1.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat1.Text + ", Ngày cấp: " + txtNgayCapGiamSat1.Text +
+                    ", Nơi cấp: " + txtNoiCapGiamSat1.Text + "; Chức vụ: " + txtChucVuGiamSat1.Text + "; Chức danh: Giám sát;";
                 tb.Rows[index].Cells[1].Range.Text = giamSat1;
+                Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
+
             }
 
-            if (string.IsNullOrEmpty(txtTenGiamSat2.Text))
+            if (!string.IsNullOrEmpty(txtTenGiamSat2.Text))
             {
                 tb.Rows.Add(oMissing);
-                tb.Rows.Add(tb.Rows[index]);
+                //tb.Rows.Add(tb.Rows[index]);
                 index++;
-                string gt = "Ông";
-                string pb = Thong_tin_dang_nhap.ten_cn;
-                if (nvGS2 != null)
-                {
-                    if (!nvGS2.gioiTinh) gt = "Bà";
-                    if (nvGS2.maPb.Split('-')[1] != "01")
-                    {
-                        pb = Thong_tin_dang_nhap.tenPb;
-                    }
-                }
-                giamSat2 = index + ". " + gt + ": " + txtTenGiamSat2.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat2.Text + " Ngày cấp: " + txtNgayCapGiamSat2.Text +
-                    " Nơi cấp: " + txtNoiCapGiamSat2.Text + "; Chức vụ: " + txtChucVuGiamSat2.Text + " " + pb + "; Chức danh: Giám sát;";
+                giamSat2 = index + ". " + cbGtGs2.Text + ": " + txtTenGiamSat2.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat2.Text + " Ngày cấp: " + txtNgayCapGiamSat2.Text +
+                    ", Nơi cấp: " + txtNoiCapGiamSat2.Text + "; Chức vụ: " + txtChucVuGiamSat2.Text + "; Chức danh: Giám sát;";
                 tb.Rows[index].Cells[1].Range.Text = giamSat2;
+                Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
             }
 
-            //if (cbGiamSat1.SelectedItem != null)
-            //{
-            //    tb.Rows.Add(oMissing);
-            //    tb.Rows.Add(tb.Rows[index]);
-            //    index++;
-            //    var u = users[cbGiamSat1.SelectedIndex];
-            //    string gt = "Ông";
-            //    if (!u.gioiTinh) gt = "Bà";
-            //    string pb = Thong_tin_dang_nhap.ten_cn;
-            //    if (u.chucvu != "Giám đốc" && u.chucvu != "Phó Giám đốc")
-            //        pb = ToVanChuyenDAL.DV_LAYPHONGBAN(u.mapb);
-            //    giamSat1 = index + ". " + gt + ": " + u.tennv + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat1.Text + " Ngày cấp: " + txtNgayCapGiamSat1.Text +
-            //        " Nơi cấp: " + txtNoiCapGiamSat1.Text + "; Chức vụ: " + u.chucvu + " " + pb + "; Chức danh: Giám sát;";
-            //    tb.Rows[index].Cells[1].Range.Text = giamSat1;
-            //}
-
-            //listDich.Add("<GIAM_SAT_2>");
-            //if (cbGiamSat2.SelectedItem != null)
-            //{
-            //    tb.Rows.Add(oMissing);
-            //    index++;
-            //    var u = users[cbGiamSat2.SelectedIndex];
-            //    string gt = "Ông";
-            //    if (!u.gioiTinh) gt = "Bà";
-            //    string pb = Thong_tin_dang_nhap.ten_cn;
-            //    if (u.chucvu != "Giám đốc" && u.chucvu != "Phó Giám đốc")
-            //        pb = ToVanChuyenDAL.DV_LAYPHONGBAN(u.mapb);
-            //    giamSat2 = index + ". " + gt + ": " + u.tennv + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat2.Text + " Ngày cấp: " + txtNgayCapGiamSat2.Text +
-            //        " Nơi cấp: " + txtNoiCapGiamSat2.Text + "; Chức vụ: " + u.chucvu + " " + pb + "; Chức danh: Giám sát;";
-            //    tb.Rows[index].Cells[1].Range.Text = giamSat2;
-            //}
             //Lai xe
             if (!string.IsNullOrEmpty(txtTenLaiXe.Text))
             {
                 tb.Rows.Add(oMissing);
                 index++;
-                laiXe = index + ". " + "Ông/Bà: " + txtTenLaiXe.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDLaiXe.Text +
-                    " Ngày cấp: " + txtNgayCapLaiXe.Text + ",Nơi cấp: " + txtNoiCapLaiXe.Text + ";Chức danh: Lái xe;";
+                laiXe = index + ". " + cbGtLx.Text + ": " + txtTenLaiXe.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDLaiXe.Text +
+                    ", Ngày cấp: " + txtNgayCapLaiXe.Text + ", Nơi cấp: " + txtNoiCapLaiXe.Text + "; Chức danh: Lái xe;";
                 tb.Rows[index].Cells[1].Range.Text = laiXe;
+                Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
             }
             //Bao ve
             if (!string.IsNullOrEmpty(txtTenBaoVe.Text))
             {
                 tb.Rows.Add(oMissing);
                 index++;
-                baoVe = index + ". " + "Ông/Bà: " + txtTenBaoVe.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDBaoVe.Text +
-                    " Ngày cấp: " + txtNgayCapBaoVe.Text + ",Nơi cấp: " + txtNoiCapBaoVe.Text + ";Chức danh: Bảo vệ;";
+                baoVe = index + ". " + cbGtBv.Text + ": " + txtTenBaoVe.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDBaoVe.Text +
+                    ", Ngày cấp: " + txtNgayCapBaoVe.Text + ", Nơi cấp: " + txtNoiCapBaoVe.Text + "; Chức danh: Bảo vệ;";
                 tb.Rows[index].Cells[1].Range.Text = baoVe;
+                Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
+
             }
             doc.Save();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //if (isExist)
-                
+            bool gtTT = false, gtGs1 = false, gtGs2 =false, gtBv = false, gtLx= false;
+            if(cbGtTT.SelectedIndex == 0) gtTT = true;
+            if(cbGtGs1.SelectedIndex == 0) gtGs1 = true;
+            if(cbGtGs2.SelectedIndex == 0) gtGs2 = true;
+            if(cbGtBv.SelectedIndex == 0) gtBv = true;
+            if(cbGtLx.SelectedIndex == 0) gtLx = true;
+
+            try
+            {
+                ToVanChuyenDAL.DV_TOVANCHUYEN_UPDATE(
+                    Thong_tin_dang_nhap.ma_pb,
+                    gtTT,
+                    gtGs1,
+                    gtGs2,
+                    gtBv,
+                    gtLx,
+                    txtTenToTruong.Text,
+                    txtTenGiamSat1.Text,
+                    txtTenGiamSat2.Text,
+                    txtTenBaoVe.Text,
+                    txtTenLaiXe.Text,
+                    txtChucVuToTruong.Text,
+                    txtChucVuGiamSat1.Text,
+                    txtChucVuGiamSat2.Text,
+                    txtChucVuBaoVe.Text,
+                    txtChucVuLaiXe.Text,
+                    txtCMNDToTruong.Text,
+                    txtCMNDGiamSat1.Text,
+                    txtCMNDGiamSat2.Text,
+                    txtCMNDBaoVe.Text,
+                    txtCMNDLaiXe.Text,
+                    txtNgayCapToTruong.Text,
+                    txtNgayCapGiamSat1.Text,
+                    txtNgayCapGiamSat2.Text,
+                    txtNgayCapBaoVe.Text,
+                    txtNgayCapLaiXe.Text,
+                    txtNoiCapToTruong.Text,
+                    txtNoiCapGiamSat1.Text,
+                    txtNoiCapGiamSat2.Text,
+                    txtNoiCapBaoVe.Text,
+                    txtNoiCapLaiXe.Text,
+                    txtLoaiHang.Text,
+                    txtBangSo.Text,
+                    txtNoiDen.Text,
+                    txtPhuongTien.Text
+                    );
+            }
+            catch
+            {
+                ErrorMessageDAL.DataAccessError();
+            }
             KhoiTaoTLTVC();
             TaoFileTLTVC();
         }
@@ -325,92 +313,55 @@ namespace CRM.GUI_DV
             TachSo(txtBangSo);
         }
 
-        private void btnThemToTruong_Click(object sender, EventArgs e)
+        private void btnXoaToTruong_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataRow tt = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_CMND(txtCMNDTimKiem.Text).Rows[0];
-                txtTenToTruong.Text = tt["HOTEN"].ToString();
-                txtChucVuToTruong.Text = tt["CHUCVU"].ToString();
-                txtCMNDToTruong.Text = tt["CMND"].ToString();
-                txtNgayCapToTruong.Text = tt["NGAYCAP"].ToString();
-                txtNoiCapToTruong.Text = tt["NOICAP"].ToString();
-            }
-            catch
-            {
-                ErrorMessageDAL.DataAccessError();
-            }
+            cbGtTT.SelectedIndex = 0;
+            txtTenToTruong.Text = "";
+            txtChucVuToTruong.Text = "";
+            txtCMNDToTruong.Text = "";
+            txtNgayCapToTruong.Text = "";
+            txtNoiCapToTruong.Text = "";
         }
 
-        private void btnThemGiamSat1_Click(object sender, EventArgs e)
+        private void btnXoaGiamSat1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataRow tt = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_CMND(txtCMNDTimKiem.Text).Rows[0];
-                txtTenGiamSat1.Text = tt["HOTEN"].ToString();
-                txtChucVuGiamSat1.Text = tt["CHUCVU"].ToString();
-                txtCMNDGiamSat1.Text = tt["CMND"].ToString();
-                txtNgayCapGiamSat1.Text = tt["NGAYCAP"].ToString();
-                txtNoiCapGiamSat1.Text = tt["NOICAP"].ToString();
-            }
-            catch
-            {
-                ErrorMessageDAL.DataAccessError();
-            }
+            cbGtGs1.SelectedIndex = 0;
+            txtTenGiamSat1.Text = "";
+            txtChucVuGiamSat1.Text = "";
+            txtCMNDGiamSat1.Text = "";
+            txtNgayCapGiamSat1.Text = "";
+            txtNoiCapGiamSat1.Text = "";
         }
 
-        private void btnThemGiamSat2_Click(object sender, EventArgs e)
+        private void btnXoaGiamSat2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataRow tt = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_CMND(txtCMNDTimKiem.Text).Rows[0];
-                txtTenGiamSat2.Text = tt["HOTEN"].ToString();
-                txtChucVuGiamSat2.Text = tt["CHUCVU"].ToString();
-                txtCMNDGiamSat2.Text = tt["CMND"].ToString();
-                txtNgayCapGiamSat2.Text = tt["NGAYCAP"].ToString();
-                txtNoiCapGiamSat2.Text = tt["NOICAP"].ToString();
-            }
-            catch
-            {
-                ErrorMessageDAL.DataAccessError();
-            }
+            cbGtGs2.SelectedIndex = 0;
+            txtTenGiamSat2.Text = "";
+            txtChucVuGiamSat2.Text = "";
+            txtCMNDGiamSat2.Text = "";
+            txtNgayCapGiamSat2.Text = "";
+            txtNoiCapGiamSat2.Text = "";
         }
 
-        private void btnThemLaiXe_Click(object sender, EventArgs e)
+        private void btnXoaLaiXe_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataRow tt = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_CMND(txtCMNDTimKiem.Text).Rows[0];
-                txtTenLaiXe.Text = tt["HOTEN"].ToString();
-                txtChucVuLaiXe.Text = tt["CHUCVU"].ToString();
-                txtCMNDLaiXe.Text = tt["CMND"].ToString();
-                txtNgayCapLaiXe.Text = tt["NGAYCAP"].ToString();
-                txtNoiCapLaiXe.Text = tt["NOICAP"].ToString();
-            }
-            catch
-            {
-                ErrorMessageDAL.DataAccessError();
-            }
+            cbGtLx.SelectedIndex = 0;
+            txtTenLaiXe.Text = "";
+            txtChucVuLaiXe.Text = "";
+            txtCMNDLaiXe.Text = "";
+            txtNgayCapLaiXe.Text = "";
+            txtNoiCapLaiXe.Text = "";
         }
 
-        private void btnThemBaoVe_Click(object sender, EventArgs e)
+        private void btnXoaBaoVe_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataRow tt = ToVanChuyenDAL.DV_TOVANCHUYEN_NHANVIEN_CMND(txtCMNDTimKiem.Text).Rows[0];
-                txtTenBaoVe.Text = tt["HOTEN"].ToString();
-                txtChucVuBaoVe.Text = tt["CHUCVU"].ToString();
-                txtCMNDBaoVe.Text = tt["CMND"].ToString();
-                txtNgayCapBaoVe.Text = tt["NGAYCAP"].ToString();
-                txtNoiCapBaoVe.Text = tt["NOICAP"].ToString();
-            }
-            catch
-            {
-                ErrorMessageDAL.DataAccessError();
-            }
-            
+            cbGtBv.SelectedIndex = 0;
+            txtTenBaoVe.Text = "";
+            txtChucVuBaoVe.Text = "";
+            txtCMNDBaoVe.Text = "";
+            txtNgayCapBaoVe.Text = "";
+            txtNoiCapBaoVe.Text = "";
         }
-
 
     }
 }

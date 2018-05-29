@@ -9,6 +9,7 @@ namespace CRM.Entities.DV
 {
     class The
     {
+        private int _ID;
         private string _soThe;
         private string _hoTen;
         private string _soTK;
@@ -24,9 +25,11 @@ namespace CRM.Entities.DV
         private DateTime _ngayDK;
         private DateTime _ngayNhan;
         private DateTime _ngayGiao;
+        private bool _isPhatHanhMoi;
 
         public The(DataRow row)
         {
+            _ID = Convert.ToInt32(row["ID"]);
             _soThe = row["SOTHE"].ToString();
             _hoTen = row["HOTEN"].ToString();
             _soTK = row["SOTK"].ToString();
@@ -45,6 +48,13 @@ namespace CRM.Entities.DV
                 _ngayNhan = (DateTime)row["NGAYNHANTHE"];
             if (!string.IsNullOrEmpty(row["NGAYGIAOTHE"].ToString()))
                 _ngayGiao = (DateTime)row["NGAYGIAOTHE"];
+            isPhatHanhMoi = Convert.ToBoolean(row["PHATHANHMOI"]);
+        }
+
+        public int ID
+        {
+            get { return _ID; }
+            set { _ID = value; }
         }
 
         public string soThe
@@ -135,6 +145,12 @@ namespace CRM.Entities.DV
         {
             get { return _ngayGiao; }
             set { _ngayGiao = value; }
+        }
+
+        public bool isPhatHanhMoi
+        {
+            get { return _isPhatHanhMoi; }
+            set { _isPhatHanhMoi = value; }
         }
     }
 }

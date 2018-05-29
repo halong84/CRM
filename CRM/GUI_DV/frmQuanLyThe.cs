@@ -161,7 +161,7 @@ namespace CRM.GUI_DV
                 txtThongTin.Focus();
                 return;
             }
-            switch (cbTieuChi_TheoNgay.SelectedIndex)
+            switch (cbTieuChi_ThongTin.SelectedIndex)
             {
                 case 0:
                     DSTheTheoCMND();
@@ -191,8 +191,7 @@ namespace CRM.GUI_DV
             {
                 int rowIndex = dgvThongTinThe.SelectedRows[0].Index;
                 frmThongTinThe frm = new frmThongTinThe(
-                    dgvThongTinThe.Rows[rowIndex].Cells[2].Value.ToString(),
-                    dgvThongTinThe.Rows[rowIndex].Cells[4].Value.ToString()
+                    Convert.ToInt32(dgvThongTinThe.Rows[rowIndex].Cells[0].Value)
                     );
                 //frm.MdiParent = this;
                 frm.Show();
@@ -212,12 +211,11 @@ namespace CRM.GUI_DV
         private void btnDeleteThe_Click(object sender, EventArgs e)
         {
             string soThe = dgvThongTinThe.SelectedRows[0].Cells[3].Value.ToString();
-            string soTK = dgvThongTinThe.SelectedRows[0].Cells[2].Value.ToString();
-            string loaiThe = dgvThongTinThe.SelectedRows[0].Cells[4].Value.ToString();
+            int ID = Convert.ToInt32(dgvThongTinThe.SelectedRows[0].Cells[0].Value);
 
             try
             {
-                The the = new The(ThongTinTheDAL.LayThongTinThe(soTK, loaiThe));
+                The the = new The(ThongTinTheDAL.LayThongTinThe(ID));
 
                 if (Thong_tin_dang_nhap.ma_pb != the.maPB)
                 {
@@ -236,14 +234,8 @@ namespace CRM.GUI_DV
             {
                 try
                 {
-                    if (string.IsNullOrEmpty(soThe))
-                    {
-                        TheDAL.XoaThe_TheoSoTK_LoaiThe(soTK, loaiThe);
-                    }
-                    else
-                    {
-                        TheDAL.XoaThe_TheoSoThe(soThe);
-                    }
+                    TheDAL.XoaThe_TheoID(ID);
+                    
                     MessageBox.Show("Xóa thẻ "+ soThe + " thành công!","Thông báo", MessageBoxButtons.OK);
                     if (tcrlQuanLyThe.SelectedIndex == 1)
                         TimKiem_TheoThongTin();

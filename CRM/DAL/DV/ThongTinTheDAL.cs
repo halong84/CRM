@@ -10,12 +10,11 @@ namespace CRM.DAL.DV
 {
     class ThongTinTheDAL
     {
-        public static DataRow LayThongTinThe(string soTk, string loaiThe)
+        public static DataRow LayThongTinThe(int ID)
         {
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[]{
-                new SqlParameter("@sotk", soTk),
-                new SqlParameter("@loaithe", loaiThe)
+                new SqlParameter("@ID", ID)
             };
 
             DataRow row = db.dt("DV_LAYTHONGTINTHE", Params).Rows[0];
@@ -26,8 +25,7 @@ namespace CRM.DAL.DV
         {
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[] { 
-            new SqlParameter("@sotk", the.soTK),
-            new SqlParameter("@loaithe", the.loaiThe),
+            new SqlParameter("@ID", the.ID),
             new SqlParameter("@sothe", the.soThe),
             new SqlParameter("@ngaynhan", the.ngayNhan)
             };
@@ -39,8 +37,7 @@ namespace CRM.DAL.DV
         {
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[] { 
-            new SqlParameter("@sotk", the.soTK),
-            new SqlParameter("@loaithe", the.loaiThe),
+            new SqlParameter("@ID", the.ID),
             new SqlParameter("@ngaygiao", the.ngayGiao)
             };
 

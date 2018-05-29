@@ -242,13 +242,13 @@ namespace CRM.GUI_DV
             ));
 
             listDich.Add("<FIMI_CE_TT50>");
-            listNguon.Add(CommonMethods.ThemDauPhay((Convert.ToInt64(XoaDauPhay(txtFIMIEnd50.Text)) * 50000).ToString()));
+            listNguon.Add(CommonMethods.ThemDauPhay((fimiCE50 * 50000).ToString()));
             listDich.Add("<FIMI_CE_TT100>");
-            listNguon.Add(CommonMethods.ThemDauPhay((Convert.ToInt64(XoaDauPhay(txtFIMIEnd50.Text)) * 100000).ToString()));
+            listNguon.Add(CommonMethods.ThemDauPhay((fimiCE100 * 100000).ToString()));
             listDich.Add("<FIMI_CE_TT200>");
-            listNguon.Add(CommonMethods.ThemDauPhay((Convert.ToInt64(XoaDauPhay(txtFIMIEnd50.Text)) * 200000).ToString()));
+            listNguon.Add(CommonMethods.ThemDauPhay((fimiCE200 * 200000).ToString()));
             listDich.Add("<FIMI_CE_TT500>");
-            listNguon.Add(CommonMethods.ThemDauPhay((Convert.ToInt64(XoaDauPhay(txtFIMIEnd50.Text)) * 500000).ToString()));
+            listNguon.Add(CommonMethods.ThemDauPhay((fimiCE500 * 500000).ToString()));
             listDich.Add("<FIMI_CE_TT_TONG>");
             long cashEnd = 
             Convert.ToInt64(XoaDauPhay(txtFIMIEnd50.Text)) * 50000 +

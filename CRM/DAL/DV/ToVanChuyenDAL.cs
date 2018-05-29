@@ -59,46 +59,40 @@ namespace CRM.DAL.DV
             return dt;
         }
 
+
+
         public static void DV_TOVANCHUYEN_UPDATE(
-            string mapb,
-            string matotruong,
-            string magiamsat1,
-            string magiamsat2,
-            string mabaove,
-            string malaixe,
-            string loaihang,
-            string bangso,
-            string noiden,
-            string phuongtien
-            )
-        {
-            DataAccess db = new DataAccess();
-            SqlParameter[] Params = new SqlParameter[]{
-                new SqlParameter("@mapb", mapb),
-                new SqlParameter("@matotruong", matotruong),
-                new SqlParameter("@magiamsat1", magiamsat1),
-                new SqlParameter("@magiamsat2", magiamsat2),
-                new SqlParameter("@mabaove", mabaove),
-                new SqlParameter("@malaixe", malaixe),
-                new SqlParameter("@loaihang", loaihang),
-                new SqlParameter("@bangso", bangso),
-                new SqlParameter("@noiden", noiden),
-                new SqlParameter("@phuongtien", phuongtien),
-
-            };
-            DataTable dt = db.dt("DV_TOVANCHUYEN_UPDATE", Params);
-        }
-
-
-
-
-        public static void DV_TOVANCHUYEN_INSERT(
                 string mapb,
-                string matotruong,
-                string magiamsat1,
-                string magiamsat2,
-                string mabaove,
-                string malaixe,
+                bool gtTT,
+                bool gtGs1,
+                bool gtGs2,
+                bool gtBv,
+                bool gtLx,
+                string tenTT,
+                string tenGs1,
+                string tenGs2,
+                string tenBv,
+                string tenLx,
+                string chucvuTT,
+                string chucvuGs1,
+                string chucvuGs2,
+                string chucvuBv,
+                string chucvuLx,
+                string cmndTT,
+                string cmndGs1,
+                string cmndGs2,
+                string cmndBv,
+                string cmndLx,
+                string ngaycapTT,
+                string ngaycapGs1,
+                string ngaycapGs2,
+                string ngaycapBv,
+                string ngaycapLx,
+                string noicapTT,
+                string noicapGs1,
+                string noicapGs2,
+                string noicapBv,
+                string noicapLx,
                 string loaihang,
                 string bangso,
                 string noiden,
@@ -108,11 +102,36 @@ namespace CRM.DAL.DV
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[]{
                 new SqlParameter("@mapb", mapb),
-                new SqlParameter("@matotruong", matotruong),
-                new SqlParameter("@magiamsat1", magiamsat1),
-                new SqlParameter("@magiamsat2", magiamsat2),
-                new SqlParameter("@mabaove", mabaove),
-                new SqlParameter("@malaixe", malaixe),
+                new SqlParameter("@gtTT", gtTT),
+                new SqlParameter("@gtGs1", gtGs1),
+                new SqlParameter("@gtGs2", gtGs2),
+                new SqlParameter("@gtBv", gtBv),
+                new SqlParameter("@gtLx", gtLx),
+                new SqlParameter("@tenTT", tenTT),
+                new SqlParameter("@tenGs1", tenGs1),
+                new SqlParameter("@tenGs2", tenGs2),
+                new SqlParameter("@tenBv", tenBv),
+                new SqlParameter("@tenLx", tenLx),
+                new SqlParameter("@chucvuTT", chucvuTT),
+                new SqlParameter("@chucvuGs1", chucvuGs1),
+                new SqlParameter("@chucvuGs2", chucvuGs2),
+                new SqlParameter("@chucvuBv", chucvuBv),
+                new SqlParameter("@chucvuLx", chucvuLx),
+                new SqlParameter("@cmndTT", cmndTT),
+                new SqlParameter("@cmndGs1", cmndGs1),
+                new SqlParameter("@cmndGs2", cmndGs2),
+                new SqlParameter("@cmndBv", cmndBv),
+                new SqlParameter("@cmndLx", cmndLx),
+                new SqlParameter("@ngaycapTT", ngaycapTT),
+                new SqlParameter("@ngaycapGs1", ngaycapGs1),
+                new SqlParameter("@ngaycapGs2", ngaycapGs2),
+                new SqlParameter("@ngaycapBv", ngaycapBv),
+                new SqlParameter("@ngaycapLx", ngaycapLx),
+                new SqlParameter("@noicapTT", noicapTT),
+                new SqlParameter("@noicapGs1", noicapGs1),
+                new SqlParameter("@noicapGs2", noicapGs2),
+                new SqlParameter("@noicapBv", noicapBv),
+                new SqlParameter("@noicapLx", noicapLx),
                 new SqlParameter("@loaihang", loaihang),
                 new SqlParameter("@bangso", bangso),
                 new SqlParameter("@noiden", noiden),
