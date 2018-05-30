@@ -10,6 +10,8 @@ namespace CRM.Entities.DV
 {
     class KhachHangDV
     {
+        public int loaiKH;
+        public string gpkd;
         private string _ma_KH;
         private string _ho_ten;
         private string _cmt;
@@ -116,6 +118,8 @@ namespace CRM.Entities.DV
 
         public KhachHangDV(DataRow row)
         {
+            loaiKH = Convert.ToInt32(row["LOAIKH"].ToString());
+            gpkd = row["GPDK"].ToString();
             this._ma_KH = row["MAKH"].ToString();
             this._ho_ten = row["HOTEN"].ToString();
             this._cmt = row["CMND"].ToString();

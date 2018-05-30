@@ -152,3 +152,4 @@ C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.csprojResolveAssembl
 D:\Agribank\CRM\CRM\bin\Debug\CRM.exe.config
 D:\Agribank\CRM\CRM\obj\Debug\CRM.exe
 D:\Agribank\CRM\CRM\obj\Debug\CRM.pdb
+C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.GUI_DV.frmDangKyDichVu.resources

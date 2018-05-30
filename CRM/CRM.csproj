@@ -164,6 +164,7 @@
     <Compile Include="DAL\DIEM_CNDAL.cs" />
     <Compile Include="DAL\DIENDAL.cs" />
     <Compile Include="DAL\DV\chinhanhDAL.cs" />
+    <Compile Include="DAL\DV\DangKyDichVuDAL.cs" />
     <Compile Include="DAL\DV\ErrorMessageDAL.cs" />
     <Compile Include="DAL\DV\KiemQuyDAL.cs" />
     <Compile Include="DAL\DV\NhanVienDAL.cs" />
