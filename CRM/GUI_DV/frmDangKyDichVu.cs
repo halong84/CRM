@@ -1,5 +1,6 @@
 ﻿using CRM.DAL.DV;
 using CRM.Entities.DV;
+using CRM.Utilities.DV;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,16 @@ namespace CRM.GUI_DV
     public partial class frmDangKyDichVu : Form
     {
         KhachHangDV kh;
+
+        List<string> listNguon, listDich;
+
         public frmDangKyDichVu()
         {
             InitializeComponent();
+            listDich = new List<string>();
+            listNguon = new List<string>();
+            cbChonMauBieu.SelectedIndex = 0;
+            btnTimKiem.Focus();
             //Place holder Textbox 
             txtTimKiem.Text = "CMND/CCCD/MAKH/SDT/GPKD";
             txtTimKiem.ForeColor = Color.Gray;
@@ -82,7 +90,7 @@ namespace CRM.GUI_DV
             cbSoTK.Items.Clear();
             //Thong tin chung
             txtNgayCap.Text = kh.ngay_cap.ToString("dd/MM/yyyy");
-            txtCMT.Text = kh.cmt;
+            txtCMND.Text = kh.cmt;
             txtNoiCap.Text = PhatHanhTheGhiNoDAL.DV_GET_NOICAPCMND(kh.noi_cap);
             txtMaKH.Text = kh.ma_KH;
             txtHoTen.Text = kh.ho_ten;
@@ -134,7 +142,7 @@ namespace CRM.GUI_DV
         {
             txtNgayCap.Text = "";
             txtNoiCap.Text = "";
-            txtCMT.Text = "";
+            txtCMND.Text = "";
             txtHoTen.Text = "";
             txtQuocTich.Text = "";
             cbSoTK.SelectedItem = null;
@@ -145,6 +153,85 @@ namespace CRM.GUI_DV
             txtDiaChi.Text = "";
             cbGioiTinh.SelectedItem = null;
             txtSoDienThoai.Text = "";
+        }
+
+        void KhoiTao()
+        {
+            listNguon.Clear();
+            listDich.Clear();
+
+            //Thong tin chung
+            string cn = Thong_tin_dang_nhap.ten_cn;
+            if (!Thong_tin_dang_nhap.hs) cn = Thong_tin_dang_nhap.tenPb;
+            listDich.Add("<CHINHANH0>");
+            listNguon.Add(cn.ToUpper());
+
+            listDich.Add("<CHINHANH>");
+            listNguon.Add(cn);
+
+            listDich.Add("<HOTEN>");
+            listNguon.Add(txtHoTen.Text);
+
+            listDich.Add("<SOTAIKHOAN>");
+            listNguon.Add(cbSoTK.Text);
+
+            listDich.Add("<CMND>");
+            listNguon.Add(txtCMND.Text);
+
+            listDich.Add("<NGAYCAP>");
+            listNguon.Add(txtNgayCap.Text);
+
+            listDich.Add("<NOICAP>");
+            listNguon.Add(txtNoiCap.Text);
+
+            listDich.Add("<GPKD>");
+            listNguon.Add(txtGPKD.Text);
+
+            listDich.Add("<NGAYSINH>");
+            listNguon.Add(txtNgaySinh.Text);
+
+            listDich.Add("<GIOITINH>");
+            if (kh.gioi_tinh) listNguon.Add("Nam");
+            else listNguon.Add("Nữ");
+
+            listDich.Add("<SODIENTHOAI>");
+            listNguon.Add(txtSoDienThoai.Text);
+
+            listDich.Add("<EMAIL>");
+            listNguon.Add(txtEmail.Text);
+
+            listDich.Add("<QUOCTICH>");
+            listNguon.Add(txtQuocTich.Text);
+
+            listDich.Add("<DIACHI>");
+            listNguon.Add(txtDiaChi.Text);
+
+            //E-MB 01
+            listDich.Add("<NGUOIDAIDIEN_EMB_1>");
+            listNguon.Add(txtNguoiDaiDien_EMB_1.Text);
+
+            listDich.Add("<CHUCVU_EMB_1>");
+            listNguon.Add(txtChucVu_EMB_1.Text);
+
+            listDich.Add("<NGAYCAP_GPKD_EMB_1>");
+            listNguon.Add(txtNgayCapGPKD_EMB_1.Text);
+
+            listDich.Add("<NOICAP_GPKD_EMB_1>");
+            listNguon.Add(txtNoiCapGPKD_EMB_1.Text);
+
+            listDich.Add("<DTDD_EMB_1>");
+            listNguon.Add(txtSDTSDDV_EMB_1.Text);
+
+            listDich.Add("<KHCN_EMB_1>");
+            if(kh.loaiKH == 1) listNguon.Add(((char)0x2611).ToString());
+            else listNguon.Add(((char)0x2610).ToString());
+
+            listDich.Add("<KHDN_EMB_1>");
+            if (kh.loaiKH == 2) listNguon.Add(((char)0x2611).ToString());
+            else listNguon.Add(((char)0x2610).ToString());
+
+            //E-MB 02
+
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -196,20 +283,17 @@ namespace CRM.GUI_DV
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void cbChonMauBieu_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            tCtrlDangKyDV.SelectedIndex = cbChonMauBieu.SelectedIndex;
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
+        private void tCtrlDangKyDV_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            cbChonMauBieu.SelectedIndex = tCtrlDangKyDV.SelectedIndex;
         }
 
-        private void gbThongTinKH_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
     }

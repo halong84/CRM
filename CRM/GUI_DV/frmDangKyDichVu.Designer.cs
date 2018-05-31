@@ -58,7 +58,7 @@
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtCMT = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
             this.lbSoCMT = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTaoMauBieu = new System.Windows.Forms.Button();
@@ -66,26 +66,184 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tCtrlDangKyDV = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtDangKyEBSDTDV = new System.Windows.Forms.TextBox();
-            this.txtDangKyEBGPKDNoiCap = new System.Windows.Forms.TextBox();
-            this.txtDangKyEBGPKDNgayCap = new System.Windows.Forms.MaskedTextBox();
-            this.txtDangKyEBDienThoai = new System.Windows.Forms.TextBox();
-            this.txtDangKyEBChucVu = new System.Windows.Forms.TextBox();
-            this.txtDangKyEBNguoiDaiDien = new System.Windows.Forms.TextBox();
+            this.txtSDTSDDV_EMB_1 = new System.Windows.Forms.TextBox();
+            this.txtNoiCapGPKD_EMB_1 = new System.Windows.Forms.TextBox();
+            this.txtNgayCapGPKD_EMB_1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtChucVu_EMB_1 = new System.Windows.Forms.TextBox();
+            this.txtNguoiDaiDien_EMB_1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtNoiDung_EMB_2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ckbThayDoi_EMB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbHuy_EMB_2 = new System.Windows.Forms.CheckBox();
+            this.txtNoiCapGPKD_EMB_2 = new System.Windows.Forms.TextBox();
+            this.txtNgayCapGPKD_EMB_2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtChucVu_EMB_2 = new System.Windows.Forms.TextBox();
+            this.txtNguoiDaiDien_EMB_2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtGiaTriGD_EMB_3 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dtpNgayGioGD_EMB_3 = new System.Windows.Forms.DateTimePicker();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtNoiDung_EMB_3 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtNoiCapGPKD_EMB_3 = new System.Windows.Forms.TextBox();
+            this.txtNgayCapGPKD_EMB_3 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDienThoai_EMB_3 = new System.Windows.Forms.TextBox();
+            this.txtNguoiDaiDien_EMB_3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_5_SMS_1 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_4_SMS_1 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_3_SMS_1 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_2_SMS_1 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_1_SMS_1 = new System.Windows.Forms.TextBox();
+            this.txtNoiCapGPKD_SMS_1 = new System.Windows.Forms.TextBox();
+            this.txtNgayCapGPKD_SMS_1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDienThoai_SMS_1 = new System.Windows.Forms.TextBox();
+            this.txtChucVu_SMS_1 = new System.Windows.Forms.TextBox();
+            this.txtNguoiDaiDien_SMS_1 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.ckbThayDoi_SMS_2 = new System.Windows.Forms.CheckBox();
+            this.ckbHuy_SMS_2 = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_5_SMS_2 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_4_SMS_2 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_3_SMS_2 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_2_SMS_2 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtSDTSDDV_1_SMS_2 = new System.Windows.Forms.TextBox();
+            this.txtNoiCapGPKD_SMS_2 = new System.Windows.Forms.TextBox();
+            this.txtNgayCapGPKD_SMS_2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDienThoai_SMS_2 = new System.Windows.Forms.TextBox();
+            this.txtChucVu_SMS_2 = new System.Windows.Forms.TextBox();
+            this.txtNguoiDaiDien_SMS_2 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSDTNhanOTP_IB_1 = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.txtSTKSuDung_6_IB_1 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtSTKSuDung_5_IB_1 = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txtSTKSuDung_4_IB_1 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.txtSTKSuDung_3_IB_1 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtSTKSuDung_2_IB_1 = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txtSTKSuDung_1_IB_1 = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtSTKMacDinh_IB_1 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.ckbOTP_Hard_IB_1 = new System.Windows.Forms.CheckBox();
+            this.ckbOTP_Soft_IB_1 = new System.Windows.Forms.CheckBox();
+            this.ckbOTP_SMS_IB_1 = new System.Windows.Forms.CheckBox();
+            this.ckbDVPhiTaiChinh_IB_1 = new System.Windows.Forms.CheckBox();
+            this.ckbDVThanhToan_IB_1 = new System.Windows.Forms.CheckBox();
+            this.ckbDVTaiChinh_IB_1 = new System.Windows.Forms.CheckBox();
+            this.txtMST_IB_1 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtSDTNhanOTP_IB_2 = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.ckbOTP_Hard_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbOTP_Soft_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbOTP_SMS_IB_2 = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.ckbHuyBo_TaiChinh_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbBoSung_ThanhToan_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbHuyBo_ThanhToan_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbBoSung_TaiChinh_IB_2 = new System.Windows.Forms.CheckBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ckbHuyBo_TK_1_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbBoSung_TK_2_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbHuyBo_TK_2_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbHuyBo_TK_3_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbHuyBo_TK_4_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbBoSung_TK_4_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbBoSung_TK_3_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbBoSung_TK_1_IB_2 = new System.Windows.Forms.CheckBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtTaiKhoan_4_IB_2 = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan_3_IB_2 = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan_2_IB_2 = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan_1_IB_2 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ckbHuyDangKy_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbCapLaiThietBi_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbKhoaThietBi_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbKhoaTenDangNhap_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbMoKhoaThietBi_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbMoTenDangNhap_IB_2 = new System.Windows.Forms.CheckBox();
+            this.ckbCapLaiMK_IB_2 = new System.Windows.Forms.CheckBox();
+            this.txtMST_IB_2 = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbThongTinKH
@@ -118,7 +276,7 @@
             this.gbThongTinKH.Controls.Add(this.txtHoTen);
             this.gbThongTinKH.Controls.Add(this.txtTimKiem);
             this.gbThongTinKH.Controls.Add(this.btnTimKiem);
-            this.gbThongTinKH.Controls.Add(this.txtCMT);
+            this.gbThongTinKH.Controls.Add(this.txtCMND);
             this.gbThongTinKH.Controls.Add(this.lbSoCMT);
             this.gbThongTinKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbThongTinKH.Location = new System.Drawing.Point(13, 12);
@@ -127,7 +285,6 @@
             this.gbThongTinKH.TabIndex = 1;
             this.gbThongTinKH.TabStop = false;
             this.gbThongTinKH.Text = "Thông tin khách hàng";
-            this.gbThongTinKH.Enter += new System.EventHandler(this.gbThongTinKH_Enter);
             // 
             // label18
             // 
@@ -161,9 +318,9 @@
             // btnLayTTKH
             // 
             this.btnLayTTKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLayTTKH.Location = new System.Drawing.Point(550, 14);
+            this.btnLayTTKH.Location = new System.Drawing.Point(638, 15);
             this.btnLayTTKH.Name = "btnLayTTKH";
-            this.btnLayTTKH.Size = new System.Drawing.Size(129, 23);
+            this.btnLayTTKH.Size = new System.Drawing.Size(150, 23);
             this.btnLayTTKH.TabIndex = 34;
             this.btnLayTTKH.Text = "Lấy TTKH từ file";
             this.btnLayTTKH.UseVisualStyleBackColor = true;
@@ -392,7 +549,7 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(125, 16);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(150, 20);
+            this.txtTimKiem.Size = new System.Drawing.Size(247, 20);
             this.txtTimKiem.TabIndex = 1;
             this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
             this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
@@ -402,7 +559,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(306, 14);
+            this.btnTimKiem.Location = new System.Drawing.Point(378, 15);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
             this.btnTimKiem.TabIndex = 2;
@@ -410,15 +567,15 @@
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // txtCMT
+            // txtCMND
             // 
-            this.txtCMT.Enabled = false;
-            this.txtCMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMT.Location = new System.Drawing.Point(125, 76);
-            this.txtCMT.MaxLength = 15;
-            this.txtCMT.Name = "txtCMT";
-            this.txtCMT.Size = new System.Drawing.Size(150, 20);
-            this.txtCMT.TabIndex = 4;
+            this.txtCMND.Enabled = false;
+            this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Location = new System.Drawing.Point(125, 76);
+            this.txtCMND.MaxLength = 15;
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(150, 20);
+            this.txtCMND.TabIndex = 4;
             // 
             // lbSoCMT
             // 
@@ -445,20 +602,35 @@
             // 
             // btnTaoMauBieu
             // 
-            this.btnTaoMauBieu.Location = new System.Drawing.Point(549, 15);
+            this.btnTaoMauBieu.Location = new System.Drawing.Point(638, 16);
             this.btnTaoMauBieu.Name = "btnTaoMauBieu";
-            this.btnTaoMauBieu.Size = new System.Drawing.Size(129, 23);
+            this.btnTaoMauBieu.Size = new System.Drawing.Size(151, 23);
             this.btnTaoMauBieu.TabIndex = 2;
             this.btnTaoMauBieu.Text = "Tạo mẫu biểu";
             this.btnTaoMauBieu.UseVisualStyleBackColor = true;
             // 
             // cbChonMauBieu
             // 
+            this.cbChonMauBieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChonMauBieu.FormattingEnabled = true;
+            this.cbChonMauBieu.Items.AddRange(new object[] {
+            "Mẫu 01A/E-MB Phiếu đăng ký sử dụng dịch vụ E-Mobile Banking",
+            "Mẫu 02A/E-MB Giấy đề nghị Thay đổi/Bổ sung/Hủy đăng ký dịch vụ E-Mobile Banking",
+            "Mẫu 03A/E-MB Đề nghị xác minh giao dịch",
+            "Mẫu 04A/E-MB Giấy đề nghị khởi tạo lại mật khẩu dịch vụ E-Mobile Banking",
+            "Mẫu 01/SMS Phiếu đăng ký sử dụng dịch vụ Mobile Banking",
+            "Mẫu 02/SMS Giấy đề nghị Thay đổi/Bổ sung/Hủy đăng ký dịch vụ Mobile Banking",
+            "Mẫu 01/IBCN Phiếu đăng ký sử dụng dịch vụ Internet Banking",
+            "Mẫu 02/IBCN Phiếu đăng ký Thay đổi/Bổ sung/Ngừng sử dụng dịch vụ Internet Banking" +
+                "",
+            "Mẫu 03/IBCN Biên bản bàn giao thiết bị xác thực",
+            "Mẫu 04/IBCN Phiếu yêu cầu đăng ký và kích hoạt thiết bị xác thực trên hệ thống OT" +
+                "P"});
             this.cbChonMauBieu.Location = new System.Drawing.Point(124, 17);
             this.cbChonMauBieu.Name = "cbChonMauBieu";
-            this.cbChonMauBieu.Size = new System.Drawing.Size(403, 21);
+            this.cbChonMauBieu.Size = new System.Drawing.Size(503, 21);
             this.cbChonMauBieu.TabIndex = 1;
+            this.cbChonMauBieu.SelectedIndexChanged += new System.EventHandler(this.cbChonMauBieu_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -476,24 +648,28 @@
             this.tCtrlDangKyDV.Controls.Add(this.tabPage3);
             this.tCtrlDangKyDV.Controls.Add(this.tabPage4);
             this.tCtrlDangKyDV.Controls.Add(this.tabPage5);
-            this.tCtrlDangKyDV.Location = new System.Drawing.Point(12, 265);
+            this.tCtrlDangKyDV.Controls.Add(this.tabPage6);
+            this.tCtrlDangKyDV.Controls.Add(this.tabPage7);
+            this.tCtrlDangKyDV.Controls.Add(this.tabPage8);
+            this.tCtrlDangKyDV.Controls.Add(this.tabPage9);
+            this.tCtrlDangKyDV.Controls.Add(this.tabPage10);
+            this.tCtrlDangKyDV.Location = new System.Drawing.Point(13, 266);
             this.tCtrlDangKyDV.Name = "tCtrlDangKyDV";
             this.tCtrlDangKyDV.SelectedIndex = 0;
             this.tCtrlDangKyDV.Size = new System.Drawing.Size(794, 328);
             this.tCtrlDangKyDV.TabIndex = 3;
+            this.tCtrlDangKyDV.SelectedIndexChanged += new System.EventHandler(this.tCtrlDangKyDV_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.txtDangKyEBSDTDV);
-            this.tabPage1.Controls.Add(this.txtDangKyEBGPKDNoiCap);
-            this.tabPage1.Controls.Add(this.txtDangKyEBGPKDNgayCap);
-            this.tabPage1.Controls.Add(this.txtDangKyEBDienThoai);
-            this.tabPage1.Controls.Add(this.txtDangKyEBChucVu);
-            this.tabPage1.Controls.Add(this.txtDangKyEBNguoiDaiDien);
+            this.tabPage1.Controls.Add(this.txtSDTSDDV_EMB_1);
+            this.tabPage1.Controls.Add(this.txtNoiCapGPKD_EMB_1);
+            this.tabPage1.Controls.Add(this.txtNgayCapGPKD_EMB_1);
+            this.tabPage1.Controls.Add(this.txtChucVu_EMB_1);
+            this.tabPage1.Controls.Add(this.txtNguoiDaiDien_EMB_1);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -503,52 +679,44 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Đăng ký E-Mobile Banking";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // txtDangKyEBSDTDV
+            // txtSDTSDDV_EMB_1
             // 
-            this.txtDangKyEBSDTDV.Location = new System.Drawing.Point(172, 84);
-            this.txtDangKyEBSDTDV.Name = "txtDangKyEBSDTDV";
-            this.txtDangKyEBSDTDV.Size = new System.Drawing.Size(150, 20);
-            this.txtDangKyEBSDTDV.TabIndex = 14;
+            this.txtSDTSDDV_EMB_1.Location = new System.Drawing.Point(172, 84);
+            this.txtSDTSDDV_EMB_1.Name = "txtSDTSDDV_EMB_1";
+            this.txtSDTSDDV_EMB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_EMB_1.TabIndex = 14;
             // 
-            // txtDangKyEBGPKDNoiCap
+            // txtNoiCapGPKD_EMB_1
             // 
-            this.txtDangKyEBGPKDNoiCap.Location = new System.Drawing.Point(172, 58);
-            this.txtDangKyEBGPKDNoiCap.Name = "txtDangKyEBGPKDNoiCap";
-            this.txtDangKyEBGPKDNoiCap.Size = new System.Drawing.Size(150, 20);
-            this.txtDangKyEBGPKDNoiCap.TabIndex = 12;
+            this.txtNoiCapGPKD_EMB_1.Location = new System.Drawing.Point(172, 58);
+            this.txtNoiCapGPKD_EMB_1.Name = "txtNoiCapGPKD_EMB_1";
+            this.txtNoiCapGPKD_EMB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtNoiCapGPKD_EMB_1.TabIndex = 12;
             // 
-            // txtDangKyEBGPKDNgayCap
+            // txtNgayCapGPKD_EMB_1
             // 
-            this.txtDangKyEBGPKDNgayCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDangKyEBGPKDNgayCap.Location = new System.Drawing.Point(172, 32);
-            this.txtDangKyEBGPKDNgayCap.Mask = "00/00/0000";
-            this.txtDangKyEBGPKDNgayCap.Name = "txtDangKyEBGPKDNgayCap";
-            this.txtDangKyEBGPKDNgayCap.Size = new System.Drawing.Size(150, 20);
-            this.txtDangKyEBGPKDNgayCap.TabIndex = 11;
-            this.txtDangKyEBGPKDNgayCap.ValidatingType = typeof(System.DateTime);
+            this.txtNgayCapGPKD_EMB_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCapGPKD_EMB_1.Location = new System.Drawing.Point(172, 32);
+            this.txtNgayCapGPKD_EMB_1.Mask = "00/00/0000";
+            this.txtNgayCapGPKD_EMB_1.Name = "txtNgayCapGPKD_EMB_1";
+            this.txtNgayCapGPKD_EMB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtNgayCapGPKD_EMB_1.TabIndex = 11;
+            this.txtNgayCapGPKD_EMB_1.ValidatingType = typeof(System.DateTime);
             // 
-            // txtDangKyEBDienThoai
+            // txtChucVu_EMB_1
             // 
-            this.txtDangKyEBDienThoai.Location = new System.Drawing.Point(630, 6);
-            this.txtDangKyEBDienThoai.Name = "txtDangKyEBDienThoai";
-            this.txtDangKyEBDienThoai.Size = new System.Drawing.Size(150, 20);
-            this.txtDangKyEBDienThoai.TabIndex = 4;
+            this.txtChucVu_EMB_1.Location = new System.Drawing.Point(401, 6);
+            this.txtChucVu_EMB_1.Name = "txtChucVu_EMB_1";
+            this.txtChucVu_EMB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtChucVu_EMB_1.TabIndex = 3;
             // 
-            // txtDangKyEBChucVu
+            // txtNguoiDaiDien_EMB_1
             // 
-            this.txtDangKyEBChucVu.Location = new System.Drawing.Point(401, 6);
-            this.txtDangKyEBChucVu.Name = "txtDangKyEBChucVu";
-            this.txtDangKyEBChucVu.Size = new System.Drawing.Size(150, 20);
-            this.txtDangKyEBChucVu.TabIndex = 3;
-            // 
-            // txtDangKyEBNguoiDaiDien
-            // 
-            this.txtDangKyEBNguoiDaiDien.Location = new System.Drawing.Point(172, 6);
-            this.txtDangKyEBNguoiDaiDien.Name = "txtDangKyEBNguoiDaiDien";
-            this.txtDangKyEBNguoiDaiDien.Size = new System.Drawing.Size(150, 20);
-            this.txtDangKyEBNguoiDaiDien.TabIndex = 2;
+            this.txtNguoiDaiDien_EMB_1.Location = new System.Drawing.Point(172, 6);
+            this.txtNguoiDaiDien_EMB_1.Name = "txtNguoiDaiDien_EMB_1";
+            this.txtNguoiDaiDien_EMB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtNguoiDaiDien_EMB_1.TabIndex = 2;
             // 
             // label17
             // 
@@ -577,15 +745,6 @@
             this.label15.TabIndex = 10;
             this.label15.Text = "Ngày cấp GPKD (Nếu có):";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(566, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Điện thoại:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -606,6 +765,18 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtNoiDung_EMB_2);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.ckbThayDoi_EMB_2);
+            this.tabPage2.Controls.Add(this.ckbHuy_EMB_2);
+            this.tabPage2.Controls.Add(this.txtNoiCapGPKD_EMB_2);
+            this.tabPage2.Controls.Add(this.txtNgayCapGPKD_EMB_2);
+            this.tabPage2.Controls.Add(this.txtChucVu_EMB_2);
+            this.tabPage2.Controls.Add(this.txtNguoiDaiDien_EMB_2);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -614,32 +785,1437 @@
             this.tabPage2.Text = "Thay đổi E-Mobile Banking";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtNoiDung_EMB_2
+            // 
+            this.txtNoiDung_EMB_2.Location = new System.Drawing.Point(171, 138);
+            this.txtNoiDung_EMB_2.Multiline = true;
+            this.txtNoiDung_EMB_2.Name = "txtNoiDung_EMB_2";
+            this.txtNoiDung_EMB_2.Size = new System.Drawing.Size(608, 60);
+            this.txtNoiDung_EMB_2.TabIndex = 30;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 138);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(94, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Nội dung thay đổi:";
+            // 
+            // ckbThayDoi_EMB_2
+            // 
+            this.ckbThayDoi_EMB_2.AutoSize = true;
+            this.ckbThayDoi_EMB_2.Location = new System.Drawing.Point(8, 113);
+            this.ckbThayDoi_EMB_2.Name = "ckbThayDoi_EMB_2";
+            this.ckbThayDoi_EMB_2.Size = new System.Drawing.Size(150, 17);
+            this.ckbThayDoi_EMB_2.TabIndex = 28;
+            this.ckbThayDoi_EMB_2.Text = "Thay đổi/Bổ sung dịch vụ";
+            this.ckbThayDoi_EMB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbHuy_EMB_2
+            // 
+            this.ckbHuy_EMB_2.AutoSize = true;
+            this.ckbHuy_EMB_2.Location = new System.Drawing.Point(8, 90);
+            this.ckbHuy_EMB_2.Name = "ckbHuy_EMB_2";
+            this.ckbHuy_EMB_2.Size = new System.Drawing.Size(125, 17);
+            this.ckbHuy_EMB_2.TabIndex = 27;
+            this.ckbHuy_EMB_2.Text = "Hủy đăng ký dịch vụ";
+            this.ckbHuy_EMB_2.UseVisualStyleBackColor = true;
+            // 
+            // txtNoiCapGPKD_EMB_2
+            // 
+            this.txtNoiCapGPKD_EMB_2.Location = new System.Drawing.Point(171, 58);
+            this.txtNoiCapGPKD_EMB_2.Name = "txtNoiCapGPKD_EMB_2";
+            this.txtNoiCapGPKD_EMB_2.Size = new System.Drawing.Size(150, 20);
+            this.txtNoiCapGPKD_EMB_2.TabIndex = 24;
+            // 
+            // txtNgayCapGPKD_EMB_2
+            // 
+            this.txtNgayCapGPKD_EMB_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCapGPKD_EMB_2.Location = new System.Drawing.Point(171, 32);
+            this.txtNgayCapGPKD_EMB_2.Mask = "00/00/0000";
+            this.txtNgayCapGPKD_EMB_2.Name = "txtNgayCapGPKD_EMB_2";
+            this.txtNgayCapGPKD_EMB_2.Size = new System.Drawing.Size(150, 20);
+            this.txtNgayCapGPKD_EMB_2.TabIndex = 22;
+            this.txtNgayCapGPKD_EMB_2.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtChucVu_EMB_2
+            // 
+            this.txtChucVu_EMB_2.Location = new System.Drawing.Point(400, 6);
+            this.txtChucVu_EMB_2.Name = "txtChucVu_EMB_2";
+            this.txtChucVu_EMB_2.Size = new System.Drawing.Size(150, 20);
+            this.txtChucVu_EMB_2.TabIndex = 18;
+            // 
+            // txtNguoiDaiDien_EMB_2
+            // 
+            this.txtNguoiDaiDien_EMB_2.Location = new System.Drawing.Point(171, 6);
+            this.txtNguoiDaiDien_EMB_2.Name = "txtNguoiDaiDien_EMB_2";
+            this.txtNguoiDaiDien_EMB_2.Size = new System.Drawing.Size(150, 20);
+            this.txtNguoiDaiDien_EMB_2.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Nơi cấp GPKD (Nếu có):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(133, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Ngày cấp GPKD (Nếu có):";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(338, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Chức vụ:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(5, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Người đại diện:";
+            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txtGiaTriGD_EMB_3);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.dtpNgayGioGD_EMB_3);
+            this.tabPage3.Controls.Add(this.label22);
+            this.tabPage3.Controls.Add(this.txtNoiDung_EMB_3);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.txtNoiCapGPKD_EMB_3);
+            this.tabPage3.Controls.Add(this.txtNgayCapGPKD_EMB_3);
+            this.tabPage3.Controls.Add(this.txtDienThoai_EMB_3);
+            this.tabPage3.Controls.Add(this.txtNguoiDaiDien_EMB_3);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(786, 302);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Xác minh giao dịch E-Mobile Banking";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txtGiaTriGD_EMB_3
+            // 
+            this.txtGiaTriGD_EMB_3.Location = new System.Drawing.Point(171, 157);
+            this.txtGiaTriGD_EMB_3.Name = "txtGiaTriGD_EMB_3";
+            this.txtGiaTriGD_EMB_3.Size = new System.Drawing.Size(612, 20);
+            this.txtGiaTriGD_EMB_3.TabIndex = 40;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(5, 163);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(127, 13);
+            this.label23.TabIndex = 39;
+            this.label23.Text = "Giá trị giao dịch (Nếu có):";
+            // 
+            // dtpNgayGioGD_EMB_3
+            // 
+            this.dtpNgayGioGD_EMB_3.CustomFormat = "hh:mm dd/MM/yyyy";
+            this.dtpNgayGioGD_EMB_3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayGioGD_EMB_3.Location = new System.Drawing.Point(171, 131);
+            this.dtpNgayGioGD_EMB_3.Name = "dtpNgayGioGD_EMB_3";
+            this.dtpNgayGioGD_EMB_3.Size = new System.Drawing.Size(150, 20);
+            this.dtpNgayGioGD_EMB_3.TabIndex = 38;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(5, 137);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(98, 13);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Ngày giờ giao dịch:";
+            // 
+            // txtNoiDung_EMB_3
+            // 
+            this.txtNoiDung_EMB_3.Location = new System.Drawing.Point(171, 85);
+            this.txtNoiDung_EMB_3.Multiline = true;
+            this.txtNoiDung_EMB_3.Name = "txtNoiDung_EMB_3";
+            this.txtNoiDung_EMB_3.Size = new System.Drawing.Size(612, 40);
+            this.txtNoiDung_EMB_3.TabIndex = 36;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(5, 88);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(139, 13);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Nội dung yêu cầu xác minh:";
+            // 
+            // txtNoiCapGPKD_EMB_3
+            // 
+            this.txtNoiCapGPKD_EMB_3.Location = new System.Drawing.Point(171, 59);
+            this.txtNoiCapGPKD_EMB_3.Name = "txtNoiCapGPKD_EMB_3";
+            this.txtNoiCapGPKD_EMB_3.Size = new System.Drawing.Size(150, 20);
+            this.txtNoiCapGPKD_EMB_3.TabIndex = 34;
+            // 
+            // txtNgayCapGPKD_EMB_3
+            // 
+            this.txtNgayCapGPKD_EMB_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCapGPKD_EMB_3.Location = new System.Drawing.Point(171, 33);
+            this.txtNgayCapGPKD_EMB_3.Mask = "00/00/0000";
+            this.txtNgayCapGPKD_EMB_3.Name = "txtNgayCapGPKD_EMB_3";
+            this.txtNgayCapGPKD_EMB_3.Size = new System.Drawing.Size(150, 20);
+            this.txtNgayCapGPKD_EMB_3.TabIndex = 32;
+            this.txtNgayCapGPKD_EMB_3.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDienThoai_EMB_3
+            // 
+            this.txtDienThoai_EMB_3.Location = new System.Drawing.Point(400, 7);
+            this.txtDienThoai_EMB_3.Name = "txtDienThoai_EMB_3";
+            this.txtDienThoai_EMB_3.Size = new System.Drawing.Size(150, 20);
+            this.txtDienThoai_EMB_3.TabIndex = 28;
+            // 
+            // txtNguoiDaiDien_EMB_3
+            // 
+            this.txtNguoiDaiDien_EMB_3.Location = new System.Drawing.Point(171, 7);
+            this.txtNguoiDaiDien_EMB_3.Name = "txtNguoiDaiDien_EMB_3";
+            this.txtNguoiDaiDien_EMB_3.Size = new System.Drawing.Size(150, 20);
+            this.txtNguoiDaiDien_EMB_3.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Nơi cấp GPKD (Nếu có):";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(5, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(133, 13);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Ngày cấp GPKD (Nếu có):";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(338, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(50, 13);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Chức vụ:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(5, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(79, 13);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "Người đại diện:";
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.label25);
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(786, 302);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Thiết lập lại mật khẩu E-Mobile Banking";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(147, 35);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(636, 40);
+            this.textBox2.TabIndex = 38;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(4, 38);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(137, 13);
+            this.label25.TabIndex = 37;
+            this.label25.Text = "Lý do khởi tạo lại mật khẩu:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(4, 12);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(132, 13);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Số điện thoại sử dụng DV:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(147, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 20);
+            this.textBox1.TabIndex = 35;
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label36);
+            this.tabPage5.Controls.Add(this.txtSDTSDDV_5_SMS_1);
+            this.tabPage5.Controls.Add(this.label35);
+            this.tabPage5.Controls.Add(this.txtSDTSDDV_4_SMS_1);
+            this.tabPage5.Controls.Add(this.label34);
+            this.tabPage5.Controls.Add(this.txtSDTSDDV_3_SMS_1);
+            this.tabPage5.Controls.Add(this.label33);
+            this.tabPage5.Controls.Add(this.txtSDTSDDV_2_SMS_1);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Controls.Add(this.txtSDTSDDV_1_SMS_1);
+            this.tabPage5.Controls.Add(this.txtNoiCapGPKD_SMS_1);
+            this.tabPage5.Controls.Add(this.txtNgayCapGPKD_SMS_1);
+            this.tabPage5.Controls.Add(this.txtDienThoai_SMS_1);
+            this.tabPage5.Controls.Add(this.txtChucVu_SMS_1);
+            this.tabPage5.Controls.Add(this.txtNguoiDaiDien_SMS_1);
+            this.tabPage5.Controls.Add(this.label26);
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.label28);
+            this.tabPage5.Controls.Add(this.label29);
+            this.tabPage5.Controls.Add(this.label30);
+            this.tabPage5.Controls.Add(this.label31);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(786, 302);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = "Đăng ký Mobile Banking";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(149, 218);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(16, 13);
+            this.label36.TabIndex = 35;
+            this.label36.Text = "5.";
+            // 
+            // txtSDTSDDV_5_SMS_1
+            // 
+            this.txtSDTSDDV_5_SMS_1.Location = new System.Drawing.Point(171, 215);
+            this.txtSDTSDDV_5_SMS_1.Name = "txtSDTSDDV_5_SMS_1";
+            this.txtSDTSDDV_5_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_5_SMS_1.TabIndex = 34;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(149, 192);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(16, 13);
+            this.label35.TabIndex = 33;
+            this.label35.Text = "4.";
+            // 
+            // txtSDTSDDV_4_SMS_1
+            // 
+            this.txtSDTSDDV_4_SMS_1.Location = new System.Drawing.Point(171, 189);
+            this.txtSDTSDDV_4_SMS_1.Name = "txtSDTSDDV_4_SMS_1";
+            this.txtSDTSDDV_4_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_4_SMS_1.TabIndex = 32;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(149, 166);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(16, 13);
+            this.label34.TabIndex = 31;
+            this.label34.Text = "3.";
+            // 
+            // txtSDTSDDV_3_SMS_1
+            // 
+            this.txtSDTSDDV_3_SMS_1.Location = new System.Drawing.Point(171, 163);
+            this.txtSDTSDDV_3_SMS_1.Name = "txtSDTSDDV_3_SMS_1";
+            this.txtSDTSDDV_3_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_3_SMS_1.TabIndex = 30;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(149, 140);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(16, 13);
+            this.label33.TabIndex = 29;
+            this.label33.Text = "2.";
+            // 
+            // txtSDTSDDV_2_SMS_1
+            // 
+            this.txtSDTSDDV_2_SMS_1.Location = new System.Drawing.Point(171, 137);
+            this.txtSDTSDDV_2_SMS_1.Name = "txtSDTSDDV_2_SMS_1";
+            this.txtSDTSDDV_2_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_2_SMS_1.TabIndex = 28;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(149, 114);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(16, 13);
+            this.label32.TabIndex = 27;
+            this.label32.Text = "1.";
+            // 
+            // txtSDTSDDV_1_SMS_1
+            // 
+            this.txtSDTSDDV_1_SMS_1.Location = new System.Drawing.Point(171, 111);
+            this.txtSDTSDDV_1_SMS_1.Name = "txtSDTSDDV_1_SMS_1";
+            this.txtSDTSDDV_1_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_1_SMS_1.TabIndex = 26;
+            // 
+            // txtNoiCapGPKD_SMS_1
+            // 
+            this.txtNoiCapGPKD_SMS_1.Location = new System.Drawing.Point(171, 59);
+            this.txtNoiCapGPKD_SMS_1.Name = "txtNoiCapGPKD_SMS_1";
+            this.txtNoiCapGPKD_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtNoiCapGPKD_SMS_1.TabIndex = 24;
+            // 
+            // txtNgayCapGPKD_SMS_1
+            // 
+            this.txtNgayCapGPKD_SMS_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCapGPKD_SMS_1.Location = new System.Drawing.Point(171, 33);
+            this.txtNgayCapGPKD_SMS_1.Mask = "00/00/0000";
+            this.txtNgayCapGPKD_SMS_1.Name = "txtNgayCapGPKD_SMS_1";
+            this.txtNgayCapGPKD_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtNgayCapGPKD_SMS_1.TabIndex = 22;
+            this.txtNgayCapGPKD_SMS_1.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDienThoai_SMS_1
+            // 
+            this.txtDienThoai_SMS_1.Location = new System.Drawing.Point(629, 7);
+            this.txtDienThoai_SMS_1.Name = "txtDienThoai_SMS_1";
+            this.txtDienThoai_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtDienThoai_SMS_1.TabIndex = 20;
+            // 
+            // txtChucVu_SMS_1
+            // 
+            this.txtChucVu_SMS_1.Location = new System.Drawing.Point(400, 7);
+            this.txtChucVu_SMS_1.Name = "txtChucVu_SMS_1";
+            this.txtChucVu_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtChucVu_SMS_1.TabIndex = 18;
+            // 
+            // txtNguoiDaiDien_SMS_1
+            // 
+            this.txtNguoiDaiDien_SMS_1.Location = new System.Drawing.Point(171, 7);
+            this.txtNguoiDaiDien_SMS_1.Name = "txtNguoiDaiDien_SMS_1";
+            this.txtNguoiDaiDien_SMS_1.Size = new System.Drawing.Size(150, 20);
+            this.txtNguoiDaiDien_SMS_1.TabIndex = 16;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(5, 88);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(152, 13);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "Số điện thoại sử dụng dịch vụ:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(5, 65);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(124, 13);
+            this.label27.TabIndex = 23;
+            this.label27.Text = "Nơi cấp GPKD (Nếu có):";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(5, 36);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(133, 13);
+            this.label28.TabIndex = 21;
+            this.label28.Text = "Ngày cấp GPKD (Nếu có):";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(565, 10);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(58, 13);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Điện thoại:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(338, 10);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(50, 13);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "Chức vụ:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(5, 10);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(79, 13);
+            this.label31.TabIndex = 15;
+            this.label31.Text = "Người đại diện:";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.ckbThayDoi_SMS_2);
+            this.tabPage6.Controls.Add(this.ckbHuy_SMS_2);
+            this.tabPage6.Controls.Add(this.label37);
+            this.tabPage6.Controls.Add(this.txtSDTSDDV_5_SMS_2);
+            this.tabPage6.Controls.Add(this.label38);
+            this.tabPage6.Controls.Add(this.txtSDTSDDV_4_SMS_2);
+            this.tabPage6.Controls.Add(this.label39);
+            this.tabPage6.Controls.Add(this.txtSDTSDDV_3_SMS_2);
+            this.tabPage6.Controls.Add(this.label40);
+            this.tabPage6.Controls.Add(this.txtSDTSDDV_2_SMS_2);
+            this.tabPage6.Controls.Add(this.label41);
+            this.tabPage6.Controls.Add(this.txtSDTSDDV_1_SMS_2);
+            this.tabPage6.Controls.Add(this.txtNoiCapGPKD_SMS_2);
+            this.tabPage6.Controls.Add(this.txtNgayCapGPKD_SMS_2);
+            this.tabPage6.Controls.Add(this.txtDienThoai_SMS_2);
+            this.tabPage6.Controls.Add(this.txtChucVu_SMS_2);
+            this.tabPage6.Controls.Add(this.txtNguoiDaiDien_SMS_2);
+            this.tabPage6.Controls.Add(this.label42);
+            this.tabPage6.Controls.Add(this.label43);
+            this.tabPage6.Controls.Add(this.label44);
+            this.tabPage6.Controls.Add(this.label45);
+            this.tabPage6.Controls.Add(this.label46);
+            this.tabPage6.Controls.Add(this.label47);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(786, 302);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Thay đổi TT Mobile Banking";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // ckbThayDoi_SMS_2
+            // 
+            this.ckbThayDoi_SMS_2.AutoSize = true;
+            this.ckbThayDoi_SMS_2.Location = new System.Drawing.Point(7, 114);
+            this.ckbThayDoi_SMS_2.Name = "ckbThayDoi_SMS_2";
+            this.ckbThayDoi_SMS_2.Size = new System.Drawing.Size(150, 17);
+            this.ckbThayDoi_SMS_2.TabIndex = 58;
+            this.ckbThayDoi_SMS_2.Text = "Thay đổi/Bổ sung dịch vụ";
+            this.ckbThayDoi_SMS_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbHuy_SMS_2
+            // 
+            this.ckbHuy_SMS_2.AutoSize = true;
+            this.ckbHuy_SMS_2.Location = new System.Drawing.Point(7, 91);
+            this.ckbHuy_SMS_2.Name = "ckbHuy_SMS_2";
+            this.ckbHuy_SMS_2.Size = new System.Drawing.Size(125, 17);
+            this.ckbHuy_SMS_2.TabIndex = 57;
+            this.ckbHuy_SMS_2.Text = "Hủy đăng ký dịch vụ";
+            this.ckbHuy_SMS_2.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(147, 255);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(16, 13);
+            this.label37.TabIndex = 56;
+            this.label37.Text = "5.";
+            // 
+            // txtSDTSDDV_5_SMS_2
+            // 
+            this.txtSDTSDDV_5_SMS_2.Location = new System.Drawing.Point(169, 252);
+            this.txtSDTSDDV_5_SMS_2.Name = "txtSDTSDDV_5_SMS_2";
+            this.txtSDTSDDV_5_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_5_SMS_2.TabIndex = 55;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(147, 229);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(16, 13);
+            this.label38.TabIndex = 54;
+            this.label38.Text = "4.";
+            // 
+            // txtSDTSDDV_4_SMS_2
+            // 
+            this.txtSDTSDDV_4_SMS_2.Location = new System.Drawing.Point(169, 226);
+            this.txtSDTSDDV_4_SMS_2.Name = "txtSDTSDDV_4_SMS_2";
+            this.txtSDTSDDV_4_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_4_SMS_2.TabIndex = 53;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(147, 203);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(16, 13);
+            this.label39.TabIndex = 52;
+            this.label39.Text = "3.";
+            // 
+            // txtSDTSDDV_3_SMS_2
+            // 
+            this.txtSDTSDDV_3_SMS_2.Location = new System.Drawing.Point(169, 200);
+            this.txtSDTSDDV_3_SMS_2.Name = "txtSDTSDDV_3_SMS_2";
+            this.txtSDTSDDV_3_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_3_SMS_2.TabIndex = 51;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(147, 177);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(16, 13);
+            this.label40.TabIndex = 50;
+            this.label40.Text = "2.";
+            // 
+            // txtSDTSDDV_2_SMS_2
+            // 
+            this.txtSDTSDDV_2_SMS_2.Location = new System.Drawing.Point(169, 174);
+            this.txtSDTSDDV_2_SMS_2.Name = "txtSDTSDDV_2_SMS_2";
+            this.txtSDTSDDV_2_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_2_SMS_2.TabIndex = 49;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(147, 151);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(16, 13);
+            this.label41.TabIndex = 48;
+            this.label41.Text = "1.";
+            // 
+            // txtSDTSDDV_1_SMS_2
+            // 
+            this.txtSDTSDDV_1_SMS_2.Location = new System.Drawing.Point(169, 148);
+            this.txtSDTSDDV_1_SMS_2.Name = "txtSDTSDDV_1_SMS_2";
+            this.txtSDTSDDV_1_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTSDDV_1_SMS_2.TabIndex = 47;
+            // 
+            // txtNoiCapGPKD_SMS_2
+            // 
+            this.txtNoiCapGPKD_SMS_2.Location = new System.Drawing.Point(169, 58);
+            this.txtNoiCapGPKD_SMS_2.Name = "txtNoiCapGPKD_SMS_2";
+            this.txtNoiCapGPKD_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtNoiCapGPKD_SMS_2.TabIndex = 45;
+            // 
+            // txtNgayCapGPKD_SMS_2
+            // 
+            this.txtNgayCapGPKD_SMS_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCapGPKD_SMS_2.Location = new System.Drawing.Point(169, 32);
+            this.txtNgayCapGPKD_SMS_2.Mask = "00/00/0000";
+            this.txtNgayCapGPKD_SMS_2.Name = "txtNgayCapGPKD_SMS_2";
+            this.txtNgayCapGPKD_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtNgayCapGPKD_SMS_2.TabIndex = 43;
+            this.txtNgayCapGPKD_SMS_2.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDienThoai_SMS_2
+            // 
+            this.txtDienThoai_SMS_2.Location = new System.Drawing.Point(627, 6);
+            this.txtDienThoai_SMS_2.Name = "txtDienThoai_SMS_2";
+            this.txtDienThoai_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtDienThoai_SMS_2.TabIndex = 41;
+            // 
+            // txtChucVu_SMS_2
+            // 
+            this.txtChucVu_SMS_2.Location = new System.Drawing.Point(398, 6);
+            this.txtChucVu_SMS_2.Name = "txtChucVu_SMS_2";
+            this.txtChucVu_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtChucVu_SMS_2.TabIndex = 39;
+            // 
+            // txtNguoiDaiDien_SMS_2
+            // 
+            this.txtNguoiDaiDien_SMS_2.Location = new System.Drawing.Point(169, 6);
+            this.txtNguoiDaiDien_SMS_2.Name = "txtNguoiDaiDien_SMS_2";
+            this.txtNguoiDaiDien_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtNguoiDaiDien_SMS_2.TabIndex = 37;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(7, 134);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(152, 13);
+            this.label42.TabIndex = 46;
+            this.label42.Text = "Số điện thoại sử dụng dịch vụ:";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(3, 64);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(124, 13);
+            this.label43.TabIndex = 44;
+            this.label43.Text = "Nơi cấp GPKD (Nếu có):";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(3, 35);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(133, 13);
+            this.label44.TabIndex = 42;
+            this.label44.Text = "Ngày cấp GPKD (Nếu có):";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(563, 9);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(58, 13);
+            this.label45.TabIndex = 40;
+            this.label45.Text = "Điện thoại:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(336, 9);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(50, 13);
+            this.label46.TabIndex = 38;
+            this.label46.Text = "Chức vụ:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(3, 9);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(79, 13);
+            this.label47.TabIndex = 36;
+            this.label47.Text = "Người đại diện:";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.groupBox2);
+            this.tabPage7.Controls.Add(this.txtMST_IB_1);
+            this.tabPage7.Controls.Add(this.label52);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(786, 302);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Đăng ký Internet Banking";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtSDTNhanOTP_IB_1);
+            this.groupBox2.Controls.Add(this.label66);
+            this.groupBox2.Controls.Add(this.label56);
+            this.groupBox2.Controls.Add(this.txtSTKSuDung_6_IB_1);
+            this.groupBox2.Controls.Add(this.label50);
+            this.groupBox2.Controls.Add(this.txtSTKSuDung_5_IB_1);
+            this.groupBox2.Controls.Add(this.label51);
+            this.groupBox2.Controls.Add(this.txtSTKSuDung_4_IB_1);
+            this.groupBox2.Controls.Add(this.label53);
+            this.groupBox2.Controls.Add(this.txtSTKSuDung_3_IB_1);
+            this.groupBox2.Controls.Add(this.label54);
+            this.groupBox2.Controls.Add(this.txtSTKSuDung_2_IB_1);
+            this.groupBox2.Controls.Add(this.label55);
+            this.groupBox2.Controls.Add(this.txtSTKSuDung_1_IB_1);
+            this.groupBox2.Controls.Add(this.label49);
+            this.groupBox2.Controls.Add(this.txtSTKMacDinh_IB_1);
+            this.groupBox2.Controls.Add(this.label48);
+            this.groupBox2.Controls.Add(this.ckbOTP_Hard_IB_1);
+            this.groupBox2.Controls.Add(this.ckbOTP_Soft_IB_1);
+            this.groupBox2.Controls.Add(this.ckbOTP_SMS_IB_1);
+            this.groupBox2.Controls.Add(this.ckbDVPhiTaiChinh_IB_1);
+            this.groupBox2.Controls.Add(this.ckbDVThanhToan_IB_1);
+            this.groupBox2.Controls.Add(this.ckbDVTaiChinh_IB_1);
+            this.groupBox2.Location = new System.Drawing.Point(8, 31);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(775, 268);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Đăng ký dịch vụ";
+            // 
+            // txtSDTNhanOTP_IB_1
+            // 
+            this.txtSDTNhanOTP_IB_1.Location = new System.Drawing.Point(465, 65);
+            this.txtSDTNhanOTP_IB_1.Name = "txtSDTNhanOTP_IB_1";
+            this.txtSDTNhanOTP_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSDTNhanOTP_IB_1.TabIndex = 49;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(334, 68);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(125, 13);
+            this.label66.TabIndex = 48;
+            this.label66.Text = "Số điện thoại nhận OTP:";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(107, 248);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(16, 13);
+            this.label56.TabIndex = 47;
+            this.label56.Text = "6.";
+            // 
+            // txtSTKSuDung_6_IB_1
+            // 
+            this.txtSTKSuDung_6_IB_1.Location = new System.Drawing.Point(129, 245);
+            this.txtSTKSuDung_6_IB_1.Name = "txtSTKSuDung_6_IB_1";
+            this.txtSTKSuDung_6_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKSuDung_6_IB_1.TabIndex = 46;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(107, 222);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(16, 13);
+            this.label50.TabIndex = 45;
+            this.label50.Text = "5.";
+            // 
+            // txtSTKSuDung_5_IB_1
+            // 
+            this.txtSTKSuDung_5_IB_1.Location = new System.Drawing.Point(129, 219);
+            this.txtSTKSuDung_5_IB_1.Name = "txtSTKSuDung_5_IB_1";
+            this.txtSTKSuDung_5_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKSuDung_5_IB_1.TabIndex = 44;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(107, 196);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(16, 13);
+            this.label51.TabIndex = 43;
+            this.label51.Text = "4.";
+            // 
+            // txtSTKSuDung_4_IB_1
+            // 
+            this.txtSTKSuDung_4_IB_1.Location = new System.Drawing.Point(129, 193);
+            this.txtSTKSuDung_4_IB_1.Name = "txtSTKSuDung_4_IB_1";
+            this.txtSTKSuDung_4_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKSuDung_4_IB_1.TabIndex = 42;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(107, 170);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(16, 13);
+            this.label53.TabIndex = 41;
+            this.label53.Text = "3.";
+            // 
+            // txtSTKSuDung_3_IB_1
+            // 
+            this.txtSTKSuDung_3_IB_1.Location = new System.Drawing.Point(129, 167);
+            this.txtSTKSuDung_3_IB_1.Name = "txtSTKSuDung_3_IB_1";
+            this.txtSTKSuDung_3_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKSuDung_3_IB_1.TabIndex = 40;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(107, 144);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(16, 13);
+            this.label54.TabIndex = 39;
+            this.label54.Text = "2.";
+            // 
+            // txtSTKSuDung_2_IB_1
+            // 
+            this.txtSTKSuDung_2_IB_1.Location = new System.Drawing.Point(129, 141);
+            this.txtSTKSuDung_2_IB_1.Name = "txtSTKSuDung_2_IB_1";
+            this.txtSTKSuDung_2_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKSuDung_2_IB_1.TabIndex = 38;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(107, 118);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(16, 13);
+            this.label55.TabIndex = 37;
+            this.label55.Text = "1.";
+            // 
+            // txtSTKSuDung_1_IB_1
+            // 
+            this.txtSTKSuDung_1_IB_1.Location = new System.Drawing.Point(129, 115);
+            this.txtSTKSuDung_1_IB_1.Name = "txtSTKSuDung_1_IB_1";
+            this.txtSTKSuDung_1_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKSuDung_1_IB_1.TabIndex = 36;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(7, 95);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(111, 13);
+            this.label49.TabIndex = 31;
+            this.label49.Text = "Số tài khoản sử dụng:";
+            // 
+            // txtSTKMacDinh_IB_1
+            // 
+            this.txtSTKMacDinh_IB_1.Location = new System.Drawing.Point(129, 65);
+            this.txtSTKMacDinh_IB_1.Name = "txtSTKMacDinh_IB_1";
+            this.txtSTKMacDinh_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtSTKMacDinh_IB_1.TabIndex = 30;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(6, 68);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(117, 13);
+            this.label48.TabIndex = 29;
+            this.label48.Text = "Số tài khoản mặc định:";
+            // 
+            // ckbOTP_Hard_IB_1
+            // 
+            this.ckbOTP_Hard_IB_1.AutoSize = true;
+            this.ckbOTP_Hard_IB_1.Location = new System.Drawing.Point(661, 42);
+            this.ckbOTP_Hard_IB_1.Name = "ckbOTP_Hard_IB_1";
+            this.ckbOTP_Hard_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbOTP_Hard_IB_1.Size = new System.Drawing.Size(108, 17);
+            this.ckbOTP_Hard_IB_1.TabIndex = 5;
+            this.ckbOTP_Hard_IB_1.Text = "OTP Hard Token";
+            this.ckbOTP_Hard_IB_1.UseVisualStyleBackColor = true;
+            // 
+            // ckbOTP_Soft_IB_1
+            // 
+            this.ckbOTP_Soft_IB_1.AutoSize = true;
+            this.ckbOTP_Soft_IB_1.Location = new System.Drawing.Point(346, 42);
+            this.ckbOTP_Soft_IB_1.Name = "ckbOTP_Soft_IB_1";
+            this.ckbOTP_Soft_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbOTP_Soft_IB_1.Size = new System.Drawing.Size(104, 17);
+            this.ckbOTP_Soft_IB_1.TabIndex = 4;
+            this.ckbOTP_Soft_IB_1.Text = "OTP Soft Token";
+            this.ckbOTP_Soft_IB_1.UseVisualStyleBackColor = true;
+            // 
+            // ckbOTP_SMS_IB_1
+            // 
+            this.ckbOTP_SMS_IB_1.AutoSize = true;
+            this.ckbOTP_SMS_IB_1.Location = new System.Drawing.Point(10, 42);
+            this.ckbOTP_SMS_IB_1.Name = "ckbOTP_SMS_IB_1";
+            this.ckbOTP_SMS_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbOTP_SMS_IB_1.Size = new System.Drawing.Size(108, 17);
+            this.ckbOTP_SMS_IB_1.TabIndex = 3;
+            this.ckbOTP_SMS_IB_1.Text = "OTP SMS Token";
+            this.ckbOTP_SMS_IB_1.UseVisualStyleBackColor = true;
+            // 
+            // ckbDVPhiTaiChinh_IB_1
+            // 
+            this.ckbDVPhiTaiChinh_IB_1.AutoSize = true;
+            this.ckbDVPhiTaiChinh_IB_1.Location = new System.Drawing.Point(644, 19);
+            this.ckbDVPhiTaiChinh_IB_1.Name = "ckbDVPhiTaiChinh_IB_1";
+            this.ckbDVPhiTaiChinh_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbDVPhiTaiChinh_IB_1.Size = new System.Drawing.Size(125, 17);
+            this.ckbDVPhiTaiChinh_IB_1.TabIndex = 2;
+            this.ckbDVPhiTaiChinh_IB_1.Text = "Dịch vụ phi tài chính";
+            this.ckbDVPhiTaiChinh_IB_1.UseVisualStyleBackColor = true;
+            // 
+            // ckbDVThanhToan_IB_1
+            // 
+            this.ckbDVThanhToan_IB_1.AutoSize = true;
+            this.ckbDVThanhToan_IB_1.Location = new System.Drawing.Point(333, 19);
+            this.ckbDVThanhToan_IB_1.Name = "ckbDVThanhToan_IB_1";
+            this.ckbDVThanhToan_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbDVThanhToan_IB_1.Size = new System.Drawing.Size(117, 17);
+            this.ckbDVThanhToan_IB_1.TabIndex = 1;
+            this.ckbDVThanhToan_IB_1.Text = "Dịch vụ thanh toán";
+            this.ckbDVThanhToan_IB_1.UseVisualStyleBackColor = true;
+            // 
+            // ckbDVTaiChinh_IB_1
+            // 
+            this.ckbDVTaiChinh_IB_1.AutoSize = true;
+            this.ckbDVTaiChinh_IB_1.Location = new System.Drawing.Point(10, 19);
+            this.ckbDVTaiChinh_IB_1.Name = "ckbDVTaiChinh_IB_1";
+            this.ckbDVTaiChinh_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbDVTaiChinh_IB_1.Size = new System.Drawing.Size(108, 17);
+            this.ckbDVTaiChinh_IB_1.TabIndex = 0;
+            this.ckbDVTaiChinh_IB_1.Text = "Dịch vụ tài chính";
+            this.ckbDVTaiChinh_IB_1.UseVisualStyleBackColor = true;
+            // 
+            // txtMST_IB_1
+            // 
+            this.txtMST_IB_1.Location = new System.Drawing.Point(74, 5);
+            this.txtMST_IB_1.Name = "txtMST_IB_1";
+            this.txtMST_IB_1.Size = new System.Drawing.Size(150, 20);
+            this.txtMST_IB_1.TabIndex = 26;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(5, 8);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(63, 13);
+            this.label52.TabIndex = 25;
+            this.label52.Text = "Mã số thuế:";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.groupBox7);
+            this.tabPage8.Controls.Add(this.groupBox4);
+            this.tabPage8.Controls.Add(this.groupBox3);
+            this.tabPage8.Controls.Add(this.txtMST_IB_2);
+            this.tabPage8.Controls.Add(this.label65);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(786, 302);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Thay đổi TT Internet Banking";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtSDTNhanOTP_IB_2);
+            this.groupBox7.Controls.Add(this.label64);
+            this.groupBox7.Controls.Add(this.ckbOTP_Hard_IB_2);
+            this.groupBox7.Controls.Add(this.ckbOTP_Soft_IB_2);
+            this.groupBox7.Controls.Add(this.ckbOTP_SMS_IB_2);
+            this.groupBox7.Location = new System.Drawing.Point(13, 218);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(764, 81);
+            this.groupBox7.TabIndex = 33;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Phương thức xác thực";
+            // 
+            // txtSDTNhanOTP_IB_2
+            // 
+            this.txtSDTNhanOTP_IB_2.Location = new System.Drawing.Point(137, 50);
+            this.txtSDTNhanOTP_IB_2.Name = "txtSDTNhanOTP_IB_2";
+            this.txtSDTNhanOTP_IB_2.Size = new System.Drawing.Size(121, 20);
+            this.txtSDTNhanOTP_IB_2.TabIndex = 4;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(6, 53);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(125, 13);
+            this.label64.TabIndex = 3;
+            this.label64.Text = "Số điện thoại nhận OTP:";
+            // 
+            // ckbOTP_Hard_IB_2
+            // 
+            this.ckbOTP_Hard_IB_2.AutoSize = true;
+            this.ckbOTP_Hard_IB_2.Location = new System.Drawing.Point(650, 19);
+            this.ckbOTP_Hard_IB_2.Name = "ckbOTP_Hard_IB_2";
+            this.ckbOTP_Hard_IB_2.Size = new System.Drawing.Size(108, 17);
+            this.ckbOTP_Hard_IB_2.TabIndex = 2;
+            this.ckbOTP_Hard_IB_2.Text = "OTP Hard Token";
+            this.ckbOTP_Hard_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbOTP_Soft_IB_2
+            // 
+            this.ckbOTP_Soft_IB_2.AutoSize = true;
+            this.ckbOTP_Soft_IB_2.Location = new System.Drawing.Point(340, 19);
+            this.ckbOTP_Soft_IB_2.Name = "ckbOTP_Soft_IB_2";
+            this.ckbOTP_Soft_IB_2.Size = new System.Drawing.Size(104, 17);
+            this.ckbOTP_Soft_IB_2.TabIndex = 1;
+            this.ckbOTP_Soft_IB_2.Text = "OTP Soft Token";
+            this.ckbOTP_Soft_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbOTP_SMS_IB_2
+            // 
+            this.ckbOTP_SMS_IB_2.AutoSize = true;
+            this.ckbOTP_SMS_IB_2.Location = new System.Drawing.Point(6, 19);
+            this.ckbOTP_SMS_IB_2.Name = "ckbOTP_SMS_IB_2";
+            this.ckbOTP_SMS_IB_2.Size = new System.Drawing.Size(108, 17);
+            this.ckbOTP_SMS_IB_2.TabIndex = 0;
+            this.ckbOTP_SMS_IB_2.Text = "OTP SMS Token";
+            this.ckbOTP_SMS_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Location = new System.Drawing.Point(195, 30);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(588, 182);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thay đổi thông tin đăng ký";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label63);
+            this.groupBox6.Controls.Add(this.label62);
+            this.groupBox6.Controls.Add(this.ckbHuyBo_TaiChinh_IB_2);
+            this.groupBox6.Controls.Add(this.ckbBoSung_ThanhToan_IB_2);
+            this.groupBox6.Controls.Add(this.ckbHuyBo_ThanhToan_IB_2);
+            this.groupBox6.Controls.Add(this.ckbBoSung_TaiChinh_IB_2);
+            this.groupBox6.Controls.Add(this.label60);
+            this.groupBox6.Controls.Add(this.label61);
+            this.groupBox6.Location = new System.Drawing.Point(306, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(276, 155);
+            this.groupBox6.TabIndex = 56;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Thay đổi dịch vụ";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(6, 64);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(110, 13);
+            this.label63.TabIndex = 57;
+            this.label63.Text = "2. Dịch vụ thanh toán";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(6, 38);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(101, 13);
+            this.label62.TabIndex = 56;
+            this.label62.Text = "1. Dịch vụ tài chính";
+            // 
+            // ckbHuyBo_TaiChinh_IB_2
+            // 
+            this.ckbHuyBo_TaiChinh_IB_2.AutoSize = true;
+            this.ckbHuyBo_TaiChinh_IB_2.Location = new System.Drawing.Point(209, 37);
+            this.ckbHuyBo_TaiChinh_IB_2.Name = "ckbHuyBo_TaiChinh_IB_2";
+            this.ckbHuyBo_TaiChinh_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbHuyBo_TaiChinh_IB_2.TabIndex = 55;
+            this.ckbHuyBo_TaiChinh_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbBoSung_ThanhToan_IB_2
+            // 
+            this.ckbBoSung_ThanhToan_IB_2.AutoSize = true;
+            this.ckbBoSung_ThanhToan_IB_2.Location = new System.Drawing.Point(152, 64);
+            this.ckbBoSung_ThanhToan_IB_2.Name = "ckbBoSung_ThanhToan_IB_2";
+            this.ckbBoSung_ThanhToan_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbBoSung_ThanhToan_IB_2.TabIndex = 54;
+            this.ckbBoSung_ThanhToan_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbHuyBo_ThanhToan_IB_2
+            // 
+            this.ckbHuyBo_ThanhToan_IB_2.AutoSize = true;
+            this.ckbHuyBo_ThanhToan_IB_2.Location = new System.Drawing.Point(209, 64);
+            this.ckbHuyBo_ThanhToan_IB_2.Name = "ckbHuyBo_ThanhToan_IB_2";
+            this.ckbHuyBo_ThanhToan_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbHuyBo_ThanhToan_IB_2.TabIndex = 53;
+            this.ckbHuyBo_ThanhToan_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbBoSung_TaiChinh_IB_2
+            // 
+            this.ckbBoSung_TaiChinh_IB_2.AutoSize = true;
+            this.ckbBoSung_TaiChinh_IB_2.Location = new System.Drawing.Point(152, 38);
+            this.ckbBoSung_TaiChinh_IB_2.Name = "ckbBoSung_TaiChinh_IB_2";
+            this.ckbBoSung_TaiChinh_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbBoSung_TaiChinh_IB_2.TabIndex = 48;
+            this.ckbBoSung_TaiChinh_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(197, 16);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(41, 13);
+            this.label60.TabIndex = 47;
+            this.label60.Text = "Hủy bỏ";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(136, 16);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(46, 13);
+            this.label61.TabIndex = 46;
+            this.label61.Text = "Bổ sung";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.ckbHuyBo_TK_1_IB_2);
+            this.groupBox5.Controls.Add(this.ckbBoSung_TK_2_IB_2);
+            this.groupBox5.Controls.Add(this.ckbHuyBo_TK_2_IB_2);
+            this.groupBox5.Controls.Add(this.ckbHuyBo_TK_3_IB_2);
+            this.groupBox5.Controls.Add(this.ckbHuyBo_TK_4_IB_2);
+            this.groupBox5.Controls.Add(this.ckbBoSung_TK_4_IB_2);
+            this.groupBox5.Controls.Add(this.ckbBoSung_TK_3_IB_2);
+            this.groupBox5.Controls.Add(this.ckbBoSung_TK_1_IB_2);
+            this.groupBox5.Controls.Add(this.label59);
+            this.groupBox5.Controls.Add(this.label58);
+            this.groupBox5.Controls.Add(this.txtTaiKhoan_4_IB_2);
+            this.groupBox5.Controls.Add(this.txtTaiKhoan_3_IB_2);
+            this.groupBox5.Controls.Add(this.txtTaiKhoan_2_IB_2);
+            this.groupBox5.Controls.Add(this.txtTaiKhoan_1_IB_2);
+            this.groupBox5.Controls.Add(this.label57);
+            this.groupBox5.Location = new System.Drawing.Point(6, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(294, 155);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Thay đổi tài khoản sử dụng";
+            // 
+            // ckbHuyBo_TK_1_IB_2
+            // 
+            this.ckbHuyBo_TK_1_IB_2.AutoSize = true;
+            this.ckbHuyBo_TK_1_IB_2.Location = new System.Drawing.Point(209, 38);
+            this.ckbHuyBo_TK_1_IB_2.Name = "ckbHuyBo_TK_1_IB_2";
+            this.ckbHuyBo_TK_1_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbHuyBo_TK_1_IB_2.TabIndex = 55;
+            this.ckbHuyBo_TK_1_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbBoSung_TK_2_IB_2
+            // 
+            this.ckbBoSung_TK_2_IB_2.AutoSize = true;
+            this.ckbBoSung_TK_2_IB_2.Location = new System.Drawing.Point(152, 64);
+            this.ckbBoSung_TK_2_IB_2.Name = "ckbBoSung_TK_2_IB_2";
+            this.ckbBoSung_TK_2_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbBoSung_TK_2_IB_2.TabIndex = 54;
+            this.ckbBoSung_TK_2_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbHuyBo_TK_2_IB_2
+            // 
+            this.ckbHuyBo_TK_2_IB_2.AutoSize = true;
+            this.ckbHuyBo_TK_2_IB_2.Location = new System.Drawing.Point(209, 64);
+            this.ckbHuyBo_TK_2_IB_2.Name = "ckbHuyBo_TK_2_IB_2";
+            this.ckbHuyBo_TK_2_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbHuyBo_TK_2_IB_2.TabIndex = 53;
+            this.ckbHuyBo_TK_2_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbHuyBo_TK_3_IB_2
+            // 
+            this.ckbHuyBo_TK_3_IB_2.AutoSize = true;
+            this.ckbHuyBo_TK_3_IB_2.Location = new System.Drawing.Point(209, 90);
+            this.ckbHuyBo_TK_3_IB_2.Name = "ckbHuyBo_TK_3_IB_2";
+            this.ckbHuyBo_TK_3_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbHuyBo_TK_3_IB_2.TabIndex = 52;
+            this.ckbHuyBo_TK_3_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbHuyBo_TK_4_IB_2
+            // 
+            this.ckbHuyBo_TK_4_IB_2.AutoSize = true;
+            this.ckbHuyBo_TK_4_IB_2.Location = new System.Drawing.Point(209, 116);
+            this.ckbHuyBo_TK_4_IB_2.Name = "ckbHuyBo_TK_4_IB_2";
+            this.ckbHuyBo_TK_4_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbHuyBo_TK_4_IB_2.TabIndex = 51;
+            this.ckbHuyBo_TK_4_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbBoSung_TK_4_IB_2
+            // 
+            this.ckbBoSung_TK_4_IB_2.AutoSize = true;
+            this.ckbBoSung_TK_4_IB_2.Location = new System.Drawing.Point(152, 116);
+            this.ckbBoSung_TK_4_IB_2.Name = "ckbBoSung_TK_4_IB_2";
+            this.ckbBoSung_TK_4_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbBoSung_TK_4_IB_2.TabIndex = 50;
+            this.ckbBoSung_TK_4_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbBoSung_TK_3_IB_2
+            // 
+            this.ckbBoSung_TK_3_IB_2.AutoSize = true;
+            this.ckbBoSung_TK_3_IB_2.Location = new System.Drawing.Point(152, 90);
+            this.ckbBoSung_TK_3_IB_2.Name = "ckbBoSung_TK_3_IB_2";
+            this.ckbBoSung_TK_3_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbBoSung_TK_3_IB_2.TabIndex = 49;
+            this.ckbBoSung_TK_3_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbBoSung_TK_1_IB_2
+            // 
+            this.ckbBoSung_TK_1_IB_2.AutoSize = true;
+            this.ckbBoSung_TK_1_IB_2.Location = new System.Drawing.Point(152, 38);
+            this.ckbBoSung_TK_1_IB_2.Name = "ckbBoSung_TK_1_IB_2";
+            this.ckbBoSung_TK_1_IB_2.Size = new System.Drawing.Size(15, 14);
+            this.ckbBoSung_TK_1_IB_2.TabIndex = 48;
+            this.ckbBoSung_TK_1_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(197, 16);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(41, 13);
+            this.label59.TabIndex = 47;
+            this.label59.Text = "Hủy bỏ";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(136, 16);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(46, 13);
+            this.label58.TabIndex = 46;
+            this.label58.Text = "Bổ sung";
+            // 
+            // txtTaiKhoan_4_IB_2
+            // 
+            this.txtTaiKhoan_4_IB_2.Location = new System.Drawing.Point(9, 113);
+            this.txtTaiKhoan_4_IB_2.Name = "txtTaiKhoan_4_IB_2";
+            this.txtTaiKhoan_4_IB_2.Size = new System.Drawing.Size(100, 20);
+            this.txtTaiKhoan_4_IB_2.TabIndex = 45;
+            // 
+            // txtTaiKhoan_3_IB_2
+            // 
+            this.txtTaiKhoan_3_IB_2.Location = new System.Drawing.Point(9, 87);
+            this.txtTaiKhoan_3_IB_2.Name = "txtTaiKhoan_3_IB_2";
+            this.txtTaiKhoan_3_IB_2.Size = new System.Drawing.Size(100, 20);
+            this.txtTaiKhoan_3_IB_2.TabIndex = 44;
+            // 
+            // txtTaiKhoan_2_IB_2
+            // 
+            this.txtTaiKhoan_2_IB_2.Location = new System.Drawing.Point(9, 61);
+            this.txtTaiKhoan_2_IB_2.Name = "txtTaiKhoan_2_IB_2";
+            this.txtTaiKhoan_2_IB_2.Size = new System.Drawing.Size(100, 20);
+            this.txtTaiKhoan_2_IB_2.TabIndex = 43;
+            // 
+            // txtTaiKhoan_1_IB_2
+            // 
+            this.txtTaiKhoan_1_IB_2.Location = new System.Drawing.Point(9, 35);
+            this.txtTaiKhoan_1_IB_2.Name = "txtTaiKhoan_1_IB_2";
+            this.txtTaiKhoan_1_IB_2.Size = new System.Drawing.Size(100, 20);
+            this.txtTaiKhoan_1_IB_2.TabIndex = 42;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(6, 16);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(96, 13);
+            this.label57.TabIndex = 41;
+            this.label57.Text = "Tài khoản sử dụng";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.ckbHuyDangKy_IB_2);
+            this.groupBox3.Controls.Add(this.ckbCapLaiThietBi_IB_2);
+            this.groupBox3.Controls.Add(this.ckbKhoaThietBi_IB_2);
+            this.groupBox3.Controls.Add(this.ckbKhoaTenDangNhap_IB_2);
+            this.groupBox3.Controls.Add(this.ckbMoKhoaThietBi_IB_2);
+            this.groupBox3.Controls.Add(this.ckbMoTenDangNhap_IB_2);
+            this.groupBox3.Controls.Add(this.ckbCapLaiMK_IB_2);
+            this.groupBox3.Location = new System.Drawing.Point(7, 30);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(182, 182);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Yêu cầu dịch vụ";
+            // 
+            // ckbHuyDangKy_IB_2
+            // 
+            this.ckbHuyDangKy_IB_2.AutoSize = true;
+            this.ckbHuyDangKy_IB_2.Location = new System.Drawing.Point(41, 157);
+            this.ckbHuyDangKy_IB_2.Name = "ckbHuyDangKy_IB_2";
+            this.ckbHuyDangKy_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbHuyDangKy_IB_2.Size = new System.Drawing.Size(125, 17);
+            this.ckbHuyDangKy_IB_2.TabIndex = 6;
+            this.ckbHuyDangKy_IB_2.Text = "Hủy đăng ký dịch vụ";
+            this.ckbHuyDangKy_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbCapLaiThietBi_IB_2
+            // 
+            this.ckbCapLaiThietBi_IB_2.AutoSize = true;
+            this.ckbCapLaiThietBi_IB_2.Location = new System.Drawing.Point(30, 134);
+            this.ckbCapLaiThietBi_IB_2.Name = "ckbCapLaiThietBi_IB_2";
+            this.ckbCapLaiThietBi_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbCapLaiThietBi_IB_2.Size = new System.Drawing.Size(136, 17);
+            this.ckbCapLaiThietBi_IB_2.TabIndex = 5;
+            this.ckbCapLaiThietBi_IB_2.Text = "Cấp lại thiết bị xác thực";
+            this.ckbCapLaiThietBi_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbKhoaThietBi_IB_2
+            // 
+            this.ckbKhoaThietBi_IB_2.AutoSize = true;
+            this.ckbKhoaThietBi_IB_2.Location = new System.Drawing.Point(37, 88);
+            this.ckbKhoaThietBi_IB_2.Name = "ckbKhoaThietBi_IB_2";
+            this.ckbKhoaThietBi_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbKhoaThietBi_IB_2.Size = new System.Drawing.Size(129, 17);
+            this.ckbKhoaThietBi_IB_2.TabIndex = 4;
+            this.ckbKhoaThietBi_IB_2.Text = "Khóa thiết bị xác thực";
+            this.ckbKhoaThietBi_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbKhoaTenDangNhap_IB_2
+            // 
+            this.ckbKhoaTenDangNhap_IB_2.AutoSize = true;
+            this.ckbKhoaTenDangNhap_IB_2.Location = new System.Drawing.Point(38, 42);
+            this.ckbKhoaTenDangNhap_IB_2.Name = "ckbKhoaTenDangNhap_IB_2";
+            this.ckbKhoaTenDangNhap_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbKhoaTenDangNhap_IB_2.Size = new System.Drawing.Size(128, 17);
+            this.ckbKhoaTenDangNhap_IB_2.TabIndex = 3;
+            this.ckbKhoaTenDangNhap_IB_2.Text = "Khóa Tên đăng nhập";
+            this.ckbKhoaTenDangNhap_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbMoKhoaThietBi_IB_2
+            // 
+            this.ckbMoKhoaThietBi_IB_2.AutoSize = true;
+            this.ckbMoKhoaThietBi_IB_2.Location = new System.Drawing.Point(20, 111);
+            this.ckbMoKhoaThietBi_IB_2.Name = "ckbMoKhoaThietBi_IB_2";
+            this.ckbMoKhoaThietBi_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbMoKhoaThietBi_IB_2.Size = new System.Drawing.Size(146, 17);
+            this.ckbMoKhoaThietBi_IB_2.TabIndex = 2;
+            this.ckbMoKhoaThietBi_IB_2.Text = "Mở khóa thiết bị xác thực";
+            this.ckbMoKhoaThietBi_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbMoTenDangNhap_IB_2
+            // 
+            this.ckbMoTenDangNhap_IB_2.AutoSize = true;
+            this.ckbMoTenDangNhap_IB_2.Location = new System.Drawing.Point(25, 65);
+            this.ckbMoTenDangNhap_IB_2.Name = "ckbMoTenDangNhap_IB_2";
+            this.ckbMoTenDangNhap_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbMoTenDangNhap_IB_2.Size = new System.Drawing.Size(141, 17);
+            this.ckbMoTenDangNhap_IB_2.TabIndex = 1;
+            this.ckbMoTenDangNhap_IB_2.Text = "Mở khóa tên đăng nhập";
+            this.ckbMoTenDangNhap_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // ckbCapLaiMK_IB_2
+            // 
+            this.ckbCapLaiMK_IB_2.AutoSize = true;
+            this.ckbCapLaiMK_IB_2.Location = new System.Drawing.Point(6, 19);
+            this.ckbCapLaiMK_IB_2.Name = "ckbCapLaiMK_IB_2";
+            this.ckbCapLaiMK_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ckbCapLaiMK_IB_2.Size = new System.Drawing.Size(160, 17);
+            this.ckbCapLaiMK_IB_2.TabIndex = 0;
+            this.ckbCapLaiMK_IB_2.Text = "Cấp lại mât khẩu đăng nhập";
+            this.ckbCapLaiMK_IB_2.UseVisualStyleBackColor = true;
+            // 
+            // txtMST_IB_2
+            // 
+            this.txtMST_IB_2.Location = new System.Drawing.Point(73, 4);
+            this.txtMST_IB_2.Name = "txtMST_IB_2";
+            this.txtMST_IB_2.Size = new System.Drawing.Size(150, 20);
+            this.txtMST_IB_2.TabIndex = 30;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(4, 7);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(63, 13);
+            this.label65.TabIndex = 29;
+            this.label65.Text = "Mã số thuế:";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(786, 302);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "Biên bản giao nhận thiết bị xác thực";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(786, 302);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "Phiếu đăng ký và kích hoạt phương thức bảo mật";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // frmDangKyDichVu
             // 
@@ -660,6 +2236,31 @@
             this.tCtrlDangKyDV.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -692,7 +2293,7 @@
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.TextBox txtCMT;
+        private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label lbSoCMT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -701,23 +2302,168 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tCtrlDangKyDV;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TextBox txtDangKyEBDienThoai;
-        private System.Windows.Forms.TextBox txtDangKyEBChucVu;
-        private System.Windows.Forms.TextBox txtDangKyEBNguoiDaiDien;
+        private System.Windows.Forms.TextBox txtChucVu_EMB_1;
+        private System.Windows.Forms.TextBox txtNguoiDaiDien_EMB_1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtDangKyEBGPKDNoiCap;
-        private System.Windows.Forms.MaskedTextBox txtDangKyEBGPKDNgayCap;
-        private System.Windows.Forms.TextBox txtDangKyEBSDTDV;
+        private System.Windows.Forms.TextBox txtNoiCapGPKD_EMB_1;
+        private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_EMB_1;
+        private System.Windows.Forms.TextBox txtSDTSDDV_EMB_1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtGPKD;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.CheckBox ckbHuy_EMB_2;
+        private System.Windows.Forms.TextBox txtNoiCapGPKD_EMB_2;
+        private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_EMB_2;
+        private System.Windows.Forms.TextBox txtChucVu_EMB_2;
+        private System.Windows.Forms.TextBox txtNguoiDaiDien_EMB_2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNoiDung_EMB_2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox ckbThayDoi_EMB_2;
+        private System.Windows.Forms.TextBox txtNoiCapGPKD_EMB_3;
+        private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_EMB_3;
+        private System.Windows.Forms.TextBox txtDienThoai_EMB_3;
+        private System.Windows.Forms.TextBox txtNguoiDaiDien_EMB_3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtGiaTriGD_EMB_3;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker dtpNgayGioGD_EMB_3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtNoiDung_EMB_3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox txtSDTSDDV_5_SMS_1;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtSDTSDDV_4_SMS_1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtSDTSDDV_3_SMS_1;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtSDTSDDV_2_SMS_1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtSDTSDDV_1_SMS_1;
+        private System.Windows.Forms.TextBox txtNoiCapGPKD_SMS_1;
+        private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_SMS_1;
+        private System.Windows.Forms.TextBox txtDienThoai_SMS_1;
+        private System.Windows.Forms.TextBox txtChucVu_SMS_1;
+        private System.Windows.Forms.TextBox txtNguoiDaiDien_SMS_1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txtSDTSDDV_5_SMS_2;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txtSDTSDDV_4_SMS_2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox txtSDTSDDV_3_SMS_2;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox txtSDTSDDV_2_SMS_2;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txtSDTSDDV_1_SMS_2;
+        private System.Windows.Forms.TextBox txtNoiCapGPKD_SMS_2;
+        private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_SMS_2;
+        private System.Windows.Forms.TextBox txtDienThoai_SMS_2;
+        private System.Windows.Forms.TextBox txtChucVu_SMS_2;
+        private System.Windows.Forms.TextBox txtNguoiDaiDien_SMS_2;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.CheckBox ckbThayDoi_SMS_2;
+        private System.Windows.Forms.CheckBox ckbHuy_SMS_2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox ckbOTP_Hard_IB_1;
+        private System.Windows.Forms.CheckBox ckbOTP_Soft_IB_1;
+        private System.Windows.Forms.CheckBox ckbOTP_SMS_IB_1;
+        private System.Windows.Forms.CheckBox ckbDVPhiTaiChinh_IB_1;
+        private System.Windows.Forms.CheckBox ckbDVThanhToan_IB_1;
+        private System.Windows.Forms.CheckBox ckbDVTaiChinh_IB_1;
+        private System.Windows.Forms.TextBox txtMST_IB_1;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox txtSTKSuDung_6_IB_1;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txtSTKSuDung_5_IB_1;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox txtSTKSuDung_4_IB_1;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox txtSTKSuDung_3_IB_1;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txtSTKSuDung_2_IB_1;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox txtSTKSuDung_1_IB_1;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox txtSTKMacDinh_IB_1;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtSDTNhanOTP_IB_2;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.CheckBox ckbOTP_Hard_IB_2;
+        private System.Windows.Forms.CheckBox ckbOTP_Soft_IB_2;
+        private System.Windows.Forms.CheckBox ckbOTP_SMS_IB_2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.CheckBox ckbHuyBo_TaiChinh_IB_2;
+        private System.Windows.Forms.CheckBox ckbBoSung_ThanhToan_IB_2;
+        private System.Windows.Forms.CheckBox ckbHuyBo_ThanhToan_IB_2;
+        private System.Windows.Forms.CheckBox ckbBoSung_TaiChinh_IB_2;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckBox ckbHuyBo_TK_1_IB_2;
+        private System.Windows.Forms.CheckBox ckbBoSung_TK_2_IB_2;
+        private System.Windows.Forms.CheckBox ckbHuyBo_TK_2_IB_2;
+        private System.Windows.Forms.CheckBox ckbHuyBo_TK_3_IB_2;
+        private System.Windows.Forms.CheckBox ckbHuyBo_TK_4_IB_2;
+        private System.Windows.Forms.CheckBox ckbBoSung_TK_4_IB_2;
+        private System.Windows.Forms.CheckBox ckbBoSung_TK_3_IB_2;
+        private System.Windows.Forms.CheckBox ckbBoSung_TK_1_IB_2;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txtTaiKhoan_4_IB_2;
+        private System.Windows.Forms.TextBox txtTaiKhoan_3_IB_2;
+        private System.Windows.Forms.TextBox txtTaiKhoan_2_IB_2;
+        private System.Windows.Forms.TextBox txtTaiKhoan_1_IB_2;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox ckbHuyDangKy_IB_2;
+        private System.Windows.Forms.CheckBox ckbCapLaiThietBi_IB_2;
+        private System.Windows.Forms.CheckBox ckbKhoaThietBi_IB_2;
+        private System.Windows.Forms.CheckBox ckbKhoaTenDangNhap_IB_2;
+        private System.Windows.Forms.CheckBox ckbMoKhoaThietBi_IB_2;
+        private System.Windows.Forms.CheckBox ckbMoTenDangNhap_IB_2;
+        private System.Windows.Forms.CheckBox ckbCapLaiMK_IB_2;
+        private System.Windows.Forms.TextBox txtMST_IB_2;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.TextBox txtSDTNhanOTP_IB_1;
+        private System.Windows.Forms.Label label66;
     }
 }
