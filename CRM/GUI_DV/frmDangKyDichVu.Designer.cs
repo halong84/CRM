@@ -98,7 +98,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtNoiCapGPKD_EMB_3 = new System.Windows.Forms.TextBox();
             this.txtNgayCapGPKD_EMB_3 = new System.Windows.Forms.MaskedTextBox();
-            this.txtDienThoai_EMB_3 = new System.Windows.Forms.TextBox();
+            this.txtChucVu_EMB_3 = new System.Windows.Forms.TextBox();
             this.txtNguoiDaiDien_EMB_3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -132,6 +132,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.txtSoTK_BoSung_SMS_2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.ckbThayDoi_SMS_2 = new System.Windows.Forms.CheckBox();
             this.ckbHuy_SMS_2 = new System.Windows.Forms.CheckBox();
             this.label37 = new System.Windows.Forms.Label();
@@ -225,9 +227,8 @@
             this.label65 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSoTK_BoSung_SMS_2 = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
@@ -325,6 +326,7 @@
             this.btnLayTTKH.TabIndex = 34;
             this.btnLayTTKH.Text = "Lấy TTKH từ file";
             this.btnLayTTKH.UseVisualStyleBackColor = true;
+            this.btnLayTTKH.Click += new System.EventHandler(this.btnLayTTKH_Click);
             // 
             // txtMaKH
             // 
@@ -901,7 +903,7 @@
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.txtNoiCapGPKD_EMB_3);
             this.tabPage3.Controls.Add(this.txtNgayCapGPKD_EMB_3);
-            this.tabPage3.Controls.Add(this.txtDienThoai_EMB_3);
+            this.tabPage3.Controls.Add(this.txtChucVu_EMB_3);
             this.tabPage3.Controls.Add(this.txtNguoiDaiDien_EMB_3);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label16);
@@ -982,12 +984,12 @@
             this.txtNgayCapGPKD_EMB_3.TabIndex = 32;
             this.txtNgayCapGPKD_EMB_3.ValidatingType = typeof(System.DateTime);
             // 
-            // txtDienThoai_EMB_3
+            // txtChucVu_EMB_3
             // 
-            this.txtDienThoai_EMB_3.Location = new System.Drawing.Point(400, 7);
-            this.txtDienThoai_EMB_3.Name = "txtDienThoai_EMB_3";
-            this.txtDienThoai_EMB_3.Size = new System.Drawing.Size(150, 20);
-            this.txtDienThoai_EMB_3.TabIndex = 28;
+            this.txtChucVu_EMB_3.Location = new System.Drawing.Point(400, 7);
+            this.txtChucVu_EMB_3.Name = "txtChucVu_EMB_3";
+            this.txtChucVu_EMB_3.Size = new System.Drawing.Size(150, 20);
+            this.txtChucVu_EMB_3.TabIndex = 28;
             // 
             // txtNguoiDaiDien_EMB_3
             // 
@@ -1311,6 +1313,22 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Thay đổi TT Mobile Banking";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // txtSoTK_BoSung_SMS_2
+            // 
+            this.txtSoTK_BoSung_SMS_2.Location = new System.Drawing.Point(453, 131);
+            this.txtSoTK_BoSung_SMS_2.Name = "txtSoTK_BoSung_SMS_2";
+            this.txtSoTK_BoSung_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSoTK_BoSung_SMS_2.TabIndex = 60;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(336, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Số tài khoản bổ sung:";
             // 
             // ckbThayDoi_SMS_2
             // 
@@ -2203,21 +2221,9 @@
             this.tabPage10.Text = "Phiếu đăng ký và kích hoạt phương thức bảo mật";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // openFileTTKH
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 134);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 59;
-            this.label6.Text = "Số tài khoản bổ sung:";
-            // 
-            // txtSoTK_BoSung_SMS_2
-            // 
-            this.txtSoTK_BoSung_SMS_2.Location = new System.Drawing.Point(453, 131);
-            this.txtSoTK_BoSung_SMS_2.Name = "txtSoTK_BoSung_SMS_2";
-            this.txtSoTK_BoSung_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSoTK_BoSung_SMS_2.TabIndex = 60;
+            this.openFileTTKH.FileName = "openFileTTKH";
             // 
             // frmDangKyDichVu
             // 
@@ -2339,7 +2345,7 @@
         private System.Windows.Forms.CheckBox ckbThayDoi_EMB_2;
         private System.Windows.Forms.TextBox txtNoiCapGPKD_EMB_3;
         private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_EMB_3;
-        private System.Windows.Forms.TextBox txtDienThoai_EMB_3;
+        private System.Windows.Forms.TextBox txtChucVu_EMB_3;
         private System.Windows.Forms.TextBox txtNguoiDaiDien_EMB_3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label16;
@@ -2468,5 +2474,6 @@
         private System.Windows.Forms.TextBox txtSoTK_BoSung_SMS_2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileTTKH;
     }
 }
