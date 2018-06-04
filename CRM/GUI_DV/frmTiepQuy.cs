@@ -196,17 +196,6 @@ namespace CRM.GUI_DV
         {
             Microsoft.Office.Interop.Word.Application ap = new Microsoft.Office.Interop.Word.Application();
             Microsoft.Office.Interop.Word.Document document = ap.Documents.Open(fileLocation);
-            //ap.Visible = false;
-            //try
-            //{
-            //    document.PrintOut();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Vui lòng kiểm tra máy in!", "Thông báo", MessageBoxButtons.OK);
-            //}
-            //document.Close();
-            //ap.Quit();
             ap.Visible = true;
         }
 

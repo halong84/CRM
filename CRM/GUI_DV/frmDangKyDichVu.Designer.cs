@@ -105,10 +105,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLyDo_EMB_4 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDTDD_EMB_4 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label36 = new System.Windows.Forms.Label();
             this.txtSDTSDDV_5_SMS_1 = new System.Windows.Forms.TextBox();
@@ -146,13 +146,11 @@
             this.txtSDTSDDV_1_SMS_2 = new System.Windows.Forms.TextBox();
             this.txtNoiCapGPKD_SMS_2 = new System.Windows.Forms.TextBox();
             this.txtNgayCapGPKD_SMS_2 = new System.Windows.Forms.MaskedTextBox();
-            this.txtDienThoai_SMS_2 = new System.Windows.Forms.TextBox();
             this.txtChucVu_SMS_2 = new System.Windows.Forms.TextBox();
             this.txtNguoiDaiDien_SMS_2 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -227,6 +225,9 @@
             this.label65 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSoTK_BoSung_SMS_2 = new System.Windows.Forms.TextBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
@@ -608,6 +609,7 @@
             this.btnTaoMauBieu.TabIndex = 2;
             this.btnTaoMauBieu.Text = "Tạo mẫu biểu";
             this.btnTaoMauBieu.UseVisualStyleBackColor = true;
+            this.btnTaoMauBieu.Click += new System.EventHandler(this.btnTaoMauBieu_Click);
             // 
             // cbChonMauBieu
             // 
@@ -1032,10 +1034,10 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.txtLyDo_EMB_4);
             this.tabPage4.Controls.Add(this.label25);
             this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.txtDTDD_EMB_4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(786, 302);
@@ -1043,13 +1045,13 @@
             this.tabPage4.Text = "Thiết lập lại mật khẩu E-Mobile Banking";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtLyDo_EMB_4
             // 
-            this.textBox2.Location = new System.Drawing.Point(147, 35);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(636, 40);
-            this.textBox2.TabIndex = 38;
+            this.txtLyDo_EMB_4.Location = new System.Drawing.Point(147, 35);
+            this.txtLyDo_EMB_4.Multiline = true;
+            this.txtLyDo_EMB_4.Name = "txtLyDo_EMB_4";
+            this.txtLyDo_EMB_4.Size = new System.Drawing.Size(636, 40);
+            this.txtLyDo_EMB_4.TabIndex = 38;
             // 
             // label25
             // 
@@ -1069,12 +1071,12 @@
             this.label24.TabIndex = 36;
             this.label24.Text = "Số điện thoại sử dụng DV:";
             // 
-            // textBox1
+            // txtDTDD_EMB_4
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 35;
+            this.txtDTDD_EMB_4.Location = new System.Drawing.Point(147, 9);
+            this.txtDTDD_EMB_4.Name = "txtDTDD_EMB_4";
+            this.txtDTDD_EMB_4.Size = new System.Drawing.Size(150, 20);
+            this.txtDTDD_EMB_4.TabIndex = 35;
             // 
             // tabPage5
             // 
@@ -1280,6 +1282,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.txtSoTK_BoSung_SMS_2);
+            this.tabPage6.Controls.Add(this.label6);
             this.tabPage6.Controls.Add(this.ckbThayDoi_SMS_2);
             this.tabPage6.Controls.Add(this.ckbHuy_SMS_2);
             this.tabPage6.Controls.Add(this.label37);
@@ -1294,13 +1298,11 @@
             this.tabPage6.Controls.Add(this.txtSDTSDDV_1_SMS_2);
             this.tabPage6.Controls.Add(this.txtNoiCapGPKD_SMS_2);
             this.tabPage6.Controls.Add(this.txtNgayCapGPKD_SMS_2);
-            this.tabPage6.Controls.Add(this.txtDienThoai_SMS_2);
             this.tabPage6.Controls.Add(this.txtChucVu_SMS_2);
             this.tabPage6.Controls.Add(this.txtNguoiDaiDien_SMS_2);
             this.tabPage6.Controls.Add(this.label42);
             this.tabPage6.Controls.Add(this.label43);
             this.tabPage6.Controls.Add(this.label44);
-            this.tabPage6.Controls.Add(this.label45);
             this.tabPage6.Controls.Add(this.label46);
             this.tabPage6.Controls.Add(this.label47);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
@@ -1427,16 +1429,9 @@
             this.txtNgayCapGPKD_SMS_2.TabIndex = 43;
             this.txtNgayCapGPKD_SMS_2.ValidatingType = typeof(System.DateTime);
             // 
-            // txtDienThoai_SMS_2
-            // 
-            this.txtDienThoai_SMS_2.Location = new System.Drawing.Point(627, 6);
-            this.txtDienThoai_SMS_2.Name = "txtDienThoai_SMS_2";
-            this.txtDienThoai_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtDienThoai_SMS_2.TabIndex = 41;
-            // 
             // txtChucVu_SMS_2
             // 
-            this.txtChucVu_SMS_2.Location = new System.Drawing.Point(398, 6);
+            this.txtChucVu_SMS_2.Location = new System.Drawing.Point(449, 9);
             this.txtChucVu_SMS_2.Name = "txtChucVu_SMS_2";
             this.txtChucVu_SMS_2.Size = new System.Drawing.Size(150, 20);
             this.txtChucVu_SMS_2.TabIndex = 39;
@@ -1474,15 +1469,6 @@
             this.label44.Size = new System.Drawing.Size(133, 13);
             this.label44.TabIndex = 42;
             this.label44.Text = "Ngày cấp GPKD (Nếu có):";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(563, 9);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(58, 13);
-            this.label45.TabIndex = 40;
-            this.label45.Text = "Điện thoại:";
             // 
             // label46
             // 
@@ -2217,6 +2203,22 @@
             this.tabPage10.Text = "Phiếu đăng ký và kích hoạt phương thức bảo mật";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(336, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Số tài khoản bổ sung:";
+            // 
+            // txtSoTK_BoSung_SMS_2
+            // 
+            this.txtSoTK_BoSung_SMS_2.Location = new System.Drawing.Point(453, 131);
+            this.txtSoTK_BoSung_SMS_2.Name = "txtSoTK_BoSung_SMS_2";
+            this.txtSoTK_BoSung_SMS_2.Size = new System.Drawing.Size(150, 20);
+            this.txtSoTK_BoSung_SMS_2.TabIndex = 60;
+            // 
             // frmDangKyDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2349,10 +2351,10 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtNoiDung_EMB_3;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLyDo_EMB_4;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDTDD_EMB_4;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtSDTSDDV_5_SMS_1;
         private System.Windows.Forms.Label label35;
@@ -2386,13 +2388,11 @@
         private System.Windows.Forms.TextBox txtSDTSDDV_1_SMS_2;
         private System.Windows.Forms.TextBox txtNoiCapGPKD_SMS_2;
         private System.Windows.Forms.MaskedTextBox txtNgayCapGPKD_SMS_2;
-        private System.Windows.Forms.TextBox txtDienThoai_SMS_2;
         private System.Windows.Forms.TextBox txtChucVu_SMS_2;
         private System.Windows.Forms.TextBox txtNguoiDaiDien_SMS_2;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.CheckBox ckbThayDoi_SMS_2;
@@ -2465,5 +2465,8 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.TextBox txtSDTNhanOTP_IB_1;
         private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TextBox txtSoTK_BoSung_SMS_2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
