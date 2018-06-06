@@ -15,7 +15,7 @@ namespace CRM.GUI_DV
 {
     public partial class frmTiepQuy : Form
     {
-        static string fileNameTiepQuy = "GIAY_DE_NGHI_TIEP_QUY";
+        static string fileNameTiepQuy = "THE_49_GIAY_DE_NGHI_TIEP_QUY";
 
         int soTo50, soTo100, soTo200, soTo500, tt50, tt100, tt200, tt500, tong;
         List<string> listNguon, listDich;

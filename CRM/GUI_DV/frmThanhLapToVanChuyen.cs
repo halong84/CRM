@@ -16,7 +16,7 @@ namespace CRM.GUI_DV
 {
     public partial class frmThanhLapToVanChuyen : Form
     {
-        static string fileNameTLTVC = "QD_THANH_LAP_TO_VAN_CHUYEN_DAC_BIET";
+        static string fileNameTLTVC = "THE_08_QD_THANH_LAP_TO_VAN_CHUYEN_DAC_BIET";
         List<String> listDich, listNguon;
 
         string maToTruong, maGiamSat1, maGiamSat2, maBaoVe, maLaixe;

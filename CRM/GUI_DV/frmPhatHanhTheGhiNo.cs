@@ -17,10 +17,10 @@ namespace CRM.GUI_DV
 {
     public partial class frmPhatHanhTheGhiNo : Form
     {
-        private const string fileNamePhatHanhMoi = "PHAT_HANH_MOI";
-        private const string fileNamePhatHanhLai = "PHAT_HANH_LAI";
-        private const string fileNameHopDong = "HOP_DONG";
-        private const string fileNameGiayHen = "GIAY_HEN";
+        private const string fileNamePhatHanhMoi = "THE_01_PHAT_HANH_MOI_THE_GHI_NO";
+        private const string fileNamePhatHanhLai = "THE_17_PHAT_HANH_LAI_THE";
+        private const string fileNameHopDong = "THE_03_HOP_DONG_PHAT_HANH_THE";
+        private const string fileNameGiayHen = "THE_22_GIAY_HEN";
 
         private List<TextBox> listTxtNotNull;
 
@@ -92,6 +92,22 @@ namespace CRM.GUI_DV
                     cbNguoiDaiDien_BenA.SelectedIndex = 0;
             }
 
+            try
+            {
+                DataTable dt = PhatHanhTheGhiNoDAL.DV_GIAYHEN_SELECT(Thong_tin_dang_nhap.ma_pb);
+                if(dt.Rows.Count > 0)
+                {
+                    txtGiayTo_1.Text = dt.Rows[0][0].ToString();
+                    txtGiayTo_2.Text = dt.Rows[0][1].ToString();
+                    txtGiayTo_3.Text = dt.Rows[0][2].ToString();
+                }
+            }
+            catch
+            {
+                ErrorMessageDAL.DataAccessError();
+            }
+
+
             //TTKH
             cbTimKiem.SelectedIndex = 0;
             txtTimKiem.Focus();
@@ -158,14 +174,6 @@ namespace CRM.GUI_DV
             txtEmail.Text = kh.email;
             txtDiaChi.Text = kh.dia_chi;
             txtQuocTich.Text = "Việt Nam";
-
-            //Thong tin ben B
-            txtHoTen_BenB.Text = kh.ho_ten;
-            txtCMT_BenB.Text = kh.cmt;
-            txtDiaChi_BenB.Text = kh.dia_chi;
-            txtNgayCap_BenB.Text = kh.ngay_cap.ToString("dd/MM/yyyy");
-            txtNoiCap_BenB.Text = txtNoiCap.Text;
-            txtNgayDeNghi_BenB.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             if (kh.gioi_tinh)
             {
@@ -459,15 +467,15 @@ namespace CRM.GUI_DV
         //EMenu tab Hop Dong
         private void cbNguoiDaiDien_BenA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbNguoiDaiDien_BenA.SelectedIndex;
-            //if (dsNguoiDaiDien[index].chucVu == "Branch General Manager")
-            //    txtChucVu_BenA.Text = "Giám đốc";
-            //else txtChucVu_BenA.Text = "Phó giám đốc";
-            txtChucVu_BenA.Text = dsNguoiDaiDien[index].chucVu;
-            txtDienThoai_BenA.Text = dsNguoiDaiDien[index].Sdt;
-            txtFax_BenA.Text = dsNguoiDaiDien[index].Fax;
-            txtDiaChi_BenA.Text = dsNguoiDaiDien[index].diaChi;
-            txtGiayUyQuyen_BenA.Text = dsNguoiDaiDien[index].giayUQ;
+            //int index = cbNguoiDaiDien_BenA.SelectedIndex;
+            ////if (dsNguoiDaiDien[index].chucVu == "Branch General Manager")
+            ////    txtChucVu_BenA.Text = "Giám đốc";
+            ////else txtChucVu_BenA.Text = "Phó giám đốc";
+            //txtChucVu_BenA.Text = dsNguoiDaiDien[index].chucVu;
+            //txtDienThoai_BenA.Text = dsNguoiDaiDien[index].Sdt;
+            //txtFax_BenA.Text = dsNguoiDaiDien[index].Fax;
+            //txtDiaChi_BenA.Text = dsNguoiDaiDien[index].diaChi;
+            //txtGiayUyQuyen_BenA.Text = dsNguoiDaiDien[index].giayUQ;
         }
 
         private void txtCMT_BenB_KeyPress(object sender, KeyPressEventArgs e)
@@ -529,6 +537,16 @@ namespace CRM.GUI_DV
         {
             KhoiTaoTTChung();
             LuuSoTK();
+            
+            //Luu Thong tin Giay Hen
+            try
+            {
+                PhatHanhTheGhiNoDAL.DV_GIAYHEN_UPDATE(Thong_tin_dang_nhap.ma_pb, txtGiayTo_1.Text, txtGiayTo_2.Text, txtGiayTo_3.Text);
+            }
+            catch
+            {
+                ErrorMessageDAL.DataAccessError();
+            }
             //Phat hanh moi the ghi no
             switch (tCtrDichVu.SelectedIndex)
             {
@@ -546,44 +564,10 @@ namespace CRM.GUI_DV
                         if (!LuuPhatHanhMoiTheQuocTe()) return;
                     }
 
-                    
-
-                    //Phat hanh the noi dia + quoc te
-                    //if (clbQT_Moi.CheckedItems.Count > 0 && clbND_Moi.CheckedItems.Count > 0)
-                    //{
-                    //    string soTK = cbSoTK.SelectedItem.ToString();
-                    //    string loaiTheND = StringConverter(clbND_Moi.CheckedItems[0].ToString());
-                    //    string loaiTheQT = StringConverter(clbQT_Moi.CheckedItems[0].ToString());
-
-                    //    if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
-                    //        PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count == 0)
-                    //    {
-                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
-                    //        return;
-                    //    }
-
-                    //    else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count == 0 &&
-                    //             PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
-                    //    {
-                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
-                    //        return;
-                    //    }
-                    //    else if (PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheND).Rows.Count > 0 &&
-                    //             PhatHanhTheGhiNoDAL.TimThe(soTK, loaiTheQT).Rows.Count > 0)
-                    //    {
-                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheND + "!", "Thông báo", MessageBoxButtons.OK);
-                    //        MessageBox.Show("Số tài khoản " + soTK + " đã đăng ký loại thẻ " + loaiTheQT + "!", "Thông báo", MessageBoxButtons.OK);
-                    //        return;
-                    //    }
-                    //    else
-                    //    {
-                    //        LuuPhatHanhMoiTheNoiDia();
-                    //        LuuPhatHanhMoiTheQuocTe();
-                    //    }
-                    //}
-
                     //Tao file word
                     KhoiTaoPhatHanhMoi();
+                    KhoiTaoHopDong();
+                    KhoiTaoGiayHen();
                     PhatHanhMoi();
                     //Thread tMoi = new Thread(PhatHanhMoi);
                     //tMoi.Start();
@@ -605,18 +589,11 @@ namespace CRM.GUI_DV
 
 
                     KhoiTaoPhatHanhLai();
+                    KhoiTaoHopDong();
+                    KhoiTaoGiayHen();
                     PhatHanhLai();
                     //Thread tLai = new Thread(PhatHanhLai);
                     //tLai.Start();
-                    break;
-                case 2: //Hop dong
-                    if (CheckNullHopDong()) return;
-                    KhoiTaoHopDong();
-                    HopDong();
-                    //Thread tHD = new Thread(HopDong);
-                    //tHD.Start();
-                    break;
-                case 3: //Giay hen
                     break;
                 default: break;
             }
@@ -627,14 +604,17 @@ namespace CRM.GUI_DV
             ttchung_nguon.Clear();
             ttchung_dich.Clear();
 
+            string cn = Thong_tin_dang_nhap.ten_cn;
+            if (!Thong_tin_dang_nhap.hs) cn = Thong_tin_dang_nhap.tenPb;
+
+            ttchung_dich.Add("<CHI_NHANH_0>");
+            ttchung_nguon.Add(cn.ToUpper());
+
             ttchung_nguon.Add(DateTime.Now.Day.ToString());
             ttchung_nguon.Add(DateTime.Now.Month.ToString());
             ttchung_nguon.Add(DateTime.Now.Year.ToString());
             ttchung_nguon.Add(DateTime.Now.ToString("dd/MM/yyyy"));
-            if (Thong_tin_dang_nhap.hs)
-                ttchung_nguon.Add(Thong_tin_dang_nhap.ten_cn);
-            else
-                ttchung_nguon.Add(Thong_tin_dang_nhap.tenPb);
+            ttchung_nguon.Add(cn);
             ttchung_nguon.Add(txtCMT.Text);
             ttchung_nguon.Add(txtHoTen.Text);
             ttchung_nguon.Add(txtTimKiem.Text);
@@ -676,6 +656,8 @@ namespace CRM.GUI_DV
                 ttchung_nguon.Add(((char)0x2610).ToString());
                 ttchung_dich.Add("<GT_0>");
             }
+
+
         }
 
         private void KhoiTaoPhatHanhMoi()
@@ -863,9 +845,6 @@ namespace CRM.GUI_DV
             hop_dong_nguon.Clear();
             hop_dong_dich.Clear();
 
-            hop_dong_dich.Add("<CHI_NHANH_0>");
-            hop_dong_nguon.Add(Thong_tin_dang_nhap.ten_cn.ToUpper());
-
             hop_dong_dich.Add("<SO_HD>");
             hop_dong_nguon.Add(txtSoHD.Text);
 
@@ -874,114 +853,152 @@ namespace CRM.GUI_DV
             hop_dong_nguon.Add(cbNguoiDaiDien_BenA.SelectedItem.ToString());
 
             hop_dong_dich.Add("<CHUC_VU>");
-            hop_dong_nguon.Add(txtChucVu_BenA.Text);
+            hop_dong_nguon.Add(dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex].chucVu);
 
             hop_dong_dich.Add("<SDT_CN>");
-            hop_dong_nguon.Add(txtDienThoai_BenA.Text);
+            hop_dong_nguon.Add(dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex].Sdt);
 
             hop_dong_dich.Add("<FAX>");
-            hop_dong_nguon.Add(txtFax_BenA.Text);
+            hop_dong_nguon.Add(dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex].Fax);
 
             hop_dong_dich.Add("<DIACHI_CN>");
-            hop_dong_nguon.Add(txtDiaChi_BenA.Text);
+            hop_dong_nguon.Add(dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex].diaChi);
 
             hop_dong_dich.Add("<UY_QUYEN>");
-            hop_dong_nguon.Add(txtGiayUyQuyen_BenA.Text);
-
-            //Ben B
-            hop_dong_dich.Add("<HOTEN_KH>");
-            hop_dong_nguon.Add(txtHoTen_BenB.Text);
-
-            hop_dong_dich.Add("<DIACHI_KH>");
-            hop_dong_nguon.Add(txtDiaChi_BenB.Text);
-
-            hop_dong_dich.Add("<CMND_KH>");
-            hop_dong_nguon.Add(txtCMT_BenB.Text);
-
-            hop_dong_dich.Add("<NGAY_CAP_KH>");
-            hop_dong_nguon.Add(txtNgayCap_BenB.Text);
-
-            hop_dong_dich.Add("<NOI_CAP_KH>");
-            hop_dong_nguon.Add(txtNoiCap_BenB.Text);
+            hop_dong_nguon.Add(dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex].giayUQ);
 
             hop_dong_dich.Add("<NGAY_DE_NGHI>");
-            hop_dong_nguon.Add(txtNgayDeNghi_BenB.Text);
+            hop_dong_nguon.Add(DateTime.Now.ToString("dd/MM/yyyy"));
+        }
+
+        void KhoiTaoGiayHen()
+        {
+            giay_hen_dich.Clear();
+            giay_hen_nguon.Clear();
+
+            giay_hen_dich.Add("<GIAY_TO_1>");
+            giay_hen_nguon.Add(txtGiayTo_1.Text);
+
+            giay_hen_dich.Add("<GIAY_TO_2>");
+            giay_hen_nguon.Add(txtGiayTo_2.Text);
+
+            giay_hen_dich.Add("<GIAY_TO_3>");
+            giay_hen_nguon.Add(txtGiayTo_3.Text);
+
+            giay_hen_dich.Add("<NGAY_HEN>");
+            giay_hen_nguon.Add(txtNgayHen.Text);
+
+            giay_hen_dich.Add("<SL_THE_CHINH>");
+            giay_hen_nguon.Add(txtSLTheChinh.Text);
+
+            giay_hen_dich.Add("<SL_THE_PHU>");
+            giay_hen_nguon.Add(txtSLThePhu.Text);
+
+            giay_hen_dich.Add("<SL_THE>");
+            giay_hen_dich.Add("<LOAI_THE>");
+            giay_hen_dich.Add("<HANG_THE>");
+            if (tCtrDichVu.SelectedIndex == 1) {
+                int slThe = 0;
+                slThe += clbND_Lai.CheckedItems.Count + clbQT_Lai.CheckedItems.Count;
+                giay_hen_nguon.Add(slThe.ToString());
+                string loaiThe = "", hangThe = "";
+                if (clbND_Lai.CheckedItems.Count > 0) loaiThe += clbND_Lai.CheckedItems[0].ToString();
+                if (clbQT_Lai.CheckedItems.Count > 0)
+                {
+                    if (string.IsNullOrEmpty(loaiThe)) loaiThe += clbQT_Lai.CheckedItems[0].ToString();
+                    else loaiThe += ", " + clbQT_Lai.CheckedItems[0].ToString();
+                }
+
+                hangThe = clbHangThe_Lai.CheckedItems[0].ToString();
+                giay_hen_nguon.Add(loaiThe);
+                giay_hen_nguon.Add(hangThe);
+
+                giay_hen_dich.Add("<DIACHI_CN>");
+                giay_hen_nguon.Add(dsNguoiDaiDien[0].diaChi);
+            }
+            else
+            {
+                int slThe = 0;
+                slThe += clbND_Moi.CheckedItems.Count + clbQT_Moi.CheckedItems.Count;
+                giay_hen_nguon.Add(slThe.ToString());
+
+                string loaiThe = "", hangThe = "";
+                if (clbND_Moi.CheckedItems.Count > 0) loaiThe += clbND_Moi.CheckedItems[0].ToString();
+                if (clbQT_Moi.CheckedItems.Count > 0)
+                {
+                    if (string.IsNullOrEmpty(loaiThe)) loaiThe += clbQT_Moi.CheckedItems[0].ToString();
+                    else loaiThe += ", " + clbQT_Moi.CheckedItems[0].ToString();
+                }
+
+                hangThe = clbHangThe_Moi.CheckedItems[0].ToString();
+                giay_hen_nguon.Add(loaiThe);
+                giay_hen_nguon.Add(hangThe);
+            }
+
+
         }
         void PhatHanhMoi() {
             var listNguon = ttchung_nguon;
             listNguon.AddRange(phat_hanh_moi_nguon);
+            listNguon.AddRange(hop_dong_nguon);
+            listNguon.AddRange(giay_hen_nguon);
             var listDich = ttchung_dich;
             listDich.AddRange(phat_hanh_moi_dich);
+            listDich.AddRange(hop_dong_dich);
+            listDich.AddRange(giay_hen_dich);
             saveFilePhatHanhMoi.Filter = "Word Documents|*.docx";
 
-            string subFolder = @"PhatHanhMoi\";
-            if (!CommonMethods.SubFolderExist(subFolder))
-                CommonMethods.CreateSubFolder(subFolder);
-
-            string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileNamePhatHanhMoi + ".docx");
-            string saveFileLocation = CommonMethods.SaveFileLocation(subFolder + fileNamePhatHanhMoi + "_" + DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss") + ".docx");
-
-
-            if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
-            {
-                //Thread.Sleep(500);
-                MessageBox.Show("File đã được tạo tại đường dẫn: " + saveFileLocation, "Tạo file thành công");
-                OpenFileWord(saveFileLocation);
-            }
-
-            
+            string[] fileNames = { fileNamePhatHanhMoi, fileNameHopDong, fileNameGiayHen };
+            CreateFile(fileNames, listNguon, listDich);
         }
+
 
         void PhatHanhLai()
         {
             var listNguon = ttchung_nguon;
             listNguon.AddRange(phat_hanh_lai_nguon);
+            listNguon.AddRange(hop_dong_nguon);
+            listNguon.AddRange(giay_hen_nguon);
+
             var listDich = ttchung_dich;
             listDich.AddRange(phat_hanh_lai_dich);
+            listDich.AddRange(hop_dong_dich);
+            listDich.AddRange(giay_hen_dich);
             saveFilePhatHanhLai.Filter = "Word Documents|*.docx";
 
-            string subFolder = @"PhatHanhLai\";
-            if (!CommonMethods.SubFolderExist(subFolder))
-                CommonMethods.CreateSubFolder(subFolder);
-
-            string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileNamePhatHanhLai + ".docx");
-            string saveFileLocation = CommonMethods.SaveFileLocation(subFolder + fileNamePhatHanhMoi + "_" + DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss") + ".docx");
-
-            
-
-            if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
-            {
-                //Thread.Sleep(500);
-                MessageBox.Show("File đã được tạo tại đường dẫn: " + saveFileLocation, "Tạo file thành công");
-                OpenFileWord(saveFileLocation);
-            }
-
+            string[] fileNames = { fileNamePhatHanhLai, fileNameHopDong, fileNameGiayHen };
+            CreateFile(fileNames, listNguon, listDich);
         }
 
-        void HopDong()
+        void CreateFile(string[] fileNames, List<string> listNguon, List<string> listDich)
         {
-            var listNguon = ttchung_nguon;
-            listNguon.AddRange(hop_dong_nguon);
-            var listDich = ttchung_dich;
-            listDich.AddRange(hop_dong_dich);
-            saveFileHopDong.Filter = "Word Documents|*.docx";
-
-            string subFolder = @"HopDong\";
-            if (!CommonMethods.SubFolderExist(subFolder))
-                CommonMethods.CreateSubFolder(subFolder);
-
-            string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileNameHopDong + ".docx");
-            string saveFileLocation = CommonMethods.SaveFileLocation(subFolder + fileNameHopDong + "_" + DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss") + ".docx");
-
-
-            if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
+            //string subFolder = @"PhatHanhMoi\";
+            try
             {
-                MessageBox.Show("File đã được tạo tại đường dẫn: " + saveFileLocation, "Tạo file thành công");
-                //Thread.Sleep(500);
-                OpenFileWord(saveFileLocation);
+                string subFolder = CommonMethods.RemoveUnicode(txtHoTen.Text).Replace(" ","") + DateTime.Now.ToString("_dd-MM-yyyy_hh-mm-ss");
+                foreach (var fileName in fileNames)
+                {
+                    if (!CommonMethods.SubFolderExist(subFolder))
+                        CommonMethods.CreateSubFolder(subFolder);
+
+                    string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileName + ".docx");
+                    string saveFileLocation = CommonMethods.SaveFileLocation(subFolder +@"\" + fileName + ".docx");
+
+
+                    if (CommonMethods.CreateWordDocument(TemplateFileLocation, saveFileLocation, listDich, listNguon))
+                    {
+                        //Thread.Sleep(500);
+                        OpenFileWord(saveFileLocation);
+                    }
+                }
+                MessageBox.Show("Các file đã tạo thành công vào thư mục: "+subFolder, "Thông báo", MessageBoxButtons.OK);
+            }
+            catch
+            {
 
             }
         }
+
 
         void OpenFileWord(string fileLocation)
         {
@@ -1054,33 +1071,33 @@ namespace CRM.GUI_DV
 
         bool CheckNullHopDong()
         {
-            if (string.IsNullOrEmpty(txtHoTen_BenB.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên khách hàng!");
-                txtHoTen_BenB.Focus();
-                return true;
-            }
+            //if (string.IsNullOrEmpty(txtHoTen_BenB.Text))
+            //{
+            //    MessageBox.Show("Vui lòng nhập tên khách hàng!");
+            //    txtHoTen_BenB.Focus();
+            //    return true;
+            //}
 
-            if (string.IsNullOrEmpty(txtCMT_BenB.Text))
-            {
-                MessageBox.Show("Vui lòng nhập số CMND!");
-                txtCMT_BenB.Focus();
-                return true;
-            }
+            //if (string.IsNullOrEmpty(txtCMT_BenB.Text))
+            //{
+            //    MessageBox.Show("Vui lòng nhập số CMND!");
+            //    txtCMT_BenB.Focus();
+            //    return true;
+            //}
 
-            if (string.IsNullOrEmpty(txtNgayCap_BenB.Text))
-            {
-                MessageBox.Show("Vui lòng nhập ngày cấp CMND!");
-                txtNgayCap_BenB.Focus();
-                return true;
-            }
+            //if (string.IsNullOrEmpty(txtNgayCap_BenB.Text))
+            //{
+            //    MessageBox.Show("Vui lòng nhập ngày cấp CMND!");
+            //    txtNgayCap_BenB.Focus();
+            //    return true;
+            //}
 
-            if (string.IsNullOrEmpty(txtNoiCap_BenB.Text))
-            {
-                MessageBox.Show("Vui lòng nhập nơi cấp CMND!");
-                txtNoiCap_BenB.Focus();
-                return true;
-            }
+            //if (string.IsNullOrEmpty(txtNoiCap_BenB.Text))
+            //{
+            //    MessageBox.Show("Vui lòng nhập nơi cấp CMND!");
+            //    txtNoiCap_BenB.Focus();
+            //    return true;
+            //}
             return false;
         }
 
@@ -1485,6 +1502,31 @@ namespace CRM.GUI_DV
         string XoaDauPhay(string s)
         {
             return s.Replace(",", "");
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void gbThongTinKH_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPhatHanhTheGhiNo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

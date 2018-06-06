@@ -17,7 +17,7 @@ namespace CRM.GUI_DV
 {
     public partial class frmKiemQuy : Form
     {
-        public static string fileNameKiemQuy = "BIEN_BAN_KIEM_QUY";
+        public static string fileNameKiemQuy = "THE_51_BIEN_BAN_KIEM_QUY";
 
         List<User> users, usersKiemQuy;
         List<string> listNguon, listDich;

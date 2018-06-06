@@ -877,7 +877,7 @@ namespace CRM.GUI_DV
             }
 
             // only allow one decimal point
-            if (((sender as TextBox).Text.IndexOf('.') > -1))
+            if (((sender as ComboBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
@@ -947,6 +947,21 @@ namespace CRM.GUI_DV
             CreateFile();
         }
         #endregion
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
 
         
 

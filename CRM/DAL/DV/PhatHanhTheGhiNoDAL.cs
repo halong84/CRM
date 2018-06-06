@@ -209,5 +209,27 @@ namespace CRM.DAL.DV
             };
             return db.dt("DV_GET_NOICAPCMND", Params).Rows[0]["NOICAP"].ToString();
         }
+
+
+        public static DataTable DV_GIAYHEN_SELECT(string mapb)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[]{
+                new SqlParameter("@mapb", mapb)
+            };
+            return db.dt("DV_GIAYHEN_SELECT", Params);
+        }
+
+        public static void DV_GIAYHEN_UPDATE(string mapb, string giayto1, string giayto2, string giayto3)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[]{
+                new SqlParameter("@mapb", mapb),
+                new SqlParameter("@giayto1", giayto1),
+                new SqlParameter("@giayto2", giayto2),
+                new SqlParameter("@giayto3", giayto3)
+            };
+            db.dt("DV_GIAYHEN_UPDATE", Params);
+        }
     }
 }

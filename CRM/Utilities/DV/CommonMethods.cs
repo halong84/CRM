@@ -374,7 +374,7 @@ namespace CRM.Utilities.DV
             }
             catch
             {
-                MessageBox.Show("File đang được sử dụng!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show(string.Format("Không thể đọc file {0}.", file_location), "Thông báo", MessageBoxButtons.OK);
             }// Release this document from memory.
             return false;
         }
@@ -472,7 +472,7 @@ namespace CRM.Utilities.DV
 
         public static string SaveFileLocation(string fileName)
         {
-            string thu_muc_goc = @"C:\TTKH\DV\";
+            string thu_muc_goc = @"C:\MauBieu\DV\";
             if(!Directory.Exists(thu_muc_goc))
             {
                 Directory.CreateDirectory(thu_muc_goc);
@@ -482,13 +482,13 @@ namespace CRM.Utilities.DV
 
         public static void CreateSubFolder(string folderPath)
         {
-            string thu_muc_goc = @"C:\TTKH\DV\";
+            string thu_muc_goc = @"C:\MauBieu\DV\";
             Directory.CreateDirectory(thu_muc_goc + folderPath);
         }
 
         public static bool SubFolderExist(string folder)
         {
-            string thu_muc_goc = @"C:\TTKH\DV\";
+            string thu_muc_goc = @"C:\MauBieu\DV\";
             return Directory.Exists(thu_muc_goc + folder);
         }
 

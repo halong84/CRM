@@ -17,6 +17,7 @@ namespace CRM.Utilities.DV
         public static string chuc_vu;
         public static bool admin;
         public static string dia_chi_cn;
+        public static string diaChiPb;
         public static string mst_cn;
         public static string ma_pb;
         public static string tenPb;

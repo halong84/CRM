@@ -1549,6 +1549,7 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đăng ký dịch vụ";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtSDTNhanOTP_IB_1
             // 
@@ -1690,9 +1691,8 @@
             // ckbOTP_Hard_IB_1
             // 
             this.ckbOTP_Hard_IB_1.AutoSize = true;
-            this.ckbOTP_Hard_IB_1.Location = new System.Drawing.Point(661, 42);
+            this.ckbOTP_Hard_IB_1.Location = new System.Drawing.Point(644, 42);
             this.ckbOTP_Hard_IB_1.Name = "ckbOTP_Hard_IB_1";
-            this.ckbOTP_Hard_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbOTP_Hard_IB_1.Size = new System.Drawing.Size(108, 17);
             this.ckbOTP_Hard_IB_1.TabIndex = 5;
             this.ckbOTP_Hard_IB_1.Text = "OTP Hard Token";
@@ -1701,9 +1701,8 @@
             // ckbOTP_Soft_IB_1
             // 
             this.ckbOTP_Soft_IB_1.AutoSize = true;
-            this.ckbOTP_Soft_IB_1.Location = new System.Drawing.Point(346, 42);
+            this.ckbOTP_Soft_IB_1.Location = new System.Drawing.Point(333, 42);
             this.ckbOTP_Soft_IB_1.Name = "ckbOTP_Soft_IB_1";
-            this.ckbOTP_Soft_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbOTP_Soft_IB_1.Size = new System.Drawing.Size(104, 17);
             this.ckbOTP_Soft_IB_1.TabIndex = 4;
             this.ckbOTP_Soft_IB_1.Text = "OTP Soft Token";
@@ -1712,9 +1711,8 @@
             // ckbOTP_SMS_IB_1
             // 
             this.ckbOTP_SMS_IB_1.AutoSize = true;
-            this.ckbOTP_SMS_IB_1.Location = new System.Drawing.Point(10, 42);
+            this.ckbOTP_SMS_IB_1.Location = new System.Drawing.Point(6, 42);
             this.ckbOTP_SMS_IB_1.Name = "ckbOTP_SMS_IB_1";
-            this.ckbOTP_SMS_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbOTP_SMS_IB_1.Size = new System.Drawing.Size(108, 17);
             this.ckbOTP_SMS_IB_1.TabIndex = 3;
             this.ckbOTP_SMS_IB_1.Text = "OTP SMS Token";
@@ -1725,7 +1723,6 @@
             this.ckbDVPhiTaiChinh_IB_1.AutoSize = true;
             this.ckbDVPhiTaiChinh_IB_1.Location = new System.Drawing.Point(644, 19);
             this.ckbDVPhiTaiChinh_IB_1.Name = "ckbDVPhiTaiChinh_IB_1";
-            this.ckbDVPhiTaiChinh_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbDVPhiTaiChinh_IB_1.Size = new System.Drawing.Size(125, 17);
             this.ckbDVPhiTaiChinh_IB_1.TabIndex = 2;
             this.ckbDVPhiTaiChinh_IB_1.Text = "Dịch vụ phi tài chính";
@@ -1736,7 +1733,6 @@
             this.ckbDVThanhToan_IB_1.AutoSize = true;
             this.ckbDVThanhToan_IB_1.Location = new System.Drawing.Point(333, 19);
             this.ckbDVThanhToan_IB_1.Name = "ckbDVThanhToan_IB_1";
-            this.ckbDVThanhToan_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbDVThanhToan_IB_1.Size = new System.Drawing.Size(117, 17);
             this.ckbDVThanhToan_IB_1.TabIndex = 1;
             this.ckbDVThanhToan_IB_1.Text = "Dịch vụ thanh toán";
@@ -1745,9 +1741,8 @@
             // ckbDVTaiChinh_IB_1
             // 
             this.ckbDVTaiChinh_IB_1.AutoSize = true;
-            this.ckbDVTaiChinh_IB_1.Location = new System.Drawing.Point(10, 19);
+            this.ckbDVTaiChinh_IB_1.Location = new System.Drawing.Point(6, 19);
             this.ckbDVTaiChinh_IB_1.Name = "ckbDVTaiChinh_IB_1";
-            this.ckbDVTaiChinh_IB_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbDVTaiChinh_IB_1.Size = new System.Drawing.Size(108, 17);
             this.ckbDVTaiChinh_IB_1.TabIndex = 0;
             this.ckbDVTaiChinh_IB_1.Text = "Dịch vụ tài chính";
@@ -1870,6 +1865,7 @@
             this.groupBox6.TabIndex = 56;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thay đổi dịch vụ";
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // label63
             // 
@@ -1966,6 +1962,7 @@
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thay đổi tài khoản sử dụng";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // ckbHuyBo_TK_1_IB_2
             // 
@@ -2113,9 +2110,8 @@
             // ckbHuyDangKy_IB_2
             // 
             this.ckbHuyDangKy_IB_2.AutoSize = true;
-            this.ckbHuyDangKy_IB_2.Location = new System.Drawing.Point(41, 157);
+            this.ckbHuyDangKy_IB_2.Location = new System.Drawing.Point(6, 157);
             this.ckbHuyDangKy_IB_2.Name = "ckbHuyDangKy_IB_2";
-            this.ckbHuyDangKy_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbHuyDangKy_IB_2.Size = new System.Drawing.Size(125, 17);
             this.ckbHuyDangKy_IB_2.TabIndex = 6;
             this.ckbHuyDangKy_IB_2.Text = "Hủy đăng ký dịch vụ";
@@ -2124,9 +2120,8 @@
             // ckbCapLaiThietBi_IB_2
             // 
             this.ckbCapLaiThietBi_IB_2.AutoSize = true;
-            this.ckbCapLaiThietBi_IB_2.Location = new System.Drawing.Point(30, 134);
+            this.ckbCapLaiThietBi_IB_2.Location = new System.Drawing.Point(6, 134);
             this.ckbCapLaiThietBi_IB_2.Name = "ckbCapLaiThietBi_IB_2";
-            this.ckbCapLaiThietBi_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbCapLaiThietBi_IB_2.Size = new System.Drawing.Size(136, 17);
             this.ckbCapLaiThietBi_IB_2.TabIndex = 5;
             this.ckbCapLaiThietBi_IB_2.Text = "Cấp lại thiết bị xác thực";
@@ -2135,9 +2130,8 @@
             // ckbKhoaThietBi_IB_2
             // 
             this.ckbKhoaThietBi_IB_2.AutoSize = true;
-            this.ckbKhoaThietBi_IB_2.Location = new System.Drawing.Point(37, 88);
+            this.ckbKhoaThietBi_IB_2.Location = new System.Drawing.Point(6, 88);
             this.ckbKhoaThietBi_IB_2.Name = "ckbKhoaThietBi_IB_2";
-            this.ckbKhoaThietBi_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbKhoaThietBi_IB_2.Size = new System.Drawing.Size(129, 17);
             this.ckbKhoaThietBi_IB_2.TabIndex = 4;
             this.ckbKhoaThietBi_IB_2.Text = "Khóa thiết bị xác thực";
@@ -2146,9 +2140,8 @@
             // ckbKhoaTenDangNhap_IB_2
             // 
             this.ckbKhoaTenDangNhap_IB_2.AutoSize = true;
-            this.ckbKhoaTenDangNhap_IB_2.Location = new System.Drawing.Point(38, 42);
+            this.ckbKhoaTenDangNhap_IB_2.Location = new System.Drawing.Point(6, 42);
             this.ckbKhoaTenDangNhap_IB_2.Name = "ckbKhoaTenDangNhap_IB_2";
-            this.ckbKhoaTenDangNhap_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbKhoaTenDangNhap_IB_2.Size = new System.Drawing.Size(128, 17);
             this.ckbKhoaTenDangNhap_IB_2.TabIndex = 3;
             this.ckbKhoaTenDangNhap_IB_2.Text = "Khóa Tên đăng nhập";
@@ -2157,9 +2150,8 @@
             // ckbMoKhoaThietBi_IB_2
             // 
             this.ckbMoKhoaThietBi_IB_2.AutoSize = true;
-            this.ckbMoKhoaThietBi_IB_2.Location = new System.Drawing.Point(20, 111);
+            this.ckbMoKhoaThietBi_IB_2.Location = new System.Drawing.Point(6, 111);
             this.ckbMoKhoaThietBi_IB_2.Name = "ckbMoKhoaThietBi_IB_2";
-            this.ckbMoKhoaThietBi_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbMoKhoaThietBi_IB_2.Size = new System.Drawing.Size(146, 17);
             this.ckbMoKhoaThietBi_IB_2.TabIndex = 2;
             this.ckbMoKhoaThietBi_IB_2.Text = "Mở khóa thiết bị xác thực";
@@ -2168,9 +2160,8 @@
             // ckbMoTenDangNhap_IB_2
             // 
             this.ckbMoTenDangNhap_IB_2.AutoSize = true;
-            this.ckbMoTenDangNhap_IB_2.Location = new System.Drawing.Point(25, 65);
+            this.ckbMoTenDangNhap_IB_2.Location = new System.Drawing.Point(6, 65);
             this.ckbMoTenDangNhap_IB_2.Name = "ckbMoTenDangNhap_IB_2";
-            this.ckbMoTenDangNhap_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbMoTenDangNhap_IB_2.Size = new System.Drawing.Size(141, 17);
             this.ckbMoTenDangNhap_IB_2.TabIndex = 1;
             this.ckbMoTenDangNhap_IB_2.Text = "Mở khóa tên đăng nhập";
@@ -2181,7 +2172,6 @@
             this.ckbCapLaiMK_IB_2.AutoSize = true;
             this.ckbCapLaiMK_IB_2.Location = new System.Drawing.Point(6, 19);
             this.ckbCapLaiMK_IB_2.Name = "ckbCapLaiMK_IB_2";
-            this.ckbCapLaiMK_IB_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ckbCapLaiMK_IB_2.Size = new System.Drawing.Size(160, 17);
             this.ckbCapLaiMK_IB_2.TabIndex = 0;
             this.ckbCapLaiMK_IB_2.Text = "Cấp lại mât khẩu đăng nhập";
