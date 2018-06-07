@@ -40,8 +40,8 @@ namespace CRM.GUI_DV
                 else
                     txtNoiPhatHanh.Text = ThongTinTheDAL.LayTenChiNhanh(the.maPB);
 
-                if (the.maPB != Thong_tin_dang_nhap.ma_pb)
-                    btnLuu.Enabled = false;
+                //if (the.maPB != Thong_tin_dang_nhap.ma_pb)
+                //    btnLuu.Enabled = false;
 
                 if (the.hmgd != 0)
                     txtHMGD.Text = the.hmgd.ToString();
@@ -67,22 +67,22 @@ namespace CRM.GUI_DV
 
                 if (the.baoHiem) ckbBaoHiem.Checked = true;
 
-                var txts = GetAll(this, typeof(TextBox));
-                var txtms = GetAll(this, typeof(MaskedTextBox));
+                //var txts = GetAll(this, typeof(TextBox));
+                //var txtms = GetAll(this, typeof(MaskedTextBox));
 
-                foreach (var c in txts)
-                {
-                    if (!string.IsNullOrEmpty(c.Text))
-                        c.Enabled = false;
-                }
+                //foreach (var c in txts)
+                //{
+                //    if (!string.IsNullOrEmpty(c.Text))
+                //        c.Enabled = false;
+                //}
 
-                foreach (var c in txtms)
-                {
-                    if (c.Text != "  /  /")
-                    {
-                        c.Enabled = false;
-                    }
-                }
+                //foreach (var c in txtms)
+                //{
+                //    if (c.Text != "  /  /")
+                //    {
+                //        c.Enabled = false;
+                //    }
+                //}
 
                 if (the.isPhatHanhMoi) cbPhatHanhMoi.Checked = true;
                 else cbPhatHanhLai.Checked = true;

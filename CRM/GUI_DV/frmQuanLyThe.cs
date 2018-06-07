@@ -19,8 +19,6 @@ namespace CRM.GUI_DV
             InitializeComponent();
             cbTieuChi_TheoNgay.SelectedIndex = 0;
             cbTieuChi_ThongTin.SelectedIndex = 0;
-
-            
         }
 
         void DSTheChuaNhan()
@@ -112,7 +110,14 @@ namespace CRM.GUI_DV
             dgvThongTinThe.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvThongTinThe.Columns[7].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvThongTinThe.Columns[5].DefaultCellStyle.Format = "HH:mm dd/MM/yyyy";
-            dgvThongTinThe.Columns[3].ReadOnly = false;
+            dgvThongTinThe.Columns[0].ReadOnly = true;
+            dgvThongTinThe.Columns[1].ReadOnly = true;
+            dgvThongTinThe.Columns[2].ReadOnly = true;
+            dgvThongTinThe.Columns[4].ReadOnly = true;
+            dgvThongTinThe.Columns[5].ReadOnly = true;
+            dgvThongTinThe.Columns[6].ReadOnly = true;
+            dgvThongTinThe.Columns[7].ReadOnly = true;
+
 
             if (dt.Rows.Count == 0)
             {
@@ -213,13 +218,13 @@ namespace CRM.GUI_DV
 
         private void btnGiaoThe_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(dgvThongTinThe.SelectedRows[0].Cells[3].Value.ToString()))
-            {
-                MessageBox.Show("Thẻ này chưa nhận được từ trung tâm thẻ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
             try
             {
+                if (string.IsNullOrEmpty(dgvThongTinThe.SelectedRows[0].Cells[3].Value.ToString()))
+                {
+                    MessageBox.Show("Thẻ này chưa nhận được từ trung tâm thẻ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
                 int ID = Convert.ToInt32(dgvThongTinThe.SelectedRows[0].Cells[0].Value);
                 ThongTinTheDAL.DV_GIAOTHE(ID, DateTime.Now);
             }

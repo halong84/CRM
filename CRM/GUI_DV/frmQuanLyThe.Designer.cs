@@ -57,7 +57,6 @@
             this.dgvThongTinThe.Location = new System.Drawing.Point(12, 78);
             this.dgvThongTinThe.MultiSelect = false;
             this.dgvThongTinThe.Name = "dgvThongTinThe";
-            this.dgvThongTinThe.ReadOnly = true;
             this.dgvThongTinThe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThongTinThe.Size = new System.Drawing.Size(799, 439);
             this.dgvThongTinThe.TabIndex = 2;

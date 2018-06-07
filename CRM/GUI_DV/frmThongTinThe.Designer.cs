@@ -68,7 +68,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtDTDD = new System.Windows.Forms.TextBox();
             this.ckbSMS = new System.Windows.Forms.CheckBox();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbPhatHanhLai = new System.Windows.Forms.CheckBox();
             this.cbPhatHanhMoi = new System.Windows.Forms.CheckBox();
@@ -115,6 +114,7 @@
             // 
             // txtNoiPhatHanh
             // 
+            this.txtNoiPhatHanh.Enabled = false;
             this.txtNoiPhatHanh.Location = new System.Drawing.Point(181, 227);
             this.txtNoiPhatHanh.Multiline = true;
             this.txtNoiPhatHanh.Name = "txtNoiPhatHanh";
@@ -132,6 +132,7 @@
             // 
             // txtUser
             // 
+            this.txtUser.Enabled = false;
             this.txtUser.Location = new System.Drawing.Point(182, 201);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(133, 20);
@@ -148,6 +149,7 @@
             // 
             // txtNgayGiaoThe
             // 
+            this.txtNgayGiaoThe.Enabled = false;
             this.txtNgayGiaoThe.Location = new System.Drawing.Point(181, 325);
             this.txtNgayGiaoThe.Mask = "00/00/0000";
             this.txtNgayGiaoThe.Name = "txtNgayGiaoThe";
@@ -157,6 +159,7 @@
             // 
             // txtNgayNhanThe
             // 
+            this.txtNgayNhanThe.Enabled = false;
             this.txtNgayNhanThe.Location = new System.Drawing.Point(181, 299);
             this.txtNgayNhanThe.Mask = "00/00/0000";
             this.txtNgayNhanThe.Name = "txtNgayNhanThe";
@@ -166,6 +169,7 @@
             // 
             // txtNgayDangKy
             // 
+            this.txtNgayDangKy.Enabled = false;
             this.txtNgayDangKy.Location = new System.Drawing.Point(181, 273);
             this.txtNgayDangKy.Mask = "00/00/0000";
             this.txtNgayDangKy.Name = "txtNgayDangKy";
@@ -202,6 +206,7 @@
             // 
             // txtHTNT
             // 
+            this.txtHTNT.Enabled = false;
             this.txtHTNT.Location = new System.Drawing.Point(182, 175);
             this.txtHTNT.Name = "txtHTNT";
             this.txtHTNT.Size = new System.Drawing.Size(133, 20);
@@ -218,6 +223,7 @@
             // 
             // txtHTPH
             // 
+            this.txtHTPH.Enabled = false;
             this.txtHTPH.Location = new System.Drawing.Point(182, 149);
             this.txtHTPH.Name = "txtHTPH";
             this.txtHTPH.Size = new System.Drawing.Size(133, 20);
@@ -234,6 +240,7 @@
             // 
             // txtHangThe
             // 
+            this.txtHangThe.Enabled = false;
             this.txtHangThe.Location = new System.Drawing.Point(182, 123);
             this.txtHangThe.Name = "txtHangThe";
             this.txtHangThe.Size = new System.Drawing.Size(133, 20);
@@ -250,6 +257,7 @@
             // 
             // txtLoaiThe
             // 
+            this.txtLoaiThe.Enabled = false;
             this.txtLoaiThe.Location = new System.Drawing.Point(182, 97);
             this.txtLoaiThe.Name = "txtLoaiThe";
             this.txtLoaiThe.Size = new System.Drawing.Size(133, 20);
@@ -266,6 +274,7 @@
             // 
             // txtSoThe
             // 
+            this.txtSoThe.Enabled = false;
             this.txtSoThe.Location = new System.Drawing.Point(182, 71);
             this.txtSoThe.Name = "txtSoThe";
             this.txtSoThe.Size = new System.Drawing.Size(133, 20);
@@ -283,6 +292,7 @@
             // 
             // txtSoTK
             // 
+            this.txtSoTK.Enabled = false;
             this.txtSoTK.Location = new System.Drawing.Point(182, 45);
             this.txtSoTK.Name = "txtSoTK";
             this.txtSoTK.Size = new System.Drawing.Size(133, 20);
@@ -299,6 +309,7 @@
             // 
             // txtHoTen
             // 
+            this.txtHoTen.Enabled = false;
             this.txtHoTen.Location = new System.Drawing.Point(182, 19);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(133, 20);
@@ -435,17 +446,6 @@
             this.ckbSMS.TabIndex = 0;
             this.ckbSMS.UseVisualStyleBackColor = true;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(128, 527);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(88, 28);
-            this.btnLuu.TabIndex = 20;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbPhatHanhLai);
@@ -484,9 +484,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 561);
+            this.ClientSize = new System.Drawing.Size(346, 528);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.gbDichVu);
             this.Controls.Add(this.gbThongTinThe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -533,7 +532,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDTDD;
         private System.Windows.Forms.CheckBox ckbSMS;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.BindingSource tHEODOITHEBindingSource6;
         private System.Windows.Forms.BindingSource tHEODOITHEBindingSource1;
         private System.Windows.Forms.Label label12;
