@@ -8,8 +8,8 @@ namespace CRM.DAL.DV
 {
     class ErrorMessageDAL
     {
-        public static void DataAccessError(){
-            MessageBox.Show("Có lỗi trong quá trình lấy dữ liệu!", "Error", MessageBoxButtons.OK);
+        public static void DataAccessError(Exception ex){
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

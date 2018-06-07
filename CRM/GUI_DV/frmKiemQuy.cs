@@ -51,9 +51,9 @@ namespace CRM.GUI_DV
                 if (cbATMID.Items.Count > 0)
                     cbATMID.SelectedIndex = 0;
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -66,9 +66,9 @@ namespace CRM.GUI_DV
             {
                 dt = KiemQuyDAL.DV_DSNhanVien_MaCN(Thong_tin_dang_nhap.ma_cn);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
 
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -471,9 +471,9 @@ namespace CRM.GUI_DV
                     txtKhacPhuc.Text
                     );
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return;
             }
             //Tao file

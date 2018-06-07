@@ -19,6 +19,8 @@ namespace CRM.GUI_DV
             InitializeComponent();
             cbTieuChi_TheoNgay.SelectedIndex = 0;
             cbTieuChi_ThongTin.SelectedIndex = 0;
+
+            
         }
 
         void DSTheChuaNhan()
@@ -28,9 +30,9 @@ namespace CRM.GUI_DV
                 DataTable dt = TheDAL.TheChuaNhan(dtpTuNgay.Text, dtpDenNgay.Text);
                 FillData(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -41,9 +43,9 @@ namespace CRM.GUI_DV
                 DataTable dt = TheDAL.TheDaNhanChuaGiao(dtpTuNgay.Text, dtpDenNgay.Text);
                 FillData(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -54,9 +56,9 @@ namespace CRM.GUI_DV
                 DataTable dt = TheDAL.TheDaGiao(dtpTuNgay.Text, dtpDenNgay.Text);
                 FillData(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -68,9 +70,9 @@ namespace CRM.GUI_DV
                 DataTable dt = TheDAL.TatCaThe(dtpTuNgay.Text, dtpDenNgay.Text);
                 FillData(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -81,9 +83,9 @@ namespace CRM.GUI_DV
                 DataTable dt = TheDAL.TheTheoMaKH(txtThongTin.Text);
                 FillData(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -94,9 +96,9 @@ namespace CRM.GUI_DV
                 DataTable dt = TheDAL.TheTheoCMND(txtThongTin.Text);
                 FillData(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -107,6 +109,11 @@ namespace CRM.GUI_DV
             dgvThongTinThe.DataSource = bindS;
             dgvThongTinThe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThongTinThe.Columns[0].Width = 30;
+            dgvThongTinThe.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvThongTinThe.Columns[7].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvThongTinThe.Columns[5].DefaultCellStyle.Format = "HH:mm dd/MM/yyyy";
+            dgvThongTinThe.Columns[3].ReadOnly = false;
+
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy thẻ nào!");
@@ -179,7 +186,8 @@ namespace CRM.GUI_DV
             {
                 ContextMenu cm = new ContextMenu();
                 cm.MenuItems.Add("Xóa", new EventHandler(btnDeleteThe_Click));
-                cm.MenuItems.Add("Sửa", new EventHandler(btnSua_Click));
+                cm.MenuItems.Add("Xem", new EventHandler(btnSua_Click));
+                cm.MenuItems.Add("Đã giao thẻ", new EventHandler(btnGiaoThe_Click));
                 dgvThongTinThe.ContextMenu = cm;
                 dgvThongTinThe.ContextMenu.Show(dgvThongTinThe, e.Location);
             }
@@ -193,14 +201,33 @@ namespace CRM.GUI_DV
                 frmThongTinThe frm = new frmThongTinThe(
                     Convert.ToInt32(dgvThongTinThe.Rows[rowIndex].Cells[0].Value)
                     );
-                //frm.MdiParent = this;
-                frm.Show();
-                frm.BringToFront();
+                frm.FormBorderStyle = this.FormBorderStyle;
+                frm.ShowDialog();
+                //frm.BringToFront();
             }
             catch
             {
 
             }
+        }
+
+        private void btnGiaoThe_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(dgvThongTinThe.SelectedRows[0].Cells[3].Value.ToString()))
+            {
+                MessageBox.Show("Thẻ này chưa nhận được từ trung tâm thẻ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            try
+            {
+                int ID = Convert.ToInt32(dgvThongTinThe.SelectedRows[0].Cells[0].Value);
+                ThongTinTheDAL.DV_GIAOTHE(ID, DateTime.Now);
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -223,9 +250,9 @@ namespace CRM.GUI_DV
                     return;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return;
             }
 
@@ -241,9 +268,9 @@ namespace CRM.GUI_DV
                         TimKiem_TheoThongTin();
                     else TimKiem_TheoNgay();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    ErrorMessageDAL.DataAccessError();
+                    ErrorMessageDAL.DataAccessError(ex);
                 }
             }
         }
@@ -254,6 +281,26 @@ namespace CRM.GUI_DV
             {
                 //Tim kiem
                 TimKiem_TheoThongTin();
+            }
+        }
+
+        private void dgvThongTinThe_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvThongTinThe_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 3) return;
+            try
+            {
+                int id = Convert.ToInt32(dgvThongTinThe.Rows[e.RowIndex].Cells[0].Value.ToString());
+                string sothe = dgvThongTinThe.Rows[e.RowIndex].Cells[3].Value.ToString();
+                ThongTinTheDAL.DV_NHANTHE(id, sothe, DateTime.Now);
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
     }

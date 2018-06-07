@@ -65,6 +65,62 @@
             this.saveFileGiayHen = new System.Windows.Forms.SaveFileDialog();
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.gbHopDong = new System.Windows.Forms.GroupBox();
+            this.cbNguoiDaiDien_BenA = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtSoHD = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tpPhatHanhLai = new System.Windows.Forms.TabPage();
+            this.gbDangKyDichVu1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtHMGD_Lai = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDTDD_SMS_Lai = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ckbBaoHiem_Lai = new System.Windows.Forms.CheckBox();
+            this.ckbInternet_Lai = new System.Windows.Forms.CheckBox();
+            this.ckbSMS_Lai = new System.Windows.Forms.CheckBox();
+            this.gbThongTinThe1 = new System.Windows.Forms.GroupBox();
+            this.clbHTPhatHanh_Lai = new System.Windows.Forms.CheckedListBox();
+            this.clbHangThe_Lai = new System.Windows.Forms.CheckedListBox();
+            this.clbQT_Lai = new System.Windows.Forms.CheckedListBox();
+            this.clbND_Lai = new System.Windows.Forms.CheckedListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tpPhatHanhTheGhiNo = new System.Windows.Forms.TabPage();
+            this.gbDangKyDichVu = new System.Windows.Forms.GroupBox();
+            this.lbDong = new System.Windows.Forms.Label();
+            this.txtHMGD_Moi = new System.Windows.Forms.TextBox();
+            this.lbHanMucGiaoDich = new System.Windows.Forms.Label();
+            this.txtDTDD_SMS_Moi = new System.Windows.Forms.TextBox();
+            this.lbSoDiDong = new System.Windows.Forms.Label();
+            this.ckbBaoHiem_Moi = new System.Windows.Forms.CheckBox();
+            this.ckbInternet_Moi = new System.Windows.Forms.CheckBox();
+            this.ckbSMS_Moi = new System.Windows.Forms.CheckBox();
+            this.gbThongTinThe = new System.Windows.Forms.GroupBox();
+            this.clbHTNhanThe_Moi = new System.Windows.Forms.CheckedListBox();
+            this.clbHTPhatHanh_Moi = new System.Windows.Forms.CheckedListBox();
+            this.clbHangThe_Moi = new System.Windows.Forms.CheckedListBox();
+            this.clbQT_Moi = new System.Windows.Forms.CheckedListBox();
+            this.clbND_Moi = new System.Windows.Forms.CheckedListBox();
+            this.lbQuocTe = new System.Windows.Forms.Label();
+            this.lbHinhThucNhanThe = new System.Windows.Forms.Label();
+            this.lbHinhThucPhatHanh = new System.Windows.Forms.Label();
+            this.lbHangThe = new System.Windows.Forms.Label();
+            this.lbNoiDia = new System.Windows.Forms.Label();
+            this.tCtrDichVu = new System.Windows.Forms.TabControl();
+            this.gbGiayHen = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtSLThePhu = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSLTheChinh = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNgayHen = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtGiayTo_3 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -72,73 +128,19 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiayTo_1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.cbNguoiDaiDien_BenA = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSoHD = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtNgayHen = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtSLThePhu = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtSLTheChinh = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tpPhatHanhLai = new System.Windows.Forms.TabPage();
-            this.gbThongTinThe1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.clbND_Lai = new System.Windows.Forms.CheckedListBox();
-            this.clbQT_Lai = new System.Windows.Forms.CheckedListBox();
-            this.clbHangThe_Lai = new System.Windows.Forms.CheckedListBox();
-            this.clbHTPhatHanh_Lai = new System.Windows.Forms.CheckedListBox();
-            this.gbDangKyDichVu1 = new System.Windows.Forms.GroupBox();
-            this.ckbSMS_Lai = new System.Windows.Forms.CheckBox();
-            this.ckbInternet_Lai = new System.Windows.Forms.CheckBox();
-            this.ckbBaoHiem_Lai = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDTDD_SMS_Lai = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtHMGD_Lai = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tpPhatHanhTheGhiNo = new System.Windows.Forms.TabPage();
-            this.gbThongTinThe = new System.Windows.Forms.GroupBox();
-            this.lbNoiDia = new System.Windows.Forms.Label();
-            this.lbHangThe = new System.Windows.Forms.Label();
-            this.lbHinhThucPhatHanh = new System.Windows.Forms.Label();
-            this.lbHinhThucNhanThe = new System.Windows.Forms.Label();
-            this.lbQuocTe = new System.Windows.Forms.Label();
-            this.clbND_Moi = new System.Windows.Forms.CheckedListBox();
-            this.clbQT_Moi = new System.Windows.Forms.CheckedListBox();
-            this.clbHangThe_Moi = new System.Windows.Forms.CheckedListBox();
-            this.clbHTPhatHanh_Moi = new System.Windows.Forms.CheckedListBox();
-            this.clbHTNhanThe_Moi = new System.Windows.Forms.CheckedListBox();
-            this.gbDangKyDichVu = new System.Windows.Forms.GroupBox();
-            this.ckbSMS_Moi = new System.Windows.Forms.CheckBox();
-            this.ckbInternet_Moi = new System.Windows.Forms.CheckBox();
-            this.ckbBaoHiem_Moi = new System.Windows.Forms.CheckBox();
-            this.lbSoDiDong = new System.Windows.Forms.Label();
-            this.txtDTDD_SMS_Moi = new System.Windows.Forms.TextBox();
-            this.lbHanMucGiaoDich = new System.Windows.Forms.Label();
-            this.txtHMGD_Moi = new System.Windows.Forms.TextBox();
-            this.lbDong = new System.Windows.Forms.Label();
-            this.tCtrDichVu = new System.Windows.Forms.TabControl();
             this.gbThongTinKH.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbHopDong.SuspendLayout();
             this.tpPhatHanhLai.SuspendLayout();
-            this.gbThongTinThe1.SuspendLayout();
             this.gbDangKyDichVu1.SuspendLayout();
+            this.gbThongTinThe1.SuspendLayout();
             this.tpPhatHanhTheGhiNo.SuspendLayout();
-            this.gbThongTinThe.SuspendLayout();
             this.gbDangKyDichVu.SuspendLayout();
+            this.gbThongTinThe.SuspendLayout();
             this.tCtrDichVu.SuspendLayout();
+            this.gbGiayHen.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbThongTinKH
@@ -470,7 +472,7 @@
             // 
             this.btnLuuHoSo.Enabled = false;
             this.btnLuuHoSo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuuHoSo.Location = new System.Drawing.Point(346, 639);
+            this.btnLuuHoSo.Location = new System.Drawing.Point(340, 664);
             this.btnLuuHoSo.Name = "btnLuuHoSo";
             this.btnLuuHoSo.Size = new System.Drawing.Size(140, 29);
             this.btnLuuHoSo.TabIndex = 6;
@@ -486,83 +488,19 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // groupBox5
+            // gbHopDong
             // 
-            this.groupBox5.Controls.Add(this.txtGiayTo_3);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.txtGiayTo_2);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.txtGiayTo_1);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(12, 537);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(419, 97);
-            this.groupBox5.TabIndex = 9;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Hồ sơ giấy hẹn bao gồm:";
-            // 
-            // txtGiayTo_3
-            // 
-            this.txtGiayTo_3.Location = new System.Drawing.Point(31, 71);
-            this.txtGiayTo_3.Name = "txtGiayTo_3";
-            this.txtGiayTo_3.Size = new System.Drawing.Size(384, 20);
-            this.txtGiayTo_3.TabIndex = 5;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 74);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(19, 13);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "3. ";
-            // 
-            // txtGiayTo_2
-            // 
-            this.txtGiayTo_2.Location = new System.Drawing.Point(31, 45);
-            this.txtGiayTo_2.Name = "txtGiayTo_2";
-            this.txtGiayTo_2.Size = new System.Drawing.Size(384, 20);
-            this.txtGiayTo_2.TabIndex = 3;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(19, 13);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "2. ";
-            // 
-            // txtGiayTo_1
-            // 
-            this.txtGiayTo_1.Location = new System.Drawing.Point(31, 19);
-            this.txtGiayTo_1.Name = "txtGiayTo_1";
-            this.txtGiayTo_1.Size = new System.Drawing.Size(384, 20);
-            this.txtGiayTo_1.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 22);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(19, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "1. ";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.cbNguoiDaiDien_BenA);
-            this.groupBox9.Controls.Add(this.label9);
-            this.groupBox9.Controls.Add(this.txtSoHD);
-            this.groupBox9.Controls.Add(this.label15);
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(12, 477);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(795, 54);
-            this.groupBox9.TabIndex = 8;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Hợp đồng phát hành thẻ";
+            this.gbHopDong.Controls.Add(this.cbNguoiDaiDien_BenA);
+            this.gbHopDong.Controls.Add(this.label9);
+            this.gbHopDong.Controls.Add(this.txtSoHD);
+            this.gbHopDong.Controls.Add(this.label15);
+            this.gbHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbHopDong.Location = new System.Drawing.Point(12, 477);
+            this.gbHopDong.Name = "gbHopDong";
+            this.gbHopDong.Size = new System.Drawing.Size(795, 54);
+            this.gbHopDong.TabIndex = 3;
+            this.gbHopDong.TabStop = false;
+            this.gbHopDong.Text = "Hợp đồng phát hành thẻ";
             // 
             // cbNguoiDaiDien_BenA
             // 
@@ -599,43 +537,527 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "Hợp đồng số:";
             // 
-            // groupBox2
+            // tpPhatHanhLai
             // 
-            this.groupBox2.Controls.Add(this.txtNgayHen);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(437, 537);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(182, 97);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ngày hẹn";
+            this.tpPhatHanhLai.Controls.Add(this.gbDangKyDichVu1);
+            this.tpPhatHanhLai.Controls.Add(this.gbThongTinThe1);
+            this.tpPhatHanhLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpPhatHanhLai.Location = new System.Drawing.Point(4, 22);
+            this.tpPhatHanhLai.Name = "tpPhatHanhLai";
+            this.tpPhatHanhLai.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPhatHanhLai.Size = new System.Drawing.Size(786, 234);
+            this.tpPhatHanhLai.TabIndex = 1;
+            this.tpPhatHanhLai.Text = "Phát hành lại thẻ";
+            this.tpPhatHanhLai.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // gbDangKyDichVu1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Nhận thẻ sau:";
+            this.gbDangKyDichVu1.Controls.Add(this.label1);
+            this.gbDangKyDichVu1.Controls.Add(this.txtHMGD_Lai);
+            this.gbDangKyDichVu1.Controls.Add(this.label2);
+            this.gbDangKyDichVu1.Controls.Add(this.txtDTDD_SMS_Lai);
+            this.gbDangKyDichVu1.Controls.Add(this.label3);
+            this.gbDangKyDichVu1.Controls.Add(this.ckbBaoHiem_Lai);
+            this.gbDangKyDichVu1.Controls.Add(this.ckbInternet_Lai);
+            this.gbDangKyDichVu1.Controls.Add(this.ckbSMS_Lai);
+            this.gbDangKyDichVu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDangKyDichVu1.Location = new System.Drawing.Point(3, 145);
+            this.gbDangKyDichVu1.Name = "gbDangKyDichVu1";
+            this.gbDangKyDichVu1.Size = new System.Drawing.Size(781, 90);
+            this.gbDangKyDichVu1.TabIndex = 5;
+            this.gbDangKyDichVu1.TabStop = false;
+            this.gbDangKyDichVu1.Text = "Đăng ký dịch vụ";
             // 
-            // label10
+            // label1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(132, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "ngày.";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(428, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "(đồng)";
             // 
-            // txtNgayHen
+            // txtHMGD_Lai
             // 
-            this.txtNgayHen.Location = new System.Drawing.Point(86, 19);
-            this.txtNgayHen.Name = "txtNgayHen";
-            this.txtNgayHen.Size = new System.Drawing.Size(40, 20);
-            this.txtNgayHen.TabIndex = 2;
+            this.txtHMGD_Lai.Enabled = false;
+            this.txtHMGD_Lai.Location = new System.Drawing.Point(299, 41);
+            this.txtHMGD_Lai.Name = "txtHMGD_Lai";
+            this.txtHMGD_Lai.Size = new System.Drawing.Size(123, 20);
+            this.txtHMGD_Lai.TabIndex = 6;
+            this.txtHMGD_Lai.TextChanged += new System.EventHandler(this.txtHMGD_Lai_TextChanged);
+            this.txtHMGD_Lai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHMGD_Lai_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(168, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Hạn mức giao dịch ngày:";
+            // 
+            // txtDTDD_SMS_Lai
+            // 
+            this.txtDTDD_SMS_Lai.Enabled = false;
+            this.txtDTDD_SMS_Lai.Location = new System.Drawing.Point(299, 17);
+            this.txtDTDD_SMS_Lai.Name = "txtDTDD_SMS_Lai";
+            this.txtDTDD_SMS_Lai.Size = new System.Drawing.Size(123, 20);
+            this.txtDTDD_SMS_Lai.TabIndex = 4;
+            this.txtDTDD_SMS_Lai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDTDD_SMS_Lai_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(236, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Số ĐTDĐ:";
+            // 
+            // ckbBaoHiem_Lai
+            // 
+            this.ckbBaoHiem_Lai.AutoSize = true;
+            this.ckbBaoHiem_Lai.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbBaoHiem_Lai.Location = new System.Drawing.Point(7, 66);
+            this.ckbBaoHiem_Lai.Name = "ckbBaoHiem_Lai";
+            this.ckbBaoHiem_Lai.Size = new System.Drawing.Size(109, 17);
+            this.ckbBaoHiem_Lai.TabIndex = 2;
+            this.ckbBaoHiem_Lai.Text = "Bảo hiểm chủ thẻ";
+            this.ckbBaoHiem_Lai.UseVisualStyleBackColor = true;
+            // 
+            // ckbInternet_Lai
+            // 
+            this.ckbInternet_Lai.AutoSize = true;
+            this.ckbInternet_Lai.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbInternet_Lai.Location = new System.Drawing.Point(6, 43);
+            this.ckbInternet_Lai.Name = "ckbInternet_Lai";
+            this.ckbInternet_Lai.Size = new System.Drawing.Size(110, 17);
+            this.ckbInternet_Lai.TabIndex = 1;
+            this.ckbInternet_Lai.Text = "Giao dịch Internet";
+            this.ckbInternet_Lai.UseVisualStyleBackColor = true;
+            this.ckbInternet_Lai.CheckedChanged += new System.EventHandler(this.ckbInternet_Lai_CheckedChanged);
+            // 
+            // ckbSMS_Lai
+            // 
+            this.ckbSMS_Lai.AutoSize = true;
+            this.ckbSMS_Lai.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbSMS_Lai.Location = new System.Drawing.Point(25, 20);
+            this.ckbSMS_Lai.Name = "ckbSMS_Lai";
+            this.ckbSMS_Lai.Size = new System.Drawing.Size(91, 17);
+            this.ckbSMS_Lai.TabIndex = 0;
+            this.ckbSMS_Lai.Text = "SMS Banking";
+            this.ckbSMS_Lai.UseVisualStyleBackColor = true;
+            this.ckbSMS_Lai.CheckedChanged += new System.EventHandler(this.ckbSMS_Lai_CheckedChanged);
+            // 
+            // gbThongTinThe1
+            // 
+            this.gbThongTinThe1.Controls.Add(this.clbHTPhatHanh_Lai);
+            this.gbThongTinThe1.Controls.Add(this.clbHangThe_Lai);
+            this.gbThongTinThe1.Controls.Add(this.clbQT_Lai);
+            this.gbThongTinThe1.Controls.Add(this.clbND_Lai);
+            this.gbThongTinThe1.Controls.Add(this.label8);
+            this.gbThongTinThe1.Controls.Add(this.label5);
+            this.gbThongTinThe1.Controls.Add(this.label6);
+            this.gbThongTinThe1.Controls.Add(this.label7);
+            this.gbThongTinThe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbThongTinThe1.Location = new System.Drawing.Point(3, 5);
+            this.gbThongTinThe1.Name = "gbThongTinThe1";
+            this.gbThongTinThe1.Size = new System.Drawing.Size(781, 133);
+            this.gbThongTinThe1.TabIndex = 4;
+            this.gbThongTinThe1.TabStop = false;
+            this.gbThongTinThe1.Text = "Thông tin thẻ";
+            // 
+            // clbHTPhatHanh_Lai
+            // 
+            this.clbHTPhatHanh_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbHTPhatHanh_Lai.CheckOnClick = true;
+            this.clbHTPhatHanh_Lai.ColumnWidth = 150;
+            this.clbHTPhatHanh_Lai.FormattingEnabled = true;
+            this.clbHTPhatHanh_Lai.Items.AddRange(new object[] {
+            "Phát hành thường",
+            "Phát hành nhanh"});
+            this.clbHTPhatHanh_Lai.Location = new System.Drawing.Point(140, 110);
+            this.clbHTPhatHanh_Lai.MultiColumn = true;
+            this.clbHTPhatHanh_Lai.Name = "clbHTPhatHanh_Lai";
+            this.clbHTPhatHanh_Lai.Size = new System.Drawing.Size(300, 15);
+            this.clbHTPhatHanh_Lai.TabIndex = 24;
+            this.clbHTPhatHanh_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHTPhatHanh_Lai_ItemCheck);
+            // 
+            // clbHangThe_Lai
+            // 
+            this.clbHangThe_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbHangThe_Lai.CheckOnClick = true;
+            this.clbHangThe_Lai.ColumnWidth = 150;
+            this.clbHangThe_Lai.FormattingEnabled = true;
+            this.clbHangThe_Lai.Items.AddRange(new object[] {
+            "Chuẩn",
+            "Vàng",
+            "Bạch kim"});
+            this.clbHangThe_Lai.Location = new System.Drawing.Point(140, 88);
+            this.clbHangThe_Lai.MultiColumn = true;
+            this.clbHangThe_Lai.Name = "clbHangThe_Lai";
+            this.clbHangThe_Lai.Size = new System.Drawing.Size(450, 15);
+            this.clbHangThe_Lai.TabIndex = 23;
+            this.clbHangThe_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHangThe_Lai_ItemCheck);
+            // 
+            // clbQT_Lai
+            // 
+            this.clbQT_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbQT_Lai.CheckOnClick = true;
+            this.clbQT_Lai.ColumnWidth = 150;
+            this.clbQT_Lai.FormattingEnabled = true;
+            this.clbQT_Lai.Items.AddRange(new object[] {
+            "Ghi nợ QT",
+            "Tín dụng QT",
+            "Visa",
+            "MasterCard",
+            "JCB"});
+            this.clbQT_Lai.Location = new System.Drawing.Point(140, 43);
+            this.clbQT_Lai.MultiColumn = true;
+            this.clbQT_Lai.Name = "clbQT_Lai";
+            this.clbQT_Lai.Size = new System.Drawing.Size(450, 30);
+            this.clbQT_Lai.TabIndex = 22;
+            this.clbQT_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbQT_Lai_ItemCheck);
+            // 
+            // clbND_Lai
+            // 
+            this.clbND_Lai.BackColor = System.Drawing.SystemColors.Window;
+            this.clbND_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbND_Lai.CheckOnClick = true;
+            this.clbND_Lai.ColumnWidth = 150;
+            this.clbND_Lai.FormattingEnabled = true;
+            this.clbND_Lai.Items.AddRange(new object[] {
+            "Ghi nợ NĐ",
+            "Lập nghiệp",
+            "Sinh Viên",
+            "Liên kết thương hiệu"});
+            this.clbND_Lai.Location = new System.Drawing.Point(140, 20);
+            this.clbND_Lai.MultiColumn = true;
+            this.clbND_Lai.Name = "clbND_Lai";
+            this.clbND_Lai.Size = new System.Drawing.Size(600, 15);
+            this.clbND_Lai.TabIndex = 21;
+            this.clbND_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbND_Lai_ItemCheck);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Thẻ quốc tế:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Hình thức phát hành:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Hạng thẻ:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Thẻ nội địa:";
+            // 
+            // tpPhatHanhTheGhiNo
+            // 
+            this.tpPhatHanhTheGhiNo.Controls.Add(this.gbDangKyDichVu);
+            this.tpPhatHanhTheGhiNo.Controls.Add(this.gbThongTinThe);
+            this.tpPhatHanhTheGhiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpPhatHanhTheGhiNo.Location = new System.Drawing.Point(4, 22);
+            this.tpPhatHanhTheGhiNo.Name = "tpPhatHanhTheGhiNo";
+            this.tpPhatHanhTheGhiNo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPhatHanhTheGhiNo.Size = new System.Drawing.Size(786, 234);
+            this.tpPhatHanhTheGhiNo.TabIndex = 0;
+            this.tpPhatHanhTheGhiNo.Text = "Phát hành mới thẻ ghi nợ";
+            this.tpPhatHanhTheGhiNo.UseVisualStyleBackColor = true;
+            // 
+            // gbDangKyDichVu
+            // 
+            this.gbDangKyDichVu.Controls.Add(this.lbDong);
+            this.gbDangKyDichVu.Controls.Add(this.txtHMGD_Moi);
+            this.gbDangKyDichVu.Controls.Add(this.lbHanMucGiaoDich);
+            this.gbDangKyDichVu.Controls.Add(this.txtDTDD_SMS_Moi);
+            this.gbDangKyDichVu.Controls.Add(this.lbSoDiDong);
+            this.gbDangKyDichVu.Controls.Add(this.ckbBaoHiem_Moi);
+            this.gbDangKyDichVu.Controls.Add(this.ckbInternet_Moi);
+            this.gbDangKyDichVu.Controls.Add(this.ckbSMS_Moi);
+            this.gbDangKyDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDangKyDichVu.Location = new System.Drawing.Point(3, 144);
+            this.gbDangKyDichVu.Name = "gbDangKyDichVu";
+            this.gbDangKyDichVu.Size = new System.Drawing.Size(781, 90);
+            this.gbDangKyDichVu.TabIndex = 3;
+            this.gbDangKyDichVu.TabStop = false;
+            this.gbDangKyDichVu.Text = "Đăng ký dịch vụ";
+            // 
+            // lbDong
+            // 
+            this.lbDong.AutoSize = true;
+            this.lbDong.Location = new System.Drawing.Point(428, 44);
+            this.lbDong.Name = "lbDong";
+            this.lbDong.Size = new System.Drawing.Size(38, 13);
+            this.lbDong.TabIndex = 7;
+            this.lbDong.Text = "(đồng)";
+            // 
+            // txtHMGD_Moi
+            // 
+            this.txtHMGD_Moi.Enabled = false;
+            this.txtHMGD_Moi.Location = new System.Drawing.Point(299, 41);
+            this.txtHMGD_Moi.Name = "txtHMGD_Moi";
+            this.txtHMGD_Moi.Size = new System.Drawing.Size(123, 20);
+            this.txtHMGD_Moi.TabIndex = 6;
+            this.txtHMGD_Moi.TextChanged += new System.EventHandler(this.txtHMGD_Moi_TextChanged);
+            this.txtHMGD_Moi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHMGD_Moi_KeyPress);
+            // 
+            // lbHanMucGiaoDich
+            // 
+            this.lbHanMucGiaoDich.AutoSize = true;
+            this.lbHanMucGiaoDich.Location = new System.Drawing.Point(168, 44);
+            this.lbHanMucGiaoDich.Name = "lbHanMucGiaoDich";
+            this.lbHanMucGiaoDich.Size = new System.Drawing.Size(125, 13);
+            this.lbHanMucGiaoDich.TabIndex = 5;
+            this.lbHanMucGiaoDich.Text = "Hạn mức giao dịch ngày:";
+            // 
+            // txtDTDD_SMS_Moi
+            // 
+            this.txtDTDD_SMS_Moi.Enabled = false;
+            this.txtDTDD_SMS_Moi.Location = new System.Drawing.Point(299, 17);
+            this.txtDTDD_SMS_Moi.Name = "txtDTDD_SMS_Moi";
+            this.txtDTDD_SMS_Moi.Size = new System.Drawing.Size(123, 20);
+            this.txtDTDD_SMS_Moi.TabIndex = 4;
+            this.txtDTDD_SMS_Moi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDTDD_SMS_Moi_KeyPress);
+            // 
+            // lbSoDiDong
+            // 
+            this.lbSoDiDong.AutoSize = true;
+            this.lbSoDiDong.Location = new System.Drawing.Point(236, 20);
+            this.lbSoDiDong.Name = "lbSoDiDong";
+            this.lbSoDiDong.Size = new System.Drawing.Size(57, 13);
+            this.lbSoDiDong.TabIndex = 3;
+            this.lbSoDiDong.Text = "Số ĐTDĐ:";
+            // 
+            // ckbBaoHiem_Moi
+            // 
+            this.ckbBaoHiem_Moi.AutoSize = true;
+            this.ckbBaoHiem_Moi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbBaoHiem_Moi.Location = new System.Drawing.Point(7, 66);
+            this.ckbBaoHiem_Moi.Name = "ckbBaoHiem_Moi";
+            this.ckbBaoHiem_Moi.Size = new System.Drawing.Size(109, 17);
+            this.ckbBaoHiem_Moi.TabIndex = 2;
+            this.ckbBaoHiem_Moi.Text = "Bảo hiểm chủ thẻ";
+            this.ckbBaoHiem_Moi.UseVisualStyleBackColor = true;
+            // 
+            // ckbInternet_Moi
+            // 
+            this.ckbInternet_Moi.AutoSize = true;
+            this.ckbInternet_Moi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbInternet_Moi.Location = new System.Drawing.Point(6, 43);
+            this.ckbInternet_Moi.Name = "ckbInternet_Moi";
+            this.ckbInternet_Moi.Size = new System.Drawing.Size(110, 17);
+            this.ckbInternet_Moi.TabIndex = 1;
+            this.ckbInternet_Moi.Text = "Giao dịch Internet";
+            this.ckbInternet_Moi.UseVisualStyleBackColor = true;
+            this.ckbInternet_Moi.CheckedChanged += new System.EventHandler(this.ckbInternet_Moi_CheckedChanged);
+            // 
+            // ckbSMS_Moi
+            // 
+            this.ckbSMS_Moi.AutoSize = true;
+            this.ckbSMS_Moi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ckbSMS_Moi.Location = new System.Drawing.Point(25, 20);
+            this.ckbSMS_Moi.Name = "ckbSMS_Moi";
+            this.ckbSMS_Moi.Size = new System.Drawing.Size(91, 17);
+            this.ckbSMS_Moi.TabIndex = 0;
+            this.ckbSMS_Moi.Text = "SMS Banking";
+            this.ckbSMS_Moi.UseVisualStyleBackColor = true;
+            this.ckbSMS_Moi.CheckedChanged += new System.EventHandler(this.ckbSMS_Moi_CheckedChanged);
+            // 
+            // gbThongTinThe
+            // 
+            this.gbThongTinThe.Controls.Add(this.clbHTNhanThe_Moi);
+            this.gbThongTinThe.Controls.Add(this.clbHTPhatHanh_Moi);
+            this.gbThongTinThe.Controls.Add(this.clbHangThe_Moi);
+            this.gbThongTinThe.Controls.Add(this.clbQT_Moi);
+            this.gbThongTinThe.Controls.Add(this.clbND_Moi);
+            this.gbThongTinThe.Controls.Add(this.lbQuocTe);
+            this.gbThongTinThe.Controls.Add(this.lbHinhThucNhanThe);
+            this.gbThongTinThe.Controls.Add(this.lbHinhThucPhatHanh);
+            this.gbThongTinThe.Controls.Add(this.lbHangThe);
+            this.gbThongTinThe.Controls.Add(this.lbNoiDia);
+            this.gbThongTinThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbThongTinThe.Location = new System.Drawing.Point(3, 5);
+            this.gbThongTinThe.Name = "gbThongTinThe";
+            this.gbThongTinThe.Size = new System.Drawing.Size(781, 133);
+            this.gbThongTinThe.TabIndex = 2;
+            this.gbThongTinThe.TabStop = false;
+            this.gbThongTinThe.Text = "Thông tin thẻ";
+            // 
+            // clbHTNhanThe_Moi
+            // 
+            this.clbHTNhanThe_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbHTNhanThe_Moi.CheckOnClick = true;
+            this.clbHTNhanThe_Moi.ColumnWidth = 200;
+            this.clbHTNhanThe_Moi.FormattingEnabled = true;
+            this.clbHTNhanThe_Moi.Items.AddRange(new object[] {
+            "Tại ngân hàng",
+            "Tại nhà riêng"});
+            this.clbHTNhanThe_Moi.Location = new System.Drawing.Point(140, 105);
+            this.clbHTNhanThe_Moi.MultiColumn = true;
+            this.clbHTNhanThe_Moi.Name = "clbHTNhanThe_Moi";
+            this.clbHTNhanThe_Moi.Size = new System.Drawing.Size(400, 15);
+            this.clbHTNhanThe_Moi.TabIndex = 20;
+            this.clbHTNhanThe_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHTNhanThe_Moi_ItemCheck);
+            // 
+            // clbHTPhatHanh_Moi
+            // 
+            this.clbHTPhatHanh_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbHTPhatHanh_Moi.CheckOnClick = true;
+            this.clbHTPhatHanh_Moi.ColumnWidth = 200;
+            this.clbHTPhatHanh_Moi.FormattingEnabled = true;
+            this.clbHTPhatHanh_Moi.Items.AddRange(new object[] {
+            "Phát hành thường",
+            "Phát hành nhanh"});
+            this.clbHTPhatHanh_Moi.Location = new System.Drawing.Point(140, 83);
+            this.clbHTPhatHanh_Moi.MultiColumn = true;
+            this.clbHTPhatHanh_Moi.Name = "clbHTPhatHanh_Moi";
+            this.clbHTPhatHanh_Moi.Size = new System.Drawing.Size(400, 15);
+            this.clbHTPhatHanh_Moi.TabIndex = 19;
+            this.clbHTPhatHanh_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHTPhatHanh_Moi_ItemCheck);
+            // 
+            // clbHangThe_Moi
+            // 
+            this.clbHangThe_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbHangThe_Moi.CheckOnClick = true;
+            this.clbHangThe_Moi.ColumnWidth = 200;
+            this.clbHangThe_Moi.FormattingEnabled = true;
+            this.clbHangThe_Moi.Items.AddRange(new object[] {
+            "Chuẩn",
+            "Vàng"});
+            this.clbHangThe_Moi.Location = new System.Drawing.Point(140, 61);
+            this.clbHangThe_Moi.MultiColumn = true;
+            this.clbHangThe_Moi.Name = "clbHangThe_Moi";
+            this.clbHangThe_Moi.Size = new System.Drawing.Size(400, 15);
+            this.clbHangThe_Moi.TabIndex = 18;
+            this.clbHangThe_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHangThe_Moi_ItemCheck);
+            // 
+            // clbQT_Moi
+            // 
+            this.clbQT_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbQT_Moi.CheckOnClick = true;
+            this.clbQT_Moi.ColumnWidth = 200;
+            this.clbQT_Moi.FormattingEnabled = true;
+            this.clbQT_Moi.Items.AddRange(new object[] {
+            "Visa",
+            "MasterCard"});
+            this.clbQT_Moi.Location = new System.Drawing.Point(140, 39);
+            this.clbQT_Moi.MultiColumn = true;
+            this.clbQT_Moi.Name = "clbQT_Moi";
+            this.clbQT_Moi.Size = new System.Drawing.Size(400, 15);
+            this.clbQT_Moi.TabIndex = 17;
+            this.clbQT_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbQT_Moi_ItemCheck);
+            // 
+            // clbND_Moi
+            // 
+            this.clbND_Moi.BackColor = System.Drawing.SystemColors.Window;
+            this.clbND_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbND_Moi.CheckOnClick = true;
+            this.clbND_Moi.ColumnWidth = 200;
+            this.clbND_Moi.FormattingEnabled = true;
+            this.clbND_Moi.Items.AddRange(new object[] {
+            "Ghi nợ NĐ",
+            "Lập nghiệp",
+            "Liên kết thương hiệu"});
+            this.clbND_Moi.Location = new System.Drawing.Point(140, 16);
+            this.clbND_Moi.MultiColumn = true;
+            this.clbND_Moi.Name = "clbND_Moi";
+            this.clbND_Moi.Size = new System.Drawing.Size(600, 15);
+            this.clbND_Moi.TabIndex = 16;
+            this.clbND_Moi.ThreeDCheckBoxes = true;
+            this.clbND_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbND_Moi_ItemCheck);
+            // 
+            // lbQuocTe
+            // 
+            this.lbQuocTe.AutoSize = true;
+            this.lbQuocTe.Location = new System.Drawing.Point(7, 43);
+            this.lbQuocTe.Name = "lbQuocTe";
+            this.lbQuocTe.Size = new System.Drawing.Size(48, 13);
+            this.lbQuocTe.TabIndex = 15;
+            this.lbQuocTe.Text = "Quốc tế:";
+            // 
+            // lbHinhThucNhanThe
+            // 
+            this.lbHinhThucNhanThe.AutoSize = true;
+            this.lbHinhThucNhanThe.Location = new System.Drawing.Point(7, 110);
+            this.lbHinhThucNhanThe.Name = "lbHinhThucNhanThe";
+            this.lbHinhThucNhanThe.Size = new System.Drawing.Size(101, 13);
+            this.lbHinhThucNhanThe.TabIndex = 12;
+            this.lbHinhThucNhanThe.Text = "Hình thức nhận thẻ:";
+            // 
+            // lbHinhThucPhatHanh
+            // 
+            this.lbHinhThucPhatHanh.AutoSize = true;
+            this.lbHinhThucPhatHanh.Location = new System.Drawing.Point(7, 87);
+            this.lbHinhThucPhatHanh.Name = "lbHinhThucPhatHanh";
+            this.lbHinhThucPhatHanh.Size = new System.Drawing.Size(107, 13);
+            this.lbHinhThucPhatHanh.TabIndex = 9;
+            this.lbHinhThucPhatHanh.Text = "Hình thức phát hành:";
+            // 
+            // lbHangThe
+            // 
+            this.lbHangThe.AutoSize = true;
+            this.lbHangThe.Location = new System.Drawing.Point(7, 64);
+            this.lbHangThe.Name = "lbHangThe";
+            this.lbHangThe.Size = new System.Drawing.Size(54, 13);
+            this.lbHangThe.TabIndex = 6;
+            this.lbHangThe.Text = "Hạng thẻ:";
+            // 
+            // lbNoiDia
+            // 
+            this.lbNoiDia.AutoSize = true;
+            this.lbNoiDia.Location = new System.Drawing.Point(7, 20);
+            this.lbNoiDia.Name = "lbNoiDia";
+            this.lbNoiDia.Size = new System.Drawing.Size(44, 13);
+            this.lbNoiDia.TabIndex = 0;
+            this.lbNoiDia.Text = "Nội địa:";
+            // 
+            // tCtrDichVu
+            // 
+            this.tCtrDichVu.Controls.Add(this.tpPhatHanhTheGhiNo);
+            this.tCtrDichVu.Controls.Add(this.tpPhatHanhLai);
+            this.tCtrDichVu.Enabled = false;
+            this.tCtrDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tCtrDichVu.Location = new System.Drawing.Point(13, 211);
+            this.tCtrDichVu.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.tCtrDichVu.Name = "tCtrDichVu";
+            this.tCtrDichVu.SelectedIndex = 0;
+            this.tCtrDichVu.Size = new System.Drawing.Size(794, 260);
+            this.tCtrDichVu.TabIndex = 4;
+            // 
+            // gbGiayHen
+            // 
+            this.gbGiayHen.Controls.Add(this.groupBox3);
+            this.gbGiayHen.Controls.Add(this.groupBox2);
+            this.gbGiayHen.Controls.Add(this.groupBox5);
+            this.gbGiayHen.Location = new System.Drawing.Point(12, 537);
+            this.gbGiayHen.Name = "gbGiayHen";
+            this.gbGiayHen.Size = new System.Drawing.Size(795, 121);
+            this.gbGiayHen.TabIndex = 4;
+            this.gbGiayHen.TabStop = false;
+            this.gbGiayHen.Text = "Giấy hẹn";
             // 
             // groupBox3
             // 
@@ -643,10 +1065,10 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txtSLTheChinh);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(627, 537);
+            this.groupBox3.Location = new System.Drawing.Point(603, 19);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(180, 97);
-            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Số lượng thẻ";
             // 
@@ -682,525 +1104,114 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Thẻ chính:";
             // 
-            // tpPhatHanhLai
-            // 
-            this.tpPhatHanhLai.Controls.Add(this.gbDangKyDichVu1);
-            this.tpPhatHanhLai.Controls.Add(this.gbThongTinThe1);
-            this.tpPhatHanhLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpPhatHanhLai.Location = new System.Drawing.Point(4, 22);
-            this.tpPhatHanhLai.Name = "tpPhatHanhLai";
-            this.tpPhatHanhLai.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPhatHanhLai.Size = new System.Drawing.Size(786, 234);
-            this.tpPhatHanhLai.TabIndex = 1;
-            this.tpPhatHanhLai.Text = "Phát hành lại thẻ";
-            this.tpPhatHanhLai.UseVisualStyleBackColor = true;
-            // 
-            // gbThongTinThe1
-            // 
-            this.gbThongTinThe1.Controls.Add(this.clbHTPhatHanh_Lai);
-            this.gbThongTinThe1.Controls.Add(this.clbHangThe_Lai);
-            this.gbThongTinThe1.Controls.Add(this.clbQT_Lai);
-            this.gbThongTinThe1.Controls.Add(this.clbND_Lai);
-            this.gbThongTinThe1.Controls.Add(this.label8);
-            this.gbThongTinThe1.Controls.Add(this.label5);
-            this.gbThongTinThe1.Controls.Add(this.label6);
-            this.gbThongTinThe1.Controls.Add(this.label7);
-            this.gbThongTinThe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbThongTinThe1.Location = new System.Drawing.Point(3, 5);
-            this.gbThongTinThe1.Name = "gbThongTinThe1";
-            this.gbThongTinThe1.Size = new System.Drawing.Size(781, 133);
-            this.gbThongTinThe1.TabIndex = 4;
-            this.gbThongTinThe1.TabStop = false;
-            this.gbThongTinThe1.Text = "Thông tin thẻ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Thẻ nội địa:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Hạng thẻ:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Hình thức phát hành:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Thẻ quốc tế:";
-            // 
-            // clbND_Lai
-            // 
-            this.clbND_Lai.BackColor = System.Drawing.SystemColors.Window;
-            this.clbND_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbND_Lai.CheckOnClick = true;
-            this.clbND_Lai.ColumnWidth = 150;
-            this.clbND_Lai.FormattingEnabled = true;
-            this.clbND_Lai.Items.AddRange(new object[] {
-            "Ghi nợ NĐ",
-            "Lập nghiệp",
-            "Sinh Viên",
-            "Liên kết thương hiệu"});
-            this.clbND_Lai.Location = new System.Drawing.Point(140, 20);
-            this.clbND_Lai.MultiColumn = true;
-            this.clbND_Lai.Name = "clbND_Lai";
-            this.clbND_Lai.Size = new System.Drawing.Size(600, 15);
-            this.clbND_Lai.TabIndex = 21;
-            this.clbND_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbND_Lai_ItemCheck);
-            // 
-            // clbQT_Lai
-            // 
-            this.clbQT_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbQT_Lai.CheckOnClick = true;
-            this.clbQT_Lai.ColumnWidth = 150;
-            this.clbQT_Lai.FormattingEnabled = true;
-            this.clbQT_Lai.Items.AddRange(new object[] {
-            "Ghi nợ QT",
-            "Tín dụng QT",
-            "Visa",
-            "MasterCard",
-            "JCB"});
-            this.clbQT_Lai.Location = new System.Drawing.Point(140, 43);
-            this.clbQT_Lai.MultiColumn = true;
-            this.clbQT_Lai.Name = "clbQT_Lai";
-            this.clbQT_Lai.Size = new System.Drawing.Size(450, 30);
-            this.clbQT_Lai.TabIndex = 22;
-            this.clbQT_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbQT_Lai_ItemCheck);
-            // 
-            // clbHangThe_Lai
-            // 
-            this.clbHangThe_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbHangThe_Lai.CheckOnClick = true;
-            this.clbHangThe_Lai.ColumnWidth = 150;
-            this.clbHangThe_Lai.FormattingEnabled = true;
-            this.clbHangThe_Lai.Items.AddRange(new object[] {
-            "Chuẩn",
-            "Vàng",
-            "Bạch kim"});
-            this.clbHangThe_Lai.Location = new System.Drawing.Point(140, 88);
-            this.clbHangThe_Lai.MultiColumn = true;
-            this.clbHangThe_Lai.Name = "clbHangThe_Lai";
-            this.clbHangThe_Lai.Size = new System.Drawing.Size(450, 15);
-            this.clbHangThe_Lai.TabIndex = 23;
-            this.clbHangThe_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHangThe_Lai_ItemCheck);
-            // 
-            // clbHTPhatHanh_Lai
-            // 
-            this.clbHTPhatHanh_Lai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbHTPhatHanh_Lai.CheckOnClick = true;
-            this.clbHTPhatHanh_Lai.ColumnWidth = 150;
-            this.clbHTPhatHanh_Lai.FormattingEnabled = true;
-            this.clbHTPhatHanh_Lai.Items.AddRange(new object[] {
-            "Phát hành thường",
-            "Phát hành nhanh"});
-            this.clbHTPhatHanh_Lai.Location = new System.Drawing.Point(140, 110);
-            this.clbHTPhatHanh_Lai.MultiColumn = true;
-            this.clbHTPhatHanh_Lai.Name = "clbHTPhatHanh_Lai";
-            this.clbHTPhatHanh_Lai.Size = new System.Drawing.Size(300, 15);
-            this.clbHTPhatHanh_Lai.TabIndex = 24;
-            this.clbHTPhatHanh_Lai.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHTPhatHanh_Lai_ItemCheck);
-            // 
-            // gbDangKyDichVu1
-            // 
-            this.gbDangKyDichVu1.Controls.Add(this.label1);
-            this.gbDangKyDichVu1.Controls.Add(this.txtHMGD_Lai);
-            this.gbDangKyDichVu1.Controls.Add(this.label2);
-            this.gbDangKyDichVu1.Controls.Add(this.txtDTDD_SMS_Lai);
-            this.gbDangKyDichVu1.Controls.Add(this.label3);
-            this.gbDangKyDichVu1.Controls.Add(this.ckbBaoHiem_Lai);
-            this.gbDangKyDichVu1.Controls.Add(this.ckbInternet_Lai);
-            this.gbDangKyDichVu1.Controls.Add(this.ckbSMS_Lai);
-            this.gbDangKyDichVu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDangKyDichVu1.Location = new System.Drawing.Point(3, 145);
-            this.gbDangKyDichVu1.Name = "gbDangKyDichVu1";
-            this.gbDangKyDichVu1.Size = new System.Drawing.Size(781, 90);
-            this.gbDangKyDichVu1.TabIndex = 5;
-            this.gbDangKyDichVu1.TabStop = false;
-            this.gbDangKyDichVu1.Text = "Đăng ký dịch vụ";
-            // 
-            // ckbSMS_Lai
-            // 
-            this.ckbSMS_Lai.AutoSize = true;
-            this.ckbSMS_Lai.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbSMS_Lai.Location = new System.Drawing.Point(25, 20);
-            this.ckbSMS_Lai.Name = "ckbSMS_Lai";
-            this.ckbSMS_Lai.Size = new System.Drawing.Size(91, 17);
-            this.ckbSMS_Lai.TabIndex = 0;
-            this.ckbSMS_Lai.Text = "SMS Banking";
-            this.ckbSMS_Lai.UseVisualStyleBackColor = true;
-            this.ckbSMS_Lai.CheckedChanged += new System.EventHandler(this.ckbSMS_Lai_CheckedChanged);
-            // 
-            // ckbInternet_Lai
-            // 
-            this.ckbInternet_Lai.AutoSize = true;
-            this.ckbInternet_Lai.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbInternet_Lai.Location = new System.Drawing.Point(6, 43);
-            this.ckbInternet_Lai.Name = "ckbInternet_Lai";
-            this.ckbInternet_Lai.Size = new System.Drawing.Size(110, 17);
-            this.ckbInternet_Lai.TabIndex = 1;
-            this.ckbInternet_Lai.Text = "Giao dịch Internet";
-            this.ckbInternet_Lai.UseVisualStyleBackColor = true;
-            this.ckbInternet_Lai.CheckedChanged += new System.EventHandler(this.ckbInternet_Lai_CheckedChanged);
-            // 
-            // ckbBaoHiem_Lai
-            // 
-            this.ckbBaoHiem_Lai.AutoSize = true;
-            this.ckbBaoHiem_Lai.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbBaoHiem_Lai.Location = new System.Drawing.Point(7, 66);
-            this.ckbBaoHiem_Lai.Name = "ckbBaoHiem_Lai";
-            this.ckbBaoHiem_Lai.Size = new System.Drawing.Size(109, 17);
-            this.ckbBaoHiem_Lai.TabIndex = 2;
-            this.ckbBaoHiem_Lai.Text = "Bảo hiểm chủ thẻ";
-            this.ckbBaoHiem_Lai.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(236, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Số ĐTDĐ:";
-            // 
-            // txtDTDD_SMS_Lai
-            // 
-            this.txtDTDD_SMS_Lai.Enabled = false;
-            this.txtDTDD_SMS_Lai.Location = new System.Drawing.Point(299, 17);
-            this.txtDTDD_SMS_Lai.Name = "txtDTDD_SMS_Lai";
-            this.txtDTDD_SMS_Lai.Size = new System.Drawing.Size(123, 20);
-            this.txtDTDD_SMS_Lai.TabIndex = 4;
-            this.txtDTDD_SMS_Lai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDTDD_SMS_Lai_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Hạn mức giao dịch ngày:";
-            // 
-            // txtHMGD_Lai
-            // 
-            this.txtHMGD_Lai.Enabled = false;
-            this.txtHMGD_Lai.Location = new System.Drawing.Point(299, 41);
-            this.txtHMGD_Lai.Name = "txtHMGD_Lai";
-            this.txtHMGD_Lai.Size = new System.Drawing.Size(123, 20);
-            this.txtHMGD_Lai.TabIndex = 6;
-            this.txtHMGD_Lai.TextChanged += new System.EventHandler(this.txtHMGD_Lai_TextChanged);
-            this.txtHMGD_Lai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHMGD_Lai_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(428, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "(đồng)";
-            // 
-            // tpPhatHanhTheGhiNo
-            // 
-            this.tpPhatHanhTheGhiNo.Controls.Add(this.gbDangKyDichVu);
-            this.tpPhatHanhTheGhiNo.Controls.Add(this.gbThongTinThe);
-            this.tpPhatHanhTheGhiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpPhatHanhTheGhiNo.Location = new System.Drawing.Point(4, 22);
-            this.tpPhatHanhTheGhiNo.Name = "tpPhatHanhTheGhiNo";
-            this.tpPhatHanhTheGhiNo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPhatHanhTheGhiNo.Size = new System.Drawing.Size(786, 234);
-            this.tpPhatHanhTheGhiNo.TabIndex = 0;
-            this.tpPhatHanhTheGhiNo.Text = "Phát hành mới thẻ ghi nợ";
-            this.tpPhatHanhTheGhiNo.UseVisualStyleBackColor = true;
-            // 
-            // gbThongTinThe
-            // 
-            this.gbThongTinThe.Controls.Add(this.clbHTNhanThe_Moi);
-            this.gbThongTinThe.Controls.Add(this.clbHTPhatHanh_Moi);
-            this.gbThongTinThe.Controls.Add(this.clbHangThe_Moi);
-            this.gbThongTinThe.Controls.Add(this.clbQT_Moi);
-            this.gbThongTinThe.Controls.Add(this.clbND_Moi);
-            this.gbThongTinThe.Controls.Add(this.lbQuocTe);
-            this.gbThongTinThe.Controls.Add(this.lbHinhThucNhanThe);
-            this.gbThongTinThe.Controls.Add(this.lbHinhThucPhatHanh);
-            this.gbThongTinThe.Controls.Add(this.lbHangThe);
-            this.gbThongTinThe.Controls.Add(this.lbNoiDia);
-            this.gbThongTinThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbThongTinThe.Location = new System.Drawing.Point(3, 5);
-            this.gbThongTinThe.Name = "gbThongTinThe";
-            this.gbThongTinThe.Size = new System.Drawing.Size(781, 133);
-            this.gbThongTinThe.TabIndex = 2;
-            this.gbThongTinThe.TabStop = false;
-            this.gbThongTinThe.Text = "Thông tin thẻ";
-            // 
-            // lbNoiDia
-            // 
-            this.lbNoiDia.AutoSize = true;
-            this.lbNoiDia.Location = new System.Drawing.Point(7, 20);
-            this.lbNoiDia.Name = "lbNoiDia";
-            this.lbNoiDia.Size = new System.Drawing.Size(44, 13);
-            this.lbNoiDia.TabIndex = 0;
-            this.lbNoiDia.Text = "Nội địa:";
-            // 
-            // lbHangThe
-            // 
-            this.lbHangThe.AutoSize = true;
-            this.lbHangThe.Location = new System.Drawing.Point(7, 64);
-            this.lbHangThe.Name = "lbHangThe";
-            this.lbHangThe.Size = new System.Drawing.Size(54, 13);
-            this.lbHangThe.TabIndex = 6;
-            this.lbHangThe.Text = "Hạng thẻ:";
-            // 
-            // lbHinhThucPhatHanh
-            // 
-            this.lbHinhThucPhatHanh.AutoSize = true;
-            this.lbHinhThucPhatHanh.Location = new System.Drawing.Point(7, 87);
-            this.lbHinhThucPhatHanh.Name = "lbHinhThucPhatHanh";
-            this.lbHinhThucPhatHanh.Size = new System.Drawing.Size(107, 13);
-            this.lbHinhThucPhatHanh.TabIndex = 9;
-            this.lbHinhThucPhatHanh.Text = "Hình thức phát hành:";
-            // 
-            // lbHinhThucNhanThe
-            // 
-            this.lbHinhThucNhanThe.AutoSize = true;
-            this.lbHinhThucNhanThe.Location = new System.Drawing.Point(7, 110);
-            this.lbHinhThucNhanThe.Name = "lbHinhThucNhanThe";
-            this.lbHinhThucNhanThe.Size = new System.Drawing.Size(101, 13);
-            this.lbHinhThucNhanThe.TabIndex = 12;
-            this.lbHinhThucNhanThe.Text = "Hình thức nhận thẻ:";
-            // 
-            // lbQuocTe
-            // 
-            this.lbQuocTe.AutoSize = true;
-            this.lbQuocTe.Location = new System.Drawing.Point(7, 43);
-            this.lbQuocTe.Name = "lbQuocTe";
-            this.lbQuocTe.Size = new System.Drawing.Size(48, 13);
-            this.lbQuocTe.TabIndex = 15;
-            this.lbQuocTe.Text = "Quốc tế:";
-            // 
-            // clbND_Moi
-            // 
-            this.clbND_Moi.BackColor = System.Drawing.SystemColors.Window;
-            this.clbND_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbND_Moi.CheckOnClick = true;
-            this.clbND_Moi.ColumnWidth = 200;
-            this.clbND_Moi.FormattingEnabled = true;
-            this.clbND_Moi.Items.AddRange(new object[] {
-            "Ghi nợ NĐ",
-            "Lập nghiệp",
-            "Liên kết thương hiệu"});
-            this.clbND_Moi.Location = new System.Drawing.Point(140, 16);
-            this.clbND_Moi.MultiColumn = true;
-            this.clbND_Moi.Name = "clbND_Moi";
-            this.clbND_Moi.Size = new System.Drawing.Size(600, 15);
-            this.clbND_Moi.TabIndex = 16;
-            this.clbND_Moi.ThreeDCheckBoxes = true;
-            this.clbND_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbND_Moi_ItemCheck);
-            // 
-            // clbQT_Moi
-            // 
-            this.clbQT_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbQT_Moi.CheckOnClick = true;
-            this.clbQT_Moi.ColumnWidth = 200;
-            this.clbQT_Moi.FormattingEnabled = true;
-            this.clbQT_Moi.Items.AddRange(new object[] {
-            "Visa",
-            "MasterCard"});
-            this.clbQT_Moi.Location = new System.Drawing.Point(140, 39);
-            this.clbQT_Moi.MultiColumn = true;
-            this.clbQT_Moi.Name = "clbQT_Moi";
-            this.clbQT_Moi.Size = new System.Drawing.Size(400, 15);
-            this.clbQT_Moi.TabIndex = 17;
-            this.clbQT_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbQT_Moi_ItemCheck);
-            // 
-            // clbHangThe_Moi
-            // 
-            this.clbHangThe_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbHangThe_Moi.CheckOnClick = true;
-            this.clbHangThe_Moi.ColumnWidth = 200;
-            this.clbHangThe_Moi.FormattingEnabled = true;
-            this.clbHangThe_Moi.Items.AddRange(new object[] {
-            "Chuẩn",
-            "Vàng"});
-            this.clbHangThe_Moi.Location = new System.Drawing.Point(140, 61);
-            this.clbHangThe_Moi.MultiColumn = true;
-            this.clbHangThe_Moi.Name = "clbHangThe_Moi";
-            this.clbHangThe_Moi.Size = new System.Drawing.Size(400, 15);
-            this.clbHangThe_Moi.TabIndex = 18;
-            this.clbHangThe_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHangThe_Moi_ItemCheck);
-            // 
-            // clbHTPhatHanh_Moi
-            // 
-            this.clbHTPhatHanh_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbHTPhatHanh_Moi.CheckOnClick = true;
-            this.clbHTPhatHanh_Moi.ColumnWidth = 200;
-            this.clbHTPhatHanh_Moi.FormattingEnabled = true;
-            this.clbHTPhatHanh_Moi.Items.AddRange(new object[] {
-            "Phát hành thường",
-            "Phát hành nhanh"});
-            this.clbHTPhatHanh_Moi.Location = new System.Drawing.Point(140, 83);
-            this.clbHTPhatHanh_Moi.MultiColumn = true;
-            this.clbHTPhatHanh_Moi.Name = "clbHTPhatHanh_Moi";
-            this.clbHTPhatHanh_Moi.Size = new System.Drawing.Size(400, 15);
-            this.clbHTPhatHanh_Moi.TabIndex = 19;
-            this.clbHTPhatHanh_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHTPhatHanh_Moi_ItemCheck);
-            // 
-            // clbHTNhanThe_Moi
-            // 
-            this.clbHTNhanThe_Moi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbHTNhanThe_Moi.CheckOnClick = true;
-            this.clbHTNhanThe_Moi.ColumnWidth = 200;
-            this.clbHTNhanThe_Moi.FormattingEnabled = true;
-            this.clbHTNhanThe_Moi.Items.AddRange(new object[] {
-            "Tại ngân hàng",
-            "Tại nhà riêng"});
-            this.clbHTNhanThe_Moi.Location = new System.Drawing.Point(140, 105);
-            this.clbHTNhanThe_Moi.MultiColumn = true;
-            this.clbHTNhanThe_Moi.Name = "clbHTNhanThe_Moi";
-            this.clbHTNhanThe_Moi.Size = new System.Drawing.Size(400, 15);
-            this.clbHTNhanThe_Moi.TabIndex = 20;
-            this.clbHTNhanThe_Moi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbHTNhanThe_Moi_ItemCheck);
-            // 
-            // gbDangKyDichVu
-            // 
-            this.gbDangKyDichVu.Controls.Add(this.lbDong);
-            this.gbDangKyDichVu.Controls.Add(this.txtHMGD_Moi);
-            this.gbDangKyDichVu.Controls.Add(this.lbHanMucGiaoDich);
-            this.gbDangKyDichVu.Controls.Add(this.txtDTDD_SMS_Moi);
-            this.gbDangKyDichVu.Controls.Add(this.lbSoDiDong);
-            this.gbDangKyDichVu.Controls.Add(this.ckbBaoHiem_Moi);
-            this.gbDangKyDichVu.Controls.Add(this.ckbInternet_Moi);
-            this.gbDangKyDichVu.Controls.Add(this.ckbSMS_Moi);
-            this.gbDangKyDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDangKyDichVu.Location = new System.Drawing.Point(3, 144);
-            this.gbDangKyDichVu.Name = "gbDangKyDichVu";
-            this.gbDangKyDichVu.Size = new System.Drawing.Size(781, 90);
-            this.gbDangKyDichVu.TabIndex = 3;
-            this.gbDangKyDichVu.TabStop = false;
-            this.gbDangKyDichVu.Text = "Đăng ký dịch vụ";
-            // 
-            // ckbSMS_Moi
-            // 
-            this.ckbSMS_Moi.AutoSize = true;
-            this.ckbSMS_Moi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbSMS_Moi.Location = new System.Drawing.Point(25, 20);
-            this.ckbSMS_Moi.Name = "ckbSMS_Moi";
-            this.ckbSMS_Moi.Size = new System.Drawing.Size(91, 17);
-            this.ckbSMS_Moi.TabIndex = 0;
-            this.ckbSMS_Moi.Text = "SMS Banking";
-            this.ckbSMS_Moi.UseVisualStyleBackColor = true;
-            this.ckbSMS_Moi.CheckedChanged += new System.EventHandler(this.ckbSMS_Moi_CheckedChanged);
-            // 
-            // ckbInternet_Moi
-            // 
-            this.ckbInternet_Moi.AutoSize = true;
-            this.ckbInternet_Moi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbInternet_Moi.Location = new System.Drawing.Point(6, 43);
-            this.ckbInternet_Moi.Name = "ckbInternet_Moi";
-            this.ckbInternet_Moi.Size = new System.Drawing.Size(110, 17);
-            this.ckbInternet_Moi.TabIndex = 1;
-            this.ckbInternet_Moi.Text = "Giao dịch Internet";
-            this.ckbInternet_Moi.UseVisualStyleBackColor = true;
-            this.ckbInternet_Moi.CheckedChanged += new System.EventHandler(this.ckbInternet_Moi_CheckedChanged);
-            // 
-            // ckbBaoHiem_Moi
-            // 
-            this.ckbBaoHiem_Moi.AutoSize = true;
-            this.ckbBaoHiem_Moi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbBaoHiem_Moi.Location = new System.Drawing.Point(7, 66);
-            this.ckbBaoHiem_Moi.Name = "ckbBaoHiem_Moi";
-            this.ckbBaoHiem_Moi.Size = new System.Drawing.Size(109, 17);
-            this.ckbBaoHiem_Moi.TabIndex = 2;
-            this.ckbBaoHiem_Moi.Text = "Bảo hiểm chủ thẻ";
-            this.ckbBaoHiem_Moi.UseVisualStyleBackColor = true;
-            // 
-            // lbSoDiDong
-            // 
-            this.lbSoDiDong.AutoSize = true;
-            this.lbSoDiDong.Location = new System.Drawing.Point(236, 20);
-            this.lbSoDiDong.Name = "lbSoDiDong";
-            this.lbSoDiDong.Size = new System.Drawing.Size(57, 13);
-            this.lbSoDiDong.TabIndex = 3;
-            this.lbSoDiDong.Text = "Số ĐTDĐ:";
-            // 
-            // txtDTDD_SMS_Moi
-            // 
-            this.txtDTDD_SMS_Moi.Enabled = false;
-            this.txtDTDD_SMS_Moi.Location = new System.Drawing.Point(299, 17);
-            this.txtDTDD_SMS_Moi.Name = "txtDTDD_SMS_Moi";
-            this.txtDTDD_SMS_Moi.Size = new System.Drawing.Size(123, 20);
-            this.txtDTDD_SMS_Moi.TabIndex = 4;
-            this.txtDTDD_SMS_Moi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDTDD_SMS_Moi_KeyPress);
-            // 
-            // lbHanMucGiaoDich
-            // 
-            this.lbHanMucGiaoDich.AutoSize = true;
-            this.lbHanMucGiaoDich.Location = new System.Drawing.Point(168, 44);
-            this.lbHanMucGiaoDich.Name = "lbHanMucGiaoDich";
-            this.lbHanMucGiaoDich.Size = new System.Drawing.Size(125, 13);
-            this.lbHanMucGiaoDich.TabIndex = 5;
-            this.lbHanMucGiaoDich.Text = "Hạn mức giao dịch ngày:";
-            // 
-            // txtHMGD_Moi
-            // 
-            this.txtHMGD_Moi.Enabled = false;
-            this.txtHMGD_Moi.Location = new System.Drawing.Point(299, 41);
-            this.txtHMGD_Moi.Name = "txtHMGD_Moi";
-            this.txtHMGD_Moi.Size = new System.Drawing.Size(123, 20);
-            this.txtHMGD_Moi.TabIndex = 6;
-            this.txtHMGD_Moi.TextChanged += new System.EventHandler(this.txtHMGD_Moi_TextChanged);
-            this.txtHMGD_Moi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHMGD_Moi_KeyPress);
-            // 
-            // lbDong
-            // 
-            this.lbDong.AutoSize = true;
-            this.lbDong.Location = new System.Drawing.Point(428, 44);
-            this.lbDong.Name = "lbDong";
-            this.lbDong.Size = new System.Drawing.Size(38, 13);
-            this.lbDong.TabIndex = 7;
-            this.lbDong.Text = "(đồng)";
-            // 
-            // tCtrDichVu
-            // 
-            this.tCtrDichVu.Controls.Add(this.tpPhatHanhTheGhiNo);
-            this.tCtrDichVu.Controls.Add(this.tpPhatHanhLai);
-            this.tCtrDichVu.Enabled = false;
-            this.tCtrDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCtrDichVu.Location = new System.Drawing.Point(13, 211);
-            this.tCtrDichVu.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tCtrDichVu.Name = "tCtrDichVu";
-            this.tCtrDichVu.SelectedIndex = 0;
-            this.tCtrDichVu.Size = new System.Drawing.Size(794, 260);
-            this.tCtrDichVu.TabIndex = 4;
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtNgayHen);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(415, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(182, 97);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ngày hẹn";
+            // 
+            // txtNgayHen
+            // 
+            this.txtNgayHen.Location = new System.Drawing.Point(86, 19);
+            this.txtNgayHen.Name = "txtNgayHen";
+            this.txtNgayHen.Size = new System.Drawing.Size(40, 20);
+            this.txtNgayHen.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(132, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ngày.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Nhận thẻ sau:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txtGiayTo_3);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.txtGiayTo_2);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.txtGiayTo_1);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(6, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(403, 97);
+            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Hồ sơ bao gồm các giấy tờ:";
+            // 
+            // txtGiayTo_3
+            // 
+            this.txtGiayTo_3.Location = new System.Drawing.Point(31, 71);
+            this.txtGiayTo_3.Name = "txtGiayTo_3";
+            this.txtGiayTo_3.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_3.TabIndex = 5;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 74);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(19, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "3. ";
+            // 
+            // txtGiayTo_2
+            // 
+            this.txtGiayTo_2.Location = new System.Drawing.Point(31, 45);
+            this.txtGiayTo_2.Name = "txtGiayTo_2";
+            this.txtGiayTo_2.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_2.TabIndex = 3;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 48);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(19, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "2. ";
+            // 
+            // txtGiayTo_1
+            // 
+            this.txtGiayTo_1.Location = new System.Drawing.Point(31, 19);
+            this.txtGiayTo_1.Name = "txtGiayTo_1";
+            this.txtGiayTo_1.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_1.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(19, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "1. ";
             // 
             // frmPhatHanhTheGhiNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 677);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox9);
+            this.ClientSize = new System.Drawing.Size(819, 697);
+            this.Controls.Add(this.gbGiayHen);
+            this.Controls.Add(this.gbHopDong);
             this.Controls.Add(this.btnLuuHoSo);
             this.Controls.Add(this.tCtrDichVu);
             this.Controls.Add(this.gbThongTinKH);
@@ -1212,25 +1223,26 @@
             this.Load += new System.EventHandler(this.frmPhatHanhTheGhiNo_Load);
             this.gbThongTinKH.ResumeLayout(false);
             this.gbThongTinKH.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbHopDong.ResumeLayout(false);
+            this.gbHopDong.PerformLayout();
             this.tpPhatHanhLai.ResumeLayout(false);
-            this.gbThongTinThe1.ResumeLayout(false);
-            this.gbThongTinThe1.PerformLayout();
             this.gbDangKyDichVu1.ResumeLayout(false);
             this.gbDangKyDichVu1.PerformLayout();
+            this.gbThongTinThe1.ResumeLayout(false);
+            this.gbThongTinThe1.PerformLayout();
             this.tpPhatHanhTheGhiNo.ResumeLayout(false);
-            this.gbThongTinThe.ResumeLayout(false);
-            this.gbThongTinThe.PerformLayout();
             this.gbDangKyDichVu.ResumeLayout(false);
             this.gbDangKyDichVu.PerformLayout();
+            this.gbThongTinThe.ResumeLayout(false);
+            this.gbThongTinThe.PerformLayout();
             this.tCtrDichVu.ResumeLayout(false);
+            this.gbGiayHen.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1273,27 +1285,11 @@
         private System.Windows.Forms.Button btnLayTTKH;
         private System.Windows.Forms.OpenFileDialog openFileTTKH;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtGiayTo_3;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtGiayTo_2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtGiayTo_1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox gbHopDong;
         private System.Windows.Forms.ComboBox cbNguoiDaiDien_BenA;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtSoHD;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtNgayHen;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSLThePhu;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtSLTheChinh;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage tpPhatHanhLai;
         private System.Windows.Forms.GroupBox gbDangKyDichVu1;
         private System.Windows.Forms.Label label1;
@@ -1335,5 +1331,22 @@
         private System.Windows.Forms.Label lbHangThe;
         private System.Windows.Forms.Label lbNoiDia;
         private System.Windows.Forms.TabControl tCtrDichVu;
+        private System.Windows.Forms.GroupBox gbGiayHen;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtSLThePhu;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtSLTheChinh;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtNgayHen;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtGiayTo_3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtGiayTo_2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtGiayTo_1;
+        private System.Windows.Forms.Label label16;
     }
 }

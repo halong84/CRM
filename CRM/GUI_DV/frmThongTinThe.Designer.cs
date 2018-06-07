@@ -70,8 +70,8 @@
             this.ckbSMS = new System.Windows.Forms.CheckBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbPhatHanhMoi = new System.Windows.Forms.CheckBox();
             this.cbPhatHanhLai = new System.Windows.Forms.CheckBox();
+            this.cbPhatHanhMoi = new System.Windows.Forms.CheckBox();
             this.gbThongTinThe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tHEODOITHEBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHEODOITHEBindingSource1)).BeginInit();
@@ -111,6 +111,7 @@
             this.gbThongTinThe.TabIndex = 18;
             this.gbThongTinThe.TabStop = false;
             this.gbThongTinThe.Text = "Thông tin thẻ";
+            this.gbThongTinThe.Enter += new System.EventHandler(this.gbThongTinThe_Enter);
             // 
             // txtNoiPhatHanh
             // 
@@ -455,18 +456,6 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
-            // cbPhatHanhMoi
-            // 
-            this.cbPhatHanhMoi.AutoSize = true;
-            this.cbPhatHanhMoi.Enabled = false;
-            this.cbPhatHanhMoi.Location = new System.Drawing.Point(24, 14);
-            this.cbPhatHanhMoi.Name = "cbPhatHanhMoi";
-            this.cbPhatHanhMoi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbPhatHanhMoi.Size = new System.Drawing.Size(94, 17);
-            this.cbPhatHanhMoi.TabIndex = 43;
-            this.cbPhatHanhMoi.Text = "Phát hành mới";
-            this.cbPhatHanhMoi.UseVisualStyleBackColor = true;
-            // 
             // cbPhatHanhLai
             // 
             this.cbPhatHanhLai.AutoSize = true;
@@ -478,6 +467,18 @@
             this.cbPhatHanhLai.TabIndex = 44;
             this.cbPhatHanhLai.Text = "Phát hành lại";
             this.cbPhatHanhLai.UseVisualStyleBackColor = true;
+            // 
+            // cbPhatHanhMoi
+            // 
+            this.cbPhatHanhMoi.AutoSize = true;
+            this.cbPhatHanhMoi.Enabled = false;
+            this.cbPhatHanhMoi.Location = new System.Drawing.Point(24, 14);
+            this.cbPhatHanhMoi.Name = "cbPhatHanhMoi";
+            this.cbPhatHanhMoi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbPhatHanhMoi.Size = new System.Drawing.Size(94, 17);
+            this.cbPhatHanhMoi.TabIndex = 43;
+            this.cbPhatHanhMoi.Text = "Phát hành mới";
+            this.cbPhatHanhMoi.UseVisualStyleBackColor = true;
             // 
             // frmThongTinThe
             // 
@@ -492,6 +493,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmThongTinThe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin thẻ";
             this.Load += new System.EventHandler(this.frmThongTinThe_Load);
             this.gbThongTinThe.ResumeLayout(false);

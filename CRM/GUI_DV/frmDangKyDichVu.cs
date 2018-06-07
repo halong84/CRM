@@ -62,9 +62,9 @@ namespace CRM.GUI_DV
                         TimThayKH(kh);
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    ErrorMessageDAL.DataAccessError();
+                    ErrorMessageDAL.DataAccessError(ex);
                 }
             }
         }
@@ -123,9 +123,9 @@ namespace CRM.GUI_DV
                     cbSoTK.Focus();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
 
         }
@@ -169,7 +169,7 @@ namespace CRM.GUI_DV
 
         void KhoiTaoEMB02()
         {
-            listDich.Add("<NGUOI_DAI_DIEN_EMB_2>");
+            listDich.Add("<NGUOIDAIDIEN_EMB_2>");
             listNguon.Add(txtNguoiDaiDien_EMB_2.Text);
 
             listDich.Add("<CHUCVU_EMB_2>");
@@ -464,9 +464,16 @@ namespace CRM.GUI_DV
         {
             //Thong tin chung
             string cn = Thong_tin_dang_nhap.ten_cn;
-            if (!Thong_tin_dang_nhap.hs) cn = Thong_tin_dang_nhap.tenPb;
-            listDich.Add("<CHINHANH0>");
-            listNguon.Add(cn.ToUpper());
+            if (!Thong_tin_dang_nhap.hs){
+                cn = Thong_tin_dang_nhap.tenPb;
+                listDich.Add("<CHINHANH0>");
+                listNguon.Add((Thong_tin_dang_nhap.ten_cn+"\n"+cn).ToUpper());
+            }
+            else
+            {
+                listDich.Add("<CHINHANH0>");
+                listNguon.Add(cn.ToUpper());
+            }
 
             listDich.Add("<CHINHANH>");
             listNguon.Add(cn);

@@ -19,8 +19,6 @@ namespace CRM.GUI_DV
         static string fileNameTLTVC = "THE_08_QD_THANH_LAP_TO_VAN_CHUYEN_DAC_BIET";
         List<String> listDich, listNguon;
 
-        string maToTruong, maGiamSat1, maGiamSat2, maBaoVe, maLaixe;
-
         public frmThanhLapToVanChuyen()
         {
             InitializeComponent();
@@ -83,9 +81,9 @@ namespace CRM.GUI_DV
                     txtPhuongTien.Text = r["PHUONGTIEN"].ToString();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
 
         }
@@ -271,9 +269,9 @@ namespace CRM.GUI_DV
                     txtPhuongTien.Text
                     );
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
             KhoiTaoTLTVC();
             TaoFileTLTVC();

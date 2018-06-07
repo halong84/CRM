@@ -54,6 +54,8 @@ namespace CRM.GUI_DV
             giay_hen_dich = new List<string>();
             giay_hen_nguon = new List<string>();
 
+            SetTabControlStatus(false);
+
             //Phat hanh moi
             clbND_Moi.SetItemChecked(0, true);
             clbQT_Moi.SetItemChecked(0, true);
@@ -102,9 +104,9 @@ namespace CRM.GUI_DV
                     txtGiayTo_3.Text = dt.Rows[0][2].ToString();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
 
 
@@ -145,9 +147,9 @@ namespace CRM.GUI_DV
                         TimThayKH(kh);
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    ErrorMessageDAL.DataAccessError();
+                    ErrorMessageDAL.DataAccessError(ex);
                 }
             }
         }
@@ -204,8 +206,9 @@ namespace CRM.GUI_DV
                 }
                 SetTabControlStatus(true);
             }
-            catch {
-                ErrorMessageDAL.DataAccessError();
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
             }
 
         }
@@ -213,6 +216,8 @@ namespace CRM.GUI_DV
         void SetTabControlStatus(bool status) {
             tCtrDichVu.Enabled = status;
             btnLuuHoSo.Enabled = status;
+            gbGiayHen.Enabled = status;
+            gbHopDong.Enabled = status;
         }
 
         void SetTextBoxStatus_TTKH(bool status) {
@@ -526,9 +531,9 @@ namespace CRM.GUI_DV
             {
                 PhatHanhTheGhiNoDAL.DV_UPDATE_SOTK(txtMaKH.Text, cbSoTK.Text);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -543,9 +548,9 @@ namespace CRM.GUI_DV
             {
                 PhatHanhTheGhiNoDAL.DV_GIAYHEN_UPDATE(Thong_tin_dang_nhap.ma_pb, txtGiayTo_1.Text, txtGiayTo_2.Text, txtGiayTo_3.Text);
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
             //Phat hanh moi the ghi no
             switch (tCtrDichVu.SelectedIndex)
@@ -605,10 +610,17 @@ namespace CRM.GUI_DV
             ttchung_dich.Clear();
 
             string cn = Thong_tin_dang_nhap.ten_cn;
-            if (!Thong_tin_dang_nhap.hs) cn = Thong_tin_dang_nhap.tenPb;
-
-            ttchung_dich.Add("<CHI_NHANH_0>");
-            ttchung_nguon.Add(cn.ToUpper());
+            if (!Thong_tin_dang_nhap.hs)
+            {
+                cn = Thong_tin_dang_nhap.tenPb;
+                ttchung_dich.Add("<CHI_NHANH_0>");
+                ttchung_nguon.Add((Thong_tin_dang_nhap.ten_cn +"\n"+ cn).ToUpper());
+            }
+            else
+            {
+                ttchung_dich.Add("<CHI_NHANH_0>");
+                ttchung_nguon.Add(cn.ToUpper());
+            }
 
             ttchung_nguon.Add(DateTime.Now.Day.ToString());
             ttchung_nguon.Add(DateTime.Now.Month.ToString());
@@ -1125,10 +1137,9 @@ namespace CRM.GUI_DV
                 PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem,Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
-                //MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return false;
             }
 
@@ -1152,10 +1163,9 @@ namespace CRM.GUI_DV
                 PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem,Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
-                //MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return false;
             }
 
@@ -1180,9 +1190,9 @@ namespace CRM.GUI_DV
                 PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem, Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
+                ErrorMessageDAL.DataAccessError(ex);
                 return false;
             }
 
@@ -1206,9 +1216,9 @@ namespace CRM.GUI_DV
                 PhatHanhTheGhiNoDAL.DangKyThe(sotk, loaithe, hangthe, htPhatHanh, htNhanThe, dtdd, hmgd, baoHiem, Thong_tin_dang_nhap.ten_dang_nhap, Thong_tin_dang_nhap.ma_pb, phatHanhMoi);
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Số tài khoản " + sotk + " đã đăng ký loại thẻ " + loaithe + "!", "Thông báo", MessageBoxButtons.OK);
+                ErrorMessageDAL.DataAccessError(ex);
                 return false;
             }
 

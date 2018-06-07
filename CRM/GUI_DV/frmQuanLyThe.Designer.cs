@@ -62,6 +62,8 @@
             this.dgvThongTinThe.Size = new System.Drawing.Size(799, 439);
             this.dgvThongTinThe.TabIndex = 2;
             this.dgvThongTinThe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinThe_CellDoubleClick);
+            this.dgvThongTinThe.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinThe_CellValidated);
+            this.dgvThongTinThe.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinThe_CellValueChanged);
             this.dgvThongTinThe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvThongTinThe_MouseDown);
             // 
             // tcrlQuanLyThe

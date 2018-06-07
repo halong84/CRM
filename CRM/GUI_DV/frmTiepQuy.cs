@@ -36,9 +36,9 @@ namespace CRM.GUI_DV
                 if (cbATMID.Items.Count > 0)
                     cbATMID.SelectedIndex = 0;
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 
@@ -99,9 +99,9 @@ namespace CRM.GUI_DV
                 soTo500
                 );
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return;
             }
             KhoiTaoTiepQuy();
@@ -133,9 +133,9 @@ namespace CRM.GUI_DV
             {
                 listNguon.Add(TiepQuyDAL.DV_GET_DIADIEM_ATM(cbATMID.SelectedItem.ToString()));
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return;
             }
 

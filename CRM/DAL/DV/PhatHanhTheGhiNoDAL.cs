@@ -120,9 +120,9 @@ namespace CRM.DAL.DV
                 }
                 return dsNguoiDaiDien;
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 return null;
             }
 

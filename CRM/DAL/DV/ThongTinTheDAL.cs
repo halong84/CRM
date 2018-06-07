@@ -60,5 +60,40 @@ namespace CRM.DAL.DV
             };
             return db.dt("DV_LAYTENCN_THONGTINTHE", Params).Rows[0]["TENCN"].ToString();
         }
+
+        public static void DV_THONGTINTHE_UPDATE(int id, string sothe, DateTime ngaynhan, DateTime ngaygiao)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[] { 
+            new SqlParameter("@id", id),
+            new SqlParameter("@sothe", sothe),
+            new SqlParameter("@ngaynhan", ngaynhan),
+            new SqlParameter("@ngaygiao", ngaygiao),
+            };
+            db.dt("DV_THONGTINTHE_UPDATE", Params);
+        }
+
+        public static void DV_NHANTHE(int id, string sothe, DateTime ngaynhan)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[] { 
+            new SqlParameter("@id", id),
+            new SqlParameter("@sothe", sothe),
+            new SqlParameter("@ngaynhan", ngaynhan)
+            };
+            db.dt("DV_NHANTHE", Params);
+        }
+
+
+        public static void DV_GIAOTHE(int id, DateTime ngaygiao)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[] { 
+            new SqlParameter("@ID", id),
+            new SqlParameter("@ngaygiao", ngaygiao)
+            };
+
+            db.dt("DV_GIAOTHE", Params);
+        }
     }
 }

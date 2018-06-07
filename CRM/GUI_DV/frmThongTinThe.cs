@@ -19,6 +19,7 @@ namespace CRM.GUI_DV
         public frmThongTinThe(int ID)
         {
             InitializeComponent();
+            this.TopMost = true;
             try
             {
                 DataRow row = ThongTinTheDAL.LayThongTinThe(ID);
@@ -86,9 +87,9 @@ namespace CRM.GUI_DV
                 if (the.isPhatHanhMoi) cbPhatHanhMoi.Checked = true;
                 else cbPhatHanhLai.Checked = true;
             }
-            catch
+            catch (Exception ex)
             {
-                ErrorMessageDAL.DataAccessError();
+                ErrorMessageDAL.DataAccessError(ex);
                 this.Close();
             }
 
@@ -168,9 +169,9 @@ namespace CRM.GUI_DV
                     ThongTinTheDAL.GiaoThe(the);
                     this.Close();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    ErrorMessageDAL.DataAccessError();
+                    ErrorMessageDAL.DataAccessError(ex);
                 }
             }
             else
@@ -186,15 +187,20 @@ namespace CRM.GUI_DV
                     ThongTinTheDAL.NhanThe(the);
                     this.Close();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    ErrorMessageDAL.DataAccessError();
+                    ErrorMessageDAL.DataAccessError(ex);
                 }
             }
         }
 
         private void txtSoThe_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void gbThongTinThe_Enter(object sender, EventArgs e)
+        {
+
         }
 
 
