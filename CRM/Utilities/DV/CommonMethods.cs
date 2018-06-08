@@ -480,10 +480,10 @@ namespace CRM.Utilities.DV
             return thu_muc_goc + fileName;
         }
 
-        public static void CreateSubFolder(string folderPath)
+        public static string CreateSubFolder(string folderPath)
         {
             string thu_muc_goc = @"C:\MauBieu\DV\";
-            Directory.CreateDirectory(thu_muc_goc + folderPath);
+            return Directory.CreateDirectory(thu_muc_goc + folderPath).FullName;
         }
 
         public static bool SubFolderExist(string folder)

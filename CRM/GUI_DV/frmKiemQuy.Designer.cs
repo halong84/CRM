@@ -46,6 +46,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtpCI = new System.Windows.Forms.DateTimePicker();
+            this.dtpCO = new System.Windows.Forms.DateTimePicker();
+            this.dtpTruocCO = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtGhiChuIPCAS3 = new System.Windows.Forms.TextBox();
@@ -79,11 +82,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dtpFIMICE = new System.Windows.Forms.DateTimePicker();
             this.txtFIMIEnd500 = new System.Windows.Forms.TextBox();
             this.txtFIMIEnd200 = new System.Windows.Forms.TextBox();
             this.txtFIMIEnd100 = new System.Windows.Forms.TextBox();
             this.txtFIMIEnd50 = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dtpFIMISC = new System.Windows.Forms.DateTimePicker();
             this.txtFIMIStart200 = new System.Windows.Forms.TextBox();
             this.txtFIMIStart500 = new System.Windows.Forms.TextBox();
             this.txtFIMIStart100 = new System.Windows.Forms.TextBox();
@@ -110,11 +115,6 @@
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.dtpTruocCO = new System.Windows.Forms.DateTimePicker();
-            this.dtpCO = new System.Windows.Forms.DateTimePicker();
-            this.dtpCI = new System.Windows.Forms.DateTimePicker();
-            this.dtpFIMISC = new System.Windows.Forms.DateTimePicker();
-            this.dtpFIMICE = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -330,6 +330,39 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "IPCAS (VND)";
+            // 
+            // dtpCI
+            // 
+            this.dtpCI.CustomFormat = "HH:mm";
+            this.dtpCI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCI.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCI.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpCI.Location = new System.Drawing.Point(162, 83);
+            this.dtpCI.Name = "dtpCI";
+            this.dtpCI.Size = new System.Drawing.Size(52, 20);
+            this.dtpCI.TabIndex = 7;
+            // 
+            // dtpCO
+            // 
+            this.dtpCO.CustomFormat = "HH:mm";
+            this.dtpCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpCO.Location = new System.Drawing.Point(162, 57);
+            this.dtpCO.Name = "dtpCO";
+            this.dtpCO.Size = new System.Drawing.Size(52, 20);
+            this.dtpCO.TabIndex = 6;
+            // 
+            // dtpTruocCO
+            // 
+            this.dtpTruocCO.CustomFormat = "HH:mm";
+            this.dtpTruocCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTruocCO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTruocCO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpTruocCO.Location = new System.Drawing.Point(162, 31);
+            this.dtpTruocCO.Name = "dtpTruocCO";
+            this.dtpTruocCO.Size = new System.Drawing.Size(52, 20);
+            this.dtpTruocCO.TabIndex = 5;
             // 
             // label8
             // 
@@ -692,6 +725,16 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Cash End";
             // 
+            // dtpFIMICE
+            // 
+            this.dtpFIMICE.CustomFormat = "HH:mm";
+            this.dtpFIMICE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFIMICE.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpFIMICE.Location = new System.Drawing.Point(18, 18);
+            this.dtpFIMICE.Name = "dtpFIMICE";
+            this.dtpFIMICE.Size = new System.Drawing.Size(52, 20);
+            this.dtpFIMICE.TabIndex = 19;
+            // 
             // txtFIMIEnd500
             // 
             this.txtFIMIEnd500.Location = new System.Drawing.Point(6, 122);
@@ -701,6 +744,7 @@
             this.txtFIMIEnd500.TabIndex = 23;
             this.txtFIMIEnd500.Text = "0";
             this.txtFIMIEnd500.TextChanged += new System.EventHandler(this.txtFIMIEnd500_TextChanged);
+            this.txtFIMIEnd500.Leave += new System.EventHandler(this.txtFIMIEnd500_Leave);
             // 
             // txtFIMIEnd200
             // 
@@ -711,6 +755,7 @@
             this.txtFIMIEnd200.TabIndex = 22;
             this.txtFIMIEnd200.Text = "0";
             this.txtFIMIEnd200.TextChanged += new System.EventHandler(this.txtFIMIEnd200_TextChanged);
+            this.txtFIMIEnd200.Leave += new System.EventHandler(this.txtFIMIEnd200_Leave);
             // 
             // txtFIMIEnd100
             // 
@@ -721,6 +766,7 @@
             this.txtFIMIEnd100.TabIndex = 21;
             this.txtFIMIEnd100.Text = "0";
             this.txtFIMIEnd100.TextChanged += new System.EventHandler(this.txtFIMIEnd100_TextChanged);
+            this.txtFIMIEnd100.Leave += new System.EventHandler(this.txtFIMIEnd100_Leave);
             // 
             // txtFIMIEnd50
             // 
@@ -731,6 +777,7 @@
             this.txtFIMIEnd50.TabIndex = 20;
             this.txtFIMIEnd50.Text = "0";
             this.txtFIMIEnd50.TextChanged += new System.EventHandler(this.txtFIMIEnd50_TextChanged);
+            this.txtFIMIEnd50.Leave += new System.EventHandler(this.txtFIMIEnd50_Leave);
             // 
             // groupBox7
             // 
@@ -747,6 +794,16 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Starting Cash";
             // 
+            // dtpFIMISC
+            // 
+            this.dtpFIMISC.CustomFormat = "HH:mm";
+            this.dtpFIMISC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFIMISC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpFIMISC.Location = new System.Drawing.Point(20, 18);
+            this.dtpFIMISC.Name = "dtpFIMISC";
+            this.dtpFIMISC.Size = new System.Drawing.Size(52, 20);
+            this.dtpFIMISC.TabIndex = 14;
+            // 
             // txtFIMIStart200
             // 
             this.txtFIMIStart200.Location = new System.Drawing.Point(6, 96);
@@ -756,6 +813,7 @@
             this.txtFIMIStart200.TabIndex = 17;
             this.txtFIMIStart200.Text = "0";
             this.txtFIMIStart200.TextChanged += new System.EventHandler(this.txtFIMIStart200_TextChanged);
+            this.txtFIMIStart200.Leave += new System.EventHandler(this.txtFIMIStart200_Leave);
             // 
             // txtFIMIStart500
             // 
@@ -767,6 +825,7 @@
             this.txtFIMIStart500.TabIndex = 18;
             this.txtFIMIStart500.Text = "0";
             this.txtFIMIStart500.TextChanged += new System.EventHandler(this.txtFIMIStart500_TextChanged);
+            this.txtFIMIStart500.Leave += new System.EventHandler(this.txtFIMIStart500_Leave);
             // 
             // txtFIMIStart100
             // 
@@ -776,7 +835,8 @@
             this.txtFIMIStart100.Size = new System.Drawing.Size(78, 20);
             this.txtFIMIStart100.TabIndex = 16;
             this.txtFIMIStart100.Text = "0";
-            this.txtFIMIStart100.TextChanged += new System.EventHandler(this.txtFIMIStart100_TextChanged);
+            this.txtFIMIStart100.TextChanged += new System.EventHandler(this.txtFIMIStart100_TextChanged_1);
+            this.txtFIMIStart100.Leave += new System.EventHandler(this.txtFIMIStart100_Leave);
             // 
             // txtFIMIStart50
             // 
@@ -787,6 +847,7 @@
             this.txtFIMIStart50.TabIndex = 15;
             this.txtFIMIStart50.Text = "0";
             this.txtFIMIStart50.TextChanged += new System.EventHandler(this.txtFIMIStart50_TextChanged);
+            this.txtFIMIStart50.Leave += new System.EventHandler(this.txtFIMIStart50_Leave);
             // 
             // label22
             // 
@@ -1015,59 +1076,6 @@
             this.label24.Size = new System.Drawing.Size(49, 13);
             this.label24.TabIndex = 0;
             this.label24.Text = "Từ ngày:";
-            // 
-            // dtpTruocCO
-            // 
-            this.dtpTruocCO.CustomFormat = "HH:mm";
-            this.dtpTruocCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTruocCO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTruocCO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpTruocCO.Location = new System.Drawing.Point(162, 31);
-            this.dtpTruocCO.Name = "dtpTruocCO";
-            this.dtpTruocCO.Size = new System.Drawing.Size(52, 20);
-            this.dtpTruocCO.TabIndex = 5;
-            // 
-            // dtpCO
-            // 
-            this.dtpCO.CustomFormat = "HH:mm";
-            this.dtpCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCO.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpCO.Location = new System.Drawing.Point(162, 57);
-            this.dtpCO.Name = "dtpCO";
-            this.dtpCO.Size = new System.Drawing.Size(52, 20);
-            this.dtpCO.TabIndex = 6;
-            // 
-            // dtpCI
-            // 
-            this.dtpCI.CustomFormat = "HH:mm";
-            this.dtpCI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCI.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCI.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpCI.Location = new System.Drawing.Point(162, 83);
-            this.dtpCI.Name = "dtpCI";
-            this.dtpCI.Size = new System.Drawing.Size(52, 20);
-            this.dtpCI.TabIndex = 7;
-            // 
-            // dtpFIMISC
-            // 
-            this.dtpFIMISC.CustomFormat = "HH:mm";
-            this.dtpFIMISC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFIMISC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFIMISC.Location = new System.Drawing.Point(20, 18);
-            this.dtpFIMISC.Name = "dtpFIMISC";
-            this.dtpFIMISC.Size = new System.Drawing.Size(52, 20);
-            this.dtpFIMISC.TabIndex = 14;
-            // 
-            // dtpFIMICE
-            // 
-            this.dtpFIMICE.CustomFormat = "HH:mm";
-            this.dtpFIMICE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFIMICE.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFIMICE.Location = new System.Drawing.Point(18, 18);
-            this.dtpFIMICE.Name = "dtpFIMICE";
-            this.dtpFIMICE.Size = new System.Drawing.Size(52, 20);
-            this.dtpFIMICE.TabIndex = 19;
             // 
             // frmKiemQuy
             // 

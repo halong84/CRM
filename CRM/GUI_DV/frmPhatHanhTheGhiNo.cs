@@ -985,13 +985,14 @@ namespace CRM.GUI_DV
         void CreateFile(string[] fileNames, List<string> listNguon, List<string> listDich)
         {
             //string subFolder = @"PhatHanhMoi\";
+            string folder = "";
             try
             {
                 string subFolder = CommonMethods.RemoveUnicode(txtHoTen.Text).Replace(" ","") + DateTime.Now.ToString("_dd-MM-yyyy_hh-mm-ss");
                 foreach (var fileName in fileNames)
                 {
                     if (!CommonMethods.SubFolderExist(subFolder))
-                        CommonMethods.CreateSubFolder(subFolder);
+                        folder = CommonMethods.CreateSubFolder(subFolder);
 
                     string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileName + ".docx");
                     string saveFileLocation = CommonMethods.SaveFileLocation(subFolder +@"\" + fileName + ".docx");
@@ -1003,7 +1004,7 @@ namespace CRM.GUI_DV
                         OpenFileWord(saveFileLocation);
                     }
                 }
-                MessageBox.Show("Các file đã tạo thành công vào thư mục: "+subFolder, "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Các file đã tạo thành công vào thư mục: " + folder , "Thông báo", MessageBoxButtons.OK);
             }
             catch
             {

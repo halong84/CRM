@@ -789,6 +789,51 @@ namespace CRM.GUI_DV
         private void txtDemLoaiThuHoi200_Leave(object sender, EventArgs e)
         {
             TinhChenhLech();
+        }
+
+        private void txtFIMIStart50_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIStart100_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIStart200_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIStart500_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIEnd50_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIEnd100_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIEnd200_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIEnd500_Leave(object sender, EventArgs e)
+        {
+            TinhChenhLech();
+        }
+
+        private void txtFIMIStart100_TextChanged_1(object sender, EventArgs e)
+        {
+            TachSo(txtFIMIStart100);
         }  
 
     }

@@ -1319,7 +1319,7 @@
             this.txtSoTK_BoSung_SMS_2.Location = new System.Drawing.Point(453, 131);
             this.txtSoTK_BoSung_SMS_2.Name = "txtSoTK_BoSung_SMS_2";
             this.txtSoTK_BoSung_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSoTK_BoSung_SMS_2.TabIndex = 60;
+            this.txtSoTK_BoSung_SMS_2.TabIndex = 64;
             // 
             // label6
             // 
@@ -1364,7 +1364,7 @@
             this.txtSDTSDDV_5_SMS_2.Location = new System.Drawing.Point(169, 252);
             this.txtSDTSDDV_5_SMS_2.Name = "txtSDTSDDV_5_SMS_2";
             this.txtSDTSDDV_5_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSDTSDDV_5_SMS_2.TabIndex = 55;
+            this.txtSDTSDDV_5_SMS_2.TabIndex = 63;
             // 
             // label38
             // 
@@ -1380,7 +1380,7 @@
             this.txtSDTSDDV_4_SMS_2.Location = new System.Drawing.Point(169, 226);
             this.txtSDTSDDV_4_SMS_2.Name = "txtSDTSDDV_4_SMS_2";
             this.txtSDTSDDV_4_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSDTSDDV_4_SMS_2.TabIndex = 53;
+            this.txtSDTSDDV_4_SMS_2.TabIndex = 62;
             // 
             // label39
             // 
@@ -1396,7 +1396,7 @@
             this.txtSDTSDDV_3_SMS_2.Location = new System.Drawing.Point(169, 200);
             this.txtSDTSDDV_3_SMS_2.Name = "txtSDTSDDV_3_SMS_2";
             this.txtSDTSDDV_3_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSDTSDDV_3_SMS_2.TabIndex = 51;
+            this.txtSDTSDDV_3_SMS_2.TabIndex = 61;
             // 
             // label40
             // 
@@ -1412,7 +1412,7 @@
             this.txtSDTSDDV_2_SMS_2.Location = new System.Drawing.Point(169, 174);
             this.txtSDTSDDV_2_SMS_2.Name = "txtSDTSDDV_2_SMS_2";
             this.txtSDTSDDV_2_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSDTSDDV_2_SMS_2.TabIndex = 49;
+            this.txtSDTSDDV_2_SMS_2.TabIndex = 60;
             // 
             // label41
             // 
@@ -1428,7 +1428,7 @@
             this.txtSDTSDDV_1_SMS_2.Location = new System.Drawing.Point(169, 148);
             this.txtSDTSDDV_1_SMS_2.Name = "txtSDTSDDV_1_SMS_2";
             this.txtSDTSDDV_1_SMS_2.Size = new System.Drawing.Size(150, 20);
-            this.txtSDTSDDV_1_SMS_2.TabIndex = 47;
+            this.txtSDTSDDV_1_SMS_2.TabIndex = 59;
             // 
             // txtNoiCapGPKD_SMS_2
             // 
@@ -1581,7 +1581,7 @@
             this.txtSTKSuDung_6_IB_1.Location = new System.Drawing.Point(129, 245);
             this.txtSTKSuDung_6_IB_1.Name = "txtSTKSuDung_6_IB_1";
             this.txtSTKSuDung_6_IB_1.Size = new System.Drawing.Size(150, 20);
-            this.txtSTKSuDung_6_IB_1.TabIndex = 46;
+            this.txtSTKSuDung_6_IB_1.TabIndex = 55;
             // 
             // label50
             // 
@@ -1597,7 +1597,7 @@
             this.txtSTKSuDung_5_IB_1.Location = new System.Drawing.Point(129, 219);
             this.txtSTKSuDung_5_IB_1.Name = "txtSTKSuDung_5_IB_1";
             this.txtSTKSuDung_5_IB_1.Size = new System.Drawing.Size(150, 20);
-            this.txtSTKSuDung_5_IB_1.TabIndex = 44;
+            this.txtSTKSuDung_5_IB_1.TabIndex = 54;
             // 
             // label51
             // 
@@ -1613,7 +1613,7 @@
             this.txtSTKSuDung_4_IB_1.Location = new System.Drawing.Point(129, 193);
             this.txtSTKSuDung_4_IB_1.Name = "txtSTKSuDung_4_IB_1";
             this.txtSTKSuDung_4_IB_1.Size = new System.Drawing.Size(150, 20);
-            this.txtSTKSuDung_4_IB_1.TabIndex = 42;
+            this.txtSTKSuDung_4_IB_1.TabIndex = 53;
             // 
             // label53
             // 
@@ -1629,7 +1629,7 @@
             this.txtSTKSuDung_3_IB_1.Location = new System.Drawing.Point(129, 167);
             this.txtSTKSuDung_3_IB_1.Name = "txtSTKSuDung_3_IB_1";
             this.txtSTKSuDung_3_IB_1.Size = new System.Drawing.Size(150, 20);
-            this.txtSTKSuDung_3_IB_1.TabIndex = 40;
+            this.txtSTKSuDung_3_IB_1.TabIndex = 52;
             // 
             // label54
             // 
@@ -1645,7 +1645,7 @@
             this.txtSTKSuDung_2_IB_1.Location = new System.Drawing.Point(129, 141);
             this.txtSTKSuDung_2_IB_1.Name = "txtSTKSuDung_2_IB_1";
             this.txtSTKSuDung_2_IB_1.Size = new System.Drawing.Size(150, 20);
-            this.txtSTKSuDung_2_IB_1.TabIndex = 38;
+            this.txtSTKSuDung_2_IB_1.TabIndex = 51;
             // 
             // label55
             // 
@@ -1661,7 +1661,7 @@
             this.txtSTKSuDung_1_IB_1.Location = new System.Drawing.Point(129, 115);
             this.txtSTKSuDung_1_IB_1.Name = "txtSTKSuDung_1_IB_1";
             this.txtSTKSuDung_1_IB_1.Size = new System.Drawing.Size(150, 20);
-            this.txtSTKSuDung_1_IB_1.TabIndex = 36;
+            this.txtSTKSuDung_1_IB_1.TabIndex = 50;
             // 
             // label49
             // 
@@ -1862,7 +1862,7 @@
             this.groupBox6.Location = new System.Drawing.Point(306, 19);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(276, 155);
-            this.groupBox6.TabIndex = 56;
+            this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thay đổi dịch vụ";
             this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
@@ -1891,7 +1891,7 @@
             this.ckbHuyBo_TaiChinh_IB_2.Location = new System.Drawing.Point(209, 37);
             this.ckbHuyBo_TaiChinh_IB_2.Name = "ckbHuyBo_TaiChinh_IB_2";
             this.ckbHuyBo_TaiChinh_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbHuyBo_TaiChinh_IB_2.TabIndex = 55;
+            this.ckbHuyBo_TaiChinh_IB_2.TabIndex = 49;
             this.ckbHuyBo_TaiChinh_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbBoSung_ThanhToan_IB_2
@@ -1900,7 +1900,7 @@
             this.ckbBoSung_ThanhToan_IB_2.Location = new System.Drawing.Point(152, 64);
             this.ckbBoSung_ThanhToan_IB_2.Name = "ckbBoSung_ThanhToan_IB_2";
             this.ckbBoSung_ThanhToan_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbBoSung_ThanhToan_IB_2.TabIndex = 54;
+            this.ckbBoSung_ThanhToan_IB_2.TabIndex = 52;
             this.ckbBoSung_ThanhToan_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbHuyBo_ThanhToan_IB_2
@@ -1970,7 +1970,7 @@
             this.ckbHuyBo_TK_1_IB_2.Location = new System.Drawing.Point(209, 38);
             this.ckbHuyBo_TK_1_IB_2.Name = "ckbHuyBo_TK_1_IB_2";
             this.ckbHuyBo_TK_1_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbHuyBo_TK_1_IB_2.TabIndex = 55;
+            this.ckbHuyBo_TK_1_IB_2.TabIndex = 49;
             this.ckbHuyBo_TK_1_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbBoSung_TK_2_IB_2
@@ -1979,7 +1979,7 @@
             this.ckbBoSung_TK_2_IB_2.Location = new System.Drawing.Point(152, 64);
             this.ckbBoSung_TK_2_IB_2.Name = "ckbBoSung_TK_2_IB_2";
             this.ckbBoSung_TK_2_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbBoSung_TK_2_IB_2.TabIndex = 54;
+            this.ckbBoSung_TK_2_IB_2.TabIndex = 50;
             this.ckbBoSung_TK_2_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbHuyBo_TK_2_IB_2
@@ -1988,7 +1988,7 @@
             this.ckbHuyBo_TK_2_IB_2.Location = new System.Drawing.Point(209, 64);
             this.ckbHuyBo_TK_2_IB_2.Name = "ckbHuyBo_TK_2_IB_2";
             this.ckbHuyBo_TK_2_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbHuyBo_TK_2_IB_2.TabIndex = 53;
+            this.ckbHuyBo_TK_2_IB_2.TabIndex = 51;
             this.ckbHuyBo_TK_2_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbHuyBo_TK_3_IB_2
@@ -1997,7 +1997,7 @@
             this.ckbHuyBo_TK_3_IB_2.Location = new System.Drawing.Point(209, 90);
             this.ckbHuyBo_TK_3_IB_2.Name = "ckbHuyBo_TK_3_IB_2";
             this.ckbHuyBo_TK_3_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbHuyBo_TK_3_IB_2.TabIndex = 52;
+            this.ckbHuyBo_TK_3_IB_2.TabIndex = 53;
             this.ckbHuyBo_TK_3_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbHuyBo_TK_4_IB_2
@@ -2006,7 +2006,7 @@
             this.ckbHuyBo_TK_4_IB_2.Location = new System.Drawing.Point(209, 116);
             this.ckbHuyBo_TK_4_IB_2.Name = "ckbHuyBo_TK_4_IB_2";
             this.ckbHuyBo_TK_4_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbHuyBo_TK_4_IB_2.TabIndex = 51;
+            this.ckbHuyBo_TK_4_IB_2.TabIndex = 55;
             this.ckbHuyBo_TK_4_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbBoSung_TK_4_IB_2
@@ -2015,7 +2015,7 @@
             this.ckbBoSung_TK_4_IB_2.Location = new System.Drawing.Point(152, 116);
             this.ckbBoSung_TK_4_IB_2.Name = "ckbBoSung_TK_4_IB_2";
             this.ckbBoSung_TK_4_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbBoSung_TK_4_IB_2.TabIndex = 50;
+            this.ckbBoSung_TK_4_IB_2.TabIndex = 54;
             this.ckbBoSung_TK_4_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbBoSung_TK_3_IB_2
@@ -2024,7 +2024,7 @@
             this.ckbBoSung_TK_3_IB_2.Location = new System.Drawing.Point(152, 90);
             this.ckbBoSung_TK_3_IB_2.Name = "ckbBoSung_TK_3_IB_2";
             this.ckbBoSung_TK_3_IB_2.Size = new System.Drawing.Size(15, 14);
-            this.ckbBoSung_TK_3_IB_2.TabIndex = 49;
+            this.ckbBoSung_TK_3_IB_2.TabIndex = 52;
             this.ckbBoSung_TK_3_IB_2.UseVisualStyleBackColor = true;
             // 
             // ckbBoSung_TK_1_IB_2

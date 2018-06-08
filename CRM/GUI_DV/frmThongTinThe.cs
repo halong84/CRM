@@ -44,7 +44,7 @@ namespace CRM.GUI_DV
                 //    btnLuu.Enabled = false;
 
                 if (the.hmgd != 0)
-                    txtHMGD.Text = the.hmgd.ToString();
+                    txtHMGD.Text = CommonMethods.ThemDauPhay(the.hmgd.ToString());
                 txtNgayDangKy.Text = the.ngayDK.ToString("dd/MM/yyyy");
                 if (the.ngayNhan == DateTime.MinValue)
                     txtNgayNhanThe.Text = "";
@@ -199,6 +199,11 @@ namespace CRM.GUI_DV
         }
 
         private void gbThongTinThe_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
