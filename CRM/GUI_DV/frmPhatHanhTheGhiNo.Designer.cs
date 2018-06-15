@@ -128,6 +128,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiayTo_1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnSuaGiayUyQuyen = new System.Windows.Forms.Button();
             this.gbThongTinKH.SuspendLayout();
             this.gbHopDong.SuspendLayout();
             this.tpPhatHanhLai.SuspendLayout();
@@ -490,6 +491,7 @@
             // 
             // gbHopDong
             // 
+            this.gbHopDong.Controls.Add(this.btnSuaGiayUyQuyen);
             this.gbHopDong.Controls.Add(this.cbNguoiDaiDien_BenA);
             this.gbHopDong.Controls.Add(this.label9);
             this.gbHopDong.Controls.Add(this.txtSoHD);
@@ -506,7 +508,7 @@
             // 
             this.cbNguoiDaiDien_BenA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNguoiDaiDien_BenA.FormattingEnabled = true;
-            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(390, 19);
+            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(429, 18);
             this.cbNguoiDaiDien_BenA.Name = "cbNguoiDaiDien_BenA";
             this.cbNguoiDaiDien_BenA.Size = new System.Drawing.Size(150, 21);
             this.cbNguoiDaiDien_BenA.TabIndex = 20;
@@ -517,9 +519,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(278, 22);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 13);
+            this.label9.Size = new System.Drawing.Size(145, 13);
             this.label9.TabIndex = 21;
-            this.label9.Text = "Đại diện: (Ông/Bà)";
+            this.label9.Text = "Đại diện (Lãnh đạo): Ông/Bà";
             // 
             // txtSoHD
             // 
@@ -1205,6 +1207,17 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "1. ";
             // 
+            // btnSuaGiayUyQuyen
+            // 
+            this.btnSuaGiayUyQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaGiayUyQuyen.Location = new System.Drawing.Point(639, 17);
+            this.btnSuaGiayUyQuyen.Name = "btnSuaGiayUyQuyen";
+            this.btnSuaGiayUyQuyen.Size = new System.Drawing.Size(150, 23);
+            this.btnSuaGiayUyQuyen.TabIndex = 22;
+            this.btnSuaGiayUyQuyen.Text = "Sửa giấy ủy quyền";
+            this.btnSuaGiayUyQuyen.UseVisualStyleBackColor = true;
+            this.btnSuaGiayUyQuyen.Click += new System.EventHandler(this.btnSuaGiayUyQuyen_Click);
+            // 
             // frmPhatHanhTheGhiNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1348,5 +1361,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtGiayTo_1;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnSuaGiayUyQuyen;
     }
 }

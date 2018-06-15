@@ -29,8 +29,8 @@ namespace CRM.Utilities
     class CommonMethod
     {
         //Khai báo địa chỉ máy chủ chứa file template
-        private static string server_add = "127.0.0.1";
-        //private static string server_add = "10.14.0.12";
+        public static string server_add = "127.0.0.1";
+        //public static string server_add = "10.14.0.12";
 
         //Chữ in hoa ký tự đầu tiên của chuỗi
         public static string FirstCharToUpper(string input)
@@ -212,12 +212,14 @@ namespace CRM.Utilities
         //7. font_family: kiểu font trong bảng
         //8. font_size: kích cỡ font trong bảng
         //9. last_row_bold: có in đậm dòng cuối cùng của bảng hay không
-        //10. Optional parameter: merge_row_index: dòng có ô cần gộp
-        //11. Optional parameter: start_index: index của ô bắt đầu gộp
-        //12. Optional parameter: end_index = index của ô kết thúc gộp
-        //13. Optional parameter: p_footer: thông tin dưới footer của mẫu biểu
+        //10. table_index: vị trí bảng trong word template
+        //11. table_row_height: độ cao của dòng
+        //12. Optional parameter: merge_row_index: dòng có ô cần gộp
+        //13. Optional parameter: start_index: index của ô bắt đầu gộp
+        //14. Optional parameter: end_index = index của ô kết thúc gộp
+        //15. Optional parameter: p_footer: thông tin dưới footer của mẫu biểu
         //
-        public static void CreateWordDocumentWithTable(string file_location, string output_location, List<string> list_nguon, List<string> list_dich, DataTable data, List<string> list_title, string font_family, double font_size, bool last_row_bold, int merge_row_index = -1, int start_index = -1, int end_index = -1, string p_footer = "")
+        public static void CreateWordDocumentWithTable(string file_location, string output_location, List<string> list_nguon, List<string> list_dich, DataTable data, List<string> list_title, string font_family, double font_size, bool last_row_bold, byte table_index, byte table_row_height, int merge_row_index = -1, int start_index = -1, int end_index = -1, string p_footer = "")
         {
             try
             {
@@ -234,7 +236,7 @@ namespace CRM.Utilities
                     }
 
                     //Tạo bảng mới sau bảng trống
-                    Table t = document.Tables[1];
+                    Table t = document.Tables[table_index];
 
                     Table table1 = t.InsertTableAfterSelf(data.Rows.Count + 1, data.Columns.Count);
                     //Định dạng cho title
@@ -243,6 +245,7 @@ namespace CRM.Utilities
                         //table1.Rows[0].Cells[i].Paragraphs.First().Append(list_title[i]).Bold().Alignment = Alignment.center;
                         table1.Rows[0].Cells[i].Paragraphs.First().Append(list_title[i]).Bold().Font(new FontFamily(font_family)).FontSize(font_size).Alignment = Alignment.center;
                         table1.Rows[0].Cells[i].VerticalAlignment = VerticalAlignment.Center;
+                        table1.Rows[0].Height = table_row_height;
                     }
 
                     //Điền thông tin vào phần nội dung của bảng
@@ -258,7 +261,7 @@ namespace CRM.Utilities
                                 {
                                     table1.Rows[row].Cells[cell].Paragraphs.First().Append(data.Rows[row - 1][cell].ToString()).Bold().Font(new FontFamily(font_family)).FontSize(font_size).Alignment = Alignment.center;
                                     table1.Rows[row].Cells[cell].VerticalAlignment = VerticalAlignment.Center;
-                                    table1.Rows[row].Height = 30;
+                                    table1.Rows[row].Height = table_row_height;
                                     
                                 }
                             }
@@ -268,8 +271,8 @@ namespace CRM.Utilities
                                 {
                                     table1.Rows[row].Cells[cell].Paragraphs.First().Append(data.Rows[row - 1][cell].ToString()).Font(new FontFamily(font_family)).FontSize(font_size).Alignment = Alignment.center;
                                     table1.Rows[row].Cells[cell].VerticalAlignment = VerticalAlignment.Center;
-                                    
-                                    table1.Rows[row].Height = 30;
+
+                                    table1.Rows[row].Height = table_row_height;
 
                                 }
                             }                           
@@ -281,7 +284,7 @@ namespace CRM.Utilities
                             {
                                 table1.Rows[row].Cells[cell].Paragraphs.First().Append(data.Rows[row - 1][cell].ToString()).Font(new FontFamily(font_family)).FontSize(font_size).Alignment = Alignment.center;
                                 table1.Rows[row].Cells[cell].VerticalAlignment = VerticalAlignment.Center;
-                                table1.Rows[row].Height = 30;
+                                table1.Rows[row].Height = table_row_height;
                             }
                         }
                     }
@@ -289,7 +292,7 @@ namespace CRM.Utilities
                     if (merge_row_index >=0 && start_index >=0 && end_index >=0 && start_index < end_index )
                     {
                         table1.Rows[merge_row_index].MergeCells(start_index, end_index);
-                        table1.Rows[merge_row_index].Height = 30;
+                        table1.Rows[merge_row_index].Height = table_row_height;
                         Paragraph cell_paragraph = table1.Rows[merge_row_index].Cells[start_index].Paragraphs.Last();
                         table1.Rows[merge_row_index].Cells[start_index].RemoveParagraph(cell_paragraph);
                         table1.Rows[merge_row_index].Cells[start_index].VerticalAlignment = VerticalAlignment.Center;
@@ -749,10 +752,5 @@ namespace CRM.Utilities
             }
         } 
         #endregion
-
-        public static string GetServerAdd()
-        {
-            return server_add;
-        }
     }
 }

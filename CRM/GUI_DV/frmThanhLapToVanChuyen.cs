@@ -16,7 +16,7 @@ namespace CRM.GUI_DV
 {
     public partial class frmThanhLapToVanChuyen : Form
     {
-        static string fileNameTLTVC = "THE_08_QD_THANH_LAP_TO_VAN_CHUYEN_DAC_BIET";
+        static string fileNameTLTVC = "MAU_03_LENH_DIEU_CHUYEN";
         List<String> listDich, listNguon;
 
         public frmThanhLapToVanChuyen()
@@ -39,6 +39,8 @@ namespace CRM.GUI_DV
                 if (dt.Rows.Count > 0)
                 {
                     DataRow r = dt.Rows[0];
+                    txtQuyetDinh.Text = r["QUYETDINH"].ToString();
+
                     if(!Convert.ToBoolean(r["GTTT"])) cbGtTT.SelectedIndex = 1;
                     if(!Convert.ToBoolean(r["GTGS1"])) cbGtGs1.SelectedIndex = 1;
                     if(!Convert.ToBoolean(r["GTGS2"])) cbGtGs2.SelectedIndex = 1;
@@ -76,7 +78,6 @@ namespace CRM.GUI_DV
                     txtNoiCapLaiXe.Text = r["NOICAPLX"].ToString();
 
                     txtLoaiHang.Text = r["LOAIHANG"].ToString();
-                    txtBangSo.Text = r["BANGSO"].ToString();
                     txtNoiDen.Text = r["NOIDEN"].ToString();
                     txtPhuongTien.Text = r["PHUONGTIEN"].ToString();
                 }
@@ -93,6 +94,8 @@ namespace CRM.GUI_DV
             listNguon.Clear();
             listDich.Clear();
 
+            listDich.Add("<QUYET_DINH>");
+            listNguon.Add(txtQuyetDinh.Text);
             listDich.Add("<CHI_NHANH_0>");
             listNguon.Add(Thong_tin_dang_nhap.ten_cn.ToUpper());
             listDich.Add("<CHI_NHANH>");
@@ -108,11 +111,7 @@ namespace CRM.GUI_DV
 
             listDich.Add("<HANG_DAC_BIET>");
             listNguon.Add(txtLoaiHang.Text);
-            listDich.Add("<BANG_SO>");
-            listNguon.Add(txtBangSo.Text);
-            listDich.Add("<BANG_CHU>");
-            listNguon.Add(CommonMethods.FirstCharToUpper(CommonMethods.ChuyenSoSangChu(XoaDauPhay(txtBangSo.Text))));
-            listDich.Add("<DIA_CHI_CN>");
+            listDich.Add("<NOI_DI>");
             listNguon.Add(Thong_tin_dang_nhap.dia_chi_cn);
             listDich.Add("<NOI_DEN>");
             listNguon.Add(txtNoiDen.Text);
@@ -167,10 +166,11 @@ namespace CRM.GUI_DV
             {
                 index++;
                 toTruong = index + ". " + cbGtTT.Text + ": " + txtTenToTruong.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDToTruong.Text + ", Ngày cấp: " + txtNgayCapToTruong.Text +
-                    ", Nơi cấp: " + txtNoiCapToTruong.Text + "; Chức vụ: " + txtChucVuToTruong.Text + "; Chức danh: Tổ trưởng;";
+                    ", Nơi cấp: " + txtNoiCapToTruong.Text;
+                if (!string.IsNullOrEmpty(txtChucVuToTruong.Text)) toTruong += " - " + txtChucVuToTruong.Text;
+                toTruong += " - Tổ trưởng;";
                 tb.Rows[index].Cells[1].Range.Text = toTruong;
                 Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
-
             }
 
             if (!string.IsNullOrEmpty(txtTenGiamSat1.Text))
@@ -179,7 +179,9 @@ namespace CRM.GUI_DV
                 //tb.Rows.Add(tb.Rows[index]);
                 index++;
                 giamSat1 = index + ". " + cbGtBv.Text + ": " + txtTenGiamSat1.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat1.Text + ", Ngày cấp: " + txtNgayCapGiamSat1.Text +
-                    ", Nơi cấp: " + txtNoiCapGiamSat1.Text + "; Chức vụ: " + txtChucVuGiamSat1.Text + "; Chức danh: Giám sát;";
+                    ", Nơi cấp: " + txtNoiCapGiamSat1.Text;
+                if (!string.IsNullOrEmpty(txtChucVuGiamSat1.Text)) giamSat1 += " - " + txtChucVuGiamSat1.Text;
+                giamSat1 += " - Thành viên;";
                 tb.Rows[index].Cells[1].Range.Text = giamSat1;
                 Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
 
@@ -191,7 +193,9 @@ namespace CRM.GUI_DV
                 //tb.Rows.Add(tb.Rows[index]);
                 index++;
                 giamSat2 = index + ". " + cbGtGs2.Text + ": " + txtTenGiamSat2.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDGiamSat2.Text + " Ngày cấp: " + txtNgayCapGiamSat2.Text +
-                    ", Nơi cấp: " + txtNoiCapGiamSat2.Text + "; Chức vụ: " + txtChucVuGiamSat2.Text + "; Chức danh: Giám sát;";
+                    ", Nơi cấp: " + txtNoiCapGiamSat2.Text;
+                if (!string.IsNullOrEmpty(txtChucVuGiamSat2.Text)) giamSat2 += " - " + txtChucVuGiamSat2.Text;
+                giamSat2 += " - Thành viên;";
                 tb.Rows[index].Cells[1].Range.Text = giamSat2;
                 Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
             }
@@ -202,7 +206,7 @@ namespace CRM.GUI_DV
                 tb.Rows.Add(oMissing);
                 index++;
                 laiXe = index + ". " + cbGtLx.Text + ": " + txtTenLaiXe.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDLaiXe.Text +
-                    ", Ngày cấp: " + txtNgayCapLaiXe.Text + ", Nơi cấp: " + txtNoiCapLaiXe.Text + "; Chức danh: Lái xe;";
+                    ", Ngày cấp: " + txtNgayCapLaiXe.Text + ", Nơi cấp: " + txtNoiCapLaiXe.Text + " - Lái xe;";
                 tb.Rows[index].Cells[1].Range.Text = laiXe;
                 Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
             }
@@ -212,7 +216,7 @@ namespace CRM.GUI_DV
                 tb.Rows.Add(oMissing);
                 index++;
                 baoVe = index + ". " + cbGtBv.Text + ": " + txtTenBaoVe.Text + ", Số hộ chiếu/CMND/CCCD: " + txtCMNDBaoVe.Text +
-                    ", Ngày cấp: " + txtNgayCapBaoVe.Text + ", Nơi cấp: " + txtNoiCapBaoVe.Text + "; Chức danh: Bảo vệ;";
+                    ", Ngày cấp: " + txtNgayCapBaoVe.Text + ", Nơi cấp: " + txtNoiCapBaoVe.Text + " - Bảo vệ;";
                 tb.Rows[index].Cells[1].Range.Text = baoVe;
                 Console.WriteLine(tb.Rows[index].Cells[1].Range.Text);
 
@@ -233,6 +237,7 @@ namespace CRM.GUI_DV
             {
                 ToVanChuyenDAL.DV_TOVANCHUYEN_UPDATE(
                     Thong_tin_dang_nhap.ma_pb,
+                    txtQuyetDinh.Text,
                     gtTT,
                     gtGs1,
                     gtGs2,
@@ -264,7 +269,6 @@ namespace CRM.GUI_DV
                     txtNoiCapBaoVe.Text,
                     txtNoiCapLaiXe.Text,
                     txtLoaiHang.Text,
-                    txtBangSo.Text,
                     txtNoiDen.Text,
                     txtPhuongTien.Text
                     );
@@ -308,7 +312,6 @@ namespace CRM.GUI_DV
 
         private void txtBangSo_TextChanged(object sender, EventArgs e)
         {
-            TachSo(txtBangSo);
         }
 
         private void btnXoaToTruong_Click(object sender, EventArgs e)

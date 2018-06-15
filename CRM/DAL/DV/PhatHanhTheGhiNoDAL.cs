@@ -231,5 +231,15 @@ namespace CRM.DAL.DV
             };
             db.dt("DV_GIAYHEN_UPDATE", Params);
         }
+
+        public static void DV_GIAYUYQUYEN_UPDATE(string manv, string uyquyen)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[]{
+                new SqlParameter("@manv", manv),
+                new SqlParameter("@uyquyen", uyquyen),
+            };
+            db.dt("DV_GIAYUYQUYEN_UPDATE", Params);
+        }
     }
 }

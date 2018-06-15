@@ -144,6 +144,7 @@
     <Compile Include="BUS\TAIKHOANBUS.cs" />
     <Compile Include="BUS\TGGTCTDALBUS.cs" />
     <Compile Include="BUS\THEBUS.cs" />
+    <Compile Include="BUS\THONGBAOSTKBUS.cs" />
     <Compile Include="BUS\TinhBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
     <Compile Include="BUS\WUBUS.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="DAL\TAIKHOANDAL.cs" />
     <Compile Include="DAL\TGGTCTDAL.cs" />
     <Compile Include="DAL\THEDAL.cs" />
+    <Compile Include="DAL\THONGBAOSTKDAL.cs" />
     <Compile Include="DAL\TinhDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DAL\WUDAL.cs" />
@@ -982,6 +984,12 @@
     <Compile Include="GUI_DV\frmDangKyDichVu.Designer.cs">
       <DependentUpon>frmDangKyDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_DV\frmGiayUyQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DV\frmGiayUyQuyen.Designer.cs">
+      <DependentUpon>frmGiayUyQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_DV\frmKiemQuy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1542,6 +1550,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DV\frmDangKyDichVu.resx">
       <DependentUpon>frmDangKyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DV\frmGiayUyQuyen.resx">
+      <DependentUpon>frmGiayUyQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DV\frmKiemQuy.resx">
       <DependentUpon>frmKiemQuy.cs</DependentUpon>

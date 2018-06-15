@@ -10,6 +10,7 @@ namespace CRM.Entities.DV
 {
     class NguoiDaiDien
     {
+        public string maNV;
         private string _hoTen;
         private string _chucVu;
         private string _chiNhanh;
@@ -21,11 +22,12 @@ namespace CRM.Entities.DV
 
         public NguoiDaiDien(DataRow row)
         {
+            maNV = row["MANV"].ToString();
             _hoTen = row["HOTEN"].ToString();
             _chucVu = row["CHUCVU"].ToString();
             _giayUQ = row["UYQUYEN2"].ToString();
             _chiNhanh = Thong_tin_dang_nhap.ten_cn;
-            _diaChi = Thong_tin_dang_nhap.dia_chi_cn;
+            _diaChi = row["DIACHI"].ToString();
             _Sdt = row["SDT"].ToString();
             _Fax = row["FAX"].ToString();
         }
@@ -71,9 +73,6 @@ namespace CRM.Entities.DV
             get { return _giayUQ; }
             set { _giayUQ = value; }
         }
-
-
-        
 
     }
 }

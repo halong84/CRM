@@ -71,28 +71,9 @@ namespace CRM.GUI_DV
 
             //Hop dong
             //Lay thong tin nguoi dai dien
-            dsNguoiDaiDien = PhatHanhTheGhiNoDAL.DanhSachNguoiDaiDien(Thong_tin_dang_nhap.ma_pb);
+            LayDSNguoiDaiDien();
             
-            if (dsNguoiDaiDien != null)
-            {
-                //sap xep dsNguoiDaiDien
-                for (int i = 0; i < dsNguoiDaiDien.Length; i++)
-                {
-                    var temp = dsNguoiDaiDien[0];
-                    if (dsNguoiDaiDien[i].chucVu == "Giám đốc")
-                    {
-                        dsNguoiDaiDien[0] = dsNguoiDaiDien[i];
-                        dsNguoiDaiDien[i] = temp;
-                    }
-                }
-
-                for (int i = 0; i < dsNguoiDaiDien.Length; i++)
-                {
-                    cbNguoiDaiDien_BenA.Items.Add(dsNguoiDaiDien[i].hoTen);
-                }
-                if (cbNguoiDaiDien_BenA.Items.Count > 0)
-                    cbNguoiDaiDien_BenA.SelectedIndex = 0;
-            }
+            
 
             try
             {
@@ -540,6 +521,16 @@ namespace CRM.GUI_DV
         //Luu ho so
         private void btnLuuHoSo_Click(object sender, EventArgs e)
         {
+            //Check Giay UQ 
+            NguoiDaiDien ngDaiDien = dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex];
+            if (ngDaiDien.chucVu != "Giám đốc" && string.IsNullOrEmpty(ngDaiDien.giayUQ))
+            {
+                MessageBox.Show(string.Format("Lãnh đạo {0} chưa có giấy ủy quyền.\nHãy nhập vào giấy ủy quyền!", cbNguoiDaiDien_BenA.Text), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                SuaGiayUyQuyen();
+                LayDSNguoiDaiDien();
+                return;
+            }
+
             KhoiTaoTTChung();
             LuuSoTK();
             
@@ -1265,6 +1256,7 @@ namespace CRM.GUI_DV
                 default:
                     return s;
             }
+
         }
 
         private void btnLayTTKH_Click(object sender, EventArgs e)
@@ -1538,6 +1530,54 @@ namespace CRM.GUI_DV
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSuaGiayUyQuyen_Click(object sender, EventArgs e)
+        {
+            SuaGiayUyQuyen();
+        }
+
+        void SuaGiayUyQuyen()
+        {
+            Form frm = new frmGiayUyQuyen();
+            frm.ShowDialog();
+        }
+
+        void LayDSNguoiDaiDien()
+        {
+            cbNguoiDaiDien_BenA.Items.Clear();
+            cbNguoiDaiDien_BenA.Text = "";
+            dsNguoiDaiDien = null;
+
+            try
+            {
+                dsNguoiDaiDien = PhatHanhTheGhiNoDAL.DanhSachNguoiDaiDien(Thong_tin_dang_nhap.ma_pb);
+
+                if (dsNguoiDaiDien != null)
+                {
+                    //sap xep dsNguoiDaiDien
+                    for (int i = 0; i < dsNguoiDaiDien.Length; i++)
+                    {
+                        var temp = dsNguoiDaiDien[0];
+                        if (dsNguoiDaiDien[i].chucVu == "Giám đốc")
+                        {
+                            dsNguoiDaiDien[0] = dsNguoiDaiDien[i];
+                            dsNguoiDaiDien[i] = temp;
+                        }
+                    }
+
+                    for (int i = 0; i < dsNguoiDaiDien.Length; i++)
+                    {
+                        cbNguoiDaiDien_BenA.Items.Add(dsNguoiDaiDien[i].hoTen);
+                    }
+                    if (cbNguoiDaiDien_BenA.Items.Count > 0)
+                        cbNguoiDaiDien_BenA.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
         }
     }
 }

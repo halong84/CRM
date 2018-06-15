@@ -63,6 +63,7 @@ namespace CRM.DAL.DV
 
         public static void DV_TOVANCHUYEN_UPDATE(
                 string mapb,
+                string quyetDinh,
                 bool gtTT,
                 bool gtGs1,
                 bool gtGs2,
@@ -94,7 +95,6 @@ namespace CRM.DAL.DV
                 string noicapBv,
                 string noicapLx,
                 string loaihang,
-                string bangso,
                 string noiden,
                 string phuongtien
                 )
@@ -102,6 +102,7 @@ namespace CRM.DAL.DV
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[]{
                 new SqlParameter("@mapb", mapb),
+                new SqlParameter("@quyetdinh", quyetDinh),
                 new SqlParameter("@gtTT", gtTT),
                 new SqlParameter("@gtGs1", gtGs1),
                 new SqlParameter("@gtGs2", gtGs2),
@@ -133,7 +134,6 @@ namespace CRM.DAL.DV
                 new SqlParameter("@noicapBv", noicapBv),
                 new SqlParameter("@noicapLx", noicapLx),
                 new SqlParameter("@loaihang", loaihang),
-                new SqlParameter("@bangso", bangso),
                 new SqlParameter("@noiden", noiden),
                 new SqlParameter("@phuongtien", phuongtien),
 
