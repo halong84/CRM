@@ -46,6 +46,7 @@
             // 
             // cbLanhDao
             // 
+            this.cbLanhDao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLanhDao.FormattingEnabled = true;
             this.cbLanhDao.Location = new System.Drawing.Point(95, 6);
             this.cbLanhDao.Name = "cbLanhDao";

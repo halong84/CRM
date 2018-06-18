@@ -83,6 +83,11 @@ namespace CRM.GUI_DV
                     txtGiayTo_1.Text = dt.Rows[0][0].ToString();
                     txtGiayTo_2.Text = dt.Rows[0][1].ToString();
                     txtGiayTo_3.Text = dt.Rows[0][2].ToString();
+                    txtGiayTo_3.Text = dt.Rows[0][3].ToString();
+                    txtGiayTo_3.Text = dt.Rows[0][4].ToString();
+                    txtNgayHen.Text = dt.Rows[0][5].ToString();
+                    txtSLTheChinh.Text = dt.Rows[0][6].ToString();
+                    txtSLThePhu.Text = dt.Rows[0][7].ToString();
                 }
             }
             catch (Exception ex)
@@ -522,12 +527,13 @@ namespace CRM.GUI_DV
         private void btnLuuHoSo_Click(object sender, EventArgs e)
         {
             //Check Giay UQ 
-            NguoiDaiDien ngDaiDien = dsNguoiDaiDien[cbNguoiDaiDien_BenA.SelectedIndex];
+            int index = cbNguoiDaiDien_BenA.SelectedIndex;
+            NguoiDaiDien ngDaiDien = dsNguoiDaiDien[index];
             if (ngDaiDien.chucVu != "Giám đốc" && string.IsNullOrEmpty(ngDaiDien.giayUQ))
             {
                 MessageBox.Show(string.Format("Lãnh đạo {0} chưa có giấy ủy quyền.\nHãy nhập vào giấy ủy quyền!", cbNguoiDaiDien_BenA.Text), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 SuaGiayUyQuyen();
-                LayDSNguoiDaiDien();
+                cbNguoiDaiDien_BenA.SelectedIndex = index;
                 return;
             }
 
@@ -537,7 +543,8 @@ namespace CRM.GUI_DV
             //Luu Thong tin Giay Hen
             try
             {
-                PhatHanhTheGhiNoDAL.DV_GIAYHEN_UPDATE(Thong_tin_dang_nhap.ma_pb, txtGiayTo_1.Text, txtGiayTo_2.Text, txtGiayTo_3.Text);
+                PhatHanhTheGhiNoDAL.DV_GIAYHEN_UPDATE(
+                    Thong_tin_dang_nhap.ma_pb, txtGiayTo_1.Text, txtGiayTo_2.Text, txtGiayTo_3.Text, txtGiayTo_4.Text, txtGiayTo_5.Text, txtNgayHen.Text, txtSLTheChinh.Text, txtSLThePhu.Text);
             }
             catch (Exception ex)
             {
@@ -849,7 +856,7 @@ namespace CRM.GUI_DV
             hop_dong_dich.Clear();
 
             hop_dong_dich.Add("<SO_HD>");
-            hop_dong_nguon.Add(txtSoHD.Text);
+            hop_dong_nguon.Add(DateTime.Now.ToString("ddMMyy-HHmmss"));
 
             //Ben A
             hop_dong_dich.Add("<DAI_DIEN>");
@@ -887,6 +894,12 @@ namespace CRM.GUI_DV
 
             giay_hen_dich.Add("<GIAY_TO_3>");
             giay_hen_nguon.Add(txtGiayTo_3.Text);
+
+            giay_hen_dich.Add("<GIAY_TO_4>");
+            giay_hen_nguon.Add(txtGiayTo_4.Text);
+
+            giay_hen_dich.Add("<GIAY_TO_5>");
+            giay_hen_nguon.Add(txtGiayTo_5.Text);
 
             giay_hen_dich.Add("<NGAY_HEN>");
             giay_hen_nguon.Add(txtNgayHen.Text);
@@ -1541,6 +1554,7 @@ namespace CRM.GUI_DV
         {
             Form frm = new frmGiayUyQuyen();
             frm.ShowDialog();
+            LayDSNguoiDaiDien();
         }
 
         void LayDSNguoiDaiDien()

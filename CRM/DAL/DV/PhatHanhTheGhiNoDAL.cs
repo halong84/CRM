@@ -220,14 +220,19 @@ namespace CRM.DAL.DV
             return db.dt("DV_GIAYHEN_SELECT", Params);
         }
 
-        public static void DV_GIAYHEN_UPDATE(string mapb, string giayto1, string giayto2, string giayto3)
+        public static void DV_GIAYHEN_UPDATE(string mapb, string giayto1, string giayto2, string giayto3, string giayto4, string giayto5, string ngayhen, string thechinh, string thephu)
         {
             DataAccess db = new DataAccess();
             SqlParameter[] Params = new SqlParameter[]{
                 new SqlParameter("@mapb", mapb),
                 new SqlParameter("@giayto1", giayto1),
                 new SqlParameter("@giayto2", giayto2),
-                new SqlParameter("@giayto3", giayto3)
+                new SqlParameter("@giayto3", giayto3),
+                new SqlParameter("@giayto4", giayto4),
+                new SqlParameter("@giayto5", giayto5),
+                new SqlParameter("@ngayhen", ngayhen),
+                new SqlParameter("@thechinh", thechinh),
+                new SqlParameter("@thephu", thephu)
             };
             db.dt("DV_GIAYHEN_UPDATE", Params);
         }

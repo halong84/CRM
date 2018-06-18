@@ -66,10 +66,9 @@
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbHopDong = new System.Windows.Forms.GroupBox();
+            this.btnSuaGiayUyQuyen = new System.Windows.Forms.Button();
             this.cbNguoiDaiDien_BenA = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSoHD = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.tpPhatHanhLai = new System.Windows.Forms.TabPage();
             this.gbDangKyDichVu1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -128,7 +127,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiayTo_1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnSuaGiayUyQuyen = new System.Windows.Forms.Button();
+            this.txtGiayTo_4 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtGiayTo_5 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.gbThongTinKH.SuspendLayout();
             this.gbHopDong.SuspendLayout();
             this.tpPhatHanhLai.SuspendLayout();
@@ -473,7 +475,7 @@
             // 
             this.btnLuuHoSo.Enabled = false;
             this.btnLuuHoSo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuuHoSo.Location = new System.Drawing.Point(340, 664);
+            this.btnLuuHoSo.Location = new System.Drawing.Point(539, 123);
             this.btnLuuHoSo.Name = "btnLuuHoSo";
             this.btnLuuHoSo.Size = new System.Drawing.Size(140, 29);
             this.btnLuuHoSo.TabIndex = 6;
@@ -494,8 +496,6 @@
             this.gbHopDong.Controls.Add(this.btnSuaGiayUyQuyen);
             this.gbHopDong.Controls.Add(this.cbNguoiDaiDien_BenA);
             this.gbHopDong.Controls.Add(this.label9);
-            this.gbHopDong.Controls.Add(this.txtSoHD);
-            this.gbHopDong.Controls.Add(this.label15);
             this.gbHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbHopDong.Location = new System.Drawing.Point(12, 477);
             this.gbHopDong.Name = "gbHopDong";
@@ -504,40 +504,35 @@
             this.gbHopDong.TabStop = false;
             this.gbHopDong.Text = "Hợp đồng phát hành thẻ";
             // 
+            // btnSuaGiayUyQuyen
+            // 
+            this.btnSuaGiayUyQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaGiayUyQuyen.Location = new System.Drawing.Point(379, 15);
+            this.btnSuaGiayUyQuyen.Name = "btnSuaGiayUyQuyen";
+            this.btnSuaGiayUyQuyen.Size = new System.Drawing.Size(150, 23);
+            this.btnSuaGiayUyQuyen.TabIndex = 22;
+            this.btnSuaGiayUyQuyen.Text = "Sửa giấy ủy quyền";
+            this.btnSuaGiayUyQuyen.UseVisualStyleBackColor = true;
+            this.btnSuaGiayUyQuyen.Click += new System.EventHandler(this.btnSuaGiayUyQuyen_Click);
+            // 
             // cbNguoiDaiDien_BenA
             // 
             this.cbNguoiDaiDien_BenA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNguoiDaiDien_BenA.FormattingEnabled = true;
-            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(429, 18);
+            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(157, 17);
             this.cbNguoiDaiDien_BenA.Name = "cbNguoiDaiDien_BenA";
-            this.cbNguoiDaiDien_BenA.Size = new System.Drawing.Size(150, 21);
+            this.cbNguoiDaiDien_BenA.Size = new System.Drawing.Size(202, 21);
             this.cbNguoiDaiDien_BenA.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(278, 22);
+            this.label9.Location = new System.Drawing.Point(6, 22);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 13);
             this.label9.TabIndex = 21;
             this.label9.Text = "Đại diện (Lãnh đạo): Ông/Bà";
-            // 
-            // txtSoHD
-            // 
-            this.txtSoHD.Location = new System.Drawing.Point(118, 19);
-            this.txtSoHD.Name = "txtSoHD";
-            this.txtSoHD.Size = new System.Drawing.Size(150, 20);
-            this.txtSoHD.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 22);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 13);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Hợp đồng số:";
             // 
             // tpPhatHanhLai
             // 
@@ -1053,10 +1048,11 @@
             // 
             this.gbGiayHen.Controls.Add(this.groupBox3);
             this.gbGiayHen.Controls.Add(this.groupBox2);
+            this.gbGiayHen.Controls.Add(this.btnLuuHoSo);
             this.gbGiayHen.Controls.Add(this.groupBox5);
             this.gbGiayHen.Location = new System.Drawing.Point(12, 537);
             this.gbGiayHen.Name = "gbGiayHen";
-            this.gbGiayHen.Size = new System.Drawing.Size(795, 121);
+            this.gbGiayHen.Size = new System.Drawing.Size(795, 170);
             this.gbGiayHen.TabIndex = 4;
             this.gbGiayHen.TabStop = false;
             this.gbGiayHen.Text = "Giấy hẹn";
@@ -1067,7 +1063,7 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txtSLTheChinh);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(603, 19);
+            this.groupBox3.Location = new System.Drawing.Point(603, 13);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(180, 97);
             this.groupBox3.TabIndex = 13;
@@ -1111,7 +1107,7 @@
             this.groupBox2.Controls.Add(this.txtNgayHen);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(415, 19);
+            this.groupBox2.Location = new System.Drawing.Point(415, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(182, 97);
             this.groupBox2.TabIndex = 12;
@@ -1145,6 +1141,10 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.txtGiayTo_5);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.txtGiayTo_4);
+            this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.txtGiayTo_3);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.txtGiayTo_2);
@@ -1152,9 +1152,9 @@
             this.groupBox5.Controls.Add(this.txtGiayTo_1);
             this.groupBox5.Controls.Add(this.label16);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(6, 19);
+            this.groupBox5.Location = new System.Drawing.Point(6, 13);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(403, 97);
+            this.groupBox5.Size = new System.Drawing.Size(403, 151);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Hồ sơ bao gồm các giấy tờ:";
@@ -1207,25 +1207,45 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "1. ";
             // 
-            // btnSuaGiayUyQuyen
+            // txtGiayTo_4
             // 
-            this.btnSuaGiayUyQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaGiayUyQuyen.Location = new System.Drawing.Point(639, 17);
-            this.btnSuaGiayUyQuyen.Name = "btnSuaGiayUyQuyen";
-            this.btnSuaGiayUyQuyen.Size = new System.Drawing.Size(150, 23);
-            this.btnSuaGiayUyQuyen.TabIndex = 22;
-            this.btnSuaGiayUyQuyen.Text = "Sửa giấy ủy quyền";
-            this.btnSuaGiayUyQuyen.UseVisualStyleBackColor = true;
-            this.btnSuaGiayUyQuyen.Click += new System.EventHandler(this.btnSuaGiayUyQuyen_Click);
+            this.txtGiayTo_4.Location = new System.Drawing.Point(31, 97);
+            this.txtGiayTo_4.Name = "txtGiayTo_4";
+            this.txtGiayTo_4.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_4.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 100);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(19, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "4. ";
+            // 
+            // txtGiayTo_5
+            // 
+            this.txtGiayTo_5.Location = new System.Drawing.Point(31, 123);
+            this.txtGiayTo_5.Name = "txtGiayTo_5";
+            this.txtGiayTo_5.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_5.TabIndex = 9;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 126);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(16, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "5.";
             // 
             // frmPhatHanhTheGhiNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 697);
+            this.ClientSize = new System.Drawing.Size(819, 717);
             this.Controls.Add(this.gbGiayHen);
             this.Controls.Add(this.gbHopDong);
-            this.Controls.Add(this.btnLuuHoSo);
             this.Controls.Add(this.tCtrDichVu);
             this.Controls.Add(this.gbThongTinKH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -1301,8 +1321,6 @@
         private System.Windows.Forms.GroupBox gbHopDong;
         private System.Windows.Forms.ComboBox cbNguoiDaiDien_BenA;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtSoHD;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage tpPhatHanhLai;
         private System.Windows.Forms.GroupBox gbDangKyDichVu1;
         private System.Windows.Forms.Label label1;
@@ -1362,5 +1380,9 @@
         private System.Windows.Forms.TextBox txtGiayTo_1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnSuaGiayUyQuyen;
+        private System.Windows.Forms.TextBox txtGiayTo_5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtGiayTo_4;
+        private System.Windows.Forms.Label label11;
     }
 }
