@@ -14,7 +14,7 @@ namespace CRM.DAL
         //public static SqlConnection conn = new SqlConnection(@"Server=2300-ws0242\SQLEXPRESS;Database=CRM;User Id=sa;Password=123456a@;");
         //public static SqlConnection conn = new SqlConnection(@"Server=10.14.0.30\SQLEXPRESS;Database=AGRIBANKHD;User Id=sa;Password=123456a@;"); 
         
-        public static string conString = @"Server=2300-ws0242\SQLEXPRESS;Database=CRM;User Id=sa;Password=123456a@;";
+        public static string conString = @"Server=192.168.1.150\SQLEXPRESS;Database=CRM;User Id=sa;Password=123456a@;";
         //public static string conString = @"Server=10.14.0.30\SQLEXPRESS;Database=CRM;User Id=sa;Password=Sql@16pht;";
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(conString);
         public static SqlConnection conn = new SqlConnection(builder.ConnectionString);

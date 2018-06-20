@@ -16,6 +16,7 @@ namespace CRM.GUI_DV
     {
         public frmQuanLyThe()
         {
+            this.Font = SystemFonts.DialogFont;
             InitializeComponent();
             cbTieuChi_TheoNgay.SelectedIndex = 0;
             cbTieuChi_ThongTin.SelectedIndex = 0;
@@ -210,9 +211,9 @@ namespace CRM.GUI_DV
                 frm.ShowDialog();
                 //frm.BringToFront();
             }
-            catch
+            catch (Exception ex)
             {
-
+                ErrorMessageDAL.DataAccessError(ex);
             }
         }
 

@@ -114,10 +114,10 @@ namespace CRM.GUI_DV
             listNguon.Add(DateTime.Now.Year.ToString());
 
             listDich.Add("<TU_NGAY>");
-            listNguon.Add(dtpTuNgay.Value.ToString("hh")+"h"+dtpTuNgay.Value.ToString("mm")+" ngày "+ dtpTuNgay.Value.ToString("dd/MM/yyyy"));
+            listNguon.Add(dtpTuNgay.Value.ToString("HH")+"h"+dtpTuNgay.Value.ToString("mm")+" ngày "+ dtpTuNgay.Value.ToString("dd/MM/yyyy"));
             tuNgay = dtpTuNgay.Value;
             listDich.Add("<DEN_NGAY>");
-            listNguon.Add(dtpDenNgay.Value.ToString("hh") + "h" + dtpDenNgay.Value.ToString("mm") + " ngày " + dtpDenNgay.Value.ToString("dd/MM/yyyy"));
+            listNguon.Add(dtpDenNgay.Value.ToString("HH") + "h" + dtpDenNgay.Value.ToString("mm") + " ngày " + dtpDenNgay.Value.ToString("dd/MM/yyyy"));
             denNgay = dtpDenNgay.Value;
 
             listDich.Add("<ATM_ID>");

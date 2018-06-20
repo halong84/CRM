@@ -683,6 +683,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Đăng ký E-Mobile Banking";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // txtSDTSDDV_EMB_1
             // 

@@ -80,14 +80,14 @@ namespace CRM.GUI_DV
                 DataTable dt = PhatHanhTheGhiNoDAL.DV_GIAYHEN_SELECT(Thong_tin_dang_nhap.ma_pb);
                 if(dt.Rows.Count > 0)
                 {
-                    txtGiayTo_1.Text = dt.Rows[0][0].ToString();
-                    txtGiayTo_2.Text = dt.Rows[0][1].ToString();
-                    txtGiayTo_3.Text = dt.Rows[0][2].ToString();
+                    txtGiayTo_1.Text = dt.Rows[0][1].ToString();
+                    txtGiayTo_2.Text = dt.Rows[0][2].ToString();
                     txtGiayTo_3.Text = dt.Rows[0][3].ToString();
-                    txtGiayTo_3.Text = dt.Rows[0][4].ToString();
-                    txtNgayHen.Text = dt.Rows[0][5].ToString();
-                    txtSLTheChinh.Text = dt.Rows[0][6].ToString();
-                    txtSLThePhu.Text = dt.Rows[0][7].ToString();
+                    txtGiayTo_4.Text = dt.Rows[0][4].ToString();
+                    txtGiayTo_5.Text = dt.Rows[0][5].ToString();
+                    txtNgayHen.Text = dt.Rows[0][6].ToString();
+                    txtSLTheChinh.Text = dt.Rows[0][7].ToString();
+                    txtSLThePhu.Text = dt.Rows[0][8].ToString();
                 }
             }
             catch (Exception ex)

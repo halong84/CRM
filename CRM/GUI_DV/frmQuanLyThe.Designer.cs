@@ -55,10 +55,11 @@
             this.dgvThongTinThe.AllowUserToResizeRows = false;
             this.dgvThongTinThe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinThe.Location = new System.Drawing.Point(12, 78);
+            this.dgvThongTinThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongTinThe.MultiSelect = false;
             this.dgvThongTinThe.Name = "dgvThongTinThe";
             this.dgvThongTinThe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThongTinThe.Size = new System.Drawing.Size(799, 439);
+            this.dgvThongTinThe.Size = new System.Drawing.Size(799, 440);
             this.dgvThongTinThe.TabIndex = 2;
             this.dgvThongTinThe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinThe_CellDoubleClick);
             this.dgvThongTinThe.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinThe_CellValidated);
@@ -70,9 +71,10 @@
             this.tcrlQuanLyThe.Controls.Add(this.tabTheoNgay);
             this.tcrlQuanLyThe.Controls.Add(this.tabPage2);
             this.tcrlQuanLyThe.Location = new System.Drawing.Point(12, 12);
+            this.tcrlQuanLyThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tcrlQuanLyThe.Name = "tcrlQuanLyThe";
             this.tcrlQuanLyThe.SelectedIndex = 0;
-            this.tcrlQuanLyThe.Size = new System.Drawing.Size(799, 60);
+            this.tcrlQuanLyThe.Size = new System.Drawing.Size(799, 61);
             this.tcrlQuanLyThe.TabIndex = 3;
             // 
             // tabTheoNgay
@@ -84,9 +86,10 @@
             this.tabTheoNgay.Controls.Add(this.label1);
             this.tabTheoNgay.Controls.Add(this.cbTieuChi_TheoNgay);
             this.tabTheoNgay.Location = new System.Drawing.Point(4, 22);
+            this.tabTheoNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabTheoNgay.Name = "tabTheoNgay";
-            this.tabTheoNgay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTheoNgay.Size = new System.Drawing.Size(791, 34);
+            this.tabTheoNgay.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabTheoNgay.Size = new System.Drawing.Size(791, 35);
             this.tabTheoNgay.TabIndex = 0;
             this.tabTheoNgay.Text = "Theo ngày";
             this.tabTheoNgay.UseVisualStyleBackColor = true;
@@ -96,7 +99,8 @@
             this.dtpDenNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDenNgay.Location = new System.Drawing.Point(502, 6);
+            this.dtpDenNgay.Location = new System.Drawing.Point(502, 5);
+            this.dtpDenNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(98, 20);
             this.dtpDenNgay.TabIndex = 9;
@@ -106,14 +110,16 @@
             this.dtpTuNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuNgay.Location = new System.Drawing.Point(324, 6);
+            this.dtpTuNgay.Location = new System.Drawing.Point(324, 5);
+            this.dtpTuNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(98, 20);
             this.dtpTuNgay.TabIndex = 7;
             // 
             // btnTimKiem_TheoNgay
             // 
-            this.btnTimKiem_TheoNgay.Location = new System.Drawing.Point(653, 4);
+            this.btnTimKiem_TheoNgay.Location = new System.Drawing.Point(653, 3);
+            this.btnTimKiem_TheoNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem_TheoNgay.Name = "btnTimKiem_TheoNgay";
             this.btnTimKiem_TheoNgay.Size = new System.Drawing.Size(115, 24);
             this.btnTimKiem_TheoNgay.TabIndex = 10;
@@ -125,7 +131,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(440, 10);
+            this.label2.Location = new System.Drawing.Point(440, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 8;
@@ -135,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(269, 10);
+            this.label1.Location = new System.Drawing.Point(269, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 6;
@@ -151,7 +157,8 @@
             "Thẻ đã nhận - chưa giao",
             "Thẻ đã giao",
             "Tất cả"});
-            this.cbTieuChi_TheoNgay.Location = new System.Drawing.Point(23, 6);
+            this.cbTieuChi_TheoNgay.Location = new System.Drawing.Point(23, 5);
+            this.cbTieuChi_TheoNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTieuChi_TheoNgay.Name = "cbTieuChi_TheoNgay";
             this.cbTieuChi_TheoNgay.Size = new System.Drawing.Size(202, 21);
             this.cbTieuChi_TheoNgay.TabIndex = 5;
@@ -162,16 +169,18 @@
             this.tabPage2.Controls.Add(this.txtThongTin);
             this.tabPage2.Controls.Add(this.cbTieuChi_ThongTin);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(791, 34);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(791, 35);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Theo người dùng";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnTimKiem_TheoThongTin
             // 
-            this.btnTimKiem_TheoThongTin.Location = new System.Drawing.Point(653, 4);
+            this.btnTimKiem_TheoThongTin.Location = new System.Drawing.Point(653, 3);
+            this.btnTimKiem_TheoThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem_TheoThongTin.Name = "btnTimKiem_TheoThongTin";
             this.btnTimKiem_TheoThongTin.Size = new System.Drawing.Size(115, 24);
             this.btnTimKiem_TheoThongTin.TabIndex = 11;
@@ -181,9 +190,10 @@
             // 
             // txtThongTin
             // 
-            this.txtThongTin.Location = new System.Drawing.Point(334, 7);
+            this.txtThongTin.Location = new System.Drawing.Point(334, 8);
+            this.txtThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtThongTin.Name = "txtThongTin";
-            this.txtThongTin.Size = new System.Drawing.Size(199, 20);
+            this.txtThongTin.Size = new System.Drawing.Size(199, 21);
             this.txtThongTin.TabIndex = 7;
             this.txtThongTin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtThongTin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtThongTin_KeyDown);
@@ -196,7 +206,8 @@
             this.cbTieuChi_ThongTin.Items.AddRange(new object[] {
             "CMND",
             "Mã khách hàng"});
-            this.cbTieuChi_ThongTin.Location = new System.Drawing.Point(23, 6);
+            this.cbTieuChi_ThongTin.Location = new System.Drawing.Point(23, 5);
+            this.cbTieuChi_ThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTieuChi_ThongTin.Name = "cbTieuChi_ThongTin";
             this.cbTieuChi_ThongTin.Size = new System.Drawing.Size(202, 21);
             this.cbTieuChi_ThongTin.TabIndex = 6;
@@ -205,11 +216,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 529);
+            this.ClientSize = new System.Drawing.Size(823, 530);
             this.Controls.Add(this.tcrlQuanLyThe);
             this.Controls.Add(this.dgvThongTinThe);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frmQuanLyThe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

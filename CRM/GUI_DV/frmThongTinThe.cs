@@ -18,6 +18,7 @@ namespace CRM.GUI_DV
         private The the;
         public frmThongTinThe(int ID)
         {
+            this.Font = SystemFonts.DialogFont;
             InitializeComponent();
             this.TopMost = true;
             try
