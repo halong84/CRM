@@ -151,3 +151,6 @@ C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.csproj.GenerateResou
 C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.exe
 C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.pdb
 C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+D:\Agribank\CRM\CRM\bin\Debug\CRM.exe.config
+D:\Agribank\CRM\CRM\obj\Debug\CRM.exe
+D:\Agribank\CRM\CRM\obj\Debug\CRM.pdb
