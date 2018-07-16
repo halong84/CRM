@@ -154,6 +154,7 @@ namespace CRM.GUI_DV
             //Thong tin chung
             txtNgayCap.Text = kh.ngay_cap.ToString("dd/MM/yyyy");
             txtCMT.Text = kh.cmt;
+            
             txtNoiCap.Text = PhatHanhTheGhiNoDAL.DV_GET_NOICAPCMND(kh.noi_cap);
             txtMaKH.Text = kh.ma_KH;
             txtHoTen.Text = kh.ho_ten;
