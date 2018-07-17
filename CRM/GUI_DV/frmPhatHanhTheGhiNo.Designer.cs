@@ -121,16 +121,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtGiayTo_5 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtGiayTo_4 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtGiayTo_3 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtGiayTo_2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiayTo_1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtGiayTo_4 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtGiayTo_5 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.txtGiayTo_2 = new System.Windows.Forms.TextBox();
             this.gbThongTinKH.SuspendLayout();
             this.gbHopDong.SuspendLayout();
             this.tpPhatHanhLai.SuspendLayout();
@@ -1159,53 +1159,21 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Hồ sơ bao gồm các giấy tờ:";
             // 
-            // txtGiayTo_3
+            // txtGiayTo_5
             // 
-            this.txtGiayTo_3.Location = new System.Drawing.Point(31, 71);
-            this.txtGiayTo_3.Name = "txtGiayTo_3";
-            this.txtGiayTo_3.Size = new System.Drawing.Size(365, 20);
-            this.txtGiayTo_3.TabIndex = 5;
+            this.txtGiayTo_5.Location = new System.Drawing.Point(31, 123);
+            this.txtGiayTo_5.Name = "txtGiayTo_5";
+            this.txtGiayTo_5.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_5.TabIndex = 9;
             // 
-            // label22
+            // label17
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 74);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(19, 13);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "3. ";
-            // 
-            // txtGiayTo_2
-            // 
-            this.txtGiayTo_2.Location = new System.Drawing.Point(31, 45);
-            this.txtGiayTo_2.Name = "txtGiayTo_2";
-            this.txtGiayTo_2.Size = new System.Drawing.Size(365, 20);
-            this.txtGiayTo_2.TabIndex = 3;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(19, 13);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "2. ";
-            // 
-            // txtGiayTo_1
-            // 
-            this.txtGiayTo_1.Location = new System.Drawing.Point(31, 19);
-            this.txtGiayTo_1.Name = "txtGiayTo_1";
-            this.txtGiayTo_1.Size = new System.Drawing.Size(365, 20);
-            this.txtGiayTo_1.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 22);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(19, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "1. ";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 126);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(16, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "5.";
             // 
             // txtGiayTo_4
             // 
@@ -1223,21 +1191,54 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "4. ";
             // 
-            // txtGiayTo_5
+            // txtGiayTo_3
             // 
-            this.txtGiayTo_5.Location = new System.Drawing.Point(31, 123);
-            this.txtGiayTo_5.Name = "txtGiayTo_5";
-            this.txtGiayTo_5.Size = new System.Drawing.Size(365, 20);
-            this.txtGiayTo_5.TabIndex = 9;
+            this.txtGiayTo_3.Location = new System.Drawing.Point(31, 71);
+            this.txtGiayTo_3.Name = "txtGiayTo_3";
+            this.txtGiayTo_3.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_3.TabIndex = 5;
             // 
-            // label17
+            // label22
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 126);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(16, 13);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "5.";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 74);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(19, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "3. ";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 48);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(19, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "2. ";
+            // 
+            // txtGiayTo_1
+            // 
+            this.txtGiayTo_1.Location = new System.Drawing.Point(31, 19);
+            this.txtGiayTo_1.Name = "txtGiayTo_1";
+            this.txtGiayTo_1.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_1.TabIndex = 1;
+            this.txtGiayTo_1.Text = "Phiếu nhận hồ sơ kiêm giấy hẹn";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(19, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "1. ";
+            // 
+            // txtGiayTo_2
+            // 
+            this.txtGiayTo_2.Location = new System.Drawing.Point(31, 45);
+            this.txtGiayTo_2.Name = "txtGiayTo_2";
+            this.txtGiayTo_2.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_2.TabIndex = 3;
             // 
             // frmPhatHanhTheGhiNo
             // 
@@ -1375,7 +1376,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtGiayTo_3;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtGiayTo_2;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtGiayTo_1;
         private System.Windows.Forms.Label label16;
@@ -1384,5 +1384,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtGiayTo_4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtGiayTo_2;
     }
 }
