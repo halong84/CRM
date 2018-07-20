@@ -40,6 +40,30 @@ namespace CRM.GUI_DV
             {
                 ErrorMessageDAL.DataAccessError(ex);
             }
+
+
+            //Lay tt nguoi kiem soat
+            try
+            {
+                DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Trưởng phòng");
+                DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó phòng");
+                for (int i = 0; i < dtTP.Rows.Count; i++)
+                {
+                    cbKSV.Items.Add(dtTP.Rows[i]["HOTEN"].ToString());
+                }
+
+                for (int i = 0; i < dtPP.Rows.Count; i++)
+                {
+                    cbKSV.Items.Add(dtPP.Rows[i]["HOTEN"].ToString());
+                }
+
+                if (cbKSV.Items.Count > 0)
+                    cbKSV.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
         }
 
         private void txt50_Leave(object sender, EventArgs e)
@@ -142,6 +166,9 @@ namespace CRM.GUI_DV
             listDich.Add("<NGUOI_DE_NGHI>");
             listNguon.Add(txtTenCanBo.Text);
 
+            listDich.Add("<KSV>");
+            listNguon.Add(cbKSV.SelectedItem.ToString());
+
             listDich.Add("<PHONG>");
             listNguon.Add(Thong_tin_dang_nhap.tenPb + "" + Thong_tin_dang_nhap.ten_cn);
 
@@ -169,6 +196,16 @@ namespace CRM.GUI_DV
 
             listDich.Add("<TONG_TIEN_CHU>");
             listNguon.Add(CommonMethods.FirstCharToUpper(CommonMethods.ChuyenSoSangChu(tong.ToString())));
+
+            listDich.Add("<DIA_BAN>");
+            if (Thong_tin_dang_nhap.ma_cn == "2300" || Thong_tin_dang_nhap.ma_cn == "2301" || Thong_tin_dang_nhap.ma_cn == "2313")
+            {
+                listNguon.Add("Hải Dương");
+            }
+            else
+            {
+                listNguon.Add(Thong_tin_dang_nhap.ten_cn.Substring(25));
+            }
         }
 
         void TaoFileTiepQuy()

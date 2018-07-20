@@ -94,6 +94,16 @@ namespace CRM.GUI_DV
             listNguon.Clear();
             listDich.Clear();
 
+            listDich.Add("<DIA_BAN>");
+            if (Thong_tin_dang_nhap.ma_cn == "2300" || Thong_tin_dang_nhap.ma_cn == "2301" || Thong_tin_dang_nhap.ma_cn == "2313")
+            {
+                listNguon.Add("Hải Dương");
+            }
+            else
+            {
+                listNguon.Add(Thong_tin_dang_nhap.ten_cn.Substring(25));
+            }
+
             listDich.Add("<QUYET_DINH>");
             listNguon.Add(txtQuyetDinh.Text);
             listDich.Add("<CHI_NHANH_0>");

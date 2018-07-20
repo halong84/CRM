@@ -47,19 +47,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.saveFileTiepQuy = new System.Windows.Forms.SaveFileDialog();
+            this.cbKSV = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbKSV);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTenCanBo);
             this.groupBox1.Controls.Add(this.cbATMID);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(231, 80);
+            this.groupBox1.Size = new System.Drawing.Size(231, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -77,7 +81,7 @@
             // 
             this.cbATMID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbATMID.FormattingEnabled = true;
-            this.cbATMID.Location = new System.Drawing.Point(98, 46);
+            this.cbATMID.Location = new System.Drawing.Point(98, 74);
             this.cbATMID.Name = "cbATMID";
             this.cbATMID.Size = new System.Drawing.Size(121, 21);
             this.cbATMID.TabIndex = 1;
@@ -85,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 49);
+            this.label2.Location = new System.Drawing.Point(6, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 6;
@@ -112,7 +116,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt50);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(13, 100);
+            this.groupBox2.Location = new System.Drawing.Point(13, 137);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(231, 160);
             this.groupBox2.TabIndex = 1;
@@ -221,7 +225,7 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(95, 266);
+            this.btnLuu.Location = new System.Drawing.Point(95, 305);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 32);
             this.btnLuu.TabIndex = 2;
@@ -229,11 +233,29 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // cbKSV
+            // 
+            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKSV.FormattingEnabled = true;
+            this.cbKSV.Location = new System.Drawing.Point(98, 45);
+            this.cbKSV.Name = "cbKSV";
+            this.cbKSV.Size = new System.Drawing.Size(121, 21);
+            this.cbKSV.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Kiểm soát:";
+            // 
             // frmTiepQuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 308);
+            this.ClientSize = new System.Drawing.Size(265, 346);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -269,6 +291,8 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.TextBox txtTenCanBo;
         private System.Windows.Forms.SaveFileDialog saveFileTiepQuy;
+        private System.Windows.Forms.ComboBox cbKSV;
+        private System.Windows.Forms.Label label8;
 
     }
 }

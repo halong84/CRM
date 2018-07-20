@@ -246,5 +246,19 @@ namespace CRM.DAL.DV
             };
             db.dt("DV_GIAYUYQUYEN_UPDATE", Params);
         }
+
+
+        public static DataTable DANH_SACH_NV_THEO_PB_CV(string mapb, string chucvu)
+        {
+            DataAccess db = new DataAccess();
+
+            SqlParameter[] Params = new SqlParameter[]
+            {
+                new SqlParameter("@mapb", mapb),
+                new SqlParameter("@chucvu", chucvu)
+            };
+            DataTable dt = db.dt("DANH_SACH_NV_THEO_PB_CV", Params);
+            return dt;
+        }
     }
 }

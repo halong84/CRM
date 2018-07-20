@@ -127,10 +127,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtGiayTo_3 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.txtGiayTo_2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiayTo_1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtGiayTo_2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cbKSV = new System.Windows.Forms.ComboBox();
             this.gbThongTinKH.SuspendLayout();
             this.gbHopDong.SuspendLayout();
             this.tpPhatHanhLai.SuspendLayout();
@@ -493,6 +495,8 @@
             // 
             // gbHopDong
             // 
+            this.gbHopDong.Controls.Add(this.cbKSV);
+            this.gbHopDong.Controls.Add(this.label15);
             this.gbHopDong.Controls.Add(this.btnSuaGiayUyQuyen);
             this.gbHopDong.Controls.Add(this.cbNguoiDaiDien_BenA);
             this.gbHopDong.Controls.Add(this.label9);
@@ -507,7 +511,7 @@
             // btnSuaGiayUyQuyen
             // 
             this.btnSuaGiayUyQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaGiayUyQuyen.Location = new System.Drawing.Point(379, 15);
+            this.btnSuaGiayUyQuyen.Location = new System.Drawing.Point(641, 15);
             this.btnSuaGiayUyQuyen.Name = "btnSuaGiayUyQuyen";
             this.btnSuaGiayUyQuyen.Size = new System.Drawing.Size(150, 23);
             this.btnSuaGiayUyQuyen.TabIndex = 22;
@@ -519,7 +523,7 @@
             // 
             this.cbNguoiDaiDien_BenA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNguoiDaiDien_BenA.FormattingEnabled = true;
-            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(157, 17);
+            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(433, 17);
             this.cbNguoiDaiDien_BenA.Name = "cbNguoiDaiDien_BenA";
             this.cbNguoiDaiDien_BenA.Size = new System.Drawing.Size(202, 21);
             this.cbNguoiDaiDien_BenA.TabIndex = 20;
@@ -528,11 +532,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 22);
+            this.label9.Location = new System.Drawing.Point(371, 20);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 13);
+            this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 21;
-            this.label9.Text = "Đại diện (Lãnh đạo): Ông/Bà";
+            this.label9.Text = "Lãnh đạo:";
             // 
             // tpPhatHanhLai
             // 
@@ -1207,6 +1211,13 @@
             this.label22.TabIndex = 4;
             this.label22.Text = "3. ";
             // 
+            // txtGiayTo_2
+            // 
+            this.txtGiayTo_2.Location = new System.Drawing.Point(31, 45);
+            this.txtGiayTo_2.Name = "txtGiayTo_2";
+            this.txtGiayTo_2.Size = new System.Drawing.Size(365, 20);
+            this.txtGiayTo_2.TabIndex = 3;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -1233,12 +1244,24 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "1. ";
             // 
-            // txtGiayTo_2
+            // label15
             // 
-            this.txtGiayTo_2.Location = new System.Drawing.Point(31, 45);
-            this.txtGiayTo_2.Name = "txtGiayTo_2";
-            this.txtGiayTo_2.Size = new System.Drawing.Size(365, 20);
-            this.txtGiayTo_2.TabIndex = 3;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(11, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 13);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Kiểm soát viên:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // cbKSV
+            // 
+            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKSV.FormattingEnabled = true;
+            this.cbKSV.Location = new System.Drawing.Point(96, 17);
+            this.cbKSV.Name = "cbKSV";
+            this.cbKSV.Size = new System.Drawing.Size(202, 21);
+            this.cbKSV.TabIndex = 24;
             // 
             // frmPhatHanhTheGhiNo
             // 
@@ -1385,5 +1408,7 @@
         private System.Windows.Forms.TextBox txtGiayTo_4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtGiayTo_2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cbKSV;
     }
 }

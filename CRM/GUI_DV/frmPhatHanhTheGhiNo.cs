@@ -17,10 +17,10 @@ namespace CRM.GUI_DV
 {
     public partial class frmPhatHanhTheGhiNo : Form
     {
-        private const string fileNamePhatHanhMoi = "THE_01_PHAT_HANH_MOI_THE_GHI_NO";
-        private const string fileNamePhatHanhLai = "THE_17_PHAT_HANH_LAI_THE";
-        private const string fileNameHopDong = "THE_03_HOP_DONG_PHAT_HANH_THE";
-        private const string fileNameGiayHen = "THE_22_GIAY_HEN";
+        private const string fileNamePhatHanhMoi = "PHAT_HANH_MOI_THE_GHI_NO";
+        private const string fileNamePhatHanhLai = "PHAT_HANH_LAI_THE_GHI_NO";
+        //private const string fileNameHopDong = "THE_03_HOP_DONG_PHAT_HANH_THE";
+        //private const string fileNameGiayHen = "THE_22_GIAY_HEN";
 
         private List<TextBox> listTxtNotNull;
 
@@ -58,14 +58,14 @@ namespace CRM.GUI_DV
 
             //Phat hanh moi
             clbND_Moi.SetItemChecked(0, true);
-            clbQT_Moi.SetItemChecked(0, true);
+            //clbQT_Moi.SetItemChecked(0, true);
             clbHangThe_Moi.SetItemChecked(0, true);
             clbHTPhatHanh_Moi.SetItemChecked(0, true);
             clbHTNhanThe_Moi.SetItemChecked(0, true);
 
             //Phat hanh lai
             clbND_Lai.SetItemChecked(0, true);
-            clbQT_Lai.SetItemChecked(0, true);
+            //clbQT_Lai.SetItemChecked(0, true);
             clbHangThe_Lai.SetItemChecked(0, true);
             clbHTPhatHanh_Lai.SetItemChecked(0, true);
 
@@ -73,7 +73,28 @@ namespace CRM.GUI_DV
             //Lay thong tin nguoi dai dien
             LayDSNguoiDaiDien();
             
-            
+            //Lay ds kiem soat vien
+            try
+            {
+                DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Trưởng phòng");
+                DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó phòng");
+                for (int i = 0; i < dtTP.Rows.Count; i++)
+                {
+                    cbKSV.Items.Add(dtTP.Rows[i]["HOTEN"].ToString());
+                }
+
+                for (int i = 0; i < dtPP.Rows.Count; i++)
+                {
+                    cbKSV.Items.Add(dtPP.Rows[i]["HOTEN"].ToString());
+                }
+
+                if (cbKSV.Items.Count > 0)
+                    cbKSV.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
 
             try
             {
@@ -668,7 +689,21 @@ namespace CRM.GUI_DV
                 ttchung_dich.Add("<GT_0>");
             }
 
+            ttchung_dich.Add("<GDV>");
+            ttchung_nguon.Add(Thong_tin_dang_nhap.ho_ten);
 
+            ttchung_dich.Add("<KSV>");
+            ttchung_nguon.Add(cbKSV.SelectedItem.ToString());
+
+            ttchung_dich.Add("<DIA_BAN>");
+            if (Thong_tin_dang_nhap.ma_cn == "2300" || Thong_tin_dang_nhap.ma_cn == "2301" || Thong_tin_dang_nhap.ma_cn == "2313")
+            {
+                ttchung_nguon.Add("Hải Dương");
+            }
+            else
+            {
+                ttchung_nguon.Add(Thong_tin_dang_nhap.ten_cn.Substring(25));
+            }
         }
 
         private void KhoiTaoPhatHanhMoi()
@@ -965,7 +1000,7 @@ namespace CRM.GUI_DV
             listDich.AddRange(giay_hen_dich);
             saveFilePhatHanhMoi.Filter = "Word Documents|*.docx";
 
-            string[] fileNames = { fileNamePhatHanhMoi, fileNameHopDong, fileNameGiayHen };
+            string[] fileNames = { fileNamePhatHanhMoi};
             CreateFile(fileNames, listNguon, listDich);
         }
 
@@ -983,7 +1018,7 @@ namespace CRM.GUI_DV
             listDich.AddRange(giay_hen_dich);
             saveFilePhatHanhLai.Filter = "Word Documents|*.docx";
 
-            string[] fileNames = { fileNamePhatHanhLai, fileNameHopDong, fileNameGiayHen };
+            string[] fileNames = { fileNamePhatHanhLai};
             CreateFile(fileNames, listNguon, listDich);
         }
 
@@ -1593,6 +1628,11 @@ namespace CRM.GUI_DV
             {
                 ErrorMessageDAL.DataAccessError(ex);
             }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
