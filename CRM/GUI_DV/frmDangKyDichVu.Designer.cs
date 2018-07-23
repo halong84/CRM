@@ -229,6 +229,17 @@
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbKSV = new System.Windows.Forms.ComboBox();
+            this.cbLanhDao = new System.Windows.Forms.ComboBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.txtIB_03_Serial = new System.Windows.Forms.TextBox();
+            this.txtIB_03_TenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtIB_03_DichVuDangKy = new System.Windows.Forms.TextBox();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
@@ -246,6 +257,8 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbThongTinKH
@@ -596,12 +609,13 @@
             this.groupBox1.Controls.Add(this.cbChonMauBieu);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 210);
+            this.groupBox1.Location = new System.Drawing.Point(14, 263);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(793, 48);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn mẫu biểu";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnTaoMauBieu
             // 
@@ -639,9 +653,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(8, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mẫu biểu:";
             // 
@@ -657,7 +672,7 @@
             this.tCtrlDangKyDV.Controls.Add(this.tabPage8);
             this.tCtrlDangKyDV.Controls.Add(this.tabPage9);
             this.tCtrlDangKyDV.Controls.Add(this.tabPage10);
-            this.tCtrlDangKyDV.Location = new System.Drawing.Point(13, 266);
+            this.tCtrlDangKyDV.Location = new System.Drawing.Point(13, 317);
             this.tCtrlDangKyDV.Name = "tCtrlDangKyDV";
             this.tCtrlDangKyDV.SelectedIndex = 0;
             this.tCtrlDangKyDV.Size = new System.Drawing.Size(794, 328);
@@ -2196,6 +2211,12 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.txtIB_03_DichVuDangKy);
+            this.tabPage9.Controls.Add(this.txtIB_03_TenDangNhap);
+            this.tabPage9.Controls.Add(this.txtIB_03_Serial);
+            this.tabPage9.Controls.Add(this.label69);
+            this.tabPage9.Controls.Add(this.label68);
+            this.tabPage9.Controls.Add(this.label67);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Size = new System.Drawing.Size(786, 302);
@@ -2216,11 +2237,115 @@
             // 
             this.openFileTTKH.FileName = "openFileTTKH";
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.cbLanhDao);
+            this.groupBox8.Controls.Add(this.label45);
+            this.groupBox8.Controls.Add(this.cbKSV);
+            this.groupBox8.Controls.Add(this.label9);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(14, 209);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(793, 48);
+            this.groupBox8.TabIndex = 4;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Chọn cán bộ";
+            this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(9, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Kiểm soát:";
+            // 
+            // cbKSV
+            // 
+            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKSV.FormattingEnabled = true;
+            this.cbKSV.Location = new System.Drawing.Point(124, 13);
+            this.cbKSV.Name = "cbKSV";
+            this.cbKSV.Size = new System.Drawing.Size(150, 21);
+            this.cbKSV.TabIndex = 1;
+            // 
+            // cbLanhDao
+            // 
+            this.cbLanhDao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLanhDao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLanhDao.FormattingEnabled = true;
+            this.cbLanhDao.Location = new System.Drawing.Point(377, 13);
+            this.cbLanhDao.Name = "cbLanhDao";
+            this.cbLanhDao.Size = new System.Drawing.Size(150, 21);
+            this.cbLanhDao.TabIndex = 3;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(301, 16);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(56, 13);
+            this.label45.TabIndex = 2;
+            this.label45.Text = "Lãnh đạo:";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(111, 12);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(45, 13);
+            this.label67.TabIndex = 0;
+            this.label67.Text = "SERIAL";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(338, 12);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(96, 13);
+            this.label68.TabIndex = 1;
+            this.label68.Text = "TÊN ĐĂNG NHẬP";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(557, 12);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(102, 13);
+            this.label69.TabIndex = 2;
+            this.label69.Text = "DỊCH VỤ ĐĂNG KÝ";
+            // 
+            // txtIB_03_Serial
+            // 
+            this.txtIB_03_Serial.Location = new System.Drawing.Point(29, 38);
+            this.txtIB_03_Serial.Name = "txtIB_03_Serial";
+            this.txtIB_03_Serial.Size = new System.Drawing.Size(209, 20);
+            this.txtIB_03_Serial.TabIndex = 3;
+            // 
+            // txtIB_03_TenDangNhap
+            // 
+            this.txtIB_03_TenDangNhap.Location = new System.Drawing.Point(305, 38);
+            this.txtIB_03_TenDangNhap.Name = "txtIB_03_TenDangNhap";
+            this.txtIB_03_TenDangNhap.Size = new System.Drawing.Size(161, 20);
+            this.txtIB_03_TenDangNhap.TabIndex = 9;
+            // 
+            // txtIB_03_DichVuDangKy
+            // 
+            this.txtIB_03_DichVuDangKy.Location = new System.Drawing.Point(525, 38);
+            this.txtIB_03_DichVuDangKy.Name = "txtIB_03_DichVuDangKy";
+            this.txtIB_03_DichVuDangKy.Size = new System.Drawing.Size(161, 20);
+            this.txtIB_03_DichVuDangKy.TabIndex = 12;
+            // 
             // frmDangKyDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 605);
+            this.ClientSize = new System.Drawing.Size(818, 651);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.tCtrlDangKyDV);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbThongTinKH);
@@ -2260,6 +2385,10 @@
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2466,5 +2595,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileTTKH;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ComboBox cbLanhDao;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox cbKSV;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox txtIB_03_Serial;
+        private System.Windows.Forms.TextBox txtIB_03_DichVuDangKy;
+        private System.Windows.Forms.TextBox txtIB_03_TenDangNhap;
     }
 }

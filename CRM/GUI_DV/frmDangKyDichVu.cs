@@ -25,6 +25,8 @@ namespace CRM.GUI_DV
         string tenFileSMS02 = "SMS_02_THAY_DOI";
         string tenFileIB01 = "IB_01_DANG_KY";
         string tenFileIB02 = "IB_02_THAY_DOI";
+        string tenFileIB03 = "IB_03_BIEN_BAN_BAN_GIAO_NHAN_THIET_BI_XAC_THUC";
+        string tenFileIB04 = "IB_04_DANG_KY_KICH_HOAT_PHUONG_THUC_BAO_MAT";
 
         List<string> listNguon, listDich;
 
@@ -39,6 +41,78 @@ namespace CRM.GUI_DV
             txtTimKiem.Text = "CMND/CCCD/MAKH/SDT/GPKD";
             txtTimKiem.ForeColor = Color.Gray;
             txtTimKiem.Font = new Font(txtTimKiem.Font, FontStyle.Italic);
+
+            //Get KSV
+            if (Thong_tin_dang_nhap.hs)
+                try
+                {
+                    DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Trưởng phòng");
+                    DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó phòng");
+
+                    dtTP.Merge(dtPP);
+
+                    cbKSV.DataSource = dtTP;
+                    cbKSV.DisplayMember = "HOTEN";
+                    cbKSV.ValueMember = "MANV";
+
+                    if (cbKSV.Items.Count > 0)
+                        cbKSV.SelectedIndex = 0;
+                }
+                catch (Exception ex)
+                {
+                    ErrorMessageDAL.DataAccessError(ex);
+                }
+            else
+                try
+                {
+                    DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Giám đốc");
+                    DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó Giám đốc");
+                    dtTP.Merge(dtPP);
+
+                    cbKSV.DataSource = dtTP;
+                    cbKSV.DisplayMember = "HOTEN";
+                    cbKSV.ValueMember = "MANV";
+
+                    if (cbKSV.Items.Count > 0)
+                        cbKSV.SelectedIndex = 0;
+                }
+                catch (Exception ex)
+                {
+                    ErrorMessageDAL.DataAccessError(ex);
+                }
+
+            //Get Leader
+            try
+            {
+                if (!Thong_tin_dang_nhap.hs)
+                {
+                    DataTable dtGD = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Giám đốc");
+                    DataTable dtPGD = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó Giám đốc");
+                    dtGD.Merge(dtPGD);
+                    cbLanhDao.DataSource = dtGD;
+                    cbLanhDao.DisplayMember = "HOTEN";
+                    cbLanhDao.ValueMember = "MANV";
+
+                    if (cbLanhDao.Items.Count > 0)
+                        cbLanhDao.SelectedIndex = 0;
+                }
+                else
+                {
+                    DataTable dtGD = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb.Substring(0,4)+"-01", "Giám đốc");
+                    DataTable dtPGD = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb.Substring(0,4)+"-01", "Phó Giám đốc");
+                    dtGD.Merge(dtPGD);
+                    cbLanhDao.DataSource = dtGD;
+                    cbLanhDao.DisplayMember = "HOTEN";
+                    cbLanhDao.ValueMember = "MANV";
+
+                    if (cbLanhDao.Items.Count > 0)
+                        cbLanhDao.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
         }
 
 
@@ -296,6 +370,7 @@ namespace CRM.GUI_DV
             else listNguon.Add(((char)0x2610).ToString());
         }
 
+
         void KhoiTaoIB01()
         {
             listDich.Add("<MST_IB_1>");
@@ -460,6 +535,18 @@ namespace CRM.GUI_DV
             listNguon.Add(txtSDTNhanOTP_IB_2.Text);
         }
 
+        void KhoiTaoIB03()
+        {
+            listDich.Add("<IB_03_SERIAL>");
+            listNguon.Add(txtIB_03_Serial.Text);
+
+            listDich.Add("<IB_03_TEN_DANG_NHAP>");
+            listNguon.Add(txtIB_03_TenDangNhap.Text);
+
+            listDich.Add("<IB_03_DV_DANG_KY>");
+            listNguon.Add(txtIB_03_DichVuDangKy.Text);
+        }
+
         void KhoiTaoChung()
         {
             //Thong tin chung
@@ -528,10 +615,49 @@ namespace CRM.GUI_DV
 
             listDich.Add("<NGAY_THANG_NAM>");
             listNguon.Add(string.Format("ngày {0} tháng {1} năm {2}", DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year));
+
+            listDich.Add("<DIA_BAN>");
+            if (Thong_tin_dang_nhap.ma_cn == "2300" || Thong_tin_dang_nhap.ma_cn == "2301" || Thong_tin_dang_nhap.ma_cn == "2313")
+            {
+                listNguon.Add("Hải Dương");
+            }
+            else
+            {
+                listNguon.Add(Thong_tin_dang_nhap.ten_cn.Substring(25));
+            }
+
+            listDich.Add("<DIA_CHI_PB>");
+            listNguon.Add(Thong_tin_dang_nhap.diaChiPb);
+
+            listDich.Add("<GDV>");
+            listNguon.Add(Thong_tin_dang_nhap.ho_ten);
+
+            listDich.Add("<KSV>");
+            listNguon.Add(cbKSV.SelectedItem.ToString());
+
+            listDich.Add("<LANH_DAO>");
+            listNguon.Add(cbLanhDao.Text);
+
+            listDich.Add("<CMND_LD>");
+            cbLanhDao.ValueMember = "CMND";
+            listNguon.Add(cbLanhDao.SelectedValue.ToString());
+
+            listDich.Add("<NOICAP_LD>");
+            cbLanhDao.ValueMember = "NOICAP";
+            listNguon.Add(PhatHanhTheGhiNoDAL.DV_GET_NOICAPCMND(cbLanhDao.SelectedValue.ToString()));
+
+            listDich.Add("<NGAYCAP_LD>");
+            cbLanhDao.ValueMember = "NGAYCAP";
+            DateTime dt = Convert.ToDateTime(cbLanhDao.SelectedValue.ToString());
+            listNguon.Add(dt.ToString("dd/MM/yyyy"));
+
+            listDich.Add("<CHUCVU_LD>");
+            cbLanhDao.ValueMember = "CHUCVU";
+            listNguon.Add(cbLanhDao.SelectedValue.ToString());
         }
 
-        void KhoiTao()
-        {
+        void KhoiTao(){
+
             listNguon.Clear();
             listDich.Clear();
 
@@ -562,6 +688,9 @@ namespace CRM.GUI_DV
                     break;
                 case 7:
                     KhoiTaoIB02();
+                    break;
+                case 8: 
+                    KhoiTaoIB03();
                     break;
                 default: break;
             }
@@ -595,6 +724,9 @@ namespace CRM.GUI_DV
                     break;
                 case 7:
                     fileName = tenFileIB02;
+                    break;
+                case 8:
+                    fileName = tenFileIB03;
                     break;
                 default: break;
             }
@@ -971,6 +1103,21 @@ namespace CRM.GUI_DV
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label72_Click(object sender, EventArgs e)
         {
 
         }

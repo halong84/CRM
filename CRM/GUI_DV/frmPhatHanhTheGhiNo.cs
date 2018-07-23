@@ -74,27 +74,43 @@ namespace CRM.GUI_DV
             LayDSNguoiDaiDien();
             
             //Lay ds kiem soat vien
-            try
-            {
-                DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Trưởng phòng");
-                DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó phòng");
-                for (int i = 0; i < dtTP.Rows.Count; i++)
+            if (Thong_tin_dang_nhap.hs)
+                try
                 {
-                    cbKSV.Items.Add(dtTP.Rows[i]["HOTEN"].ToString());
-                }
+                    DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Trưởng phòng");
+                    DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó phòng");
 
-                for (int i = 0; i < dtPP.Rows.Count; i++)
+                    dtTP.Merge(dtPP);
+
+                    cbKSV.DataSource = dtTP;
+                    cbKSV.DisplayMember = "HOTEN";
+                    cbKSV.ValueMember = "MANV";
+
+                    if (cbKSV.Items.Count > 0)
+                        cbKSV.SelectedIndex = 0;
+                }
+                catch (Exception ex)
                 {
-                    cbKSV.Items.Add(dtPP.Rows[i]["HOTEN"].ToString());
+                    ErrorMessageDAL.DataAccessError(ex);
                 }
+            else
+                try
+                {
+                    DataTable dtTP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Giám đốc");
+                    DataTable dtPP = PhatHanhTheGhiNoDAL.DANH_SACH_NV_THEO_PB_CV(Thong_tin_dang_nhap.ma_pb, "Phó Giám đốc");
+                    dtTP.Merge(dtPP);
 
-                if (cbKSV.Items.Count > 0)
-                    cbKSV.SelectedIndex = 0;
-            }
-            catch (Exception ex)
-            {
-                ErrorMessageDAL.DataAccessError(ex);
-            }
+                    cbKSV.DataSource = dtTP;
+                    cbKSV.DisplayMember = "HOTEN";
+                    cbKSV.ValueMember = "MANV";
+
+                    if (cbKSV.Items.Count > 0)
+                        cbKSV.SelectedIndex = 0;
+                }
+                catch (Exception ex)
+                {
+                    ErrorMessageDAL.DataAccessError(ex);
+                }
 
             try
             {

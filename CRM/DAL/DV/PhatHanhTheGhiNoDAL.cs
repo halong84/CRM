@@ -257,7 +257,7 @@ namespace CRM.DAL.DV
                 new SqlParameter("@mapb", mapb),
                 new SqlParameter("@chucvu", chucvu)
             };
-            DataTable dt = db.dt("DANH_SACH_NV_THEO_PB_CV", Params);
+            DataTable dt = db.dt("DV_DS_NHANVIEN_PB_CV", Params);
             return dt;
         }
     }
