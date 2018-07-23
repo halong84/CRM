@@ -747,6 +747,16 @@ namespace CRM.GUI_DV
             }
         }
 
+
+        void PutStringIntoTable(Microsoft.Office.Interop.Word.Document doc)
+        {
+            object oMissing = System.Reflection.Missing.Value;
+            Microsoft.Office.Interop.Word.Table tb = doc.Tables[2];
+
+            int index = 0;
+
+        }
+
         #endregion
 
         #region Other Procedures

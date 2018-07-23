@@ -226,20 +226,25 @@
             this.txtMST_IB_2 = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.txtIB_03_DichVuDangKy = new System.Windows.Forms.TextBox();
+            this.txtIB_03_TenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtIB_03_Serial = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbKSV = new System.Windows.Forms.ComboBox();
             this.cbLanhDao = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.txtIB_03_Serial = new System.Windows.Forms.TextBox();
-            this.txtIB_03_TenDangNhap = new System.Windows.Forms.TextBox();
-            this.txtIB_03_DichVuDangKy = new System.Windows.Forms.TextBox();
+            this.cbKSV = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dgvIB_04_DataGridView = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MADANGNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
@@ -258,7 +263,9 @@
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage9.SuspendLayout();
+            this.tabPage10.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIB_04_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // gbThongTinKH
@@ -2224,8 +2231,57 @@
             this.tabPage9.Text = "Biên bản giao nhận thiết bị xác thực";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // txtIB_03_DichVuDangKy
+            // 
+            this.txtIB_03_DichVuDangKy.Location = new System.Drawing.Point(525, 38);
+            this.txtIB_03_DichVuDangKy.Name = "txtIB_03_DichVuDangKy";
+            this.txtIB_03_DichVuDangKy.Size = new System.Drawing.Size(161, 20);
+            this.txtIB_03_DichVuDangKy.TabIndex = 12;
+            // 
+            // txtIB_03_TenDangNhap
+            // 
+            this.txtIB_03_TenDangNhap.Location = new System.Drawing.Point(305, 38);
+            this.txtIB_03_TenDangNhap.Name = "txtIB_03_TenDangNhap";
+            this.txtIB_03_TenDangNhap.Size = new System.Drawing.Size(161, 20);
+            this.txtIB_03_TenDangNhap.TabIndex = 9;
+            // 
+            // txtIB_03_Serial
+            // 
+            this.txtIB_03_Serial.Location = new System.Drawing.Point(29, 38);
+            this.txtIB_03_Serial.Name = "txtIB_03_Serial";
+            this.txtIB_03_Serial.Size = new System.Drawing.Size(209, 20);
+            this.txtIB_03_Serial.TabIndex = 3;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(557, 12);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(102, 13);
+            this.label69.TabIndex = 2;
+            this.label69.Text = "DỊCH VỤ ĐĂNG KÝ";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(338, 12);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(96, 13);
+            this.label68.TabIndex = 1;
+            this.label68.Text = "TÊN ĐĂNG NHẬP";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(111, 12);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(45, 13);
+            this.label67.TabIndex = 0;
+            this.label67.Text = "SERIAL";
+            // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.dgvIB_04_DataGridView);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Size = new System.Drawing.Size(786, 302);
@@ -2252,26 +2308,6 @@
             this.groupBox8.Text = "Chọn cán bộ";
             this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Kiểm soát:";
-            // 
-            // cbKSV
-            // 
-            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbKSV.FormattingEnabled = true;
-            this.cbKSV.Location = new System.Drawing.Point(124, 13);
-            this.cbKSV.Name = "cbKSV";
-            this.cbKSV.Size = new System.Drawing.Size(150, 21);
-            this.cbKSV.TabIndex = 1;
-            // 
             // cbLanhDao
             // 
             this.cbLanhDao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -2292,53 +2328,65 @@
             this.label45.TabIndex = 2;
             this.label45.Text = "Lãnh đạo:";
             // 
-            // label67
+            // cbKSV
             // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(111, 12);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(45, 13);
-            this.label67.TabIndex = 0;
-            this.label67.Text = "SERIAL";
+            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKSV.FormattingEnabled = true;
+            this.cbKSV.Location = new System.Drawing.Point(124, 13);
+            this.cbKSV.Name = "cbKSV";
+            this.cbKSV.Size = new System.Drawing.Size(150, 21);
+            this.cbKSV.TabIndex = 1;
             // 
-            // label68
+            // label9
             // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(338, 12);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(96, 13);
-            this.label68.TabIndex = 1;
-            this.label68.Text = "TÊN ĐĂNG NHẬP";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(9, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Kiểm soát:";
             // 
-            // label69
+            // dgvIB_04_DataGridView
             // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(557, 12);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(102, 13);
-            this.label69.TabIndex = 2;
-            this.label69.Text = "DỊCH VỤ ĐĂNG KÝ";
+            this.dgvIB_04_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIB_04_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.HOTEN,
+            this.MADANGNHAP,
+            this.OTP});
+            this.dgvIB_04_DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvIB_04_DataGridView.Location = new System.Drawing.Point(3, 3);
+            this.dgvIB_04_DataGridView.Name = "dgvIB_04_DataGridView";
+            this.dgvIB_04_DataGridView.RowHeadersWidth = 30;
+            this.dgvIB_04_DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvIB_04_DataGridView.Size = new System.Drawing.Size(780, 296);
+            this.dgvIB_04_DataGridView.TabIndex = 0;
             // 
-            // txtIB_03_Serial
+            // STT
             // 
-            this.txtIB_03_Serial.Location = new System.Drawing.Point(29, 38);
-            this.txtIB_03_Serial.Name = "txtIB_03_Serial";
-            this.txtIB_03_Serial.Size = new System.Drawing.Size(209, 20);
-            this.txtIB_03_Serial.TabIndex = 3;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 30;
             // 
-            // txtIB_03_TenDangNhap
+            // HOTEN
             // 
-            this.txtIB_03_TenDangNhap.Location = new System.Drawing.Point(305, 38);
-            this.txtIB_03_TenDangNhap.Name = "txtIB_03_TenDangNhap";
-            this.txtIB_03_TenDangNhap.Size = new System.Drawing.Size(161, 20);
-            this.txtIB_03_TenDangNhap.TabIndex = 9;
+            this.HOTEN.HeaderText = "HỌ VÀ TÊN";
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.Width = 240;
             // 
-            // txtIB_03_DichVuDangKy
+            // MADANGNHAP
             // 
-            this.txtIB_03_DichVuDangKy.Location = new System.Drawing.Point(525, 38);
-            this.txtIB_03_DichVuDangKy.Name = "txtIB_03_DichVuDangKy";
-            this.txtIB_03_DichVuDangKy.Size = new System.Drawing.Size(161, 20);
-            this.txtIB_03_DichVuDangKy.TabIndex = 12;
+            this.MADANGNHAP.HeaderText = "MÃ ĐĂNG NHẬP";
+            this.MADANGNHAP.Name = "MADANGNHAP";
+            this.MADANGNHAP.Width = 240;
+            // 
+            // OTP
+            // 
+            this.OTP.HeaderText = "OTP HARD TOKEN/SỐ ĐIỆN THOẠI";
+            this.OTP.Name = "OTP";
+            this.OTP.Width = 240;
             // 
             // frmDangKyDichVu
             // 
@@ -2387,8 +2435,10 @@
             this.groupBox3.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIB_04_DataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2606,5 +2656,10 @@
         private System.Windows.Forms.TextBox txtIB_03_Serial;
         private System.Windows.Forms.TextBox txtIB_03_DichVuDangKy;
         private System.Windows.Forms.TextBox txtIB_03_TenDangNhap;
+        private System.Windows.Forms.DataGridView dgvIB_04_DataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MADANGNHAP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OTP;
     }
 }
