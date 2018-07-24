@@ -709,7 +709,7 @@ namespace CRM.GUI_DV
             ttchung_nguon.Add(Thong_tin_dang_nhap.ho_ten);
 
             ttchung_dich.Add("<KSV>");
-            ttchung_nguon.Add(cbKSV.SelectedItem.ToString());
+            ttchung_nguon.Add(cbKSV.Text);
 
             ttchung_dich.Add("<DIA_BAN>");
             if (Thong_tin_dang_nhap.ma_cn == "2300" || Thong_tin_dang_nhap.ma_cn == "2301" || Thong_tin_dang_nhap.ma_cn == "2313")

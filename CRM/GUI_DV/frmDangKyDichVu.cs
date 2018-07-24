@@ -547,6 +547,10 @@ namespace CRM.GUI_DV
             listNguon.Add(txtIB_03_DichVuDangKy.Text);
         }
 
+        void KhoiTaoIB04()
+        {
+
+        }
         void KhoiTaoChung()
         {
             //Thong tin chung
@@ -633,7 +637,7 @@ namespace CRM.GUI_DV
             listNguon.Add(Thong_tin_dang_nhap.ho_ten);
 
             listDich.Add("<KSV>");
-            listNguon.Add(cbKSV.SelectedItem.ToString());
+            listNguon.Add(cbKSV.Text);
 
             listDich.Add("<LANH_DAO>");
             listNguon.Add(cbLanhDao.Text);
@@ -692,6 +696,9 @@ namespace CRM.GUI_DV
                 case 8: 
                     KhoiTaoIB03();
                     break;
+                case 9:
+                    KhoiTaoIB04();
+                    break;
                 default: break;
             }
         }
@@ -728,6 +735,9 @@ namespace CRM.GUI_DV
                 case 8:
                     fileName = tenFileIB03;
                     break;
+                case 9:
+                    fileName = tenFileIB04;
+                    break;
                 default: break;
             }
             saveFileDialog1.Filter = "Word Documents|*.docx";
@@ -753,8 +763,21 @@ namespace CRM.GUI_DV
             object oMissing = System.Reflection.Missing.Value;
             Microsoft.Office.Interop.Word.Table tb = doc.Tables[2];
 
-            int index = 0;
+            int index = 2;
 
+            for (int i = 0; i < dgvIB_04_DataGridView.Rows.Count; i++)
+            {
+                if (dgvIB_04_DataGridView.Rows[i].Cells[0].Value == null)
+                    return;
+                tb.Rows.Add(oMissing);
+                tb.Rows[index].Cells[1].Range.Text = dgvIB_04_DataGridView.Rows[i].Cells[0].Value.ToString();
+                tb.Rows[index].Cells[2].Range.Text = dgvIB_04_DataGridView.Rows[i].Cells[1].Value.ToString();
+                tb.Rows[index].Cells[3].Range.Text = dgvIB_04_DataGridView.Rows[i].Cells[2].Value.ToString();
+                tb.Rows[index].Cells[4].Range.Text = dgvIB_04_DataGridView.Rows[i].Cells[3].Value.ToString();
+                index++;
+            }
+
+            doc.Save();
         }
 
         #endregion
@@ -955,6 +978,10 @@ namespace CRM.GUI_DV
         {
             Microsoft.Office.Interop.Word.Application ap = new Microsoft.Office.Interop.Word.Application();
             Microsoft.Office.Interop.Word.Document document = ap.Documents.Open(fileLocation);
+            if (cbChonMauBieu.SelectedIndex == 9)
+            {
+                PutStringIntoTable(document);
+            }
             ap.Visible = true;
         }
         public void TachSo(TextBox luong)
