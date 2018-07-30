@@ -233,6 +233,11 @@
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.dgvIB_04_DataGridView = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MADANGNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -240,11 +245,7 @@
             this.label45 = new System.Windows.Forms.Label();
             this.cbKSV = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dgvIB_04_DataGridView = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MADANGNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
@@ -264,8 +265,8 @@
             this.groupBox3.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIB_04_DataGridView)).BeginInit();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbThongTinKH
@@ -650,7 +651,9 @@
                 "",
             "Mẫu 03/IBCN Biên bản bàn giao thiết bị xác thực",
             "Mẫu 04/IBCN Phiếu yêu cầu đăng ký và kích hoạt thiết bị xác thực trên hệ thống OT" +
-                "P"});
+                "P",
+            "Mẫu 01/ĐK/NTTĐ-Giấy đăng ký sử dụng dịch vụ nhờ thu tự động kiêm giấy ủy quyền tr" +
+                "ích tài khoản"});
             this.cbChonMauBieu.Location = new System.Drawing.Point(124, 17);
             this.cbChonMauBieu.Name = "cbChonMauBieu";
             this.cbChonMauBieu.Size = new System.Drawing.Size(503, 21);
@@ -679,6 +682,7 @@
             this.tCtrlDangKyDV.Controls.Add(this.tabPage8);
             this.tCtrlDangKyDV.Controls.Add(this.tabPage9);
             this.tCtrlDangKyDV.Controls.Add(this.tabPage10);
+            this.tCtrlDangKyDV.Controls.Add(this.tabPage11);
             this.tCtrlDangKyDV.Location = new System.Drawing.Point(13, 317);
             this.tCtrlDangKyDV.Name = "tCtrlDangKyDV";
             this.tCtrlDangKyDV.SelectedIndex = 0;
@@ -2289,6 +2293,46 @@
             this.tabPage10.Text = "Phiếu đăng ký và kích hoạt phương thức bảo mật";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
+            // dgvIB_04_DataGridView
+            // 
+            this.dgvIB_04_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIB_04_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.HOTEN,
+            this.MADANGNHAP,
+            this.OTP});
+            this.dgvIB_04_DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvIB_04_DataGridView.Location = new System.Drawing.Point(3, 3);
+            this.dgvIB_04_DataGridView.Name = "dgvIB_04_DataGridView";
+            this.dgvIB_04_DataGridView.RowHeadersWidth = 30;
+            this.dgvIB_04_DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvIB_04_DataGridView.Size = new System.Drawing.Size(780, 296);
+            this.dgvIB_04_DataGridView.TabIndex = 0;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 30;
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.HeaderText = "HỌ VÀ TÊN";
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.Width = 240;
+            // 
+            // MADANGNHAP
+            // 
+            this.MADANGNHAP.HeaderText = "MÃ ĐĂNG NHẬP";
+            this.MADANGNHAP.Name = "MADANGNHAP";
+            this.MADANGNHAP.Width = 240;
+            // 
+            // OTP
+            // 
+            this.OTP.HeaderText = "OTP HARD TOKEN/SỐ ĐIỆN THOẠI";
+            this.OTP.Name = "OTP";
+            this.OTP.Width = 240;
+            // 
             // openFileTTKH
             // 
             this.openFileTTKH.FileName = "openFileTTKH";
@@ -2348,45 +2392,14 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Kiểm soát:";
             // 
-            // dgvIB_04_DataGridView
+            // tabPage11
             // 
-            this.dgvIB_04_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIB_04_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.HOTEN,
-            this.MADANGNHAP,
-            this.OTP});
-            this.dgvIB_04_DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvIB_04_DataGridView.Location = new System.Drawing.Point(3, 3);
-            this.dgvIB_04_DataGridView.Name = "dgvIB_04_DataGridView";
-            this.dgvIB_04_DataGridView.RowHeadersWidth = 30;
-            this.dgvIB_04_DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvIB_04_DataGridView.Size = new System.Drawing.Size(780, 296);
-            this.dgvIB_04_DataGridView.TabIndex = 0;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 30;
-            // 
-            // HOTEN
-            // 
-            this.HOTEN.HeaderText = "HỌ VÀ TÊN";
-            this.HOTEN.Name = "HOTEN";
-            this.HOTEN.Width = 240;
-            // 
-            // MADANGNHAP
-            // 
-            this.MADANGNHAP.HeaderText = "MÃ ĐĂNG NHẬP";
-            this.MADANGNHAP.Name = "MADANGNHAP";
-            this.MADANGNHAP.Width = 240;
-            // 
-            // OTP
-            // 
-            this.OTP.HeaderText = "OTP HARD TOKEN/SỐ ĐIỆN THOẠI";
-            this.OTP.Name = "OTP";
-            this.OTP.Width = 240;
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(786, 302);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "Đăng ký dịch vụ nhờ thu tự động";
+            this.tabPage11.UseVisualStyleBackColor = true;
             // 
             // frmDangKyDichVu
             // 
@@ -2436,9 +2449,9 @@
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             this.tabPage10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIB_04_DataGridView)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIB_04_DataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2661,5 +2674,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MADANGNHAP;
         private System.Windows.Forms.DataGridViewTextBoxColumn OTP;
+        private System.Windows.Forms.TabPage tabPage11;
     }
 }
