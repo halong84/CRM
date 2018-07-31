@@ -27,6 +27,7 @@ namespace CRM.GUI_DV
         string tenFileIB02 = "IB_02_THAY_DOI";
         string tenFileIB03 = "IB_03_BIEN_BAN_BAN_GIAO_NHAN_THIET_BI_XAC_THUC";
         string tenFileIB04 = "IB_04_DANG_KY_KICH_HOAT_PHUONG_THUC_BAO_MAT";
+        string tenFileDKNT01 = "DKNT_01_DANG_KY_NHO_THU";
 
         List<string> listNguon, listDich;
 
@@ -41,6 +42,9 @@ namespace CRM.GUI_DV
             txtTimKiem.Text = "CMND/CCCD/MAKH/SDT/GPKD";
             txtTimKiem.ForeColor = Color.Gray;
             txtTimKiem.Font = new Font(txtTimKiem.Font, FontStyle.Italic);
+
+            //Set text DataGridView
+            SetInfoDgvDangKyNhoThu();
 
             //Get KSV
             if (Thong_tin_dang_nhap.hs)
@@ -551,6 +555,50 @@ namespace CRM.GUI_DV
         {
 
         }
+
+        void KhoiTaoDKNT01()
+        {
+            listDich.Add("<SOTK>");
+            listNguon.Add(cbSoTK.Text);
+
+            listDich.Add("<HANMUC_DKNT>");
+            listNguon.Add(txtHanMuc_DKNT.Text);
+
+            listDich.Add("<BANGCHU_DKNT>");
+            listNguon.Add(CommonMethods.ChuyenSoSangChu(CommonMethods.XoaDauPhay(txtHanMuc_DKNT.Text)));
+
+            for (int i = 0; i < 13; i++)
+            {
+                listDich.Add(string.Format("<DKNT_CKB_{0}>", i));
+                listDich.Add(string.Format("<DKNT_STB_{0}>", i));
+
+                if (Convert.ToBoolean(dgvDKNT01.Rows[i].Cells[0].Value)) listNguon.Add(((char)0x2611).ToString());
+                else listNguon.Add(((char)0x2610).ToString());
+
+                listNguon.Add(dgvDKNT01.Rows[i].Cells[3].Value.ToString());
+            }
+
+            listDich.Add("<COTHOIHAN>");
+            if (ckbCoThoiHan.Checked) listNguon.Add(((char)0x2611).ToString());
+            else listNguon.Add(((char)0x2610).ToString());
+
+            listDich.Add("<VOTHOIHAN>");
+            if (ckbKhongThoiHan.Checked) listNguon.Add(((char)0x2611).ToString());
+            else listNguon.Add(((char)0x2610).ToString());
+
+            listDich.Add("<TUNGAY>");
+            listDich.Add("<DENNGAY>");
+            if (ckbCoThoiHan.Checked)
+            {
+                listNguon.Add(dtpTuNgay_DKNT.Value.ToString("dd/MM/yyyy"));
+                listNguon.Add(dtpDenNgay_DKNT.Value.ToString("dd/MM/yyyy"));
+            }
+            else
+            {
+                listNguon.Add(".................");
+                listNguon.Add(".................");
+            }
+        }
         void KhoiTaoChung()
         {
             //Thong tin chung
@@ -660,6 +708,8 @@ namespace CRM.GUI_DV
             listNguon.Add(cbLanhDao.SelectedValue.ToString());
         }
 
+
+
         void KhoiTao(){
 
             listNguon.Clear();
@@ -699,6 +749,9 @@ namespace CRM.GUI_DV
                 case 9:
                     KhoiTaoIB04();
                     break;
+                case 10:
+                    KhoiTaoDKNT01();
+                    break;
                 default: break;
             }
         }
@@ -737,6 +790,9 @@ namespace CRM.GUI_DV
                     break;
                 case 9:
                     fileName = tenFileIB04;
+                    break;
+                case 10:
+                    fileName = tenFileDKNT01;
                     break;
                 default: break;
             }
@@ -1012,6 +1068,23 @@ namespace CRM.GUI_DV
             return s.Replace(",", "");
         }
 
+        void SetInfoDgvDangKyNhoThu()
+        {
+            dgvDKNT01.Rows.Add(false, "Điện thoại di động trả sau", "MobiFone", "");
+            dgvDKNT01.Rows.Add(false, "Điện thoại di động trả sau", "Viettel", "");
+            dgvDKNT01.Rows.Add(false, "Điện thoại HomePhone", "Viettel", "");
+            dgvDKNT01.Rows.Add(false, "Điện thoại cố định (PSTN)", "Viettel", "");
+            dgvDKNT01.Rows.Add(false, "Internet ADSL", "Viettel", "");
+            dgvDKNT01.Rows.Add(false, "Điện thoại di động trả sau", "S-Fone", "");
+            dgvDKNT01.Rows.Add(false, "Điện thoại di động trả sau (VinaPhone)   ", "VNPT", "");
+            dgvDKNT01.Rows.Add(false, "Điện thoại cố định", "VNPT", "");
+            dgvDKNT01.Rows.Add(false, "Dịch vụ GPhone", "VNPT", "");
+            dgvDKNT01.Rows.Add(false, "MegaVNN", "VNPT", "");
+            dgvDKNT01.Rows.Add(false, "MegaWAN", "VNPT", "");
+            dgvDKNT01.Rows.Add(false, "FTTH", "VNPT", "");
+            dgvDKNT01.Rows.Add(false, "MyTV", "VNPT", "");
+        }
+
         #endregion
 
         #region Event Handler
@@ -1156,6 +1229,54 @@ namespace CRM.GUI_DV
 
         private void label72_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtHanMuc_DKNT_TextChanged(object sender, EventArgs e)
+        {
+            CommonMethods.TachSo(txtHanMuc_DKNT);
+        }
+
+        private void ckbCoThoiHan_CheckedChanged(object sender, EventArgs e)
+        {
+            ckbKhongThoiHan.Checked = !ckbCoThoiHan.Checked;
+        }
+
+        private void dgvDKNT01_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ckbKhongThoiHan_CheckedChanged(object sender, EventArgs e)
+        {
+            ckbCoThoiHan.Checked = !ckbKhongThoiHan.Checked;
+        }
+
+        private void dgvDKNT01_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvDKNT01.Rows[e.RowIndex].Cells[0];
+            if (chk.Value == chk.TrueValue)
+                chk.Value = chk.FalseValue;
+            else chk.Value = chk.TrueValue;
+            dgvDKNT01.EndEdit();
+        }
+
+        private void dgvDKNT01_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvDKNT01.CommitEdit(DataGridViewDataErrorContexts.Commit);
+        }
+
+        private void dgvDKNT01_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            DataGridViewRow row = dgvDKNT01.Rows[e.RowIndex];
+            DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells[0];
+            if (chk.Value == chk.TrueValue)
+            {
+                dgvDKNT01.CurrentCell = row.Cells[3];
+                dgvDKNT01.BeginEdit(true);
+            }
+            else row.Cells[3].Value = "";
 
         }
 

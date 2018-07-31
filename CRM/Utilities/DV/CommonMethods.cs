@@ -735,6 +735,34 @@ namespace CRM.Utilities.DV
             return dt;
         }
 
+        public static void TachSo(TextBox luong)
+        {
+            string txt, txt1;
+            txt1 = luong.Text.Replace(",", "");
+            txt = "";
+            int n = txt1.Length;
+            int dem = 0;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (dem == 2 && i != 0)
+                {
+                    txt = "," + txt1.Substring(i, 1) + txt;
+                    dem = 0;
+                }
+                else
+                {
+                    txt = txt1.Substring(i, 1) + txt;
+                    dem += 1;
+                }
+            }
+            luong.Text = txt;
+            luong.SelectionStart = luong.Text.Length;
+        }
 
+        public static string XoaDauPhay(string s)
+        {
+            string s2 = s.Replace(",", "");
+            return s2;
+        }
     }
 }
