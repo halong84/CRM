@@ -607,11 +607,17 @@ namespace CRM.GUI_DV
                 cn = Thong_tin_dang_nhap.tenPb;
                 listDich.Add("<CHINHANH0>");
                 listNguon.Add((Thong_tin_dang_nhap.ten_cn+"\n"+cn).ToUpper());
+
+                listDich.Add("<PHONGBAN>");
+                listNguon.Add(Thong_tin_dang_nhap.tenPb);
             }
             else
             {
                 listDich.Add("<CHINHANH0>");
                 listNguon.Add(cn.ToUpper());
+
+                listDich.Add("<PHONGBAN>");
+                listNguon.Add(Thong_tin_dang_nhap.ten_cn);
             }
 
             listDich.Add("<CHINHANH>");
