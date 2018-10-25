@@ -7,12 +7,3 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Debug\CRM_UPDATE.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Debug\CRM_UPDATE.exe
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Debug\CRM_UPDATE.pdb
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\bin\Debug\CRM_UPDATE.exe.config
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\bin\Debug\CRM_UPDATE.exe
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\bin\Debug\CRM_UPDATE.pdb
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\obj\Debug\CRM_UPDATE.csprojResolveAssemblyReference.cache
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\obj\Debug\CRM_UPDATE.frmUpdate.resources
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\obj\Debug\CRM_UPDATE.Properties.Resources.resources
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\obj\Debug\CRM_UPDATE.csproj.GenerateResource.Cache
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\obj\Debug\CRM_UPDATE.exe
-C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM_UPDATE\obj\Debug\CRM_UPDATE.pdb

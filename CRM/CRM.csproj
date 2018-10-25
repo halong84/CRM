@@ -978,6 +978,18 @@
     <Compile Include="frmXacnhan.Designer.cs">
       <DependentUpon>frmXacnhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_DT\frmDienToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DT\frmDienToan.Designer.cs">
+      <DependentUpon>frmDienToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DT\frmIPCAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DT\frmIPCAS.Designer.cs">
+      <DependentUpon>frmIPCAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_DV\frmDangKyDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1054,6 +1066,12 @@
     <Compile Include="Utilities\DV\ControlFormat.cs" />
     <Compile Include="Utilities\DV\Thong_tin_dang_nhap.cs" />
     <Compile Include="Utilities\Thongtindangnhap.cs" />
+    <Compile Include="Webcam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Webcam.Designer.cs">
+      <DependentUpon>Webcam.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Chinhsach.resx">
       <DependentUpon>Chinhsach.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1547,6 +1565,12 @@
     <EmbeddedResource Include="frmXacnhan.resx">
       <DependentUpon>frmXacnhan.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DT\frmDienToan.resx">
+      <DependentUpon>frmDienToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DT\frmIPCAS.resx">
+      <DependentUpon>frmIPCAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DV\frmDangKyDichVu.resx">
       <DependentUpon>frmDangKyDichVu.cs</DependentUpon>

@@ -57,5 +57,17 @@ namespace CRM.DAL
             count = db.cmdExecNonQueryProc("UPDATE__USER", Params);
             return count != 0;
         }
+
+        public bool UPDATE__USER_HOATDONG(DataTable dt)
+        {
+            int count = 0;
+
+            SqlParameter[] Params = new SqlParameter[] 
+            {
+                 new SqlParameter("@tbl_USER", dt)
+             };
+            count = db.cmdExecNonQueryProc("UPDATE__USER_HOATDONG", Params);
+            return count != 0;
+        }
     }
 }

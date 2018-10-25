@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="rdbUQMNT_CHK_NSTC.Text" xml:space="preserve">
+    <value>Áp dụng cho các Lệnh chuyển tiền trong khoảng thời gian từ ngày ký 
+văn bản này đến khi có văn bản khác thay thế (Applicable for Payment
+Orders in the period from the date of signing this application until a 
+replacement document).</value>
+  </data>
   <metadata name="ofdNhapfileKH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

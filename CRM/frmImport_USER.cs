@@ -68,46 +68,55 @@ namespace CRM
                     DataTable nhanvien = new DataTable();
                     for (int i = 0; i < dt_temp.Rows.Count; i++)
                     {
-                        try
+                        if (dt_temp.Rows[i][4].ToString() != "2")
                         {
-                            nhanvien.Clear();
-                            dr = dt_temp2.NewRow();
-                            dr["USER_ID"] = dt_temp.Rows[i][1].ToString();
-                            dr["USER_PASS"] = "123456";
-                            
-                            if (dt_temp.Rows[i][36].ToString() == Thongtindangnhap.ma_hoi_so)
+                            try
                             {
-                                dr["GROUP_LIST"] = "G_HS";
-                            }
-                            else
-                            {
-                                dr["GROUP_LIST"] = "G_CN";
-                            }
-                            dr["MANV"] = dt_temp.Rows[i][35].ToString();
+                                nhanvien.Clear();
 
-                            nhanvien = nvbus.NHAN_VIEN_THEO_MANV(dt_temp.Rows[i][35].ToString());
-                            dr["TENNV"] = nhanvien.Rows[0]["HOTEN"].ToString();
-                            dr["CHUCVU"] = nhanvien.Rows[0]["CHUCVU"].ToString();
-                            dr["MACN"] = dt_temp.Rows[i][36].ToString();
-                            dr["GHICHU"] = "";
-                            dr["MAPB"] = nhanvien.Rows[0]["MAPB"].ToString(); ;
-                            dr["KICHHOAT"] = true;
-                            dt_temp2.Rows.Add(dr);
-                        }
-                        catch
-                        { }
+                                dr = dt_temp2.NewRow();
+                                dr["USER_ID"] = dt_temp.Rows[i][1].ToString();
+                                dr["USER_PASS"] = "123456";
+
+                                if (dt_temp.Rows[i][36].ToString() == Thongtindangnhap.ma_hoi_so)
+                                {
+                                    dr["GROUP_LIST"] = "G_HS";
+                                }
+                                else
+                                {
+                                    dr["GROUP_LIST"] = "G_CN";
+                                }
+                                dr["MANV"] = dt_temp.Rows[i][35].ToString();
+
+                                nhanvien = nvbus.NHAN_VIEN_THEO_MANV(dt_temp.Rows[i][35].ToString());
+                                dr["TENNV"] = nhanvien.Rows[0]["HOTEN"].ToString();
+                                dr["CHUCVU"] = nhanvien.Rows[0]["CHUCVU"].ToString();
+
+                                dr["MACN"] = dt_temp.Rows[i][36].ToString();
+                                dr["GHICHU"] = "";
+                                dr["MAPB"] = nhanvien.Rows[0]["MAPB"].ToString(); ;
+                                dr["KICHHOAT"] = true;
+                                dt_temp2.Rows.Add(dr);
+                            }
+                            catch
+                            { }
+                       }                        
                     }
                 }
 
                 //Cập nhật thông tin người sử dụng
                 if (usbus.UPDATE__USER(dt_temp2))
                 {
+                    //Khóa những user không hoạt động (đưa cột KICHHOAT về 0)
+                    bool update_user = usbus.UPDATE__USER_HOATDONG(dt_temp2);
                     MessageBox.Show("Hoàn thành nhập thông tin người sử dụng");
                 }
                 else
                 {
                     MessageBox.Show("Có lỗi xảy ra khi nhập thông tin người sử dụng");
                 }
+
+                
             }
         }
     }

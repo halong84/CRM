@@ -32,5 +32,10 @@ namespace CRM.BUS
         {
             return dal.UPDATE__USER(dt);
         }
+
+        public bool UPDATE__USER_HOATDONG(DataTable dt)
+        {
+            return dal.UPDATE__USER_HOATDONG(dt);
+        }
     }
 }

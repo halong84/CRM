@@ -529,6 +529,7 @@ namespace CRM.Utilities
                     name = "Seven";
                     break;
                 case 8:
+
                     name = "Eight";
                     break;
                 case 9:
@@ -581,7 +582,7 @@ namespace CRM.Utilities
                     name = "Thirty";
                     break;
                 case 40:
-                    name = "Fourty";
+                    name = "Forty";
                     break;
                 case 50:
                     name = "Fifty";

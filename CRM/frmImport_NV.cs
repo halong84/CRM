@@ -83,7 +83,7 @@ namespace CRM
                                 }
                                 else
                                 {
-                                    
+                                    dr["NGAYSINH"] = "01/01/1900";
                                 }
                                 
                             }
@@ -110,15 +110,15 @@ namespace CRM
                 //Cập nhật nhân viên
                 if (nv_bus.UPDATE_NHANVIEN(dt_temp2))
                 {
+                    //Cập nhật tình trạng các nhân viên đã nghỉ việc (đưa cột HOATDONG về 0)
+                    bool set_nv_nghiviec = nv_bus.UPDATE_NHANVIEN_HOATDONG(dt_temp2);
+
                     MessageBox.Show("Hoàn thành nhập dữ liệu nhân viên");
                 }
                 else
                 {
                     MessageBox.Show("Có lỗi xảy ra khi nhập dữ liệu nhân viên");
-                }
-
-                //Cập nhật tình trạng các nhân viên đã nghỉ việc (đưa cột HOATDONG về 0)
-                bool set_nv_nghiviec = nv_bus.UPDATE_NHANVIEN_HOATDONG(dt_temp2);
+                }               
             }
         }
     }

@@ -1,0 +1,9 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\bin\Release\CRM_UPDATE.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\bin\Release\CRM_UPDATE.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\bin\Release\CRM_UPDATE.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.frmUpdate.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.pdb
