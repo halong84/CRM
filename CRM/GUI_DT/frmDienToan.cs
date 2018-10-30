@@ -15,5 +15,11 @@ namespace CRM.GUI_DT
         {
             InitializeComponent();
         }
+
+        private void btnIPCAS_Click(object sender, EventArgs e)
+        {
+            frmIPCAS frm = new frmIPCAS();
+            frm.ShowDialog();
+        }
     }
 }

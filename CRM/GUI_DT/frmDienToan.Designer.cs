@@ -48,6 +48,7 @@
             this.btnIPCAS.TabIndex = 0;
             this.btnIPCAS.Text = "IPCAS";
             this.btnIPCAS.UseVisualStyleBackColor = true;
+            this.btnIPCAS.Click += new System.EventHandler(this.btnIPCAS_Click);
             // 
             // btnAD
             // 
