@@ -76,28 +76,28 @@ namespace CRM.GUI_DT
                 var menu = IPCASDAL.DT_GET_MENU_IPCAS();
                 for (int i = 0; i < cn.Rows.Count; i++)
                 {
-                    cboxChucNangHienTai.Items.Add(cn.Rows[i][0].ToString());
-                    cboxChucNangThayDoi.Items.Add(cn.Rows[i][0].ToString());
+                    cboxChucNangHienTai_03.Items.Add(cn.Rows[i][0].ToString());
+                    cboxChucNangThayDoi_03.Items.Add(cn.Rows[i][0].ToString());
                 }
 
                 for (int i = 0; i < menu.Rows.Count; i++)
                 {
-                    cboxMenuHienTai.Items.Add(menu.Rows[i][0].ToString());
-                    cboxMenuThayDoi.Items.Add(menu.Rows[i][0].ToString());
+                    cboxMenuHienTai_03.Items.Add(menu.Rows[i][0].ToString());
+                    cboxMenuThayDoi_03.Items.Add(menu.Rows[i][0].ToString());
                 }
             }
             catch (Exception ex)
             {
                 CRM.DAL.DV.ErrorMessageDAL.DataAccessError(ex);
             }
-            if (cboxChucNangHienTai.Items.Count > 0)
-                cboxChucNangHienTai.SelectedIndex = 0;
-            if (cboxChucNangThayDoi.Items.Count > 0)
-                cboxChucNangThayDoi.SelectedIndex = 0;
-            if (cboxMenuThayDoi.Items.Count > 0)
-                cboxMenuThayDoi.SelectedIndex = 0;
-            if (cboxMenuHienTai.Items.Count > 0)
-                cboxMenuHienTai.SelectedIndex = 0;
+            if (cboxChucNangHienTai_03.Items.Count > 0)
+                cboxChucNangHienTai_03.SelectedIndex = 0;
+            if (cboxChucNangThayDoi_03.Items.Count > 0)
+                cboxChucNangThayDoi_03.SelectedIndex = 0;
+            if (cboxMenuThayDoi_03.Items.Count > 0)
+                cboxMenuThayDoi_03.SelectedIndex = 0;
+            if (cboxMenuHienTai_03.Items.Count > 0)
+                cboxMenuHienTai_03.SelectedIndex = 0;
         }
 
         void GetNoiLamViec()
@@ -113,8 +113,8 @@ namespace CRM.GUI_DT
                 //cboxNoiLamViecThayDoi.ValueMember = "MAPB";
                 for (int i = 0; i < pb.Rows.Count; i++)
                 {
-                    cboxNoiLamViecHienTai.Items.Add(pb.Rows[i]["TENPB"].ToString());
-                    cboxNoiLamViecThayDoi.Items.Add(pb.Rows[i]["TENPB"].ToString());
+                    cboxNoiLamViecHienTai_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
+                    cboxNoiLamViecThayDoi_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
                 }
             }
             catch (Exception ex)
@@ -122,8 +122,8 @@ namespace CRM.GUI_DT
                 CRM.DAL.DV.ErrorMessageDAL.DataAccessError(ex);
             }
 
-            if (cboxNoiLamViecHienTai.Items.Count > 0) cboxNoiLamViecHienTai.SelectedIndex = 0;
-            if (cboxNoiLamViecThayDoi.Items.Count > 0) cboxNoiLamViecThayDoi.SelectedIndex = 0;
+            if (cboxNoiLamViecHienTai_03.Items.Count > 0) cboxNoiLamViecHienTai_03.SelectedIndex = 0;
+            if (cboxNoiLamViecThayDoi_03.Items.Count > 0) cboxNoiLamViecThayDoi_03.SelectedIndex = 0;
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -169,43 +169,48 @@ namespace CRM.GUI_DT
 
         private void cbkDiaChiMAC_CheckedChanged(object sender, EventArgs e)
         {
-            txtMACHienTai.Enabled = ckbDiaChiMAC.Checked;
-            txtMACThayDoi.Enabled = ckbDiaChiMAC.Checked;
+            txtMACHienTai_03.Enabled = ckbDiaChiMAC_03.Checked;
+            txtMACThayDoi_03.Enabled = ckbDiaChiMAC_03.Checked;
         }
 
         private void ckbThayDoiNoiLamViec_CheckedChanged(object sender, EventArgs e)
         {
-            cboxNoiLamViecHienTai.Enabled = ckbThayDoiNoiLamViec.Checked;
-            cboxNoiLamViecThayDoi.Enabled = ckbThayDoiNoiLamViec.Checked;
+            cboxNoiLamViecHienTai_03.Enabled = ckbThayDoiNoiLamViec_03.Checked;
+            cboxNoiLamViecThayDoi_03.Enabled = ckbThayDoiNoiLamViec_03.Checked;
         }
 
         private void ckbThayDoiChucNang_CheckedChanged(object sender, EventArgs e)
         {
-            cboxChucNangHienTai.Enabled = ckbThayDoiChucNang.Checked;
-            cboxChucNangThayDoi.Enabled = ckbThayDoiChucNang.Checked;
+            cboxChucNangHienTai_03.Enabled = ckbThayDoiChucNang_03.Checked;
+            cboxChucNangThayDoi_03.Enabled = ckbThayDoiChucNang_03.Checked;
         }
 
         private void ckbThayDoiMenu_CheckedChanged(object sender, EventArgs e)
         {
-            cboxMenuHienTai.Enabled = ckbThayDoiMenu.Checked;
-            cboxMenuThayDoi.Enabled = ckbThayDoiMenu.Checked;
+            cboxMenuHienTai_03.Enabled = ckbThayDoiMenu_03.Checked;
+            cboxMenuThayDoi_03.Enabled = ckbThayDoiMenu_03.Checked;
         }
 
         private void ckbThoiGian_CheckedChanged(object sender, EventArgs e)
         {
-            dtpThoiGianTuNgay.Enabled = ckbThoiGian.Checked;
-            dtpThoiGianDenNgay.Enabled = ckbThoiGian.Checked;
+            dtpThoiGianTuNgay_03.Enabled = ckbThoiGian_03.Checked;
+            dtpThoiGianDenNgay_03.Enabled = ckbThoiGian_03.Checked;
         }
 
         private void ckbDangNhapKhongDungThe_CheckedChanged(object sender, EventArgs e)
         {
-            dtpDangNhapTuNgay.Enabled = ckbDangNhapKhongDungThe.Checked;
-            dtpDangNhapDenNgay.Enabled = ckbDangNhapKhongDungThe.Checked;
+            dtpDangNhapTuNgay_03.Enabled = ckbDangNhapKhongDungThe_03.Checked;
+            dtpDangNhapDenNgay_03.Enabled = ckbDangNhapKhongDungThe_03.Checked;
         }
 
         private void ckbThayDoiKhac_CheckedChanged(object sender, EventArgs e)
         {
-            txtThayDoiKhac.Enabled = ckbThayDoiKhac.Checked;
+            txtThayDoiKhac_03.Enabled = ckbThayDoiKhac_03.Checked;
+        }
+
+        private void tPageCapMoi_Click(object sender, EventArgs e)
+        {
+
         }
 
 
