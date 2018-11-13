@@ -458,14 +458,14 @@ namespace CRM.Utilities.DV
         }
 
        
-        public static string TemplateFileLocation(string file_location)
+        public static string TemplateFileLocation(string file_location, string subFolder)
         {
             //var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
             //var thu_muc_goc = Path.Combine(outPutDirectory, "Word_template\\");
             //string thu_muc_goc = @"C:\Word_template\";
             //string thu_muc_goc = Path.GetDirectoryName(Application.ExecutablePath)+@"\Word_template\";
             //string thu_muc_goc = Path.GetDirectoryName(Application.ExecutablePath) + @"\\127.0.0.1\Word_template\";
-            string thu_muc_goc = @"\\" + server_add + @"\Word_template\DV\";
+            string thu_muc_goc = @"\\" + server_add + @"\Word_template\" + subFolder + @"\";
             //string thu_muc_goc = Directory.GetCurrentDirectory() + @"\Word_template\";
             return thu_muc_goc + file_location;
         }

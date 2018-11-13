@@ -216,7 +216,7 @@ namespace CRM.GUI_DV
             if (!CommonMethods.SubFolderExist(subFolder))
                 CommonMethods.CreateSubFolder(subFolder);
 
-            string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileNameTiepQuy + ".docx");
+            string TemplateFileLocation = CommonMethods.TemplateFileLocation(fileNameTiepQuy + ".docx", "DV");
             string saveFileLocation = CommonMethods.SaveFileLocation(subFolder + fileNameTiepQuy + "_" + DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss") + ".docx");
 
 
