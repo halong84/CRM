@@ -74,6 +74,8 @@
             this.txtHoTen_02 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tPageThayDoi = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ckbDenNgay_03 = new System.Windows.Forms.CheckBox();
             this.dtpDNKDTDenNgay_03 = new System.Windows.Forms.DateTimePicker();
             this.txtYeuCauThem_03 = new System.Windows.Forms.TextBox();
             this.ckbYeuCauThem_03 = new System.Windows.Forms.CheckBox();
@@ -134,8 +136,6 @@
             this.txtLyDo_09 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.ckbDenNgay_03 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tCtrThongTin.SuspendLayout();
@@ -625,6 +625,26 @@
             this.tPageThayDoi.UseVisualStyleBackColor = true;
             this.tPageThayDoi.Click += new System.EventHandler(this.tPageThayDoi_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(16, 156);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 13);
+            this.label11.TabIndex = 52;
+            this.label11.Text = "Thực hiện từ ngày";
+            // 
+            // ckbDenNgay_03
+            // 
+            this.ckbDenNgay_03.AutoSize = true;
+            this.ckbDenNgay_03.Location = new System.Drawing.Point(400, 155);
+            this.ckbDenNgay_03.Name = "ckbDenNgay_03";
+            this.ckbDenNgay_03.Size = new System.Drawing.Size(72, 17);
+            this.ckbDenNgay_03.TabIndex = 51;
+            this.ckbDenNgay_03.Text = "Đến ngày";
+            this.ckbDenNgay_03.UseVisualStyleBackColor = true;
+            this.ckbDenNgay_03.CheckedChanged += new System.EventHandler(this.ckbDenNgay_03_CheckedChanged);
+            // 
             // dtpDNKDTDenNgay_03
             // 
             this.dtpDNKDTDenNgay_03.CustomFormat = "dd/MM/yyyy";
@@ -882,6 +902,7 @@
             this.groupBox5.TabIndex = 27;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin làm thay";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // txtUser_07
             // 
@@ -1219,26 +1240,6 @@
             this.label38.Size = new System.Drawing.Size(101, 13);
             this.label38.TabIndex = 0;
             this.label38.Text = "Lý do đổi mật khẩu:";
-            // 
-            // ckbDenNgay_03
-            // 
-            this.ckbDenNgay_03.AutoSize = true;
-            this.ckbDenNgay_03.Location = new System.Drawing.Point(400, 155);
-            this.ckbDenNgay_03.Name = "ckbDenNgay_03";
-            this.ckbDenNgay_03.Size = new System.Drawing.Size(72, 17);
-            this.ckbDenNgay_03.TabIndex = 51;
-            this.ckbDenNgay_03.Text = "Đến ngày";
-            this.ckbDenNgay_03.UseVisualStyleBackColor = true;
-            this.ckbDenNgay_03.CheckedChanged += new System.EventHandler(this.ckbDenNgay_03_CheckedChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 156);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 13);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "Thực hiện từ ngày";
             // 
             // frmIPCAS
             // 

@@ -307,7 +307,6 @@ C:\Users\Quang Tung\Documents\GitHub\CRM1\CRM\bin\Release\ExcelDataReader.DataSe
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\CRM.exe.config
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.exe
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.pdb
-C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.csprojResolveAssemblyReference.cache
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.Chinhsach.resources
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmAD_Huypheduyet.resources
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmBHHDBH.resources

@@ -549,6 +549,11 @@ namespace CRM.GUI_DT
             dtpThoiGianDenNgay_03.Enabled = ckbDenNgay_03.Checked;
         }
 
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }
