@@ -459,3 +459,6 @@ C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.Office.Interop.Exce
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.xml
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.DataSet.xml
+D:\Agribank\CRM\CRM\bin\Release\CRM.exe.config
+D:\Agribank\CRM\CRM\obj\Release\CRM.exe
+D:\Agribank\CRM\CRM\obj\Release\CRM.pdb
