@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIPCAS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxHeThong = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
@@ -135,6 +137,7 @@
             this.tPageDoiMK = new System.Windows.Forms.TabPage();
             this.txtLyDo_09 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -151,6 +154,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboxHeThong);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.txtMaNV);
@@ -171,6 +176,34 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
+            // 
+            // cboxHeThong
+            // 
+            this.cboxHeThong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxHeThong.FormattingEnabled = true;
+            this.cboxHeThong.Items.AddRange(new object[] {
+            "IPCAS",
+            "AD",
+            "PKI",
+            "Internet Banking",
+            "Billpayment",
+            "Kiều hối (WU, ARS)",
+            "Thanh toán song phương",
+            "AGRITAX"});
+            this.cboxHeThong.Location = new System.Drawing.Point(295, 91);
+            this.cboxHeThong.Name = "cboxHeThong";
+            this.cboxHeThong.Size = new System.Drawing.Size(314, 21);
+            this.cboxHeThong.TabIndex = 14;
+            this.cboxHeThong.SelectedIndexChanged += new System.EventHandler(this.cboxHeThong_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(235, 94);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Hệ thống:";
             // 
             // txtSDT
             // 
@@ -352,12 +385,15 @@
             this.tCtrThongTin.Controls.Add(this.tPageXacNhan);
             this.tCtrThongTin.Controls.Add(this.tPageThuHoi);
             this.tCtrThongTin.Controls.Add(this.tPageDoiMK);
+            this.tCtrThongTin.Controls.Add(this.tabPage1);
             this.tCtrThongTin.Location = new System.Drawing.Point(12, 207);
             this.tCtrThongTin.Name = "tCtrThongTin";
             this.tCtrThongTin.SelectedIndex = 0;
             this.tCtrThongTin.Size = new System.Drawing.Size(690, 313);
             this.tCtrThongTin.TabIndex = 11;
             this.tCtrThongTin.SelectedIndexChanged += new System.EventHandler(this.tCtrThongTin_SelectedIndexChanged);
+            this.tCtrThongTin.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tCtrThongTin_Selecting);
+            this.tCtrThongTin.Selected += new System.Windows.Forms.TabControlEventHandler(this.tCtrThongTin_Selected);
             // 
             // tPageCapMoi
             // 
@@ -1241,6 +1277,15 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Lý do đổi mật khẩu:";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(682, 287);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "AD/02 - Cấp mới user";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // frmIPCAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1251,7 +1296,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmIPCAS";
-            this.Text = "IPCAS";
+            this.Text = "Tạo mẫu biểu Điện toán";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1386,5 +1431,8 @@
         private System.Windows.Forms.DateTimePicker dtpThoiGianTuNgay_03;
         private System.Windows.Forms.CheckBox ckbDenNgay_03;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cboxHeThong;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

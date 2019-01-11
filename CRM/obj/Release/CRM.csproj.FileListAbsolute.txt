@@ -459,3 +459,10 @@ C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.Office.Interop.Exce
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.xml
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.DataSet.xml
+<<<<<<< HEAD
+C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.csprojResolveAssemblyReference.cache
+=======
+D:\Agribank\CRM\CRM\bin\Release\CRM.exe.config
+D:\Agribank\CRM\CRM\obj\Release\CRM.exe
+D:\Agribank\CRM\CRM\obj\Release\CRM.pdb
+>>>>>>> b9b0b349773980bfa2b6688398a449f9d920914f

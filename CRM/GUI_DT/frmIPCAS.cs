@@ -14,18 +14,82 @@ namespace CRM.GUI_DT
 {
     public partial class frmIPCAS : Form
     {
+        bool tabSelectingAllowed = false;
 
-        string tenFile02 = "CSUS02";
-        string tenFile03 = "CSUS03";
-        string tenFile07 = "CSUS07";
-        string tenFile08 = "CSUS08";
-        string tenFile09 = "CSUS09";
+        //ten file .docx
+        string tenFileIPCAS02 = "CSUS02";
+        string tenFileIPCAS03 = "CSUS03";
+        string tenFileIPCAS07 = "CSUS07";
+        string tenFileIPCAS08 = "CSUS08";
+        string tenFileIPCAS09 = "CSUS09";
+
+        string[] listIPCAS, listAD, listPKI, listIB, listBill, listKieuHoi, listTTSP, listAGRITAX;
+        //int indexIPCAS = 0, indexAD = 5, indexPKI = 12, indexIB = 22,
+        //    indexBill = 28, indexKH = 31, indexTTSP = 35, indexAGRITAX = 39;
+        int[] indexHeThong = { 0, 5, 12, 22, 28, 31, 35, 39 };
 
         List<string> listNguon, listDich;
 
         public frmIPCAS()
         {
             InitializeComponent();
+
+            //Khoi tao ten mau bieu
+            listIPCAS = new string[]{"CSUS/02 - Cấp mới user",
+                                    "CSUS/03 - Thay đổi thông tin",
+                                    "CSUS/07 - Xác nhận",
+                                    "CSUS/08 - Thu hồi user", 
+                                    "CSUS/09 - Đặt lại mật khẩu"};
+            listAD = new string[]{"AD/02 - Cấp mới user",
+                                  "AD/03 - Phiếu xác nhận",
+                                  "AD/06 - Thu hồi user",
+                                  "AD/08 - Tạm dừng user",
+                                  "AD/10 - Khôi phục user",
+                                  "AD/12 - Đổi mật khẩu",
+                                  "AD/14 - Thay đổi thông tin"};
+            listPKI = new string[] {
+                            "1A - Cấp chứng thư số",
+                            "2A - Gia hạn chứng thư số",
+                            "3A - Tạm dừng chứng thư số",
+                            "4A - Khôi phục chứng thư số",
+                            "5A - Thu hồi chứng thư số",
+                            "9A - Đổi mật khẩu",
+                            "11A - Bản xác nhận chứng thư số và thiết bị bảo mật",
+                            "12A - Bản xác nhận xử lý lỗi thiết bị bảo mật",
+                            "13A - Biên bản xác nhận mất/hỏng thiết bị",
+                            "PKI/01 - Đề nghị cấp thiết bị bảo mật"};
+            listIB = new string[]{
+                    "07/IB-ADMIN - Cấp mới user",
+                    "08/IB-ADMIN - Thay đổi thông tin",
+                    "09/IB-ADMIN - Thu hồi user",
+                    "10/IB-ADMIN - Khôi phục user",
+                    "11/IB-ADMIN - Đổi mật khẩu",
+                    "12/IB-ADMIN - Biên bản bàn giao user"
+                };
+            listBill = new string[]{
+                    "01/BILLPAYMENT - Cấp mới, thay đổi thông tin",
+                    "02/BILLPAYMENT - Đổi mật khẩu",
+                    "03/BILLPAYMENT - Bản xác nhận user, mật khẩu"
+                };
+            listKieuHoi = new string[]{
+              "KH02 - Cấp mới user",
+              "KH04 - Thu hồi user",
+              "KH06 - Khôi phục user",
+              "KH08 - Đổi mật khẩu"
+            };
+            listTTSP = new string[]{
+                "03/SPKB - Cấp mới user",
+                "04/SPKB - Thay đổi thông tin",
+                "05/SPKB - Đổi mật khẩu",
+                "06/SPKB - Bản xác nhận"
+            };
+            listAGRITAX = new string[]{
+                "01/AGRITAX - Cấp mới user",
+                "02/AGRITAX - Thay đổi thông tin",
+                "03/AGRITAX - Đổi mật khẩu",
+                "04/AGRITAX - Bản xác nhận"
+            };
+            
             GetUserInfo();
             GetKiemSoat();
             GetNoiLamViec();
@@ -39,7 +103,8 @@ namespace CRM.GUI_DT
             cboxChucNangThayDoi_03.SelectedIndex = 0;
             cboxMenuHienTai_03.SelectedIndex = 0;
             cboxMenuThayDoi_03.SelectedIndex = 0;
-
+            cboxHeThong.SelectedIndex = 0;
+          
 
             listNguon = new List<string>();
             listDich = new List<string>();
@@ -52,6 +117,70 @@ namespace CRM.GUI_DT
             txtChucVu.Text = Thongtindangnhap.chucvu;
             txtDonVi.Text = Thongtindangnhap.tencn;
             txtUserID.Text = Thongtindangnhap.user_id;
+        }
+
+        void ThayDoiHeThong()
+        {
+            cboxMauBieu.Items.Clear();
+            switch (cboxHeThong.SelectedIndex)
+            {
+                case 0: //IPCAS
+                    cboxMauBieu.Items.AddRange(listIPCAS);
+                    break;
+                case 1: //AD
+                    cboxMauBieu.Items.AddRange(listAD);
+                    break;
+                case 2: //PKI
+                    cboxMauBieu.Items.AddRange(listPKI);
+                    break;
+                case 3: //Internet Banking
+                    cboxMauBieu.Items.AddRange(listIB);
+                    break;
+                case 4: //Billpayment
+                    cboxMauBieu.Items.AddRange(listBill);
+                    break;
+                case 5: //Kieu hoi
+                    cboxMauBieu.Items.AddRange(listKieuHoi);
+                    break;
+                case 6: //TTSP
+                    cboxMauBieu.Items.AddRange(listTTSP);
+                    break;
+                case 7: //AGRITAX
+                    cboxMauBieu.Items.AddRange(listAGRITAX);
+                    break;
+                default: 
+                    break;
+            }
+            cboxMauBieu.SelectedIndex = 0;
+        }
+
+        void ThayDoiMauBieu()
+        {
+            if (cboxHeThong.SelectedIndex < 0) return;
+            var index = indexHeThong[cboxHeThong.SelectedIndex] + cboxMauBieu.SelectedIndex;
+            if (tCtrThongTin.TabCount < index)
+            {
+                MessageBox.Show("Mẫu biểu hiện tại chưa được hỗ trợ.\nXin chờ bản cập nhật sau!");
+            }
+            else
+            {
+                tabSelectingAllowed = true;
+                tCtrThongTin.SelectedIndex = index;
+            }
+        }
+
+        void ThayDoiMauBieu_Tab()
+        {
+            if (cboxHeThong.SelectedIndex < 0 || cboxMauBieu.SelectedIndex < 0) return;
+            for (int i = 0; i < indexHeThong.Length; i++)
+            {
+                if (tCtrThongTin.SelectedIndex < indexHeThong[i] && tCtrThongTin.SelectedIndex < indexHeThong[i + 1])
+                {
+                    cboxHeThong.SelectedIndex = i;
+                    cboxMauBieu.SelectedIndex = tCtrThongTin.SelectedIndex - indexHeThong[i];
+                    break;
+                }
+            }
         }
 
         void GetKiemSoat()
@@ -126,12 +255,7 @@ namespace CRM.GUI_DT
             try
             {
                 var pb = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
-                //cboxNoiLamViecHienTai.DataSource = pb;
-                //cboxNoiLamViecHienTai.DisplayMember = "TENPB";
-                //cboxNoiLamViecHienTai.ValueMember = "MAPB";
-                //cboxNoiLamViecThayDoi.DataSource = pb;
-                //cboxNoiLamViecThayDoi.DisplayMember = "TENPB";
-                //cboxNoiLamViecThayDoi.ValueMember = "MAPB";
+               
                 for (int i = 0; i < pb.Rows.Count; i++)
                 {
                     cboxNoiLamViecHienTai_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
@@ -212,7 +336,7 @@ namespace CRM.GUI_DT
             listNguon.Add(txtSDT.Text);
         }
 
-        void KhoiTao02()
+        void CSUS02()
         {
             listDich.Add("<HOTEN_02>");
             listNguon.Add(txtHoTen_02.Text);
@@ -249,7 +373,7 @@ namespace CRM.GUI_DT
             listNguon.Add(thongTinThem);
         }
 
-        void KhoiTao03()
+        void CSUS03()
         {
             listDich.Add("<THAYDOI_03>");
             string thayDoi = "";
@@ -294,9 +418,9 @@ namespace CRM.GUI_DT
                 listNguon.Add("");
         }
 
-        void KhoiTao07() { }
-        void KhoiTao08() { }
-        void KhoiTao09() { }
+        void CSUS07() { }
+        void CSUS08() { }
+        void CSUS09() { }
 
 
         void KhoiTao()
@@ -309,19 +433,19 @@ namespace CRM.GUI_DT
             switch(cboxMauBieu.SelectedIndex)
             {
                 case 0:
-                    KhoiTao02();
+                    CSUS02();
                     break;
                 case 1:
-                    KhoiTao03();
+                    CSUS03();
                     break;
                 case 2:
-                    KhoiTao07();
+                    CSUS07();
                     break;
                 case 3:
-                    KhoiTao08();
+                    CSUS08();
                     break;
                 case 4:
-                    KhoiTao09();
+                    CSUS09();
                     break;
                 default: break;
             }
@@ -333,19 +457,19 @@ namespace CRM.GUI_DT
             switch (cboxMauBieu.SelectedIndex)
             {
                 case 0:
-                    fileName = tenFile02;
+                    fileName = tenFileIPCAS02;
                     break;
                 case 1:
-                    fileName = tenFile03;
+                    fileName = tenFileIPCAS03;
                     break;
                 case 2:
-                    fileName = tenFile07;
+                    fileName = tenFileIPCAS07;
                     break;
                 case 3:
-                    fileName = tenFile08;
+                    fileName = tenFileIPCAS08;
                     break;
                 case 4:
-                    fileName = tenFile09;
+                    fileName = tenFileIPCAS09;
                     break;
                 default: break;
             }
@@ -401,12 +525,12 @@ namespace CRM.GUI_DT
 
         private void cboxMauBieu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tCtrThongTin.SelectedIndex = cboxMauBieu.SelectedIndex;
+            ThayDoiMauBieu();
         }
 
         private void tCtrThongTin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboxMauBieu.SelectedIndex = tCtrThongTin.SelectedIndex;
+            tabSelectingAllowed = false;
         }
 
         private void txtMACHienTai_TextChanged(object sender, EventArgs e)
@@ -554,7 +678,19 @@ namespace CRM.GUI_DT
 
         }
 
+        private void cboxHeThong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ThayDoiHeThong();
+        }
 
+        private void tCtrThongTin_Selected(object sender, TabControlEventArgs e)
+        {
+        }
 
+        private void tCtrThongTin_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (!tabSelectingAllowed)
+                e.Cancel = true;
+        }
     }
 }
