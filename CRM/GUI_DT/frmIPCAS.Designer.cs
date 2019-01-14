@@ -938,6 +938,7 @@
             this.groupBox5.TabIndex = 27;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin làm thay";
+            this.groupBox5.Visible = false;
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // txtUser_07
@@ -1073,7 +1074,7 @@
             // 
             // txtLyDo_08
             // 
-            this.txtLyDo_08.Location = new System.Drawing.Point(115, 53);
+            this.txtLyDo_08.Location = new System.Drawing.Point(106, 60);
             this.txtLyDo_08.Name = "txtLyDo_08";
             this.txtLyDo_08.Size = new System.Drawing.Size(564, 20);
             this.txtLyDo_08.TabIndex = 34;
@@ -1081,7 +1082,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(9, 56);
+            this.label37.Location = new System.Drawing.Point(9, 63);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(71, 13);
             this.label37.TabIndex = 33;
@@ -1091,7 +1092,7 @@
             // 
             this.dtpDenNgay_08.CustomFormat = "dd/MM/yyyy";
             this.dtpDenNgay_08.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDenNgay_08.Location = new System.Drawing.Point(340, 27);
+            this.dtpDenNgay_08.Location = new System.Drawing.Point(340, 34);
             this.dtpDenNgay_08.Name = "dtpDenNgay_08";
             this.dtpDenNgay_08.Size = new System.Drawing.Size(119, 20);
             this.dtpDenNgay_08.TabIndex = 32;
@@ -1099,7 +1100,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(260, 33);
+            this.label36.Location = new System.Drawing.Point(260, 40);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(56, 13);
             this.label36.TabIndex = 31;
@@ -1108,7 +1109,7 @@
             // ckbVinhVien_08
             // 
             this.ckbVinhVien_08.AutoSize = true;
-            this.ckbVinhVien_08.Location = new System.Drawing.Point(11, 3);
+            this.ckbVinhVien_08.Location = new System.Drawing.Point(11, 10);
             this.ckbVinhVien_08.Name = "ckbVinhVien_08";
             this.ckbVinhVien_08.Size = new System.Drawing.Size(111, 17);
             this.ckbVinhVien_08.TabIndex = 25;
@@ -1135,6 +1136,7 @@
             this.groupBox6.TabIndex = 30;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thông tin làm thay";
+            this.groupBox6.Visible = false;
             // 
             // txtUser_08
             // 
@@ -1236,7 +1238,7 @@
             // 
             this.dtpTuNgay_08.CustomFormat = "dd/MM/yyyy";
             this.dtpTuNgay_08.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuNgay_08.Location = new System.Drawing.Point(112, 27);
+            this.dtpTuNgay_08.Location = new System.Drawing.Point(106, 34);
             this.dtpTuNgay_08.Name = "dtpTuNgay_08";
             this.dtpTuNgay_08.Size = new System.Drawing.Size(119, 20);
             this.dtpTuNgay_08.TabIndex = 29;
@@ -1244,7 +1246,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(8, 33);
+            this.label35.Location = new System.Drawing.Point(8, 40);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(84, 13);
             this.label35.TabIndex = 28;

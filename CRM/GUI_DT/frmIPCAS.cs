@@ -105,7 +105,6 @@ namespace CRM.GUI_DT
             cboxMenuThayDoi_03.SelectedIndex = 0;
             cboxHeThong.SelectedIndex = 0;
           
-
             listNguon = new List<string>();
             listDich = new List<string>();
         }
@@ -290,6 +289,9 @@ namespace CRM.GUI_DT
             listDich.Add("<CHINHANH>");
             listNguon.Add(cn);
 
+            listDich.Add("<PHONGBAN>");
+            listNguon.Add(Thongtindangnhap.tenpb);
+
             listDich.Add("<MACN>");
             listNguon.Add(Thongtindangnhap.macn);
 
@@ -338,31 +340,31 @@ namespace CRM.GUI_DT
 
         void CSUS02()
         {
-            listDich.Add("<HOTEN_02>");
+            listDich.Add("<CSUS02_HOTEN>");
             listNguon.Add(txtHoTen_02.Text);
 
-            listDich.Add("<PHONGBAN_02>");
+            listDich.Add("<CSUS02_PHONGBAN>");
             listNguon.Add(txtPhongBan_02.Text);
 
-            listDich.Add("<CHUCVU_02>");
+            listDich.Add("<CSUS02_CHUCVU>");
             listNguon.Add(txtChucVu_02.Text);
 
-            listDich.Add("<MANV_02>");
+            listDich.Add("<CSUS02_MANV>");
             listNguon.Add(txtMaNV_02.Text);
 
-            listDich.Add("<EMAIL_02>");
+            listDich.Add("<CSUS02_EMAIL>");
             listNguon.Add(txtEmail_02.Text);
 
-            listDich.Add("<SDT_02>");
+            listDich.Add("<CSUS02_SDT>");
             listNguon.Add(txtSDT_02.Text);
 
-            listDich.Add("<KIEU_USER_02>");
+            listDich.Add("<CSUS02_KIEU_USER>");
             listNguon.Add(cboxKieuUser_02.Text);
 
-            listDich.Add("<MENU_02>");
+            listDich.Add("<CSUS02_MENU>");
             listNguon.Add(cboxMenu_02.Text);
 
-            listDich.Add("<THONGTINTHEM_02>");
+            listDich.Add("<CSUS02_THONGTINTHEM>");
             string thongTinThem = "";
             if (ckbMAC_02.Checked) thongTinThem += "Gán địa chỉ MAC: " + txtMAC_02.Text;
             if (ckbDNKDT_02.Checked)
@@ -375,7 +377,7 @@ namespace CRM.GUI_DT
 
         void CSUS03()
         {
-            listDich.Add("<THAYDOI_03>");
+            listDich.Add("<CSUS03_THAYDOI>");
             string thayDoi = "";
             if (ckbMAC_03.Checked) thayDoi += "-Đổi địa chỉ MAC: " + txtMACHienTai_03.Text + " => " + txtMACThayDoi_03.Text;
             if (ckbNoiLamViec_03.Checked)
@@ -399,28 +401,65 @@ namespace CRM.GUI_DT
             }
             listNguon.Add(thayDoi);
 
-            listDich.Add("<THOIGIAN_03>");
+            listDich.Add("<CSUS03_THOIGIAN>");
             var thoiGian = "-Thực hiện từ: " + dtpThoiGianTuNgay_03.Value.ToString("HH:mm") + " ngày " + dtpThoiGianTuNgay_03.Value.ToString("dd/MM/yyyy");
             if (ckbDenNgay_03.Checked)
                 thoiGian += "\n-Đến: " + dtpThoiGianDenNgay_03.Value.ToString("HH:mm") + " ngày " + dtpThoiGianDenNgay_03.Value.ToString("dd/MM/yyyy");
             listNguon.Add(thoiGian);
 
-            listDich.Add("<MENU_03>");
+            listDich.Add("<CSUS03_MENU>");
             if (ckbMenu_03.Checked)
                 listNguon.Add(cboxMenuHienTai_03.Text + " => " + cboxMenuThayDoi_03.Text);
             else 
                 listNguon.Add("");
 
-            listDich.Add("<YEUCAUTHEM_03>");
+            listDich.Add("<CSUS03_YEUCAUTHEM>");
             if (ckbYeuCauThem_03.Checked)
                 listNguon.Add(txtYeuCauThem_03.Text);
             else
                 listNguon.Add("");
         }
 
-        void CSUS07() { }
-        void CSUS08() { }
-        void CSUS09() { }
+        void CSUS07() {
+            listDich.Add("<CSUS07_TIME>");
+            listNguon.Add(string.Format("{0} giờ {1} phút, ngày {2} tháng {3} năm {4}",
+                dtpThoiGian_07.Value.Hour,
+                dtpThoiGian_07.Value.Minute,
+                dtpThoiGian_07.Value.Day,
+                dtpThoiGian_07.Value.Month,
+                dtpThoiGian_07.Value.Year));
+        }
+        void CSUS08() {
+            if (!ckbVinhVien_08.Checked)
+            {
+                listDich.Add("<CSUS08_USERID_R>");
+                listNguon.Add(Thongtindangnhap.user_id);
+
+                listDich.Add("<CSUS08_FROM_R>");
+                listNguon.Add(dtpTuNgay_08.Text);
+
+                listDich.Add("<CSUS08_TO_R>");
+                listNguon.Add(dtpDenNgay_08.Text);
+
+                listDich.Add("<CSUS08_LYDO_R>");
+                listNguon.Add(txtLyDo_08.Text);
+            }
+            else
+            {
+                listDich.Add("<CSUS08_USERID_D>");
+                listNguon.Add(Thongtindangnhap.user_id);
+
+                listDich.Add("<CSUS08_FROM_D>");
+                listNguon.Add(dtpTuNgay_08.Text);
+
+                listDich.Add("<CSUS08_LYDO_D>");
+                listNguon.Add(txtLyDo_08.Text);
+            }
+        }
+        void CSUS09() {
+            listDich.Add("<CSUS09_LYDO>");
+            listNguon.Add(txtLyDo_09.Text);
+        }
 
 
         void KhoiTao()
@@ -685,6 +724,7 @@ namespace CRM.GUI_DT
 
         private void tCtrThongTin_Selected(object sender, TabControlEventArgs e)
         {
+            tabSelectingAllowed = false;
         }
 
         private void tCtrThongTin_Selecting(object sender, TabControlCancelEventArgs e)
