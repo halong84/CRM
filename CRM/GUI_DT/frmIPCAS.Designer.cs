@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIPCAS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboxHeThong = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
@@ -46,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cboxHeThong = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cboxMauBieu = new System.Windows.Forms.ComboBox();
@@ -137,8 +137,50 @@
             this.tPageDoiMK = new System.Windows.Forms.TabPage();
             this.txtLyDo_09 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tPageAD02 = new System.Windows.Forms.TabPage();
+            this.txtAD02_ChucVu = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cboxAD02_PhongBan = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtAD02_HoTen = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tPageAD03 = new System.Windows.Forms.TabPage();
+            this.dtpAD03 = new System.Windows.Forms.DateTimePicker();
+            this.label41 = new System.Windows.Forms.Label();
+            this.tPageAD06 = new System.Windows.Forms.TabPage();
+            this.txtAD06_LyDo = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.dtpAD06 = new System.Windows.Forms.DateTimePicker();
+            this.label43 = new System.Windows.Forms.Label();
+            this.tPageAD08 = new System.Windows.Forms.TabPage();
+            this.txtAD08_LyDo = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.dtpAD08 = new System.Windows.Forms.DateTimePicker();
+            this.label45 = new System.Windows.Forms.Label();
+            this.tPageAD10 = new System.Windows.Forms.TabPage();
+            this.txtAD10_LyDo = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.dtpAD10 = new System.Windows.Forms.DateTimePicker();
+            this.label47 = new System.Windows.Forms.Label();
+            this.tPageAD12 = new System.Windows.Forms.TabPage();
+            this.txtAD12_LyDo = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.dtpAD12 = new System.Windows.Forms.DateTimePicker();
+            this.label49 = new System.Windows.Forms.Label();
+            this.tPageAD14 = new System.Windows.Forms.TabPage();
+            this.txtAD14_ThongTin = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.tPage1A = new System.Windows.Forms.TabPage();
+            this.tPage2A = new System.Windows.Forms.TabPage();
+            this.tPage3A = new System.Windows.Forms.TabPage();
+            this.tPage4A = new System.Windows.Forms.TabPage();
+            this.tPage5A = new System.Windows.Forms.TabPage();
+            this.tPage9A = new System.Windows.Forms.TabPage();
+            this.tPage11A = new System.Windows.Forms.TabPage();
+            this.tPage12A = new System.Windows.Forms.TabPage();
+            this.tPage13A = new System.Windows.Forms.TabPage();
+            this.tPagePKI01 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tCtrThongTin.SuspendLayout();
@@ -150,12 +192,17 @@
             this.tPageThuHoi.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tPageDoiMK.SuspendLayout();
+            this.tPageAD02.SuspendLayout();
+            this.tPageAD03.SuspendLayout();
+            this.tPageAD06.SuspendLayout();
+            this.tPageAD08.SuspendLayout();
+            this.tPageAD10.SuspendLayout();
+            this.tPageAD12.SuspendLayout();
+            this.tPageAD14.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cboxHeThong);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.txtMaNV);
@@ -176,34 +223,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
-            // 
-            // cboxHeThong
-            // 
-            this.cboxHeThong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxHeThong.FormattingEnabled = true;
-            this.cboxHeThong.Items.AddRange(new object[] {
-            "IPCAS",
-            "AD",
-            "PKI",
-            "Internet Banking",
-            "Billpayment",
-            "Kiều hối (WU, ARS)",
-            "Thanh toán song phương",
-            "AGRITAX"});
-            this.cboxHeThong.Location = new System.Drawing.Point(295, 91);
-            this.cboxHeThong.Name = "cboxHeThong";
-            this.cboxHeThong.Size = new System.Drawing.Size(314, 21);
-            this.cboxHeThong.TabIndex = 14;
-            this.cboxHeThong.SelectedIndexChanged += new System.EventHandler(this.cboxHeThong_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(235, 94);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Hệ thống:";
             // 
             // txtSDT
             // 
@@ -324,14 +343,44 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên:";
             // 
+            // cboxHeThong
+            // 
+            this.cboxHeThong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxHeThong.FormattingEnabled = true;
+            this.cboxHeThong.Items.AddRange(new object[] {
+            "IPCAS",
+            "AD",
+            "PKI",
+            "Internet Banking",
+            "Billpayment",
+            "Kiều hối (WU, ARS)",
+            "Thanh toán song phương",
+            "AGRITAX"});
+            this.cboxHeThong.Location = new System.Drawing.Point(68, 19);
+            this.cboxHeThong.Name = "cboxHeThong";
+            this.cboxHeThong.Size = new System.Drawing.Size(473, 21);
+            this.cboxHeThong.TabIndex = 14;
+            this.cboxHeThong.SelectedIndexChanged += new System.EventHandler(this.cboxHeThong_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 22);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Hệ thống:";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cboxHeThong);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.cboxMauBieu);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(12, 147);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(686, 54);
+            this.groupBox2.Size = new System.Drawing.Size(686, 85);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tạo mẫu biểu";
@@ -339,7 +388,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(545, 18);
+            this.button1.Location = new System.Drawing.Point(547, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 23);
             this.button1.TabIndex = 0;
@@ -363,7 +412,7 @@
             "CSUS/07 - Xác nhận",
             "CSUS/08 - Thu hồi user",
             "CSUS/09 - Đặt lại mật khẩu"});
-            this.cboxMauBieu.Location = new System.Drawing.Point(66, 19);
+            this.cboxMauBieu.Location = new System.Drawing.Point(68, 46);
             this.cboxMauBieu.Name = "cboxMauBieu";
             this.cboxMauBieu.Size = new System.Drawing.Size(473, 21);
             this.cboxMauBieu.TabIndex = 10;
@@ -372,7 +421,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 22);
+            this.label6.Location = new System.Drawing.Point(8, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 0;
@@ -385,8 +434,24 @@
             this.tCtrThongTin.Controls.Add(this.tPageXacNhan);
             this.tCtrThongTin.Controls.Add(this.tPageThuHoi);
             this.tCtrThongTin.Controls.Add(this.tPageDoiMK);
-            this.tCtrThongTin.Controls.Add(this.tabPage1);
-            this.tCtrThongTin.Location = new System.Drawing.Point(12, 207);
+            this.tCtrThongTin.Controls.Add(this.tPageAD02);
+            this.tCtrThongTin.Controls.Add(this.tPageAD03);
+            this.tCtrThongTin.Controls.Add(this.tPageAD06);
+            this.tCtrThongTin.Controls.Add(this.tPageAD08);
+            this.tCtrThongTin.Controls.Add(this.tPageAD10);
+            this.tCtrThongTin.Controls.Add(this.tPageAD12);
+            this.tCtrThongTin.Controls.Add(this.tPageAD14);
+            this.tCtrThongTin.Controls.Add(this.tPage1A);
+            this.tCtrThongTin.Controls.Add(this.tPage2A);
+            this.tCtrThongTin.Controls.Add(this.tPage3A);
+            this.tCtrThongTin.Controls.Add(this.tPage4A);
+            this.tCtrThongTin.Controls.Add(this.tPage5A);
+            this.tCtrThongTin.Controls.Add(this.tPage9A);
+            this.tCtrThongTin.Controls.Add(this.tPage11A);
+            this.tCtrThongTin.Controls.Add(this.tPage12A);
+            this.tCtrThongTin.Controls.Add(this.tPage13A);
+            this.tCtrThongTin.Controls.Add(this.tPagePKI01);
+            this.tCtrThongTin.Location = new System.Drawing.Point(13, 238);
             this.tCtrThongTin.Name = "tCtrThongTin";
             this.tCtrThongTin.SelectedIndex = 0;
             this.tCtrThongTin.Size = new System.Drawing.Size(690, 313);
@@ -1279,20 +1344,414 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Lý do đổi mật khẩu:";
             // 
-            // tabPage1
+            // tPageAD02
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(682, 287);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "AD/02 - Cấp mới user";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tPageAD02.Controls.Add(this.txtAD02_ChucVu);
+            this.tPageAD02.Controls.Add(this.label40);
+            this.tPageAD02.Controls.Add(this.cboxAD02_PhongBan);
+            this.tPageAD02.Controls.Add(this.label14);
+            this.tPageAD02.Controls.Add(this.txtAD02_HoTen);
+            this.tPageAD02.Controls.Add(this.label13);
+            this.tPageAD02.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD02.Name = "tPageAD02";
+            this.tPageAD02.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD02.TabIndex = 5;
+            this.tPageAD02.Text = "AD/02 - Cấp mới user";
+            this.tPageAD02.UseVisualStyleBackColor = true;
+            // 
+            // txtAD02_ChucVu
+            // 
+            this.txtAD02_ChucVu.Location = new System.Drawing.Point(79, 62);
+            this.txtAD02_ChucVu.Name = "txtAD02_ChucVu";
+            this.txtAD02_ChucVu.Size = new System.Drawing.Size(316, 20);
+            this.txtAD02_ChucVu.TabIndex = 5;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(11, 65);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(50, 13);
+            this.label40.TabIndex = 4;
+            this.label40.Text = "Chức vụ:";
+            // 
+            // cboxAD02_PhongBan
+            // 
+            this.cboxAD02_PhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxAD02_PhongBan.FormattingEnabled = true;
+            this.cboxAD02_PhongBan.Location = new System.Drawing.Point(79, 35);
+            this.cboxAD02_PhongBan.Name = "cboxAD02_PhongBan";
+            this.cboxAD02_PhongBan.Size = new System.Drawing.Size(316, 21);
+            this.cboxAD02_PhongBan.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(62, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Phòng ban:";
+            // 
+            // txtAD02_HoTen
+            // 
+            this.txtAD02_HoTen.Location = new System.Drawing.Point(79, 6);
+            this.txtAD02_HoTen.Name = "txtAD02_HoTen";
+            this.txtAD02_HoTen.Size = new System.Drawing.Size(316, 20);
+            this.txtAD02_HoTen.TabIndex = 1;
+            this.txtAD02_HoTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(11, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Họ tên:";
+            // 
+            // tPageAD03
+            // 
+            this.tPageAD03.Controls.Add(this.dtpAD03);
+            this.tPageAD03.Controls.Add(this.label41);
+            this.tPageAD03.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD03.Name = "tPageAD03";
+            this.tPageAD03.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD03.TabIndex = 6;
+            this.tPageAD03.Text = "AD/03 - Bản xác nhận";
+            this.tPageAD03.UseVisualStyleBackColor = true;
+            // 
+            // dtpAD03
+            // 
+            this.dtpAD03.CustomFormat = "hh:mm dd/MM/yyyy";
+            this.dtpAD03.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAD03.Location = new System.Drawing.Point(199, 13);
+            this.dtpAD03.Name = "dtpAD03";
+            this.dtpAD03.Size = new System.Drawing.Size(134, 20);
+            this.dtpAD03.TabIndex = 28;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(16, 19);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(177, 13);
+            this.label41.TabIndex = 27;
+            this.label41.Text = "Thời gian nhận tài khoản/mật khẩu:";
+            // 
+            // tPageAD06
+            // 
+            this.tPageAD06.Controls.Add(this.txtAD06_LyDo);
+            this.tPageAD06.Controls.Add(this.label42);
+            this.tPageAD06.Controls.Add(this.dtpAD06);
+            this.tPageAD06.Controls.Add(this.label43);
+            this.tPageAD06.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD06.Name = "tPageAD06";
+            this.tPageAD06.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD06.TabIndex = 7;
+            this.tPageAD06.Text = "AD/06 - Thu hồi user AD";
+            this.tPageAD06.UseVisualStyleBackColor = true;
+            // 
+            // txtAD06_LyDo
+            // 
+            this.txtAD06_LyDo.Location = new System.Drawing.Point(107, 42);
+            this.txtAD06_LyDo.Name = "txtAD06_LyDo";
+            this.txtAD06_LyDo.Size = new System.Drawing.Size(564, 20);
+            this.txtAD06_LyDo.TabIndex = 38;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(10, 45);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(71, 13);
+            this.label42.TabIndex = 37;
+            this.label42.Text = "Lý do thu hồi:";
+            // 
+            // dtpAD06
+            // 
+            this.dtpAD06.CustomFormat = "dd/MM/yyyy";
+            this.dtpAD06.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAD06.Location = new System.Drawing.Point(107, 16);
+            this.dtpAD06.Name = "dtpAD06";
+            this.dtpAD06.Size = new System.Drawing.Size(119, 20);
+            this.dtpAD06.TabIndex = 36;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(9, 22);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(84, 13);
+            this.label43.TabIndex = 35;
+            this.label43.Text = "Thu hồi từ ngày:";
+            // 
+            // tPageAD08
+            // 
+            this.tPageAD08.Controls.Add(this.txtAD08_LyDo);
+            this.tPageAD08.Controls.Add(this.label44);
+            this.tPageAD08.Controls.Add(this.dtpAD08);
+            this.tPageAD08.Controls.Add(this.label45);
+            this.tPageAD08.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD08.Name = "tPageAD08";
+            this.tPageAD08.Padding = new System.Windows.Forms.Padding(3);
+            this.tPageAD08.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD08.TabIndex = 8;
+            this.tPageAD08.Text = "AD/08 - Tạm dừng user";
+            this.tPageAD08.UseVisualStyleBackColor = true;
+            // 
+            // txtAD08_LyDo
+            // 
+            this.txtAD08_LyDo.Location = new System.Drawing.Point(110, 36);
+            this.txtAD08_LyDo.Name = "txtAD08_LyDo";
+            this.txtAD08_LyDo.Size = new System.Drawing.Size(566, 20);
+            this.txtAD08_LyDo.TabIndex = 42;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(9, 39);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(83, 13);
+            this.label44.TabIndex = 41;
+            this.label44.Text = "Lý do tạm dừng:";
+            // 
+            // dtpAD08
+            // 
+            this.dtpAD08.CustomFormat = "dd/MM/yyyy";
+            this.dtpAD08.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAD08.Location = new System.Drawing.Point(110, 10);
+            this.dtpAD08.Name = "dtpAD08";
+            this.dtpAD08.Size = new System.Drawing.Size(119, 20);
+            this.dtpAD08.TabIndex = 40;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(8, 16);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(96, 13);
+            this.label45.TabIndex = 39;
+            this.label45.Text = "Tạm dừng từ ngày:";
+            // 
+            // tPageAD10
+            // 
+            this.tPageAD10.Controls.Add(this.txtAD10_LyDo);
+            this.tPageAD10.Controls.Add(this.label46);
+            this.tPageAD10.Controls.Add(this.dtpAD10);
+            this.tPageAD10.Controls.Add(this.label47);
+            this.tPageAD10.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD10.Name = "tPageAD10";
+            this.tPageAD10.Padding = new System.Windows.Forms.Padding(3);
+            this.tPageAD10.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD10.TabIndex = 9;
+            this.tPageAD10.Text = "AD/10 - Khôi phục user";
+            this.tPageAD10.UseVisualStyleBackColor = true;
+            // 
+            // txtAD10_LyDo
+            // 
+            this.txtAD10_LyDo.Location = new System.Drawing.Point(110, 36);
+            this.txtAD10_LyDo.Name = "txtAD10_LyDo";
+            this.txtAD10_LyDo.Size = new System.Drawing.Size(566, 20);
+            this.txtAD10_LyDo.TabIndex = 46;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(9, 39);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(86, 13);
+            this.label46.TabIndex = 45;
+            this.label46.Text = "Lý do khôi phục:";
+            // 
+            // dtpAD10
+            // 
+            this.dtpAD10.CustomFormat = "dd/MM/yyyy";
+            this.dtpAD10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAD10.Location = new System.Drawing.Point(110, 10);
+            this.dtpAD10.Name = "dtpAD10";
+            this.dtpAD10.Size = new System.Drawing.Size(119, 20);
+            this.dtpAD10.TabIndex = 44;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(8, 16);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(96, 13);
+            this.label47.TabIndex = 43;
+            this.label47.Text = "Khôi phục từ ngày:";
+            // 
+            // tPageAD12
+            // 
+            this.tPageAD12.Controls.Add(this.txtAD12_LyDo);
+            this.tPageAD12.Controls.Add(this.label48);
+            this.tPageAD12.Controls.Add(this.dtpAD12);
+            this.tPageAD12.Controls.Add(this.label49);
+            this.tPageAD12.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD12.Name = "tPageAD12";
+            this.tPageAD12.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD12.TabIndex = 10;
+            this.tPageAD12.Text = "AD/12 - Đổi mật khẩu";
+            this.tPageAD12.UseVisualStyleBackColor = true;
+            // 
+            // txtAD12_LyDo
+            // 
+            this.txtAD12_LyDo.Location = new System.Drawing.Point(125, 38);
+            this.txtAD12_LyDo.Name = "txtAD12_LyDo";
+            this.txtAD12_LyDo.Size = new System.Drawing.Size(551, 20);
+            this.txtAD12_LyDo.TabIndex = 46;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(9, 41);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(101, 13);
+            this.label48.TabIndex = 45;
+            this.label48.Text = "Lý do đổi mật khẩu:";
+            // 
+            // dtpAD12
+            // 
+            this.dtpAD12.CustomFormat = "dd/MM/yyyy";
+            this.dtpAD12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAD12.Location = new System.Drawing.Point(125, 12);
+            this.dtpAD12.Name = "dtpAD12";
+            this.dtpAD12.Size = new System.Drawing.Size(119, 20);
+            this.dtpAD12.TabIndex = 44;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(8, 18);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(111, 13);
+            this.label49.TabIndex = 43;
+            this.label49.Text = "Đổi mật khẩu từ ngày:";
+            // 
+            // tPageAD14
+            // 
+            this.tPageAD14.Controls.Add(this.txtAD14_ThongTin);
+            this.tPageAD14.Controls.Add(this.label50);
+            this.tPageAD14.Location = new System.Drawing.Point(4, 22);
+            this.tPageAD14.Name = "tPageAD14";
+            this.tPageAD14.Size = new System.Drawing.Size(682, 287);
+            this.tPageAD14.TabIndex = 11;
+            this.tPageAD14.Text = "AD/14 - Thay đổi thông tin";
+            this.tPageAD14.UseVisualStyleBackColor = true;
+            // 
+            // txtAD14_ThongTin
+            // 
+            this.txtAD14_ThongTin.Location = new System.Drawing.Point(163, 14);
+            this.txtAD14_ThongTin.Multiline = true;
+            this.txtAD14_ThongTin.Name = "txtAD14_ThongTin";
+            this.txtAD14_ThongTin.Size = new System.Drawing.Size(514, 99);
+            this.txtAD14_ThongTin.TabIndex = 1;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(3, 14);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(154, 13);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Thông tin cần bổ sung/hủy bỏ:";
+            // 
+            // tPage1A
+            // 
+            this.tPage1A.Location = new System.Drawing.Point(4, 22);
+            this.tPage1A.Name = "tPage1A";
+            this.tPage1A.Size = new System.Drawing.Size(682, 287);
+            this.tPage1A.TabIndex = 12;
+            this.tPage1A.Text = "1A - Cấp mới chứng thư số";
+            this.tPage1A.UseVisualStyleBackColor = true;
+            // 
+            // tPage2A
+            // 
+            this.tPage2A.Location = new System.Drawing.Point(4, 22);
+            this.tPage2A.Name = "tPage2A";
+            this.tPage2A.Size = new System.Drawing.Size(682, 287);
+            this.tPage2A.TabIndex = 13;
+            this.tPage2A.Text = "2A - Gia hạn chứng thư số";
+            this.tPage2A.UseVisualStyleBackColor = true;
+            // 
+            // tPage3A
+            // 
+            this.tPage3A.Location = new System.Drawing.Point(4, 22);
+            this.tPage3A.Name = "tPage3A";
+            this.tPage3A.Size = new System.Drawing.Size(682, 287);
+            this.tPage3A.TabIndex = 14;
+            this.tPage3A.Text = "3A - Tạm dừng chứng thư số";
+            this.tPage3A.UseVisualStyleBackColor = true;
+            // 
+            // tPage4A
+            // 
+            this.tPage4A.Location = new System.Drawing.Point(4, 22);
+            this.tPage4A.Name = "tPage4A";
+            this.tPage4A.Size = new System.Drawing.Size(682, 287);
+            this.tPage4A.TabIndex = 15;
+            this.tPage4A.Text = "4A - Khôi phục chứng thư số";
+            this.tPage4A.UseVisualStyleBackColor = true;
+            // 
+            // tPage5A
+            // 
+            this.tPage5A.Location = new System.Drawing.Point(4, 22);
+            this.tPage5A.Name = "tPage5A";
+            this.tPage5A.Size = new System.Drawing.Size(682, 287);
+            this.tPage5A.TabIndex = 16;
+            this.tPage5A.Text = "5A - Thu hồi chứng thư số";
+            this.tPage5A.UseVisualStyleBackColor = true;
+            // 
+            // tPage9A
+            // 
+            this.tPage9A.Location = new System.Drawing.Point(4, 22);
+            this.tPage9A.Name = "tPage9A";
+            this.tPage9A.Size = new System.Drawing.Size(682, 287);
+            this.tPage9A.TabIndex = 17;
+            this.tPage9A.Text = "9A - Đổi mật khẩu";
+            this.tPage9A.UseVisualStyleBackColor = true;
+            // 
+            // tPage11A
+            // 
+            this.tPage11A.Location = new System.Drawing.Point(4, 22);
+            this.tPage11A.Name = "tPage11A";
+            this.tPage11A.Size = new System.Drawing.Size(682, 287);
+            this.tPage11A.TabIndex = 18;
+            this.tPage11A.Text = "11A - Xác nhận chứng thư số và thiết bị bảo mật";
+            this.tPage11A.UseVisualStyleBackColor = true;
+            // 
+            // tPage12A
+            // 
+            this.tPage12A.Location = new System.Drawing.Point(4, 22);
+            this.tPage12A.Name = "tPage12A";
+            this.tPage12A.Size = new System.Drawing.Size(682, 287);
+            this.tPage12A.TabIndex = 19;
+            this.tPage12A.Text = "12A - Xác nhận xử lý lỗi thiết bị bảo mật";
+            this.tPage12A.UseVisualStyleBackColor = true;
+            // 
+            // tPage13A
+            // 
+            this.tPage13A.Location = new System.Drawing.Point(4, 22);
+            this.tPage13A.Name = "tPage13A";
+            this.tPage13A.Size = new System.Drawing.Size(682, 287);
+            this.tPage13A.TabIndex = 20;
+            this.tPage13A.Text = "13A - Biên bản xác nhận mất/hỏng thiết bị bảo mật";
+            this.tPage13A.UseVisualStyleBackColor = true;
+            // 
+            // tPagePKI01
+            // 
+            this.tPagePKI01.Location = new System.Drawing.Point(4, 22);
+            this.tPagePKI01.Name = "tPagePKI01";
+            this.tPagePKI01.Size = new System.Drawing.Size(682, 287);
+            this.tPagePKI01.TabIndex = 21;
+            this.tPagePKI01.Text = "PKI01 - Đề nghị cấp thiết bị bảo mật";
+            this.tPagePKI01.UseVisualStyleBackColor = true;
             // 
             // frmIPCAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 532);
+            this.ClientSize = new System.Drawing.Size(714, 562);
             this.Controls.Add(this.tCtrThongTin);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1320,6 +1779,20 @@
             this.groupBox6.PerformLayout();
             this.tPageDoiMK.ResumeLayout(false);
             this.tPageDoiMK.PerformLayout();
+            this.tPageAD02.ResumeLayout(false);
+            this.tPageAD02.PerformLayout();
+            this.tPageAD03.ResumeLayout(false);
+            this.tPageAD03.PerformLayout();
+            this.tPageAD06.ResumeLayout(false);
+            this.tPageAD06.PerformLayout();
+            this.tPageAD08.ResumeLayout(false);
+            this.tPageAD08.PerformLayout();
+            this.tPageAD10.ResumeLayout(false);
+            this.tPageAD10.PerformLayout();
+            this.tPageAD12.ResumeLayout(false);
+            this.tPageAD12.PerformLayout();
+            this.tPageAD14.ResumeLayout(false);
+            this.tPageAD14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1435,6 +1908,48 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboxHeThong;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tPageAD02;
+        private System.Windows.Forms.TextBox txtAD02_HoTen;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtAD02_ChucVu;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cboxAD02_PhongBan;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TabPage tPageAD03;
+        private System.Windows.Forms.DateTimePicker dtpAD03;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TabPage tPageAD06;
+        private System.Windows.Forms.TextBox txtAD06_LyDo;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.DateTimePicker dtpAD06;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TabPage tPageAD08;
+        private System.Windows.Forms.TabPage tPageAD10;
+        private System.Windows.Forms.TabPage tPageAD12;
+        private System.Windows.Forms.TabPage tPageAD14;
+        private System.Windows.Forms.TextBox txtAD08_LyDo;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.DateTimePicker dtpAD08;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox txtAD10_LyDo;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.DateTimePicker dtpAD10;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox txtAD12_LyDo;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.DateTimePicker dtpAD12;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox txtAD14_ThongTin;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TabPage tPage1A;
+        private System.Windows.Forms.TabPage tPage2A;
+        private System.Windows.Forms.TabPage tPage3A;
+        private System.Windows.Forms.TabPage tPage4A;
+        private System.Windows.Forms.TabPage tPage5A;
+        private System.Windows.Forms.TabPage tPage9A;
+        private System.Windows.Forms.TabPage tPage11A;
+        private System.Windows.Forms.TabPage tPage12A;
+        private System.Windows.Forms.TabPage tPage13A;
+        private System.Windows.Forms.TabPage tPagePKI01;
     }
 }

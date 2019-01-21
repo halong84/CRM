@@ -17,23 +17,24 @@ namespace CRM.GUI_DT
         bool tabSelectingAllowed = false;
 
         //ten file .docx
-        string tenFileIPCAS02 = "CSUS02";
-        string tenFileIPCAS03 = "CSUS03";
-        string tenFileIPCAS07 = "CSUS07";
-        string tenFileIPCAS08 = "CSUS08";
-        string tenFileIPCAS09 = "CSUS09";
+        //string tenFileIPCAS02 = "CSUS02";
+        //string tenFileIPCAS03 = "CSUS03";
+        //string tenFileIPCAS07 = "CSUS07";
+        //string tenFileIPCAS08 = "CSUS08";
+        //string tenFileIPCAS09 = "CSUS09";
 
         string[] listIPCAS, listAD, listPKI, listIB, listBill, listKieuHoi, listTTSP, listAGRITAX;
         //int indexIPCAS = 0, indexAD = 5, indexPKI = 12, indexIB = 22,
         //    indexBill = 28, indexKH = 31, indexTTSP = 35, indexAGRITAX = 39;
         int[] indexHeThong = { 0, 5, 12, 22, 28, 31, 35, 39 };
+        int lastIndexMauBieu;
 
         List<string> listNguon, listDich;
 
         public frmIPCAS()
         {
             InitializeComponent();
-
+            lastIndexMauBieu = cboxMauBieu.SelectedIndex;
             //Khoi tao ten mau bieu
             listIPCAS = new string[]{"CSUS/02 - Cấp mới user",
                                     "CSUS/03 - Thay đổi thông tin",
@@ -163,23 +164,11 @@ namespace CRM.GUI_DT
             }
             else
             {
-                tabSelectingAllowed = true;
+                if (lastIndexMauBieu >= 0)
+                    tabSelectingAllowed = true;
                 tCtrThongTin.SelectedIndex = index;
             }
-        }
-
-        void ThayDoiMauBieu_Tab()
-        {
-            if (cboxHeThong.SelectedIndex < 0 || cboxMauBieu.SelectedIndex < 0) return;
-            for (int i = 0; i < indexHeThong.Length; i++)
-            {
-                if (tCtrThongTin.SelectedIndex < indexHeThong[i] && tCtrThongTin.SelectedIndex < indexHeThong[i + 1])
-                {
-                    cboxHeThong.SelectedIndex = i;
-                    cboxMauBieu.SelectedIndex = tCtrThongTin.SelectedIndex - indexHeThong[i];
-                    break;
-                }
-            }
+            lastIndexMauBieu = cboxMauBieu.SelectedIndex;
         }
 
         void GetKiemSoat()
@@ -259,6 +248,7 @@ namespace CRM.GUI_DT
                 {
                     cboxNoiLamViecHienTai_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
                     cboxNoiLamViecThayDoi_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
+                    cboxAD02_PhongBan.Items.Add(pb.Rows[i]["TENPB"].ToString());
                 }
             }
             catch (Exception ex)
@@ -337,7 +327,6 @@ namespace CRM.GUI_DT
             listDich.Add("<SDT>");
             listNguon.Add(txtSDT.Text);
         }
-
         void CSUS02()
         {
             listDich.Add("<CSUS02_HOTEN>");
@@ -374,7 +363,6 @@ namespace CRM.GUI_DT
             }
             listNguon.Add(thongTinThem);
         }
-
         void CSUS03()
         {
             listDich.Add("<CSUS03_THAYDOI>");
@@ -419,7 +407,6 @@ namespace CRM.GUI_DT
             else
                 listNguon.Add("");
         }
-
         void CSUS07() {
             listDich.Add("<CSUS07_TIME>");
             listNguon.Add(string.Format("{0} giờ {1} phút, ngày {2} tháng {3} năm {4}",
@@ -460,7 +447,70 @@ namespace CRM.GUI_DT
             listDich.Add("<CSUS09_LYDO>");
             listNguon.Add(txtLyDo_09.Text);
         }
-
+        void AD02()
+        {
+            listDich.Add("<AD02_HOTEN>");
+            listNguon.Add(txtAD02_HoTen.Text);
+            listDich.Add("<AD02_PHONGBAN>");
+            listNguon.Add(cboxAD02_PhongBan.Text);
+            listDich.Add("<AD02_CHUCVU>");
+            listNguon.Add(txtAD02_ChucVu.Text);
+        }
+        void AD03()
+        {
+            listDich.Add("<AD03_USER>");
+            listNguon.Add(Thongtindangnhap.user_ad);
+            listDich.Add("<AD03_TIME>");
+            listNguon.Add(string.Format("{0} giờ {1} phút, ngày {2} tháng {3} năm {4}",
+                dtpThoiGian_07.Value.Hour,
+                dtpThoiGian_07.Value.Minute,
+                dtpThoiGian_07.Value.Day,
+                dtpThoiGian_07.Value.Month,
+                dtpThoiGian_07.Value.Year));
+        }
+        void AD06()
+        {
+            listDich.Add("<AD06_USER>");
+            listNguon.Add(Thongtindangnhap.user_ad);
+            listDich.Add("<AD06_TIME>");
+            listNguon.Add(dtpAD06.Value.ToString("dd/MM/yyyy"));
+            listDich.Add("<AD06_LYDO>");
+            listNguon.Add(txtAD06_LyDo.Text);
+        }
+        void AD08()
+        {
+            listDich.Add("<AD08_USER>");
+            listNguon.Add(Thongtindangnhap.user_ad);
+            listDich.Add("<AD08_TIME>");
+            listNguon.Add(dtpAD08.Value.ToString("dd/MM/yyyy"));
+            listDich.Add("<AD08_LYDO>");
+            listNguon.Add(txtAD08_LyDo.Text);
+        }
+        void AD10()
+        {
+            listDich.Add("<AD10_USER>");
+            listNguon.Add(Thongtindangnhap.user_ad);
+            listDich.Add("<AD10_TIME>");
+            listNguon.Add(dtpAD10.Value.ToString("dd/MM/yyyy"));
+            listDich.Add("<AD10_LYDO>");
+            listNguon.Add(txtAD10_LyDo.Text);
+        }
+        void AD12()
+        {
+            listDich.Add("<AD12_USER>");
+            listNguon.Add(Thongtindangnhap.user_ad);
+            listDich.Add("<AD12_TIME>");
+            listNguon.Add(dtpAD12.Value.ToString("dd/MM/yyyy"));
+            listDich.Add("<AD12_LYDO>");
+            listNguon.Add(txtAD12_LyDo.Text);
+        }
+        void AD14()
+        {
+            listDich.Add("<AD14_USER>");
+            listNguon.Add(Thongtindangnhap.user_ad);
+            listDich.Add("<AD14_ThongTin>");
+            listNguon.Add(txtAD14_ThongTin.Text);
+        }
 
         void KhoiTao()
         {
@@ -469,23 +519,21 @@ namespace CRM.GUI_DT
 
             KhoiTaoChung();
 
-            switch(cboxMauBieu.SelectedIndex)
+            switch (tCtrThongTin.SelectedIndex)
             {
-                case 0:
-                    CSUS02();
-                    break;
-                case 1:
-                    CSUS03();
-                    break;
-                case 2:
-                    CSUS07();
-                    break;
-                case 3:
-                    CSUS08();
-                    break;
-                case 4:
-                    CSUS09();
-                    break;
+                case 0: CSUS02(); break;
+                case 1: CSUS03(); break;
+                case 2: CSUS07(); break;
+                case 3: CSUS08(); break;
+                case 4: CSUS09(); break;
+                case 5: AD02(); break;
+                case 6: AD03(); break;
+                case 7: AD06(); break;
+                case 8: AD08(); break;
+                case 9: AD10(); break;
+                case 10: AD12(); break;
+                case 11: AD14(); break;
+
                 default: break;
             }
         }
@@ -493,23 +541,21 @@ namespace CRM.GUI_DT
         void CreateFile()
         {
             string fileName = "";
-            switch (cboxMauBieu.SelectedIndex)
+            switch (tCtrThongTin.SelectedIndex)
             {
-                case 0:
-                    fileName = tenFileIPCAS02;
-                    break;
-                case 1:
-                    fileName = tenFileIPCAS03;
-                    break;
-                case 2:
-                    fileName = tenFileIPCAS07;
-                    break;
-                case 3:
-                    fileName = tenFileIPCAS08;
-                    break;
-                case 4:
-                    fileName = tenFileIPCAS09;
-                    break;
+                case 0: fileName = "CSUS02"; break;
+                case 1: fileName = "CSUS03"; break;
+                case 2: fileName = "CSUS07"; break;
+                case 3: fileName = "CSUS08"; break;
+                case 4: fileName = "CSUS09"; break;
+                case 5: fileName = "AD02"; break;
+                case 6: fileName = "AD03"; break;
+                case 7: fileName = "AD06"; break;
+                case 8: fileName = "AD08"; break;
+                case 9: fileName = "AD10"; break;
+                case 10: fileName = "AD12"; break;
+                case 11: fileName = "AD14"; break;
+
                 default: break;
             }
             saveFileDialog1.Filter = "Word Documents|*.docx";
@@ -569,6 +615,7 @@ namespace CRM.GUI_DT
 
         private void tCtrThongTin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             tabSelectingAllowed = false;
         }
 
@@ -731,6 +778,11 @@ namespace CRM.GUI_DT
         {
             if (!tabSelectingAllowed)
                 e.Cancel = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

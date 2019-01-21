@@ -34,5 +34,13 @@ namespace CRM.Utilities
         public static string ddimport;
         public static string ma_tinh_hien_tai;
         public static string ip_address;
+
+        public static string user_ad = "";
+        public static string user_ib = "";
+        public static string user_bill = "";
+        public static string user_wu = "";
+        public static string madiem_wu = "";
+        public static string user_agritax = "";
+        public static string user_ttsp = "";
     }
 }
