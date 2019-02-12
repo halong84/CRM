@@ -16,7 +16,23 @@ namespace CRM.GUI_DV
     public partial class frmDangKyDichVu : Form
     {
         KhachHangDV kh;
+        DataTable tKh;
 
+        string[] fileNameNHDT = 
+        {
+            "01A_NHDT",
+            "01B_NHDT",
+            "02A_NHDT",
+            "02B_NHDT",
+            "03A_NHDT",
+            "03B_NHDT",
+            "04_NHDT",
+            "05_NHDT",
+            "06A_NHDT",
+            "06B_NHDT",
+            "07_NHDT",
+            "08_NHDT"
+        };
         string tenFileEMB01 = "EMB_01_DANG_KY";
         string tenFileEMB02 = "EMB_02_THAY_DOI";
         string tenFileEMB03 = "EMB_03_XAC_MINH_GD";
@@ -130,7 +146,8 @@ namespace CRM.GUI_DV
                 try
                 {
                     //Dat ham tim kiem
-                    kh = DangKyDichVuDAL.DV_DANGKYDICHVU_KHACHHANG(txtTimKiem.Text);
+                    kh = DangKyDichVuDAL.DV_DANGKYDICHVU_KHACHHANG(txtTimKiem.Text, tKh);
+
                     if (kh == null)
                     {
                         KhongTimThayKH();
@@ -614,6 +631,9 @@ namespace CRM.GUI_DV
                 listNguon.Add(cn.ToUpper());
             }
 
+            listDich.Add("PHONGBAN");
+            listNguon.Add(Thong_tin_dang_nhap.tenPb);
+
             listDich.Add("<CHINHANH>");
             listNguon.Add(cn);
 
@@ -706,6 +726,29 @@ namespace CRM.GUI_DV
             listDich.Add("<CHUCVU_LD>");
             cbLanhDao.ValueMember = "CHUCVU";
             listNguon.Add(cbLanhDao.SelectedValue.ToString());
+
+            listDich.Add("<GIAYUYQUYEN>");
+            cbLanhDao.ValueMember = "UYQUYEN2";
+            listNguon.Add(cbLanhDao.SelectedValue.ToString());
+
+            string ngaySinhKH = kh.ngay_sinh.ToString("ddMMyyyy");
+            string ngayCapKH = kh.ngay_cap.ToString("ddMMyyyy");
+            for (int i = 0; i < ngaySinhKH.Length; i++)
+            {
+                listDich.Add(string.Format("<NS{0}>", i));
+                listNguon.Add(ngaySinhKH[i].ToString());
+                listDich.Add(string.Format("<NC{0}>", i));
+                listNguon.Add(ngayCapKH[i].ToString());
+            }
+
+            listDich.Add("<MST_NH>");
+            listNguon.Add(Thong_tin_dang_nhap.mst_cn);
+
+            listDich.Add("<MST_KH>");
+            listNguon.Add(tKh.Rows[0]["MST"].ToString());
+
+            listDich.Add("<DKKD_KH>");
+            listNguon.Add(tKh.Rows[0]["DKKD"].ToString());
         }
 
 
@@ -717,7 +760,7 @@ namespace CRM.GUI_DV
 
             KhoiTaoChung();
 
-            switch (cbChonMauBieu.SelectedIndex)
+            switch (cbChonMauBieu.SelectedIndex - 12)
             {
                 case 0:
                     KhoiTaoEMB01();
@@ -759,7 +802,10 @@ namespace CRM.GUI_DV
         void CreateFile()
         {
             string fileName = "";
-            switch (cbChonMauBieu.SelectedIndex)
+            if (cbChonMauBieu.SelectedIndex < 12)
+                fileName = fileNameNHDT[cbChonMauBieu.SelectedIndex];
+
+            switch (cbChonMauBieu.SelectedIndex - 12)
             {
                 case 0:
                     fileName = tenFileEMB01;
@@ -1158,12 +1204,18 @@ namespace CRM.GUI_DV
 
         private void cbChonMauBieu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tCtrlDangKyDV.SelectedIndex = cbChonMauBieu.SelectedIndex;
+            int index = cbChonMauBieu.SelectedIndex - 12;
+            if (index >= 0){
+                tCtrlDangKyDV.Enabled = true;
+                tCtrlDangKyDV.SelectedIndex = index;
+            }
+            else
+                tCtrlDangKyDV.Enabled = false;
         }
 
         private void tCtrlDangKyDV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbChonMauBieu.SelectedIndex = tCtrlDangKyDV.SelectedIndex;
+            cbChonMauBieu.SelectedIndex = tCtrlDangKyDV.SelectedIndex + 12;
         }
 
         private void btnLayTTKH_Click(object sender, EventArgs e)

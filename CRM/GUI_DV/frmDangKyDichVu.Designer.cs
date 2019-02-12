@@ -249,6 +249,10 @@
             this.label70 = new System.Windows.Forms.Label();
             this.dtpTuNgay_DKNT = new System.Windows.Forms.DateTimePicker();
             this.dgvDKNT01 = new System.Windows.Forms.DataGridView();
+            this.CheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.DichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhaMang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoThueBao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -256,10 +260,6 @@
             this.label45 = new System.Windows.Forms.Label();
             this.cbKSV = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.CheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NhaMang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoThueBao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbThongTinKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tCtrlDangKyDV.SuspendLayout();
@@ -656,6 +656,28 @@
             this.cbChonMauBieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChonMauBieu.FormattingEnabled = true;
             this.cbChonMauBieu.Items.AddRange(new object[] {
+            "Mẫu 01a/NHĐT - Giấy đăng ký sử dụng dịch vụ ngân hàng điện tử (Cá nhân)-Tiếng Việ" +
+                "t",
+            "Mẫu 01b/NHĐT - Giấy đăng ký sử dụng dịch vụ ngân hàng điện tử (Cá nhân) – Song ng" +
+                "ữ (Tiếng Việt & Tiếng Anh)",
+            "Mẫu 02a/NHĐT - Hợp đồng cung cấp và sử dụng dịch vụ ngân hàng điện tử (Tổ chức) –" +
+                " Tiếng Việt",
+            "Mẫu 02b/NHĐT - Hợp đồng cung cấp và sử dụng dịch vụ ngân hàng điện tử (Tổ chức) –" +
+                " Song ngữ (Tiếng Việt & Tiếng Anh)",
+            "Mẫu 03a/NHĐT - Giấy đăng ký sử dụng dịch vụ ngân hàng điện tử (đối với khách hàng" +
+                " tổ chức đăng ký dịch vụ phi tài chính) – Tiếng Việt",
+            "Mẫu 03b/NHĐT - Giấy đăng ký sử dụng dịch vụ ngân hàng điện tử (đối với khách hàng" +
+                " tổ chức đăng ký dịch vụ phi tài chính) – Song ngữ (Tiếng Việt & Tiếng Anh)",
+            "Mẫu 04/NHĐT - Giấy đề nghị thay đổi/bổ sung/khóa/hủy dịch vụ ngân hàng điện tử (đ" +
+                "ối với khách hàng cá nhân)",
+            "Mẫu 05/NHĐT - Giấy đề nghị thay đổi/bổ sung/khóa/hủy dịch vụ ngân hàng điện tử (đ" +
+                "ối với khách hàng tổ chức)",
+            "Mẫu 06a/NHĐT - Biên bản bàn giao thiết bị xác thực – Tiếng Việt",
+            "Mẫu 06b/NHĐT - Biên bản bàn giao thiết bị xác thực – Song ngữ (Tiếng Việt & Tiếng" +
+                " Anh)",
+            "Mẫu 07/NHĐT - Giấy yêu cầu đăng ký và kích hoạt thiết bị xác thực/phần mềm sinh O" +
+                "TP",
+            "Mẫu 08/NHĐT - Giấy yêu cầu tra soát giao dịch",
             "Mẫu 01A/E-MB Phiếu đăng ký sử dụng dịch vụ E-Mobile Banking",
             "Mẫu 02A/E-MB Giấy đề nghị Thay đổi/Bổ sung/Hủy đăng ký dịch vụ E-Mobile Banking",
             "Mẫu 03A/E-MB Đề nghị xác minh giao dịch",
@@ -2470,6 +2492,37 @@
             this.dgvDKNT01.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDKNT01_CellMouseDoubleClick);
             this.dgvDKNT01.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDKNT01_CellValueChanged);
             // 
+            // CheckBox
+            // 
+            this.CheckBox.FalseValue = "False";
+            this.CheckBox.HeaderText = "";
+            this.CheckBox.Name = "CheckBox";
+            this.CheckBox.TrueValue = "True";
+            this.CheckBox.Width = 35;
+            // 
+            // DichVu
+            // 
+            this.DichVu.HeaderText = "Dịch vụ";
+            this.DichVu.Name = "DichVu";
+            this.DichVu.ReadOnly = true;
+            this.DichVu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DichVu.Width = 400;
+            // 
+            // NhaMang
+            // 
+            this.NhaMang.HeaderText = "Nhà mạng";
+            this.NhaMang.Name = "NhaMang";
+            this.NhaMang.ReadOnly = true;
+            this.NhaMang.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NhaMang.Width = 150;
+            // 
+            // SoThueBao
+            // 
+            this.SoThueBao.HeaderText = "Số thuê bao/Mã KH";
+            this.SoThueBao.Name = "SoThueBao";
+            this.SoThueBao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.SoThueBao.Width = 150;
+            // 
             // openFileTTKH
             // 
             this.openFileTTKH.FileName = "openFileTTKH";
@@ -2486,7 +2539,7 @@
             this.groupBox8.Size = new System.Drawing.Size(793, 48);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Chọn cán bộ";
+            this.groupBox8.Text = "Chọn lãnh đạo";
             this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
             // cbLanhDao
@@ -2528,37 +2581,6 @@
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "Kiểm soát:";
-            // 
-            // CheckBox
-            // 
-            this.CheckBox.FalseValue = "False";
-            this.CheckBox.HeaderText = "";
-            this.CheckBox.Name = "CheckBox";
-            this.CheckBox.TrueValue = "True";
-            this.CheckBox.Width = 35;
-            // 
-            // DichVu
-            // 
-            this.DichVu.HeaderText = "Dịch vụ";
-            this.DichVu.Name = "DichVu";
-            this.DichVu.ReadOnly = true;
-            this.DichVu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DichVu.Width = 400;
-            // 
-            // NhaMang
-            // 
-            this.NhaMang.HeaderText = "Nhà mạng";
-            this.NhaMang.Name = "NhaMang";
-            this.NhaMang.ReadOnly = true;
-            this.NhaMang.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NhaMang.Width = 150;
-            // 
-            // SoThueBao
-            // 
-            this.SoThueBao.HeaderText = "Số thuê bao/Mã KH";
-            this.SoThueBao.Name = "SoThueBao";
-            this.SoThueBao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.SoThueBao.Width = 150;
             // 
             // frmDangKyDichVu
             // 

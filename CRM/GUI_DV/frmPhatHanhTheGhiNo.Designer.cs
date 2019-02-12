@@ -66,6 +66,8 @@
             this.openFileTTKH = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbHopDong = new System.Windows.Forms.GroupBox();
+            this.cbKSV = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.btnSuaGiayUyQuyen = new System.Windows.Forms.Button();
             this.cbNguoiDaiDien_BenA = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -131,8 +133,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiayTo_1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cbKSV = new System.Windows.Forms.ComboBox();
             this.gbThongTinKH.SuspendLayout();
             this.gbHopDong.SuspendLayout();
             this.tpPhatHanhLai.SuspendLayout();
@@ -506,7 +506,26 @@
             this.gbHopDong.Size = new System.Drawing.Size(795, 54);
             this.gbHopDong.TabIndex = 3;
             this.gbHopDong.TabStop = false;
-            this.gbHopDong.Text = "Hợp đồng phát hành thẻ";
+            this.gbHopDong.Text = "Chọn lãnh đạo";
+            // 
+            // cbKSV
+            // 
+            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKSV.FormattingEnabled = true;
+            this.cbKSV.Location = new System.Drawing.Point(96, 17);
+            this.cbKSV.Name = "cbKSV";
+            this.cbKSV.Size = new System.Drawing.Size(202, 21);
+            this.cbKSV.TabIndex = 24;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(11, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 13);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Kiểm soát viên:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // btnSuaGiayUyQuyen
             // 
@@ -523,7 +542,7 @@
             // 
             this.cbNguoiDaiDien_BenA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNguoiDaiDien_BenA.FormattingEnabled = true;
-            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(433, 17);
+            this.cbNguoiDaiDien_BenA.Location = new System.Drawing.Point(406, 17);
             this.cbNguoiDaiDien_BenA.Name = "cbNguoiDaiDien_BenA";
             this.cbNguoiDaiDien_BenA.Size = new System.Drawing.Size(202, 21);
             this.cbNguoiDaiDien_BenA.TabIndex = 20;
@@ -532,7 +551,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(371, 20);
+            this.label9.Location = new System.Drawing.Point(344, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 21;
@@ -1243,25 +1262,6 @@
             this.label16.Size = new System.Drawing.Size(19, 13);
             this.label16.TabIndex = 0;
             this.label16.Text = "1. ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 13);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Kiểm soát viên:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // cbKSV
-            // 
-            this.cbKSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKSV.FormattingEnabled = true;
-            this.cbKSV.Location = new System.Drawing.Point(96, 17);
-            this.cbKSV.Name = "cbKSV";
-            this.cbKSV.Size = new System.Drawing.Size(202, 21);
-            this.cbKSV.TabIndex = 24;
             // 
             // frmPhatHanhTheGhiNo
             // 
