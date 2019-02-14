@@ -154,3 +154,4 @@ C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.Properties.Resources.reso
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.csproj.GenerateResource.Cache
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.exe
 C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.pdb
+C:\Users\TUNG\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmThongBao.resources

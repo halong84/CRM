@@ -133,6 +133,17 @@ namespace CRM.GUI_DV
             {
                 ErrorMessageDAL.DataAccessError(ex);
             }
+
+            //Get thong tin chi nhanh
+            try
+            {
+                Thong_tin_dang_nhap.mst_cn = DangKyDichVuDAL.DV_GET_CHINHANH(Thong_tin_dang_nhap.ma_cn).Rows[0]["MST"].ToString();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
+
         }
 
 
@@ -146,7 +157,8 @@ namespace CRM.GUI_DV
                 try
                 {
                     //Dat ham tim kiem
-                    kh = DangKyDichVuDAL.DV_DANGKYDICHVU_KHACHHANG(txtTimKiem.Text, tKh);
+                    kh = DangKyDichVuDAL.DV_DANGKYDICHVU_KHACHHANG(txtTimKiem.Text);
+                    tKh = DangKyDichVuDAL.DV_KHACHHANG(txtTimKiem.Text);
 
                     if (kh == null)
                     {
@@ -631,7 +643,7 @@ namespace CRM.GUI_DV
                 listNguon.Add(cn.ToUpper());
             }
 
-            listDich.Add("PHONGBAN");
+            listDich.Add("<PHONGBAN>");
             listNguon.Add(Thong_tin_dang_nhap.tenPb);
 
             listDich.Add("<CHINHANH>");
@@ -748,9 +760,20 @@ namespace CRM.GUI_DV
             listNguon.Add(tKh.Rows[0]["MST"].ToString());
 
             listDich.Add("<DKKD_KH>");
-            listNguon.Add(tKh.Rows[0]["DKKD"].ToString());
-        }
+            listNguon.Add(tKh.Rows[0]["GPDK"].ToString());
 
+            listDich.Add("<SDT_PB>");
+            listNguon.Add(Thong_tin_dang_nhap.sdtPb);
+
+            listDich.Add("<FAX_PB>");
+            listNguon.Add(Thong_tin_dang_nhap.faxPb);
+
+            listDich.Add("<MAKH>");
+            listNguon.Add(kh.ma_KH);
+
+            listDich.Add("<CHUCVU>");
+            listNguon.Add(Thong_tin_dang_nhap.chuc_vu);
+        }
 
 
         void KhoiTao(){

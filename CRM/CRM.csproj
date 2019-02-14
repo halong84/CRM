@@ -1061,6 +1061,12 @@
       <DependentUpon>test.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongBao.Designer.cs">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\CommonMethod.cs" />
     <Compile Include="Utilities\ControlFormat.cs" />
     <Compile Include="Utilities\DV\CommonMethods.cs" />
@@ -1794,6 +1800,9 @@
     <EmbeddedResource Include="test.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>test.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBao.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DataSet1.xsc">

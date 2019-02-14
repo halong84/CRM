@@ -21,6 +21,8 @@ namespace CRM.Utilities.DV
         public static string mst_cn;
         public static string ma_pb;
         public static string tenPb;
+        public static string sdtPb;
+        public static string faxPb;
         public static bool hs;
         //public static string chuc_vu;
     }
