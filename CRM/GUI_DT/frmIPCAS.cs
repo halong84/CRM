@@ -242,14 +242,14 @@ namespace CRM.GUI_DT
         {
             try
             {
-                var pb = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
-               
-                for (int i = 0; i < pb.Rows.Count; i++)
-                {
-                    cboxNoiLamViecHienTai_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
-                    cboxNoiLamViecThayDoi_03.Items.Add(pb.Rows[i]["TENPB"].ToString());
-                    cboxAD02_PhongBan.Items.Add(pb.Rows[i]["TENPB"].ToString());
-                }
+                cboxNoiLamViecHienTai_03.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
+                cboxNoiLamViecThayDoi_03.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
+                cboxAD02_PhongBan.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
+                cboxPhongBan_02.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
+                cboxNoiLamViecHienTai_03.DisplayMember = "TENPB";
+                cboxNoiLamViecThayDoi_03.DisplayMember = "TENPB";
+                cboxAD02_PhongBan.DisplayMember = "TENPB";
+                cboxPhongBan_02.DisplayMember = "TENPB";
             }
             catch (Exception ex)
             {
@@ -258,6 +258,8 @@ namespace CRM.GUI_DT
 
             if (cboxNoiLamViecHienTai_03.Items.Count > 0) cboxNoiLamViecHienTai_03.SelectedIndex = 0;
             if (cboxNoiLamViecThayDoi_03.Items.Count > 0) cboxNoiLamViecThayDoi_03.SelectedIndex = 0;
+            if (cboxPhongBan_02.Items.Count > 0) cboxPhongBan_02.SelectedIndex = 0;
+            if (cboxAD02_PhongBan.Items.Count > 0) cboxAD02_PhongBan.SelectedIndex = 0;
         }
 
         #region Tao mau bieu
@@ -333,10 +335,10 @@ namespace CRM.GUI_DT
             listNguon.Add(txtHoTen_02.Text);
 
             listDich.Add("<CSUS02_PHONGBAN>");
-            listNguon.Add(txtPhongBan_02.Text);
+            listNguon.Add(cboxPhongBan_02.Text);
 
             listDich.Add("<CSUS02_CHUCVU>");
-            listNguon.Add(txtChucVu_02.Text);
+            listNguon.Add(cboxChucVu_02.Text);
 
             listDich.Add("<CSUS02_MANV>");
             listNguon.Add(txtMaNV_02.Text);
@@ -512,6 +514,10 @@ namespace CRM.GUI_DT
             listNguon.Add(txtAD14_ThongTin.Text);
         }
 
+        void _1A(){
+
+        }
+
         void KhoiTao()
         {
             listNguon.Clear();
@@ -522,7 +528,20 @@ namespace CRM.GUI_DT
             switch (tCtrThongTin.SelectedIndex)
             {
                 case 0: CSUS02(); break;
-                case 1: CSUS03(); break;
+                case 1: CSUS03();
+                    string mac = "";
+                    if (ckbMAC_03.Checked) mac = txtMACThayDoi_03.Text;
+                    else mac = txtMACHienTai_03.Text;
+                    string menu = "";
+                    if (ckbMenu_03.Checked) menu = cboxMenuThayDoi_03.Text;
+                    else menu = cboxMenuHienTai_03.Text;
+                    string chucnang = "";
+                    if (ckbChucNang_03.Checked) chucnang = cboxChucNangThayDoi_03.Text;
+                    else chucnang = cboxChucNangHienTai_03.Text;
+                    string yeuCauKhac = "";
+                    yeuCauKhac = txtYeuCauThem_03.Text;
+                    if (ckbDNKDT_03.Checked) yeuCauKhac += " - Đăng nhập không dùng thẻ";
+                    break;
                 case 2: CSUS07(); break;
                 case 3: CSUS08(); break;
                 case 4: CSUS09(); break;
@@ -536,6 +555,8 @@ namespace CRM.GUI_DT
 
                 default: break;
             }
+
+            CreateFile();
         }
 
         void CreateFile()
@@ -737,7 +758,7 @@ namespace CRM.GUI_DT
         private void button1_Click(object sender, EventArgs e)
         {
             KhoiTao();
-            CreateFile();
+            //CreateFile();
         }
 
         private void ckbDNKDT_03_CheckedChanged(object sender, EventArgs e)
@@ -781,6 +802,11 @@ namespace CRM.GUI_DT
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label53_Click(object sender, EventArgs e)
         {
 
         }

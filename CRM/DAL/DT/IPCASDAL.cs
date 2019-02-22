@@ -47,5 +47,34 @@ namespace CRM.DAL.DT
             };
             return db.dt("DANH_SACH_PHONG_BAN", Params);
         }
+
+        public static void UPDATE_SYSTEM_DETAL(string manv, string col_id, string sys_id, string value)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[]{
+                new SqlParameter("@manv", manv),
+                new SqlParameter("@col_id",col_id),
+                new SqlParameter("@sys_id", sys_id),
+                new SqlParameter("@value", value)
+            };
+
+            db.dt("UPDATE_SYSTEM_DETAIL");
+        }
+
+        public static void DT_IPCAS_CHANGE_REQUEST(string userid, string mac, string menu, string chucnang, bool hoatdong, string yeucaukhac, string mapb)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[]{
+                new SqlParameter("@userid", userid),
+                new SqlParameter("@mac", mac),
+                new SqlParameter("@menu", menu),
+                new SqlParameter("@chucnang", chucnang),
+                new SqlParameter("@hoatdong", hoatdong),
+                new SqlParameter("@yeucaukhac", yeucaukhac),
+                new SqlParameter("@mapb", mapb)
+            };
+
+            db.dt("DT_IPCAS_CHANGE_REQUEST", Params);
+        }
     }
 }
