@@ -387,7 +387,7 @@ namespace CRM.GUI_DT
             {
                 if (ckbMAC_03.Checked || ckbNoiLamViec_03.Checked || ckbChucNang_03.Checked)
                     thayDoi += "\n";
-                thayDoi += "-Đăng nhập không dùng thẻ PKI đến: " + dtpDNKDTDenNgay_03.Text;
+                thayDoi += "-Đăng nhập không dùng thẻ PKI đến: " + dtpThoiGianDenNgay_03.Text;
             }
             listNguon.Add(thayDoi);
 
@@ -408,6 +408,7 @@ namespace CRM.GUI_DT
                 listNguon.Add(txtYeuCauThem_03.Text);
             else
                 listNguon.Add("");
+            IPCASDAL.DT_IPCAS_CHANGE_REQUEST(Thongtindangnhap.user_id, txtMACThayDoi_03.Text, cboxMenuThayDoi_03.Text, cboxChucNangThayDoi_03.Text, true, "", Thongtindangnhap.mapb);
         }
         void CSUS07() {
             listDich.Add("<CSUS07_TIME>");
@@ -678,7 +679,7 @@ namespace CRM.GUI_DT
 
         private void ckbDangNhapKhongDungThe_CheckedChanged(object sender, EventArgs e)
         {
-            dtpDNKDTDenNgay_03.Enabled = ckbDNKDT_03.Checked;
+            dtpThoiGianDenNgay_03.Enabled = ckbDNKDT_03.Checked;
         }
 
         private void ckbThayDoiKhac_CheckedChanged(object sender, EventArgs e)
@@ -763,7 +764,7 @@ namespace CRM.GUI_DT
 
         private void ckbDNKDT_03_CheckedChanged(object sender, EventArgs e)
         {
-            dtpDNKDTDenNgay_03.Enabled = ckbDNKDT_03.Checked;
+            dtpThoiGianDenNgay_03.Enabled = ckbDNKDT_03.Checked;
         }
 
         private void ckbThoiGian_03_CheckedChanged(object sender, EventArgs e)
