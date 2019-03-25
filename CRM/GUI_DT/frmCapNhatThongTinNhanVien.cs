@@ -11,7 +11,7 @@ using CRM.Utilities;
 using CRM.Entities;
 using CRM.DAL.DV;
 
-namespace CRM
+namespace CRM.GUI_DT
 {
     public partial class frmCapNhatThongTinNhanVien : Form
     {
@@ -20,8 +20,20 @@ namespace CRM
             InitializeComponent();
             try
             {
+                DataTable tbInfo = DungChungDAL.GET_THONGTIN_NHANVIEN(Thongtindangnhap.manv);
+                DataRow rInfo = tbInfo.Rows[0];
+                dtpNgaySinh.Value = (DateTime)rInfo["NGAYSINH"];
+                txtNoiSinh.Text = rInfo["NOISINH"].ToString();
+                txtDiaChi.Text = rInfo["DIACHI"].ToString();
+                txtCMND.Text = rInfo["CMND"].ToString();
+                dtpNgayCap.Value = (DateTime)rInfo["NGAYCAP"];
+
                 cboxNoiCap.DataSource = DungChungDAL.GET_ALL_NOICAP_CMND();
                 cboxNoiCap.DisplayMember = "NOICAP";
+                cboxNoiCap.ValueMember = "MA_NOICAP";
+                cboxNoiCap.SelectedValue = rInfo["NOICAP"];
+                txtSDTNhaRieng.Text = rInfo["SDTNHARIENG"].ToString();
+                txtDiDong.Text = rInfo["DIDONG"].ToString();
             }
             catch (Exception ex)
             {
@@ -29,18 +41,19 @@ namespace CRM
             }
         }
 
+
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             try
             {
                 DungChungDAL.UPDATE_NHANVIEN_DT(
                 Thongtindangnhap.manv,
-                DateTime.Parse(txtNgaySinh.Text),
+                dtpNgaySinh.Value,
                 txtNoiSinh.Text,
                 txtDiaChi.Text,
                 txtCMND.Text,
-                DateTime.Parse(txtNgayCap.Text),
-                cboxNoiCap.Text,
+                dtpNgayCap.Value,
+                cboxNoiCap.SelectedValue.ToString(),
                 txtSDTNhaRieng.Text,
                 txtDiDong.Text
                 );
@@ -49,7 +62,7 @@ namespace CRM
             }
             catch
             {
-                MessageBox.Show("Vui lòng nhập đúng định dạng ngày/tháng/năm", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập đúng định dạng ngày/tháng/năm (dd/MM/yyyy)", "Thông báo", MessageBoxButtons.OK);
             }
         }
     }

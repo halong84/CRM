@@ -312,4 +312,4 @@ C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.In.resources
 C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.Properties.Resources.resources
 C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmThongBao.resources
 C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.csproj.GenerateResource.Cache
-C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmCapNhatThongTinNhanVien.resources
+C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.GUI_DT.frmCapNhatThongTinNhanVien.resources

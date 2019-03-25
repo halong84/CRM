@@ -1,4 +1,4 @@
-﻿namespace CRM
+﻿namespace CRM.GUI_DT
 {
     partial class frmCapNhatThongTinNhanVien
     {
@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCapNhatThongTinNhanVien));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNgaySinh = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNoiSinh = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNgayCap = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cboxNoiCap = new System.Windows.Forms.ComboBox();
@@ -48,6 +46,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCapNhat = new System.Windows.Forms.Button();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayCap = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -68,15 +68,6 @@
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày sinh:";
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(120, 29);
-            this.txtNgaySinh.Mask = "00/00/0000";
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(114, 20);
-            this.txtNgaySinh.TabIndex = 2;
-            this.txtNgaySinh.ValidatingType = typeof(System.DateTime);
             // 
             // label3
             // 
@@ -125,15 +116,6 @@
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "CMND:";
-            // 
-            // txtNgayCap
-            // 
-            this.txtNgayCap.Location = new System.Drawing.Point(120, 133);
-            this.txtNgayCap.Mask = "00/00/0000";
-            this.txtNgayCap.Name = "txtNgayCap";
-            this.txtNgayCap.Size = new System.Drawing.Size(114, 20);
-            this.txtNgayCap.TabIndex = 10;
-            this.txtNgayCap.ValidatingType = typeof(System.DateTime);
             // 
             // label6
             // 
@@ -214,11 +196,27 @@
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(120, 29);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(114, 20);
+            this.dtpNgaySinh.TabIndex = 23;
+            // 
+            // dtpNgayCap
+            // 
+            this.dtpNgayCap.Location = new System.Drawing.Point(120, 133);
+            this.dtpNgayCap.Name = "dtpNgayCap";
+            this.dtpNgayCap.Size = new System.Drawing.Size(114, 20);
+            this.dtpNgayCap.TabIndex = 24;
+            // 
             // frmCapNhatThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 306);
+            this.Controls.Add(this.dtpNgayCap);
+            this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDiDong);
@@ -227,7 +225,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cboxNoiCap);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtNgayCap);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.label5);
@@ -235,7 +232,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNoiSinh);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -250,14 +246,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox txtNgaySinh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNoiSinh;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox txtNgayCap;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboxNoiCap;
@@ -267,6 +261,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.DateTimePicker dtpNgayCap;
 
     }
 }

@@ -458,7 +458,7 @@
             this.tCtrThongTin.Controls.Add(this.tPage12A);
             this.tCtrThongTin.Controls.Add(this.tPage13A);
             this.tCtrThongTin.Controls.Add(this.tPagePKI01);
-            this.tCtrThongTin.Location = new System.Drawing.Point(13, 238);
+            this.tCtrThongTin.Location = new System.Drawing.Point(14, 237);
             this.tCtrThongTin.Name = "tCtrThongTin";
             this.tCtrThongTin.SelectedIndex = 0;
             this.tCtrThongTin.Size = new System.Drawing.Size(690, 313);
