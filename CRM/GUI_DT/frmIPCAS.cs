@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using CRM.Utilities;
 using CRM.DAL.DT;
 using CRM.Utilities.DV;
+using CRM.DAL.DV;
 
 namespace CRM.GUI_DT
 {
@@ -30,6 +31,8 @@ namespace CRM.GUI_DT
         int lastIndexMauBieu;
 
         List<string> listNguon, listDich;
+
+        DataTable ipcasInfo;
 
         public frmIPCAS()
         {
@@ -97,13 +100,10 @@ namespace CRM.GUI_DT
             GetChucNang_Menu();
             cboxMauBieu.SelectedIndex = 0;
             cboxKieuUser_02.SelectedIndex = 0;
-            cboxMenu_02.SelectedIndex = 0;
-            cboxNoiLamViecHienTai_03.SelectedIndex = 0;
-            cboxNoiLamViecThayDoi_03.SelectedIndex = 0;
-            cboxChucNangHienTai_03.SelectedIndex = 0;
-            cboxChucNangThayDoi_03.SelectedIndex = 0;
-            cboxMenuHienTai_03.SelectedIndex = 0;
-            cboxMenuThayDoi_03.SelectedIndex = 0;
+            //cboxMenu_02.SelectedIndex = 0;
+            //cboxPhongBanThayDoi_03.SelectedIndex = 0;
+            //cboxChucNangThayDoi_03.SelectedIndex = 0;
+            //cboxMenuThayDoi_03.SelectedIndex = 0;
             cboxHeThong.SelectedIndex = 0;
           
             listNguon = new List<string>();
@@ -117,6 +117,19 @@ namespace CRM.GUI_DT
             txtChucVu.Text = Thongtindangnhap.chucvu;
             txtDonVi.Text = Thongtindangnhap.tencn;
             txtUserID.Text = Thongtindangnhap.user_id;
+            try
+            {
+                ipcasInfo = IPCASDAL.DT_IPCAS_GET_INFO(Thongtindangnhap.user_id);
+                txtChucNangHienTai_03.Text = ipcasInfo.Rows[0]["CHUCNANG"].ToString();
+                txtMenuHienTai_03.Text = ipcasInfo.Rows[0]["MENU_ID"].ToString();
+                txtMACHienTai_03.Text = ipcasInfo.Rows[0]["MAC"].ToString();
+                txtMACThayDoi_03.Text = txtMACHienTai_03.Text;
+
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDAL.DataAccessError(ex);
+            }
         }
 
         void ThayDoiHeThong()
@@ -198,7 +211,7 @@ namespace CRM.GUI_DT
             }
             catch (Exception ex)
             {
-                CRM.DAL.DV.ErrorMessageDAL.DataAccessError(ex);
+                ErrorMessageDAL.DataAccessError(ex);
             }
 
             if (cboxKiemSoat.Items.Count > 0)
@@ -209,55 +222,44 @@ namespace CRM.GUI_DT
         {
             try
             {
-                var cn = IPCASDAL.DT_GET_CHUCNANG_IPCAS();
-                var menu = IPCASDAL.DT_GET_MENU_IPCAS();
-                for (int i = 0; i < cn.Rows.Count; i++)
-                {
-                    cboxChucNangHienTai_03.Items.Add(cn.Rows[i][0].ToString());
-                    cboxChucNangThayDoi_03.Items.Add(cn.Rows[i][0].ToString());
-                }
+                cboxChucNangThayDoi_03.DataSource = IPCASDAL.DT_GET_CHUCNANG_IPCAS();
+                cboxChucNangThayDoi_03.DisplayMember = "CHUCNANG";
+                cboxChucNangThayDoi_03.ValueMember = "CHUCNANG";
+                cboxChucNangThayDoi_03.SelectedValue = ipcasInfo.Rows[0]["CHUCNANG"];
 
-                for (int i = 0; i < menu.Rows.Count; i++)
-                {
-                    cboxMenuHienTai_03.Items.Add(menu.Rows[i][0].ToString());
-                    cboxMenuThayDoi_03.Items.Add(menu.Rows[i][0].ToString());
-                    cboxMenu_02.Items.Add(menu.Rows[i][0].ToString());
-                }
+                cboxMenuThayDoi_03.DataSource = IPCASDAL.DT_GET_MENU_IPCAS();
+                cboxMenuThayDoi_03.DisplayMember = "MENU_ID";
+                cboxMenuThayDoi_03.ValueMember = "MENU_ID";
+                cboxMenuThayDoi_03.SelectedValue = ipcasInfo.Rows[0]["MENU_ID"];
             }
             catch (Exception ex)
             {
-                CRM.DAL.DV.ErrorMessageDAL.DataAccessError(ex);
+                ErrorMessageDAL.DataAccessError(ex);
             }
-            if (cboxChucNangHienTai_03.Items.Count > 0)
-                cboxChucNangHienTai_03.SelectedIndex = 0;
-            if (cboxChucNangThayDoi_03.Items.Count > 0)
-                cboxChucNangThayDoi_03.SelectedIndex = 0;
-            if (cboxMenuThayDoi_03.Items.Count > 0)
-                cboxMenuThayDoi_03.SelectedIndex = 0;
-            if (cboxMenuHienTai_03.Items.Count > 0)
-                cboxMenuHienTai_03.SelectedIndex = 0;
         }
 
         void GetNoiLamViec()
         {
             try
             {
-                cboxNoiLamViecHienTai_03.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
-                cboxNoiLamViecThayDoi_03.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
+                cboxPhongBanThayDoi_03.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
+                cboxPhongBanThayDoi_03.DisplayMember = "TENPB";
+                cboxPhongBanThayDoi_03.ValueMember = "MAPB";
+                cboxPhongBanThayDoi_03.SelectedValue = ipcasInfo.Rows[0]["MAPB"];
+                txtPhongBanHienTai_03.Text = cboxPhongBanThayDoi_03.Text;
+
                 cboxAD02_PhongBan.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
                 cboxPhongBan_02.DataSource = IPCASDAL.DANHSACH_PB(Thongtindangnhap.macn);
-                cboxNoiLamViecHienTai_03.DisplayMember = "TENPB";
-                cboxNoiLamViecThayDoi_03.DisplayMember = "TENPB";
                 cboxAD02_PhongBan.DisplayMember = "TENPB";
                 cboxPhongBan_02.DisplayMember = "TENPB";
+
+                
             }
             catch (Exception ex)
             {
-                CRM.DAL.DV.ErrorMessageDAL.DataAccessError(ex);
+               ErrorMessageDAL.DataAccessError(ex);
             }
 
-            if (cboxNoiLamViecHienTai_03.Items.Count > 0) cboxNoiLamViecHienTai_03.SelectedIndex = 0;
-            if (cboxNoiLamViecThayDoi_03.Items.Count > 0) cboxNoiLamViecThayDoi_03.SelectedIndex = 0;
             if (cboxPhongBan_02.Items.Count > 0) cboxPhongBan_02.SelectedIndex = 0;
             if (cboxAD02_PhongBan.Items.Count > 0) cboxAD02_PhongBan.SelectedIndex = 0;
         }
@@ -369,39 +371,39 @@ namespace CRM.GUI_DT
         {
             listDich.Add("<CSUS03_THAYDOI>");
             string thayDoi = "";
-            if (ckbMAC_03.Checked) thayDoi += "-Đổi địa chỉ MAC: " + txtMACHienTai_03.Text + " => " + txtMACThayDoi_03.Text;
-            if (ckbNoiLamViec_03.Checked)
-            {
-                if (ckbMAC_03.Checked)
-                    thayDoi += "\n";
-                thayDoi += "-Thay đổi phòng ban:" + cboxNoiLamViecHienTai_03.Text + " => " + cboxNoiLamViecThayDoi_03.Text;
-            }
-            if (ckbChucNang_03.Checked)
-            {
-                if (ckbMAC_03.Checked || ckbNoiLamViec_03.Checked)
-                    thayDoi += "\n";
-                thayDoi += "-Thay đổi chức năng: " + cboxChucNangHienTai_03.Text + " => " + cboxChucNangThayDoi_03.Text;
-            }
+            //if (ckbMAC_03.Checked) thayDoi += "-Đổi địa chỉ MAC: " + txtMACHienTai_03.Text + " => " + txtMACThayDoi_03.Text;
+            //if (ckbNoiLamViec_03.Checked)
+            //{
+            //    if (ckbMAC_03.Checked)
+            //        thayDoi += "\n";
+            //    thayDoi += "-Thay đổi phòng ban:" + cboxNoiLamViecHienTai_03.Text + " => " + cboxNoiLamViecThayDoi_03.Text;
+            //}
+            //if (ckbChucNang_03.Checked)
+            //{
+            //    if (ckbMAC_03.Checked || ckbNoiLamViec_03.Checked)
+            //        thayDoi += "\n";
+            //    thayDoi += "-Thay đổi chức năng: " + cboxChucNangHienTai_03.Text + " => " + cboxChucNangThayDoi_03.Text;
+            //}
 
-            if (ckbDNKDT_03.Checked)
-            {
-                if (ckbMAC_03.Checked || ckbNoiLamViec_03.Checked || ckbChucNang_03.Checked)
-                    thayDoi += "\n";
-                thayDoi += "-Đăng nhập không dùng thẻ PKI đến: " + dtpThoiGianDenNgay_03.Text;
-            }
-            listNguon.Add(thayDoi);
+            //if (ckbDNKDT_03.Checked)
+            //{
+            //    if (ckbMAC_03.Checked || ckbNoiLamViec_03.Checked || ckbChucNang_03.Checked)
+            //        thayDoi += "\n";
+            //    thayDoi += "-Đăng nhập không dùng thẻ PKI đến: " + dtpThoiGianDenNgay_03.Text;
+            //}
+            //listNguon.Add(thayDoi);
 
-            listDich.Add("<CSUS03_THOIGIAN>");
-            var thoiGian = "-Thực hiện từ: " + dtpThoiGianTuNgay_03.Value.ToString("HH:mm") + " ngày " + dtpThoiGianTuNgay_03.Value.ToString("dd/MM/yyyy");
-            if (ckbDenNgay_03.Checked)
-                thoiGian += "\n-Đến: " + dtpThoiGianDenNgay_03.Value.ToString("HH:mm") + " ngày " + dtpThoiGianDenNgay_03.Value.ToString("dd/MM/yyyy");
-            listNguon.Add(thoiGian);
+            //listDich.Add("<CSUS03_THOIGIAN>");
+            //var thoiGian = "-Thực hiện từ: " + dtpThoiGianTuNgay_03.Value.ToString("HH:mm") + " ngày " + dtpThoiGianTuNgay_03.Value.ToString("dd/MM/yyyy");
+            //if (ckbDenNgay_03.Checked)
+            //    thoiGian += "\n-Đến: " + dtpThoiGianDenNgay_03.Value.ToString("HH:mm") + " ngày " + dtpThoiGianDenNgay_03.Value.ToString("dd/MM/yyyy");
+            //listNguon.Add(thoiGian);
 
-            listDich.Add("<CSUS03_MENU>");
-            if (ckbMenu_03.Checked)
-                listNguon.Add(cboxMenuHienTai_03.Text + " => " + cboxMenuThayDoi_03.Text);
-            else 
-                listNguon.Add("");
+            //listDich.Add("<CSUS03_MENU>");
+            //if (ckbMenu_03.Checked)
+            //    listNguon.Add(cboxMenuHienTai_03.Text + " => " + cboxMenuThayDoi_03.Text);
+            //else 
+            //    listNguon.Add("");
 
             listDich.Add("<CSUS03_YEUCAUTHEM>");
             if (ckbYeuCauThem_03.Checked)
@@ -530,18 +532,18 @@ namespace CRM.GUI_DT
             {
                 case 0: CSUS02(); break;
                 case 1: CSUS03();
-                    string mac = "";
-                    if (ckbMAC_03.Checked) mac = txtMACThayDoi_03.Text;
-                    else mac = txtMACHienTai_03.Text;
-                    string menu = "";
-                    if (ckbMenu_03.Checked) menu = cboxMenuThayDoi_03.Text;
-                    else menu = cboxMenuHienTai_03.Text;
-                    string chucnang = "";
-                    if (ckbChucNang_03.Checked) chucnang = cboxChucNangThayDoi_03.Text;
-                    else chucnang = cboxChucNangHienTai_03.Text;
-                    string yeuCauKhac = "";
-                    yeuCauKhac = txtYeuCauThem_03.Text;
-                    if (ckbDNKDT_03.Checked) yeuCauKhac += " - Đăng nhập không dùng thẻ";
+                    //string mac = "";
+                    //if (ckbMAC_03.Checked) mac = txtMACThayDoi_03.Text;
+                    //else mac = txtMACHienTai_03.Text;
+                    //string menu = "";
+                    //if (ckbMenu_03.Checked) menu = cboxMenuThayDoi_03.Text;
+                    //else menu = cboxMenuHienTai_03.Text;
+                    //string chucnang = "";
+                    //if (ckbChucNang_03.Checked) chucnang = cboxChucNangThayDoi_03.Text;
+                    //else chucnang = cboxChucNangHienTai_03.Text;
+                    //string yeuCauKhac = "";
+                    //yeuCauKhac = txtYeuCauThem_03.Text;
+                    //if (ckbDNKDT_03.Checked) yeuCauKhac += " - Đăng nhập không dùng thẻ";
                     break;
                 case 2: CSUS07(); break;
                 case 3: CSUS08(); break;
@@ -615,17 +617,7 @@ namespace CRM.GUI_DT
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tPageThayDoi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
         {
 
         }
@@ -637,7 +629,6 @@ namespace CRM.GUI_DT
 
         private void tCtrThongTin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             tabSelectingAllowed = false;
         }
 
@@ -650,30 +641,6 @@ namespace CRM.GUI_DT
         private void txtMACThayDoi_TextChanged(object sender, EventArgs e)
         {
             //txtMACThayDoi.Text = txtMACThayDoi.Text.ToUpper();
-        }
-
-        private void cbkDiaChiMAC_CheckedChanged(object sender, EventArgs e)
-        {
-            txtMACHienTai_03.Enabled = ckbMAC_03.Checked;
-            txtMACThayDoi_03.Enabled = ckbMAC_03.Checked;
-        }
-
-        private void ckbThayDoiNoiLamViec_CheckedChanged(object sender, EventArgs e)
-        {
-            cboxNoiLamViecHienTai_03.Enabled = ckbNoiLamViec_03.Checked;
-            cboxNoiLamViecThayDoi_03.Enabled = ckbNoiLamViec_03.Checked;
-        }
-
-        private void ckbThayDoiChucNang_CheckedChanged(object sender, EventArgs e)
-        {
-            cboxChucNangHienTai_03.Enabled = ckbChucNang_03.Checked;
-            cboxChucNangThayDoi_03.Enabled = ckbChucNang_03.Checked;
-        }
-
-        private void ckbThayDoiMenu_CheckedChanged(object sender, EventArgs e)
-        {
-            cboxMenuHienTai_03.Enabled = ckbMenu_03.Checked;
-            cboxMenuThayDoi_03.Enabled = ckbMenu_03.Checked;
         }
 
 
@@ -803,11 +770,6 @@ namespace CRM.GUI_DT
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label53_Click(object sender, EventArgs e)
         {
 
         }

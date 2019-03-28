@@ -85,19 +85,12 @@
             this.dtpThoiGianTuNgay_03 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cboxMenuThayDoi_03 = new System.Windows.Forms.ComboBox();
-            this.cboxMenuHienTai_03 = new System.Windows.Forms.ComboBox();
-            this.ckbMenu_03 = new System.Windows.Forms.CheckBox();
             this.cboxChucNangThayDoi_03 = new System.Windows.Forms.ComboBox();
-            this.cboxChucNangHienTai_03 = new System.Windows.Forms.ComboBox();
-            this.ckbChucNang_03 = new System.Windows.Forms.CheckBox();
-            this.cboxNoiLamViecThayDoi_03 = new System.Windows.Forms.ComboBox();
-            this.cboxNoiLamViecHienTai_03 = new System.Windows.Forms.ComboBox();
-            this.ckbNoiLamViec_03 = new System.Windows.Forms.CheckBox();
+            this.cboxPhongBanThayDoi_03 = new System.Windows.Forms.ComboBox();
             this.txtMACThayDoi_03 = new System.Windows.Forms.MaskedTextBox();
             this.txtMACHienTai_03 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.ckbMAC_03 = new System.Windows.Forms.CheckBox();
             this.tPageXacNhan = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtUser_07 = new System.Windows.Forms.TextBox();
@@ -186,6 +179,13 @@
             this.tPage13A = new System.Windows.Forms.TabPage();
             this.tPagePKI01 = new System.Windows.Forms.TabPage();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtPhongBanHienTai_03 = new System.Windows.Forms.TextBox();
+            this.txtChucNangHienTai_03 = new System.Windows.Forms.TextBox();
+            this.txtMenuHienTai_03 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tCtrThongTin.SuspendLayout();
@@ -814,20 +814,20 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtMenuHienTai_03);
+            this.groupBox3.Controls.Add(this.txtChucNangHienTai_03);
+            this.groupBox3.Controls.Add(this.txtPhongBanHienTai_03);
+            this.groupBox3.Controls.Add(this.label54);
+            this.groupBox3.Controls.Add(this.label53);
+            this.groupBox3.Controls.Add(this.label52);
+            this.groupBox3.Controls.Add(this.label51);
             this.groupBox3.Controls.Add(this.cboxMenuThayDoi_03);
-            this.groupBox3.Controls.Add(this.cboxMenuHienTai_03);
-            this.groupBox3.Controls.Add(this.ckbMenu_03);
             this.groupBox3.Controls.Add(this.cboxChucNangThayDoi_03);
-            this.groupBox3.Controls.Add(this.cboxChucNangHienTai_03);
-            this.groupBox3.Controls.Add(this.ckbChucNang_03);
-            this.groupBox3.Controls.Add(this.cboxNoiLamViecThayDoi_03);
-            this.groupBox3.Controls.Add(this.cboxNoiLamViecHienTai_03);
-            this.groupBox3.Controls.Add(this.ckbNoiLamViec_03);
+            this.groupBox3.Controls.Add(this.cboxPhongBanThayDoi_03);
             this.groupBox3.Controls.Add(this.txtMACThayDoi_03);
             this.groupBox3.Controls.Add(this.txtMACHienTai_03);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.ckbMAC_03);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(670, 143);
@@ -837,100 +837,33 @@
             // cboxMenuThayDoi_03
             // 
             this.cboxMenuThayDoi_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxMenuThayDoi_03.Enabled = false;
             this.cboxMenuThayDoi_03.FormattingEnabled = true;
-            this.cboxMenuThayDoi_03.Location = new System.Drawing.Point(472, 112);
+            this.cboxMenuThayDoi_03.Location = new System.Drawing.Point(455, 112);
             this.cboxMenuThayDoi_03.Name = "cboxMenuThayDoi_03";
             this.cboxMenuThayDoi_03.Size = new System.Drawing.Size(180, 21);
             this.cboxMenuThayDoi_03.TabIndex = 30;
             // 
-            // cboxMenuHienTai_03
-            // 
-            this.cboxMenuHienTai_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxMenuHienTai_03.Enabled = false;
-            this.cboxMenuHienTai_03.FormattingEnabled = true;
-            this.cboxMenuHienTai_03.Location = new System.Drawing.Point(200, 112);
-            this.cboxMenuHienTai_03.Name = "cboxMenuHienTai_03";
-            this.cboxMenuHienTai_03.Size = new System.Drawing.Size(180, 21);
-            this.cboxMenuHienTai_03.TabIndex = 29;
-            // 
-            // ckbMenu_03
-            // 
-            this.ckbMenu_03.AutoSize = true;
-            this.ckbMenu_03.Location = new System.Drawing.Point(13, 114);
-            this.ckbMenu_03.Name = "ckbMenu_03";
-            this.ckbMenu_03.Size = new System.Drawing.Size(109, 17);
-            this.ckbMenu_03.TabIndex = 28;
-            this.ckbMenu_03.Text = "Thay đổi MenuID";
-            this.ckbMenu_03.UseVisualStyleBackColor = true;
-            this.ckbMenu_03.CheckedChanged += new System.EventHandler(this.ckbThayDoiMenu_CheckedChanged);
-            // 
             // cboxChucNangThayDoi_03
             // 
             this.cboxChucNangThayDoi_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxChucNangThayDoi_03.Enabled = false;
             this.cboxChucNangThayDoi_03.FormattingEnabled = true;
-            this.cboxChucNangThayDoi_03.Location = new System.Drawing.Point(472, 85);
+            this.cboxChucNangThayDoi_03.Location = new System.Drawing.Point(455, 85);
             this.cboxChucNangThayDoi_03.Name = "cboxChucNangThayDoi_03";
             this.cboxChucNangThayDoi_03.Size = new System.Drawing.Size(180, 21);
             this.cboxChucNangThayDoi_03.TabIndex = 27;
             // 
-            // cboxChucNangHienTai_03
+            // cboxPhongBanThayDoi_03
             // 
-            this.cboxChucNangHienTai_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxChucNangHienTai_03.Enabled = false;
-            this.cboxChucNangHienTai_03.FormattingEnabled = true;
-            this.cboxChucNangHienTai_03.Location = new System.Drawing.Point(200, 85);
-            this.cboxChucNangHienTai_03.Name = "cboxChucNangHienTai_03";
-            this.cboxChucNangHienTai_03.Size = new System.Drawing.Size(180, 21);
-            this.cboxChucNangHienTai_03.TabIndex = 26;
-            // 
-            // ckbChucNang_03
-            // 
-            this.ckbChucNang_03.AutoSize = true;
-            this.ckbChucNang_03.Location = new System.Drawing.Point(13, 87);
-            this.ckbChucNang_03.Name = "ckbChucNang_03";
-            this.ckbChucNang_03.Size = new System.Drawing.Size(122, 17);
-            this.ckbChucNang_03.TabIndex = 25;
-            this.ckbChucNang_03.Text = "Thay đổi chức năng";
-            this.ckbChucNang_03.UseVisualStyleBackColor = true;
-            this.ckbChucNang_03.CheckedChanged += new System.EventHandler(this.ckbThayDoiChucNang_CheckedChanged);
-            // 
-            // cboxNoiLamViecThayDoi_03
-            // 
-            this.cboxNoiLamViecThayDoi_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxNoiLamViecThayDoi_03.Enabled = false;
-            this.cboxNoiLamViecThayDoi_03.FormattingEnabled = true;
-            this.cboxNoiLamViecThayDoi_03.Location = new System.Drawing.Point(472, 58);
-            this.cboxNoiLamViecThayDoi_03.Name = "cboxNoiLamViecThayDoi_03";
-            this.cboxNoiLamViecThayDoi_03.Size = new System.Drawing.Size(180, 21);
-            this.cboxNoiLamViecThayDoi_03.TabIndex = 24;
-            // 
-            // cboxNoiLamViecHienTai_03
-            // 
-            this.cboxNoiLamViecHienTai_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxNoiLamViecHienTai_03.Enabled = false;
-            this.cboxNoiLamViecHienTai_03.FormattingEnabled = true;
-            this.cboxNoiLamViecHienTai_03.Location = new System.Drawing.Point(200, 58);
-            this.cboxNoiLamViecHienTai_03.Name = "cboxNoiLamViecHienTai_03";
-            this.cboxNoiLamViecHienTai_03.Size = new System.Drawing.Size(180, 21);
-            this.cboxNoiLamViecHienTai_03.TabIndex = 23;
-            // 
-            // ckbNoiLamViec_03
-            // 
-            this.ckbNoiLamViec_03.AutoSize = true;
-            this.ckbNoiLamViec_03.Location = new System.Drawing.Point(13, 60);
-            this.ckbNoiLamViec_03.Name = "ckbNoiLamViec_03";
-            this.ckbNoiLamViec_03.Size = new System.Drawing.Size(122, 17);
-            this.ckbNoiLamViec_03.TabIndex = 22;
-            this.ckbNoiLamViec_03.Text = "Thay đổi phòng ban";
-            this.ckbNoiLamViec_03.UseVisualStyleBackColor = true;
-            this.ckbNoiLamViec_03.CheckedChanged += new System.EventHandler(this.ckbThayDoiNoiLamViec_CheckedChanged);
+            this.cboxPhongBanThayDoi_03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxPhongBanThayDoi_03.FormattingEnabled = true;
+            this.cboxPhongBanThayDoi_03.Location = new System.Drawing.Point(455, 58);
+            this.cboxPhongBanThayDoi_03.Name = "cboxPhongBanThayDoi_03";
+            this.cboxPhongBanThayDoi_03.Size = new System.Drawing.Size(180, 21);
+            this.cboxPhongBanThayDoi_03.TabIndex = 24;
             // 
             // txtMACThayDoi_03
             // 
-            this.txtMACThayDoi_03.Enabled = false;
-            this.txtMACThayDoi_03.Location = new System.Drawing.Point(472, 31);
+            this.txtMACThayDoi_03.Location = new System.Drawing.Point(455, 31);
             this.txtMACThayDoi_03.Mask = ">CC-CC-CC-CC-CC-CC";
             this.txtMACThayDoi_03.Name = "txtMACThayDoi_03";
             this.txtMACThayDoi_03.Size = new System.Drawing.Size(180, 20);
@@ -941,7 +874,7 @@
             // txtMACHienTai_03
             // 
             this.txtMACHienTai_03.Enabled = false;
-            this.txtMACHienTai_03.Location = new System.Drawing.Point(200, 32);
+            this.txtMACHienTai_03.Location = new System.Drawing.Point(167, 31);
             this.txtMACHienTai_03.Mask = ">CC-CC-CC-CC-CC-CC";
             this.txtMACHienTai_03.Name = "txtMACHienTai_03";
             this.txtMACHienTai_03.Size = new System.Drawing.Size(180, 20);
@@ -952,7 +885,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(540, 13);
+            this.label8.Location = new System.Drawing.Point(523, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 19;
@@ -961,22 +894,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(269, 13);
+            this.label7.Location = new System.Drawing.Point(236, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "Hiện tại";
-            // 
-            // ckbMAC_03
-            // 
-            this.ckbMAC_03.AutoSize = true;
-            this.ckbMAC_03.Location = new System.Drawing.Point(13, 34);
-            this.ckbMAC_03.Name = "ckbMAC_03";
-            this.ckbMAC_03.Size = new System.Drawing.Size(85, 17);
-            this.ckbMAC_03.TabIndex = 17;
-            this.ckbMAC_03.Text = "Địa chỉ MAC";
-            this.ckbMAC_03.UseVisualStyleBackColor = true;
-            this.ckbMAC_03.CheckedChanged += new System.EventHandler(this.cbkDiaChiMAC_CheckedChanged);
             // 
             // tPageXacNhan
             // 
@@ -1809,6 +1731,66 @@
             this.tPagePKI01.Text = "PKI01 - Đề nghị cấp thiết bị bảo mật";
             this.tPagePKI01.UseVisualStyleBackColor = true;
             // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(6, 34);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(69, 13);
+            this.label51.TabIndex = 31;
+            this.label51.Text = "Địa chỉ MAC:";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(6, 60);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(62, 13);
+            this.label52.TabIndex = 32;
+            this.label52.Text = "Phòng ban:";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(6, 87);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(62, 13);
+            this.label53.TabIndex = 33;
+            this.label53.Text = "Chức năng:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(6, 114);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(37, 13);
+            this.label54.TabIndex = 34;
+            this.label54.Text = "Menu:";
+            // 
+            // txtPhongBanHienTai_03
+            // 
+            this.txtPhongBanHienTai_03.Enabled = false;
+            this.txtPhongBanHienTai_03.Location = new System.Drawing.Point(167, 58);
+            this.txtPhongBanHienTai_03.Name = "txtPhongBanHienTai_03";
+            this.txtPhongBanHienTai_03.Size = new System.Drawing.Size(180, 20);
+            this.txtPhongBanHienTai_03.TabIndex = 35;
+            // 
+            // txtChucNangHienTai_03
+            // 
+            this.txtChucNangHienTai_03.Enabled = false;
+            this.txtChucNangHienTai_03.Location = new System.Drawing.Point(167, 84);
+            this.txtChucNangHienTai_03.Name = "txtChucNangHienTai_03";
+            this.txtChucNangHienTai_03.Size = new System.Drawing.Size(180, 20);
+            this.txtChucNangHienTai_03.TabIndex = 36;
+            // 
+            // txtMenuHienTai_03
+            // 
+            this.txtMenuHienTai_03.Enabled = false;
+            this.txtMenuHienTai_03.Location = new System.Drawing.Point(167, 110);
+            this.txtMenuHienTai_03.Name = "txtMenuHienTai_03";
+            this.txtMenuHienTai_03.Size = new System.Drawing.Size(180, 20);
+            this.txtMenuHienTai_03.TabIndex = 37;
+            // 
             // frmIPCAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1890,19 +1872,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cboxMenuThayDoi_03;
-        private System.Windows.Forms.ComboBox cboxMenuHienTai_03;
-        private System.Windows.Forms.CheckBox ckbMenu_03;
         private System.Windows.Forms.ComboBox cboxChucNangThayDoi_03;
-        private System.Windows.Forms.ComboBox cboxChucNangHienTai_03;
-        private System.Windows.Forms.CheckBox ckbChucNang_03;
-        private System.Windows.Forms.ComboBox cboxNoiLamViecThayDoi_03;
-        private System.Windows.Forms.ComboBox cboxNoiLamViecHienTai_03;
-        private System.Windows.Forms.CheckBox ckbNoiLamViec_03;
+        private System.Windows.Forms.ComboBox cboxPhongBanThayDoi_03;
         private System.Windows.Forms.MaskedTextBox txtMACThayDoi_03;
         private System.Windows.Forms.MaskedTextBox txtMACHienTai_03;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox ckbMAC_03;
         private System.Windows.Forms.MaskedTextBox txtMAC_02;
         private System.Windows.Forms.CheckBox ckbMAC_02;
         private System.Windows.Forms.Label label20;
@@ -2022,5 +1997,12 @@
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.ComboBox cboxChucVu_02;
         private System.Windows.Forms.ComboBox cboxPhongBan_02;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox txtMenuHienTai_03;
+        private System.Windows.Forms.TextBox txtChucNangHienTai_03;
+        private System.Windows.Forms.TextBox txtPhongBanHienTai_03;
     }
 }

@@ -458,3 +458,16 @@ C:\Users\QuangTung\Documents\GitHub\CRM\CRM\obj\Release\CRM.In.resources
 C:\Users\QuangTung\Documents\GitHub\CRM\CRM\obj\Release\CRM.Properties.Resources.resources
 C:\Users\QuangTung\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmThongBao.resources
 C:\Users\QuangTung\Documents\GitHub\CRM\CRM\obj\Release\CRM.csproj.GenerateResource.Cache
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\rptTKKHCS.rpt
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\rptTKKHCS.cs
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\CRM.exe
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\CRM.pdb
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\DevComponents.DotNetBar2.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\DocX.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.DataSet.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.Office.Interop.Excel.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.xml
+C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.DataSet.xml

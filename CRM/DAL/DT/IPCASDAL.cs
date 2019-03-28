@@ -76,5 +76,14 @@ namespace CRM.DAL.DT
 
             db.dt("DT_IPCAS_CHANGE_REQUEST", Params);
         }
+
+        public static DataTable DT_IPCAS_GET_INFO(string userid)
+        {
+            DataAccess db = new DataAccess();
+            SqlParameter[] Params = new SqlParameter[]{
+                new SqlParameter("@userid", userid)
+            };
+            return db.dt("DT_IPCAS_GET_INFO", Params);
+        }
     }
 }
