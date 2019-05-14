@@ -171,7 +171,6 @@ C:\Users\phamq\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.Office.Interop.Exc
 C:\Users\phamq\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\phamq\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.xml
 C:\Users\phamq\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.DataSet.xml
-C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.csprojResolveAssemblyReference.cache
 C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.Chinhsach.resources
 C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmAD_Huypheduyet.resources
 C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.frmBHHDBH.resources

@@ -29,8 +29,8 @@ namespace CRM.Utilities
     class CommonMethod
     {
         //Khai báo địa chỉ máy chủ chứa file template
-        public static string server_add = "127.0.0.1";
-        //public static string server_add = "10.14.0.12";
+        //public static string server_add = "127.0.0.1";
+        public static string server_add = "10.14.0.12";
 
         //Chữ in hoa ký tự đầu tiên của chuỗi
         public static string FirstCharToUpper(string input)
@@ -95,16 +95,12 @@ namespace CRM.Utilities
 
                 foreach (string colname in keyColumns)
                 {
-
                     stringBuilder.Append(((string)row[colname]));
-
                 }
 
                 if (uniquenessDict.ContainsKey(stringBuilder.ToString()))
                 {
-
                     rows.Remove(row);
-
                 }
 
                 else
@@ -497,6 +493,12 @@ namespace CRM.Utilities
             sb = sb.Replace('Đ', 'D');
             sb = sb.Replace('đ', 'd');
             return (sb.ToString().Normalize(NormalizationForm.FormD));
+        }
+
+        public static string Thang(string thang)
+        {
+            if (int.Parse(thang) < 3 || int.Parse(thang) > 9) return thang;
+            else return thang.Substring(1);
         }
 
         #region Currency_to_word_english

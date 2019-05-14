@@ -678,6 +678,8 @@
             "Mẫu 07/NHĐT - Giấy yêu cầu đăng ký và kích hoạt thiết bị xác thực/phần mềm sinh O" +
                 "TP",
             "Mẫu 08/NHĐT - Giấy yêu cầu tra soát giao dịch",
+            "Mẫu 01/TBTiengui - Yêu cầu đăng ký sử dụng dịch vụ tra cứu thông tin, thông báo s" +
+                "ố dư tài khoản tiền gửi tiết kiệm có kỳ hạn",
             "Mẫu 01A/E-MB Phiếu đăng ký sử dụng dịch vụ E-Mobile Banking",
             "Mẫu 02A/E-MB Giấy đề nghị Thay đổi/Bổ sung/Hủy đăng ký dịch vụ E-Mobile Banking",
             "Mẫu 03A/E-MB Đề nghị xác minh giao dịch",

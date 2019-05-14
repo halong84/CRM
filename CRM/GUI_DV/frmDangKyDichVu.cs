@@ -31,7 +31,8 @@ namespace CRM.GUI_DV
             "06A_NHDT",
             "06B_NHDT",
             "07_NHDT",
-            "08_NHDT"
+            "08_NHDT",
+            "TBTiengui_01"
         };
         string tenFileEMB01 = "EMB_01_DANG_KY";
         string tenFileEMB02 = "EMB_02_THAY_DOI";
@@ -825,10 +826,10 @@ namespace CRM.GUI_DV
         void CreateFile()
         {
             string fileName = "";
-            if (cbChonMauBieu.SelectedIndex < 12)
+            if (cbChonMauBieu.SelectedIndex < 13)
                 fileName = fileNameNHDT[cbChonMauBieu.SelectedIndex];
 
-            switch (cbChonMauBieu.SelectedIndex - 12)
+            switch (cbChonMauBieu.SelectedIndex - 13)
             {
                 case 0:
                     fileName = tenFileEMB01;
@@ -1227,7 +1228,7 @@ namespace CRM.GUI_DV
 
         private void cbChonMauBieu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbChonMauBieu.SelectedIndex - 12;
+            int index = cbChonMauBieu.SelectedIndex - 13;
             if (index >= 0){
                 tCtrlDangKyDV.Enabled = true;
                 tCtrlDangKyDV.SelectedIndex = index;
@@ -1238,7 +1239,7 @@ namespace CRM.GUI_DV
 
         private void tCtrlDangKyDV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbChonMauBieu.SelectedIndex = tCtrlDangKyDV.SelectedIndex + 12;
+            cbChonMauBieu.SelectedIndex = tCtrlDangKyDV.SelectedIndex + 13;
         }
 
         private void btnLayTTKH_Click(object sender, EventArgs e)
