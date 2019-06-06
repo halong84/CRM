@@ -470,3 +470,4 @@ C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.Office.Interop
 C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.xml
 C:\Users\QuangTung\Documents\GitHub\CRM\CRM\bin\Release\ExcelDataReader.DataSet.xml
+C:\Users\phamq\Documents\GitHub\CRM\CRM\obj\Release\CRM.csprojResolveAssemblyReference.cache

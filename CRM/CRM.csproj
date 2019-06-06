@@ -10,7 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CRM</RootNamespace>
     <AssemblyName>CRM</AssemblyName>
-    <StartupObject>CRM.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
     <ApplicationIcon>ms_icon_144x144_kHe_icon.ico</ApplicationIcon>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>

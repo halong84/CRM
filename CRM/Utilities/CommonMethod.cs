@@ -499,6 +499,7 @@ namespace CRM.Utilities
         {
             if (int.Parse(thang) < 3 || int.Parse(thang) > 9) return thang;
             else return thang.Substring(1);
+            //return thang;
         }
 
         #region Currency_to_word_english
