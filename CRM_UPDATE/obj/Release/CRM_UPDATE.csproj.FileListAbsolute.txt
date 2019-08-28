@@ -16,3 +16,12 @@ C:\Users\TUNG\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.Properties.
 C:\Users\TUNG\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.csproj.GenerateResource.Cache
 C:\Users\TUNG\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.exe
 C:\Users\TUNG\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.pdb
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\bin\Release\CRM_UPDATE.exe.config
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\bin\Release\CRM_UPDATE.exe
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\bin\Release\CRM_UPDATE.pdb
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.csprojResolveAssemblyReference.cache
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.frmUpdate.resources
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.Properties.Resources.resources
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.csproj.GenerateResource.Cache
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.exe
+C:\Users\phamq\Documents\GitHub\CRM\CRM_UPDATE\obj\Release\CRM_UPDATE.pdb
