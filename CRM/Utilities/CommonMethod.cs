@@ -191,7 +191,7 @@ namespace CRM.Utilities
             }
             catch
             {
-                MessageBox.Show("File mẫu đang mở, liên hệ bộ phận Điện toán để kiểm tra");
+                MessageBox.Show("Không thể tạo file! Kiểm tra lại định dạng Ngày/Tháng/Năm!");
                 return;
             }
         }
@@ -317,7 +317,7 @@ namespace CRM.Utilities
             }
             catch
             {
-                MessageBox.Show("File mẫu đang mở, liên hệ bộ phận Điện toán để kiểm tra");
+                MessageBox.Show("Không thể tạo file! Kiểm tra lại định dạng Ngày/Tháng/Năm!");
                 return;
             }
         }
